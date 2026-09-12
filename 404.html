@@ -81,7 +81,7 @@
   .util .wrap{display:flex;justify-content:space-between;align-items:center;height:34px;gap:16px}
   .util .crumbs{display:flex;gap:6px;flex-wrap:wrap}
   @media (max-width:760px){ .util .wrap{height:auto;min-height:34px;padding-top:6px;padding-bottom:6px} .util .crumbs{flex-wrap:nowrap;overflow:hidden;white-space:nowrap} .util .crumbs a:not(:nth-last-child(3)),.util .crumbs span:not(:nth-last-child(2)){display:none} }
-  @media (max-width:420px){ .brandbar .lockup .t .s{display:none} }
+  @media (max-width:420px){ .brandbar .lockup .t .s{display:none} .util .crumbs a,.util .crumbs span{display:none!important} .util{font-size:12px} }
   .util .crumbs a{color:var(--on-blue-2);text-decoration:none}
   .util .crumbs a:hover{color:#fff;text-decoration:underline}
   .util .crumbs b{color:#fff;font-weight:600}

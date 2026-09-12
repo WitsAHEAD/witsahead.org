@@ -1,0 +1,26 @@
+{
+ "issues": [
+  {
+   "issue": 0,
+   "date": "2026-09-12",
+   "label": "Issue 0 (launch preview)",
+   "dateLabel": "12 September 2026",
+   "preview": true,
+   "items": [
+    "2026-09-12-leicester-copilot",
+    "2026-09-12-statssa-q2",
+    "2026-09-12-wdr2026",
+    "2026-09-12-frontiers-still-emerging",
+    "2026-09-12-frontiers-reframing",
+    "2026-09-12-jobs-summit",
+    "2026-09-12-berkeley-law",
+    "2026-09-12-v-mwenda",
+    "2026-09-12-v-ft-graduates"
+   ],
+   "html": "newsletter/2026-09-12/issue-0.html",
+   "pdf": "newsletter/2026-09-12/issue-0.pdf",
+   "lead": "University of Leicester gives Microsoft 365 Copilot to all 21,000 students and 4,000 staff"
+  }
+ ],
+ "cadence": "Every second Thursday, 07:00 SAST"
+}

@@ -185,7 +185,8 @@
   .dash{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
   .dash .bar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
   .dash .bar .t{font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px}
-  .dash .bar .t .live{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 25%,transparent)}
+  .dash .bar .t .live{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 25%,transparent);animation:livepulse 2s ease-in-out infinite}
+  @keyframes livepulse{0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 25%,transparent)}50%{box-shadow:0 0 0 8px color-mix(in srgb,var(--ok) 0%,transparent)}}
   .dash .bar .t small{font-weight:400;color:var(--text-3);font-size:13px}
   .seg{display:inline-flex;border:1px solid var(--line-2)}
   .seg button{background:transparent;border:0;padding:8px 14px;font:600 13px var(--font);color:var(--text-2);cursor:pointer}
@@ -323,7 +324,7 @@
   /* News and insights */
   .newsbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
   .newsbar .stamp{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-2)}
-  .newsbar .stamp .live{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 25%,transparent)}
+  .newsbar .stamp .live{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 25%,transparent);animation:livepulse 2s ease-in-out infinite}
   .newsbar .stamp b{color:var(--text)}
   .newsctl{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
   .newsctl select,.newsctl input{border:1px solid var(--line-2);background:var(--surface);color:var(--text);font:400 13px var(--font);padding:8px 10px;height:36px}
@@ -460,10 +461,11 @@
 
 
 
-.h-bar{transform-box:fill-box;transform-origin:bottom center;transform:scaleY(0);animation:h-rise .7s calc(.15s + var(--i)*.35s) cubic-bezier(.2,.8,.2,1) forwards, h-step 4.8s calc(2.6s + var(--i)*.45s) ease-in-out infinite}
+.h-bar{transform-box:fill-box;transform-origin:bottom center;transform:scaleY(0);animation:h-rise .7s calc(.15s + var(--i)*.35s) cubic-bezier(.2,.8,.2,1) forwards, h-step 4s calc(2.6s + var(--i)*.4s) ease-in-out infinite}
 @keyframes h-rise{to{transform:scaleY(1)}}
-@keyframes h-step{0%,70%,100%{transform:scaleY(1)}80%{transform:scaleY(1.04)}}
-.h-arrow{stroke-dashoffset:140;animation:h-draw 1s 1.25s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes h-step{0%,72%,100%{transform:scaleY(1)}82%{transform:scaleY(1.12)}}
+.h-arrow{stroke-dashoffset:140;animation:h-draw 1s 1.25s cubic-bezier(.4,0,.2,1) forwards, h-redraw 10s 4s ease-in-out infinite}
+@keyframes h-redraw{0%,100%{stroke-dashoffset:0;opacity:1}88%{stroke-dashoffset:0;opacity:1}92%{stroke-dashoffset:140;opacity:.3}}
 @keyframes h-draw{to{stroke-dashoffset:0}}
 .h-head{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:h-pop .45s 2.1s cubic-bezier(.3,1.6,.5,1) forwards}
 @keyframes h-pop{to{transform:scale(1)}}
@@ -947,12 +949,13 @@
   /* Hero: the moving bars field, from the first Wits AHEAD website */
   var cv=document.getElementById('net'), ctx=cv.getContext('2d'), W,H,bars=[],t0=performance.now();
   function size(){ var r=cv.parentElement.getBoundingClientRect(); W=cv.width=Math.floor(r.width*devicePixelRatio); H=cv.height=Math.floor(r.height*devicePixelRatio); bars=[]; var gap=14*devicePixelRatio, w=6*devicePixelRatio, n=Math.ceil(W/gap); for(var i=0;i<n;i++){ bars.push({x:i*gap, base:0.14+0.5*Math.pow(i/n,1.6), ph:Math.random()*6.28, sp:0.4+Math.random()*0.6, w:w}); } }
+  function amp(b,i,t){ return reduce?0:(0.11*Math.sin(t*b.sp+b.ph)+0.06*Math.sin(t*0.9-i*0.09)); }
   function draw(now){
     var t=(now-t0)/1000; ctx.clearRect(0,0,W,H);
-    for(var i=0;i<bars.length;i++){ var b=bars[i]; var h=H*(b.base+(reduce?0:0.05*Math.sin(t*b.sp+b.ph))); var y=H-h; var g=ctx.createLinearGradient(0,y,0,H); g.addColorStop(0,'rgba(127,166,192,0.26)'); g.addColorStop(1,'rgba(127,166,192,0.02)'); ctx.fillStyle=g; ctx.fillRect(b.x,y,b.w,h); }
-    ctx.strokeStyle='rgba(183,154,94,0.5)'; ctx.lineWidth=2*devicePixelRatio; ctx.beginPath();
-    for(var j=0;j<bars.length;j+=3){ var bb=bars[j]; var yy=H-H*(bb.base+(reduce?0:0.05*Math.sin(t*bb.sp+bb.ph)))-8*devicePixelRatio; if(j===0)ctx.moveTo(bb.x,yy); else ctx.lineTo(bb.x,yy); }
-    ctx.stroke();
+    for(var i=0;i<bars.length;i++){ var b=bars[i]; var h=H*(b.base+amp(b,i,t)); var y=H-h; var g=ctx.createLinearGradient(0,y,0,H); g.addColorStop(0,'rgba(127,166,192,0.34)'); g.addColorStop(1,'rgba(127,166,192,0.02)'); ctx.fillStyle=g; ctx.fillRect(b.x,y,b.w,h); }
+    var pts=[]; for(var j=0;j<bars.length;j+=3){ var bb=bars[j]; pts.push([bb.x, H-H*(bb.base+amp(bb,j,t))-8*devicePixelRatio]); }
+    ctx.strokeStyle='rgba(183,154,94,0.6)'; ctx.lineWidth=2.2*devicePixelRatio; ctx.beginPath(); for(var k=0;k<pts.length;k++){ if(k===0)ctx.moveTo(pts[k][0],pts[k][1]); else ctx.lineTo(pts[k][0],pts[k][1]); } ctx.stroke();
+    if(!reduce&&pts.length>1){ var u=(t*0.11)%1, f=u*(pts.length-1), a=Math.floor(f), q=f-a, p0=pts[a], p1=pts[Math.min(a+1,pts.length-1)]; var px=p0[0]+(p1[0]-p0[0])*q, py=p0[1]+(p1[1]-p0[1])*q; var r=7*devicePixelRatio; var rg=ctx.createRadialGradient(px,py,0,px,py,r*4); rg.addColorStop(0,'rgba(183,154,94,0.9)'); rg.addColorStop(1,'rgba(183,154,94,0)'); ctx.fillStyle=rg; ctx.beginPath(); ctx.arc(px,py,r*4,0,6.283); ctx.fill(); ctx.fillStyle='#E9D9A8'; ctx.beginPath(); ctx.arc(px,py,r*0.55,0,6.283); ctx.fill(); }
     if(!reduce) requestAnimationFrame(draw);
   }
   size(); window.addEventListener('resize',size); requestAnimationFrame(draw);

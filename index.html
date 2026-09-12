@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-VB30zxtAdzqrXf4f7cqgs9pY7sagV4gsTWqlv42PaSE=' 'sha256-d8qEW/GCR6O9esFaCIIzEH6h6/noXNWgrAN/nAdbxgQ=' 'sha256-bWe32sq//RZd6JKWrF8PpnRO6Im/SmeLKYO7jLdUHCk=' 'sha256-ebJebLghKy9TmTj7/Ik8QLlGnaMcSCFNSPwFg3cxGjE=' 'sha256-Cww/5VI0cok3BN4kO1SY9xhBpizUhC16k1Dnxqk3gJ4=' 'sha256-5QQ0sZ0z+sDyjaOLiT4gpUdM+BmZneaxl3IGYUGSKqA=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-VB30zxtAdzqrXf4f7cqgs9pY7sagV4gsTWqlv42PaSE=' 'sha256-d8qEW/GCR6O9esFaCIIzEH6h6/noXNWgrAN/nAdbxgQ=' 'sha256-jW25B9mzzbiJjXk0fLBfdUbD8VY6FOaWFmbYJnJ42ZU=' 'sha256-ebJebLghKy9TmTj7/Ik8QLlGnaMcSCFNSPwFg3cxGjE=' 'sha256-Cww/5VI0cok3BN4kO1SY9xhBpizUhC16k1Dnxqk3gJ4=' 'sha256-5QQ0sZ0z+sDyjaOLiT4gpUdM+BmZneaxl3IGYUGSKqA=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -109,6 +109,19 @@
   .mainnav li a:hover,.mainnav li a.active{border-bottom-color:#B79A5E;background:#002F4A}
   .mainnav .apply{background:#85714D;color:#fff;font-weight:700;font-size:13px;padding:9px 16px;text-decoration:none;white-space:nowrap}
   .progress{position:absolute;left:0;bottom:-3px;height:3px;background:#B79A5E;width:0;transition:width .1s linear}
+  .navtoggle{display:none}
+  .mainnav ul{scrollbar-width:none} .mainnav ul::-webkit-scrollbar{display:none}
+  @media (max-width:760px){
+    .mainnav .wrap{position:relative}
+    .navtoggle{display:inline-flex;align-items:center;gap:10px;background:transparent;border:1px solid rgba(255,255,255,.35);color:#F1F5FB;font:700 13px var(--font);padding:8px 14px;cursor:pointer;min-height:40px}
+    .navtoggle .bars{display:inline-flex;flex-direction:column;gap:3px} .navtoggle .bars i{display:block;width:16px;height:2px;background:#F1F5FB;transition:transform .2s ease,opacity .2s ease}
+    .mainnav.open .navtoggle .bars i:nth-child(1){transform:translateY(5px) rotate(45deg)} .mainnav.open .navtoggle .bars i:nth-child(2){opacity:0} .mainnav.open .navtoggle .bars i:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+    .mainnav ul{position:absolute;left:0;right:0;top:50px;display:none;flex-direction:column;background:#002F4A;overflow:visible;border-top:1px solid rgba(255,255,255,.12);box-shadow:0 14px 28px rgba(0,0,0,.28);z-index:41}
+    .mainnav.open ul{display:flex}
+    .mainnav li a{padding:14px 22px;font-size:15px;border-bottom:1px solid rgba(255,255,255,.08);min-height:48px}
+    .mainnav li a:hover,.mainnav li a.active{border-bottom-color:rgba(255,255,255,.08);box-shadow:inset 4px 0 0 #B79A5E}
+    .board::after{content:'Swipe sideways to see every stage';display:block;grid-column:1/-1;font-size:12px;color:var(--text-3);padding:8px 12px}
+  }
 
   /* Buttons in the Wits idiom: square, gold primary, dark-blue secondary */
   .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;font:700 14px var(--font);text-decoration:none;border:0;cursor:pointer;border-radius:0}
@@ -509,7 +522,8 @@
 </div>
 <div class="mainnav" id="top">
   <div class="wrap">
-    <ul>
+    <button class="navtoggle" id="navToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Open menu"><span class="bars"><i></i><i></i><i></i></span>Menu</button>
+    <ul id="mainMenu">
       <li><a href="#news">News</a></li><li><a href="#newsletter">Fortnightly</a></li><li><a href="#latest">Latest</a></li><li><a href="#about">About</a></li><li><a href="#research">Research</a></li><li><a href="#people">People</a></li><li><a href="#supervision">Supervision</a></li><li><a href="#partners">Partners</a></li><li><a href="#open">Join</a></li>
     </ul>
     <a class="apply" href="#contact">Work with us</a>
@@ -880,6 +894,7 @@
   document.querySelectorAll('[data-count]').forEach(function(el){ var target=+el.getAttribute('data-count'); if(reduce){el.textContent=target;return;} var t0=null; function step(ts){ if(!t0)t0=ts; var k=Math.min(1,(ts-t0)/1100); var e=1-Math.pow(1-k,3); el.textContent=Math.round(target*e); if(k<1) requestAnimationFrame(step); } requestAnimationFrame(step); });
 
   /* Scroll progress and active nav */
+  (function(){ var nav=document.querySelector('.mainnav'), tg=document.getElementById('navToggle'); if(!tg) return; function setOpen(o){ nav.classList.toggle('open',o); tg.setAttribute('aria-expanded',o?'true':'false'); tg.setAttribute('aria-label',o?'Close menu':'Open menu'); } tg.addEventListener('click',function(){ setOpen(!nav.classList.contains('open')); }); nav.querySelectorAll('li a').forEach(function(a){ a.addEventListener('click',function(){ setOpen(false); }); }); document.addEventListener('click',function(e){ if(nav.classList.contains('open')&&!nav.contains(e.target)) setOpen(false); }); document.addEventListener('keydown',function(e){ if(e.key==='Escape') setOpen(false); }); })();
   var prog=document.getElementById('progress'), navLinks=document.querySelectorAll('.mainnav li a'), secs=[].map.call(navLinks,function(a){return document.querySelector(a.getAttribute('href'));});
   function onScroll(){ var h=document.documentElement; var p=h.scrollTop/(h.scrollHeight-h.clientHeight); prog.style.width=(p*100)+'%'; var y=h.scrollTop+140, cur=-1; secs.forEach(function(s,i){ if(s&&s.offsetTop<=y) cur=i; }); navLinks.forEach(function(a,i){ a.classList.toggle('active',i===cur); }); }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();

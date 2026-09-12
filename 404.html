@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-VB30zxtAdzqrXf4f7cqgs9pY7sagV4gsTWqlv42PaSE=' 'sha256-d8qEW/GCR6O9esFaCIIzEH6h6/noXNWgrAN/nAdbxgQ=' 'sha256-aJfrtfn6SAtQ42yArRJbeL36QVxE9+XJf2NEw00fKWk=' 'sha256-OQ7IqKB11HuwyIPwPIoYQvmwk5NuxIW7Yg245gJp8+w=' 'sha256-Cww/5VI0cok3BN4kO1SY9xhBpizUhC16k1Dnxqk3gJ4=' 'sha256-5QQ0sZ0z+sDyjaOLiT4gpUdM+BmZneaxl3IGYUGSKqA=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-VB30zxtAdzqrXf4f7cqgs9pY7sagV4gsTWqlv42PaSE=' 'sha256-d8qEW/GCR6O9esFaCIIzEH6h6/noXNWgrAN/nAdbxgQ=' 'sha256-OhZLFpDmpC88I8IIFJo8Z2DSBEZIBzvEYk5yv4swc1Y=' 'sha256-OQ7IqKB11HuwyIPwPIoYQvmwk5NuxIW7Yg245gJp8+w=' 'sha256-Cww/5VI0cok3BN4kO1SY9xhBpizUhC16k1Dnxqk3gJ4=' 'sha256-5QQ0sZ0z+sDyjaOLiT4gpUdM+BmZneaxl3IGYUGSKqA=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -951,12 +951,12 @@
   function size(){ var r=cv.parentElement.getBoundingClientRect(); W=cv.width=Math.floor(r.width*devicePixelRatio); H=cv.height=Math.floor(r.height*devicePixelRatio); bars=[]; var gap=14*devicePixelRatio, w=6*devicePixelRatio, n=Math.ceil(W/gap); for(var i=0;i<n;i++){ bars.push({x:i*gap, base:0.14+0.5*Math.pow(i/n,1.6), ph:Math.random()*6.28, sp:0.4+Math.random()*0.6, w:w}); } }
   function amp(b,i,t){ return reduce?0:(0.11*Math.sin(t*b.sp+b.ph)+0.06*Math.sin(t*0.9-i*0.09)); }
   function draw(now){
-    var t=(now-t0)/1000; ctx.clearRect(0,0,W,H);
+    if(!reduce) requestAnimationFrame(draw);
+    var t=Math.max(0,(now-t0)/1000); ctx.clearRect(0,0,W,H);
     for(var i=0;i<bars.length;i++){ var b=bars[i]; var h=H*(b.base+amp(b,i,t)); var y=H-h; var g=ctx.createLinearGradient(0,y,0,H); g.addColorStop(0,'rgba(127,166,192,0.34)'); g.addColorStop(1,'rgba(127,166,192,0.02)'); ctx.fillStyle=g; ctx.fillRect(b.x,y,b.w,h); }
     var pts=[]; for(var j=0;j<bars.length;j+=3){ var bb=bars[j]; pts.push([bb.x, H-H*(bb.base+amp(bb,j,t))-8*devicePixelRatio]); }
     ctx.strokeStyle='rgba(183,154,94,0.6)'; ctx.lineWidth=2.2*devicePixelRatio; ctx.beginPath(); for(var k=0;k<pts.length;k++){ if(k===0)ctx.moveTo(pts[k][0],pts[k][1]); else ctx.lineTo(pts[k][0],pts[k][1]); } ctx.stroke();
-    if(!reduce&&pts.length>1){ var u=(t*0.11)%1, f=u*(pts.length-1), a=Math.floor(f), q=f-a, p0=pts[a], p1=pts[Math.min(a+1,pts.length-1)]; var px=p0[0]+(p1[0]-p0[0])*q, py=p0[1]+(p1[1]-p0[1])*q; var r=7*devicePixelRatio; var rg=ctx.createRadialGradient(px,py,0,px,py,r*4); rg.addColorStop(0,'rgba(183,154,94,0.9)'); rg.addColorStop(1,'rgba(183,154,94,0)'); ctx.fillStyle=rg; ctx.beginPath(); ctx.arc(px,py,r*4,0,6.283); ctx.fill(); ctx.fillStyle='#E9D9A8'; ctx.beginPath(); ctx.arc(px,py,r*0.55,0,6.283); ctx.fill(); }
-    if(!reduce) requestAnimationFrame(draw);
+    if(!reduce&&pts.length>1){ var u=(((t*0.11)%1)+1)%1, f=u*(pts.length-1), a=Math.max(0,Math.floor(f)), q=f-a, p0=pts[a], p1=pts[Math.min(a+1,pts.length-1)]; var px=p0[0]+(p1[0]-p0[0])*q, py=p0[1]+(p1[1]-p0[1])*q; var r=7*devicePixelRatio; var rg=ctx.createRadialGradient(px,py,0,px,py,r*4); rg.addColorStop(0,'rgba(183,154,94,0.9)'); rg.addColorStop(1,'rgba(183,154,94,0)'); ctx.fillStyle=rg; ctx.beginPath(); ctx.arc(px,py,r*4,0,6.283); ctx.fill(); ctx.fillStyle='#E9D9A8'; ctx.beginPath(); ctx.arc(px,py,r*0.55,0,6.283); ctx.fill(); }
   }
   size(); window.addEventListener('resize',size); requestAnimationFrame(draw);
 })();

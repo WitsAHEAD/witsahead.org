@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-VB30zxtAdzqrXf4f7cqgs9pY7sagV4gsTWqlv42PaSE=' 'sha256-d8qEW/GCR6O9esFaCIIzEH6h6/noXNWgrAN/nAdbxgQ=' 'sha256-AH9ZlyhfU8tE6v+JFGsY0Gr3X4jBvulyaTxfnuwTAe0=' 'sha256-4qY/yU9bma1Xkzq4IgtCUgXYg4uJTdZN1DcomkRhG2o=' 'sha256-IdDoWS92cKvDlfuwVdIGI1BGXTQepld3tyjTLiNhhXU=' 'sha256-Cww/5VI0cok3BN4kO1SY9xhBpizUhC16k1Dnxqk3gJ4=' 'sha256-5QQ0sZ0z+sDyjaOLiT4gpUdM+BmZneaxl3IGYUGSKqA=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-VB30zxtAdzqrXf4f7cqgs9pY7sagV4gsTWqlv42PaSE=' 'sha256-d8qEW/GCR6O9esFaCIIzEH6h6/noXNWgrAN/nAdbxgQ=' 'sha256-AH9ZlyhfU8tE6v+JFGsY0Gr3X4jBvulyaTxfnuwTAe0=' 'sha256-TDLl2aHvv/Sgfw+/C/0mBtSoL47m/G8as5h7aXKDRCg=' 'sha256-IdDoWS92cKvDlfuwVdIGI1BGXTQepld3tyjTLiNhhXU=' 'sha256-Cww/5VI0cok3BN4kO1SY9xhBpizUhC16k1Dnxqk3gJ4=' 'sha256-5QQ0sZ0z+sDyjaOLiT4gpUdM+BmZneaxl3IGYUGSKqA=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -329,6 +329,8 @@
   .fpmap .node circle.c{fill:#7FA6C0;stroke:#002F4A;stroke-width:1.5;r:3.2;opacity:.55;transition:opacity .4s,r .3s}
   .fpmap .node.grant circle.c{fill:#B79A5E} .fpmap .node.fellowship circle.c,.fpmap .node.visiting circle.c{fill:#F1F5FB} .fpmap .node.partnership circle.c{fill:#7FA6C0} .fpmap .node.distinction circle.c{fill:#B79A5E}
   .fpmap .node.on circle.c{opacity:1;r:4.6}
+  .fpmap .node.past circle.c{opacity:.8;r:3.4}
+  .fpmap .arc.past{opacity:.12;stroke-dashoffset:0;stroke-dasharray:3 5}
   .fpmap .node circle.ring{fill:none;stroke:#B79A5E;stroke-width:1.2;opacity:0}
   .fpmap .node.new circle.ring{animation:fpring 1.6s ease-out 2}
   @keyframes fpring{0%{r:4;opacity:.9}100%{r:22;opacity:0}}
@@ -1031,7 +1033,8 @@
     year=y; yearEl.textContent=y; range.value=y; var newest=[], active=0;
     FP.forEach(function(n){
       var on=n.items.some(function(x){return x.y[0]<=y&&x.y[1]>=y;}), isNew=n.items.some(function(x){return x.y[0]===y;});
-      if(!n.hub){ n.g.classList.toggle('on',on); n.g.classList.toggle('new',isNew&&animate&&!reduce); if(n.arc){ n.arc.classList.toggle('stay',on&&!(isNew&&animate)); n.arc.classList.toggle('on',isNew&&animate&&!reduce); if(!on&&!isNew){ n.arc.classList.remove('on','stay'); } } }
+      var past=!on&&n.y0<y;
+      if(!n.hub){ n.g.classList.toggle('on',on); n.g.classList.toggle('past',past); n.g.classList.toggle('new',isNew&&animate&&!reduce); if(n.arc){ n.arc.classList.toggle('stay',on&&!(isNew&&animate)); n.arc.classList.toggle('on',isNew&&animate&&!reduce); n.arc.classList.toggle('past',past); if(!on&&!isNew){ n.arc.classList.remove('on','stay'); } } }
       if(on&&!n.hub) active++;
       if(isNew) n.items.forEach(function(x){ if(x.y[0]===y) newest.push(x.o.replace(/,.*$/,'')+' ('+n.c+')'); });
     });

@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-hebRyMfQMzxwZ4lyIWF1Xwu5ifXWhA87ek54DtD2+JM=' 'sha256-nEPloELqHZMFlIlgRJfxWI3mhk2rnYfZ4M+CcMA+QC4=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-tUsuA4I5hymvBRyGSbkXdo9aMrfK7Pv/FEIDEdibu4A=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-GVpYpV/k+4uVrXMymSQkfXWp7/V8XR0T/NX4WV4/2GQ=' 'sha256-nEPloELqHZMFlIlgRJfxWI3mhk2rnYfZ4M+CcMA+QC4=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-tUsuA4I5hymvBRyGSbkXdo9aMrfK7Pv/FEIDEdibu4A=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -744,7 +744,7 @@
   pw.querySelectorAll('.pillar button').forEach(function(b){ b.addEventListener('click',function(){ var p=b.parentElement; var o=p.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false'); b.querySelector('.more').textContent=(o?'Hide projects':'Show projects')+' ›'; }); });
 
   /* Board and roster */
-  var dash=document.getElementById('dash'), board=document.getElementById('board'), tbody=document.querySelector('#roster tbody');
+  var dash=document.getElementById('dash'), board=document.getElementById('board'), tbody=document.querySelector('#roster tbody')||document.createElement('tbody');
   function render(){
     dash.setAttribute('data-view',view);
     board.innerHTML=STAGES.map(function(st){

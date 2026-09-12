@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-GVpYpV/k+4uVrXMymSQkfXWp7/V8XR0T/NX4WV4/2GQ=' 'sha256-nEPloELqHZMFlIlgRJfxWI3mhk2rnYfZ4M+CcMA+QC4=' 'sha256-/zzXNM/ajI4KfPub4BZdz435mZkjw+fb6WfZmWMbyPA=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-tUsuA4I5hymvBRyGSbkXdo9aMrfK7Pv/FEIDEdibu4A=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-GVpYpV/k+4uVrXMymSQkfXWp7/V8XR0T/NX4WV4/2GQ=' 'sha256-nEPloELqHZMFlIlgRJfxWI3mhk2rnYfZ4M+CcMA+QC4=' 'sha256-p0mtnjG8W1CLLpTaVTSF8jNgwQR0GMDLVKPhrfBZaiM=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-tUsuA4I5hymvBRyGSbkXdo9aMrfK7Pv/FEIDEdibu4A=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -939,41 +939,20 @@
 </script>
 <script>
 (function(){
-  var PILL={1:'Pillar 1 · Generative AI in HE',2:'Pillar 2 · Student success analytics',3:'Pillar 3 · STEM and teacher education',4:'Pillar 4 · Graduate capability',5:'Pillar 5 · Data for education systems',6:'Pillar 6 · Responsible AI and policy'};
-  var TYPE={news:'News',report:'Report',research:'Research',video:'Video',reading:'Reading'};
-  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var DATA=null, nt='all', np=0, nq='';
-  function esc(x){return String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
-  function fdate(it){ var d=new Date(it.date+'T00:00:00'); if(it.datePrecision==='year') return String(d.getFullYear()); if(it.datePrecision==='month') return MON[d.getMonth()]+' '+d.getFullYear(); return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); }
-  function host(u){ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(e){ return ''; } }
-  document.addEventListener('error',function(e){ var im=e.target; if(!im||im.tagName!=='IMG'||!im.dataset.yt) return; if(!im.dataset.f){ im.dataset.f=1; im.src=im.src.replace('maxresdefault','hqdefault'); } else { im.remove(); } },true);
-  function card(it){
-    var v=it.type==='video';
-    var thumb=v?'<a class="thumb" href="'+esc(it.url)+'" target="_blank" rel="noopener"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/'+esc(it.videoId)+'/maxresdefault.jpg" data-yt="1"><span class="play"><i></i></span>'+(it.duration?'<span class="dur">'+esc(it.duration)+'</span>':'')+'</a>':'';
-    return '<article class="ncard" data-t="'+esc(it.type)+'" data-p="'+it.pillar+'">'+thumb+'<div class="nb"><div class="meta"><span class="tb '+esc(it.type)+'">'+TYPE[it.type]+'</span><span>'+fdate(it)+'</span><span>·</span><span>'+esc(it.region)+'</span><span class="pl">'+(PILL[it.pillar]||'')+'</span></div><h3><a href="'+esc(it.url)+'" target="_blank" rel="noopener">'+esc(it.title)+'</a></h3><div class="src"><b>'+esc(it.source)+'</b> · '+esc(host(it.url))+'</div><span class="cred">'+esc(it.credibility)+'</span><p class="sum">'+esc(it.summary)+'</p><div class="why"><b>Why it matters for AHEAD</b>'+esc(it.why)+'</div><a class="go" href="'+esc(it.url)+'" target="_blank" rel="noopener">'+(v?'Watch on YouTube':'Read at source')+' ↗</a></div></article>';
+  var MON=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function render(idx){
+    var L=idx.issues||[]; if(!L.length) return; var cur=L[0];
+    document.getElementById('issLabel').textContent='The AHEAD Fortnightly · '+cur.label;
+    document.getElementById('issDate').textContent=cur.dateLabel;
+    document.getElementById('issLead').textContent=cur.lead?('Leading with: '+cur.lead):'';
+    function abs(u){ return /^(https?:|\/)/.test(u)?u:'https://witsahead.org/'+u; }
+    document.getElementById('issRead').href=abs(cur.html); document.getElementById('issPdf').href=abs(cur.pdf);
+    var arch=L.slice(1); document.getElementById('issArch').innerHTML=arch.length?arch.map(function(m){return '<a href="'+abs(m.pdf)+'" target="_blank" rel="noopener"><span style="color:var(--text)">'+m.label+'</span><span>'+m.dateLabel+' · PDF</span></a>';}).join(''):'<div style="font-size:13px;color:var(--text-3)">Issue 1 arrives on Thursday 1 October 2026. Past issues will be listed here.</div>';
   }
-  function match(it){ if(nt!=='all'&&it.type!==nt) return false; if(np&&it.pillar!==np) return false; if(nq){ var h=(it.title+' '+it.source+' '+it.summary+' '+it.why+' '+it.region).toLowerCase(); if(h.indexOf(nq)<0) return false; } return true; }
-  function render(){
-    if(!DATA) return;
-    var upd=new Date(DATA.updated+'T00:00:00'); document.getElementById('newsUpdated').textContent=upd.getDate()+' '+MON[upd.getMonth()]+' '+upd.getFullYear();
-    var items=DATA.items.filter(function(i){return i.type!=='reading';}).sort(function(a,b){return a.date<b.date?1:-1;});
-    document.getElementById('newsCount').textContent=DATA.items.length;
-    var now=new Date(DATA.updated+'T00:00:00'), wk=new Date(now-7*864e5), mo=new Date(now-45*864e5);
-    var g={This:[],Month:[],Arch:[]};
-    items.forEach(function(it){ if(!match(it)) return; var a=new Date((it.added||DATA.updated)+'T00:00:00'), d=new Date(it.date+'T00:00:00'); (a>=wk?g.This:d>=mo?g.Month:g.Arch).push(it); });
-    ['This','Month','Arch'].forEach(function(k){ var el=document.getElementById('g'+k); el.innerHTML=g[k].length?g[k].map(card).join(''):'<div class="nempty" style="grid-column:1/-1">Nothing here for this filter.</div>'; document.getElementById('c'+k).textContent=g[k].length; document.getElementById('ng'+k).style.display=g[k].length?'':'none'; });
-    var rd=DATA.items.filter(function(i){return i.type==='reading'&&(!np||i.pillar===np)&&(!nq||(i.title+' '+i.source+' '+i.summary).toLowerCase().indexOf(nq)>=0);});
-    document.getElementById('gRead').innerHTML=rd.map(function(r){return '<div class="rd"><b><a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+'</a></b><small>'+esc(r.source)+'</small><p>'+esc(r.summary)+'</p><div class="why">'+esc(r.why)+'</div></div>';}).join('');
-    document.getElementById('cRead').textContent=rd.length; document.getElementById('ngRead').style.display=(nt==='all'&&rd.length)?'':'none';
-  }
-  try{ DATA=JSON.parse(document.getElementById('newsData').textContent.replace(/<!--NEWS-DATA-(START|END)-->/g,'')); }catch(e){ DATA={updated:'2026-09-12',items:[]}; }
-  render();
-  document.querySelectorAll('button[data-nt]').forEach(function(b){ b.addEventListener('click',function(){ nt=b.getAttribute('data-nt'); document.querySelectorAll('button[data-nt]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');}); render(); }); });
-  document.getElementById('newsPillar').addEventListener('change',function(e){ np=+e.target.value; render(); });
-  document.getElementById('newsQ').addEventListener('input',function(e){ nq=e.target.value.trim().toLowerCase(); render(); });
-  document.getElementById('archToggle').addEventListener('click',function(){ var g=document.getElementById('ngArch'); var c=g.classList.toggle('collapsed'); this.textContent=c?'Show archive':'Hide archive'; });
-  /* A fresher news.json published beside the page wins over the inline copy */
-  try{ fetch('/news.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(j){ if(j&&j.items&&j.updated>=DATA.updated){ DATA=j; render(); } }).catch(function(){}); }catch(e){}
+  var IDX={issues:[]};
+  try{ IDX=JSON.parse(document.getElementById('nlData').textContent.replace(/<!--NL-DATA-(START|END)-->/g,'')); }catch(e){}
+  render(IDX);
+  try{ fetch('/newsletter/issues.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(j){ if(j&&j.issues&&j.issues.length>=IDX.issues.length){ render(j); } }).catch(function(){}); }catch(e){}
 })();
 </script>
 <script>

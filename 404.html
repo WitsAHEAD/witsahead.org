@@ -1,8 +1,17 @@
 <!doctype html>
+<!--
+  Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg.
+  Canonical home: https://witsahead.org/  Copies of this page hosted elsewhere are not authorised.
+  Security contact: https://witsahead.org/.well-known/security.txt
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-VB30zxtAdzqrXf4f7cqgs9pY7sagV4gsTWqlv42PaSE=' 'sha256-d8qEW/GCR6O9esFaCIIzEH6h6/noXNWgrAN/nAdbxgQ=' 'sha256-aJfrtfn6SAtQ42yArRJbeL36QVxE9+XJf2NEw00fKWk=' 'sha256-OQ7IqKB11HuwyIPwPIoYQvmwk5NuxIW7Yg245gJp8+w=' 'sha256-Cww/5VI0cok3BN4kO1SY9xhBpizUhC16k1Dnxqk3gJ4=' 'sha256-5QQ0sZ0z+sDyjaOLiT4gpUdM+BmZneaxl3IGYUGSKqA=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
+<script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://witsahead.org/">
 <meta name="theme-color" content="#003B5C">
@@ -21,7 +30,7 @@
 <meta name="twitter:description" content="AI, analytics and data for human capability in higher education. Daily briefing and a fortnightly newsletter from Wits.">
 <meta name="twitter:image" content="https://witsahead.org/assets/og.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ResearchOrganization", "@id": "https://witsahead.org/#org", "name": "Wits AHEAD Research Group", "alternateName": "Wits Research Group for Advancing Human Capabilities through Education, Analytics and Development", "url": "https://witsahead.org/", "logo": "https://witsahead.org/assets/og.png", "email": "Ask@WitsAHEAD.org", "parentOrganization": {"@type": "CollegeOrUniversity", "name": "University of the Witwatersrand, Johannesburg", "url": "https://www.wits.ac.za/", "department": {"@type": "Organization", "name": "Wits School of Education", "url": "https://www.wits.ac.za/education/"}}, "address": {"@type": "PostalAddress", "streetAddress": "Wits School of Education, Private Bag 3", "addressLocality": "Johannesburg", "postalCode": "2050", "addressCountry": "ZA"}, "founder": {"@type": "Person", "name": "Emmanuel Ojo", "honorificPrefix": "Professor", "jobTitle": "Director, Wits AHEAD Research Group", "email": "Director@WitsAHEAD.org", "sameAs": ["https://orcid.org/0000-0003-3809-5503"]}, "knowsAbout": ["Generative AI in higher education", "Learning analytics and student success", "STEM and teacher education", "Graduate employability and just transitions", "Data for education systems", "Responsible AI, ethics and policy"]}, {"@type": "WebSite", "@id": "https://witsahead.org/#website", "url": "https://witsahead.org/", "name": "Wits AHEAD Research Group", "publisher": {"@id": "https://witsahead.org/#org"}, "inLanguage": "en-ZA"}, {"@type": "Periodical", "name": "The AHEAD Fortnightly", "publisher": {"@id": "https://witsahead.org/#org"}, "url": "https://witsahead.org/#newsletter", "description": "A two-page newsletter every second Thursday on AI, data and human capability in higher education."}]}</script>
-<script data-goatcounter="https://witsahead.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://witsahead.goatcounter.com/count" async src="https://gc.zgo.at/count.v5.js" integrity="sha384-atnOLvQb9t+jTSipvd75X2yginT4PjVbqDdlJAmxMm+wYElFmeR6EmLP5bYeoRVQ" crossorigin="anonymous"></script>
 <meta name="description" content="Wits AHEAD, the Wits Research Group for Advancing Human Capabilities through Education, Analytics and Development, Wits School of Education, University of the Witwatersrand. Daily briefing on AI, data and human capability in higher education; The AHEAD Fortnightly newsletter.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <title>Wits AHEAD Research Group</title>
@@ -1011,9 +1020,10 @@
   function esc(x){return String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
   function fdate(it){ var d=new Date(it.date+'T00:00:00'); if(it.datePrecision==='year') return String(d.getFullYear()); if(it.datePrecision==='month') return MON[d.getMonth()]+' '+d.getFullYear(); return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); }
   function host(u){ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(e){ return ''; } }
+  document.addEventListener('error',function(e){ var im=e.target; if(!im||im.tagName!=='IMG'||!im.dataset.yt) return; if(!im.dataset.f){ im.dataset.f=1; im.src=im.src.replace('maxresdefault','hqdefault'); } else { im.remove(); } },true);
   function card(it){
     var v=it.type==='video';
-    var thumb=v?'<a class="thumb" href="'+esc(it.url)+'" target="_blank" rel="noopener"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/'+esc(it.videoId)+'/maxresdefault.jpg" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace(\'maxresdefault\',\'hqdefault\');}else{this.remove();}"><span class="play"><i></i></span>'+(it.duration?'<span class="dur">'+esc(it.duration)+'</span>':'')+'</a>':'';
+    var thumb=v?'<a class="thumb" href="'+esc(it.url)+'" target="_blank" rel="noopener"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/'+esc(it.videoId)+'/maxresdefault.jpg" data-yt="1"><span class="play"><i></i></span>'+(it.duration?'<span class="dur">'+esc(it.duration)+'</span>':'')+'</a>':'';
     return '<article class="ncard" data-t="'+esc(it.type)+'" data-p="'+it.pillar+'">'+thumb+'<div class="nb"><div class="meta"><span class="tb '+esc(it.type)+'">'+TYPE[it.type]+'</span><span>'+fdate(it)+'</span><span>·</span><span>'+esc(it.region)+'</span><span class="pl">'+(PILL[it.pillar]||'')+'</span></div><h3><a href="'+esc(it.url)+'" target="_blank" rel="noopener">'+esc(it.title)+'</a></h3><div class="src"><b>'+esc(it.source)+'</b> · '+esc(host(it.url))+'</div><span class="cred">'+esc(it.credibility)+'</span><p class="sum">'+esc(it.summary)+'</p><div class="why"><b>Why it matters for AHEAD</b>'+esc(it.why)+'</div><a class="go" href="'+esc(it.url)+'" target="_blank" rel="noopener">'+(v?'Watch on YouTube':'Read at source')+' ↗</a></div></article>';
   }
   function match(it){ if(nt!=='all'&&it.type!==nt) return false; if(np&&it.pillar!==np) return false; if(nq){ var h=(it.title+' '+it.source+' '+it.summary+' '+it.why+' '+it.region).toLowerCase(); if(h.indexOf(nq)<0) return false; } return true; }

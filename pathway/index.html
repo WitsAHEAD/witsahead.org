@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-apwr4pW9cXDTbaIONdhP5+ge0hGaRnma29Sy/AuRsZk=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-uTksE3IKkEo9xfoTRGx13iLPMCk1RbxqdizpGsHgipE=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-rRtmrLUVeXovCzvkWgEuTDuMx6M2rMuD1sgBE1RptIE=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-uTksE3IKkEo9xfoTRGx13iLPMCk1RbxqdizpGsHgipE=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -123,6 +123,32 @@
 .pwfoot a{color:var(--w-blue)}
 .pwst.reveal.pre,.pwfacts.reveal.pre,.pwready.reveal.pre{opacity:0;transform:translateY(22px)}
 .pwst.reveal,.pwfacts.reveal,.pwready.reveal{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.pwjourney{position:relative;overflow:hidden;border-radius:14px;aspect-ratio:1.86;min-height:300px;margin:0 0 40px;display:flex;align-items:center;color:#fff;isolation:isolate;background:#003B5C;box-shadow:0 12px 34px -18px rgba(0,26,41,.45)}
+.pwjbg{position:absolute;inset:-3%;z-index:-2;background-size:cover;background-position:center 48%;animation:pwjken 36s ease-in-out infinite alternate;will-change:transform}
+.pwjshade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,26,41,0) 0%,rgba(0,26,41,.04) 45%,rgba(0,26,41,.38) 100%),linear-gradient(0deg,rgba(0,26,41,.55),rgba(0,26,41,0) 38%)}
+.pwjtxt{position:relative;padding:34px 40px 30px 34px;text-align:right;max-width:660px;margin-left:auto;text-shadow:0 2px 14px rgba(0,26,41,.55)}
+.pwj1{font-size:clamp(24px,3.4vw,44px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.pwj2{font-size:clamp(20px,2.5vw,32px);font-weight:300;line-height:1;margin-top:8px}
+.pwj2 .big{font-size:clamp(40px,5.8vw,76px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:.95}
+.pwj3{margin-top:16px}
+.pwjbadge{display:inline-block;background:#fff;color:#003B5C;font-weight:700;font-size:clamp(17px,2.1vw,27px);padding:6px 18px;border-radius:4px;text-shadow:none;box-shadow:0 10px 26px -10px rgba(0,26,41,.7)}
+.pwjline{display:block;width:min(320px,70%);height:24px;margin:16px 0 0 auto;overflow:visible}
+.pwjline path{stroke-dasharray:420;stroke-dashoffset:420}
+.pwjline circle{opacity:0;transform-origin:318px 6px}
+.pwjcap{font-size:13.5px;color:#D6E2EC;margin:10px 0 0 auto;max-width:50ch;line-height:1.45}
+.pwjcred{position:absolute;left:12px;bottom:7px;font-size:10.5px;color:rgba(255,255,255,.5)}
+.pwjourney .w{display:inline-block;opacity:0;transform:translateY(24px)}
+.pwjourney .pwjbadge{opacity:0;transform:translateX(34px) scale(.92)}
+.pwjourney .pwjcap{opacity:0}
+.pwjourney:not(.pre) .w{animation:pwrise .85s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.3s + var(--i) * .3s)}
+.pwjourney:not(.pre) .pwjbadge{animation:pwjslide .7s cubic-bezier(.2,.7,.2,1) forwards 1.45s}
+.pwjourney:not(.pre) .pwjline path{animation:pwdraw 1.3s ease-out forwards 2s}
+.pwjourney:not(.pre) .pwjline circle{animation:pwpop .5s ease-out forwards 3.1s}
+.pwjourney:not(.pre) .pwjcap{animation:pwfade .9s ease-out forwards 2.7s}
+@keyframes pwjken{from{transform:scale(1) translate(0,0)}to{transform:scale(1.07) translate(-1.4%,1%)}}
+@keyframes pwjslide{to{opacity:1;transform:none}}
+@media (max-width:900px){.pwjourney{aspect-ratio:auto;min-height:360px;align-items:flex-end}.pwjbg{background-position:35% 30%;background-image:url(/assets/wits/research-journey-900.jpg)!important}.pwjshade{background:linear-gradient(0deg,rgba(0,26,41,.75) 0%,rgba(0,26,41,.25) 55%,rgba(0,26,41,0) 100%)}.pwjtxt{padding:22px 20px 26px;max-width:100%}.pwjcap{max-width:100%}}
+@media (prefers-reduced-motion:reduce){.pwjbg,.pwjourney .w,.pwjourney .pwjbadge,.pwjourney .pwjcap,.pwjline path,.pwjline circle{animation:none!important;opacity:1;transform:none;stroke-dashoffset:0}}
 @keyframes pwken{from{transform:scale(1) translate(0,0)}to{transform:scale(1.08) translate(-1.5%,1%)}}
 @media (max-width:900px){.pwstages{grid-template-columns:1fr}.pwfacts{grid-template-columns:repeat(2,1fr)}.pwready{grid-template-columns:1fr}.pwhero{min-height:0}.pwhero-in{padding:48px 0 40px}}
 /* AHEAD Pathway: welcome ribbon and animated welcome */
@@ -738,6 +764,13 @@
       <a class="pwst" href="https://pathway.witsahead.org/" rel="noopener"><div class="pwimg"><img src="/assets/wits/teacher-experiment.jpg" alt="Teaching at the Wits School of Education" loading="lazy"></div><div class="pwtx"><span class="pwn">02</span><h3>Feedback that comes back</h3><p>The Director's comments and reviewed files, on your record, with an email when they land.</p></div></a>
       <a class="pwst" href="https://pathway.witsahead.org/" rel="noopener"><div class="pwimg"><img src="/assets/wits/graduates.jpg" alt="Wits graduates on graduation day" loading="lazy"></div><div class="pwtx"><span class="pwn">03</span><h3>Milestones to graduation</h3><p>Registration to graduation on one pathway, with reminders before each date.</p></div></a>
     </div>
+    <div class="pwjourney" aria-label="Research is a journey. Travel it well.">
+      <div class="pwjbg" style="background-image:url(/assets/wits/research-journey.jpg)"></div><div class="pwjshade"></div>
+      <div class="pwjtxt"><div class="pwj1"><span class="w" style="--i:0">Research</span></div><div class="pwj2"><span class="w" style="--i:1">is a</span> <span class="w big" style="--i:2">journey</span></div><div class="pwj3"><span class="pwjbadge">Travel it well</span></div>
+      <svg class="pwjline" viewBox="0 0 320 24" preserveAspectRatio="none" aria-hidden="true"><path d="M2 18 C 60 18, 90 4, 160 12 S 260 22, 318 6" fill="none" stroke="#E0B061" stroke-width="2.5" stroke-linecap="round"/><circle cx="318" cy="6" r="3.5" fill="#E0B061"/></svg>
+      <p class="pwjcap">The postcard on the Director's office wall. Inside Pathway, every upload, every draft and every milestone is a step of the journey.</p></div>
+      <small class="pwjcred">Postcard image: MAXQDA</small>
+    </div>
     <div class="pwfacts">
       <div class="pwf"><b data-n="12">0</b><span>PhD milestones on the pathway</span></div>
       <div class="pwf"><b data-n="1">0</b><span>place for every document and every reply</span></div>
@@ -910,7 +943,7 @@
 
   /* Reveal on scroll, from a visible resting state */
   if(!reduce && 'IntersectionObserver' in window){
-    var targets=document.querySelectorAll('section.block .head, .pillar, .person, .fp, .wcard, .ledger .row, .pwst, .pwfacts, .pwready');
+    var targets=document.querySelectorAll('section.block .head, .pillar, .person, .fp, .wcard, .ledger .row, .pwst, .pwfacts, .pwready, .pwjourney');
     var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.remove('pre'); io.unobserve(en.target); } }); },{rootMargin:'0px 0px -6% 0px'});
     targets.forEach(function(t){ var r=t.getBoundingClientRect(); if(r.top>window.innerHeight){ t.classList.add('reveal','pre'); io.observe(t); } });
   }

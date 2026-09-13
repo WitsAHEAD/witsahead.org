@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-GVpYpV/k+4uVrXMymSQkfXWp7/V8XR0T/NX4WV4/2GQ=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-/zzXNM/ajI4KfPub4BZdz435mZkjw+fb6WfZmWMbyPA=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-tUsuA4I5hymvBRyGSbkXdo9aMrfK7Pv/FEIDEdibu4A=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-GVpYpV/k+4uVrXMymSQkfXWp7/V8XR0T/NX4WV4/2GQ=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-/zzXNM/ajI4KfPub4BZdz435mZkjw+fb6WfZmWMbyPA=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-uTksE3IKkEo9xfoTRGx13iLPMCk1RbxqdizpGsHgipE=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -158,7 +158,7 @@
   .tile:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,59,92,.14)}
   .tile .art{height:96px;background:linear-gradient(135deg,#003B5C,#508BAC);position:relative;overflow:hidden}
   .tile .art svg{position:absolute;right:14px;bottom:-6px;height:110px;width:auto;opacity:.5}
-  .tile .lab{background:#003B5C;color:#fff;font-weight:700;font-size:14px;padding:10px 14px}
+  .tile.wide{grid-column:1/-1;flex-direction:row;align-items:stretch}.tile.wide .art{width:140px;min-height:0;flex:0 0 140px}.tile.wide>div:last-child{display:flex;flex-direction:column;justify-content:center;flex:1}.tile.wide .lab{font-size:15px}@media (max-width:720px){.tile.wide{flex-direction:column}.tile.wide .art{width:auto;flex:0 0 auto}}.tile .lab{background:#003B5C;color:#fff;font-weight:700;font-size:14px;padding:10px 14px}
   .tile .d{padding:12px 14px 14px;font-size:13.5px;color:var(--text-2)}
   @media (max-width:880px){ .tiles .wrap{grid-template-columns:repeat(2,1fr)} }
 
@@ -611,7 +611,7 @@
   <div class="wrap">
     <button class="navtoggle" id="navToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Open menu"><span class="bars"><i></i><i></i><i></i></span>Menu</button>
     <ul id="mainMenu">
-      <li><a href="/news/" class="active">News</a></li><li><a href="/newsletter/">Fortnightly</a></li><li><a href="/latest/">Latest</a></li><li><a href="/about/">About</a></li><li><a href="/research/">Research</a></li><li><a href="/people/">People</a></li><li><a href="/supervision/">Supervision</a></li><li><a href="/footprint/">Footprint</a></li><li><a href="/join/">Join</a></li>
+      <li><a href="/news/" class="active">News</a></li><li><a href="/newsletter/">Fortnightly</a></li><li><a href="/latest/">Latest</a></li><li><a href="/about/">About</a></li><li><a href="/research/">Research</a></li><li><a href="/people/">People</a></li><li><a href="/supervision/">Supervision</a></li><li><a href="/footprint/">Footprint</a></li><li><a href="/join/">Join</a></li><li><a href="/pathway/">Pathway</a></li>
     </ul>
     <a class="apply" href="/join/#contact">Work with us</a>
   </div>
@@ -646,7 +646,7 @@
   <div class="wrap">
     <div class="cols">
       <div><h4>Wits AHEAD</h4><p style="color:#B8CBDA;max-width:44ch">Wits Research Group for Advancing Human Capabilities through Education, Analytics and Development. Wits School of Education, Faculty of Humanities, with a cross-faculty affiliation to Engineering and a cross-school affiliation to the Arts.</p></div>
-      <div><h4>Explore</h4><ul><li><a href="/research/">Research pillars</a></li><li><a href="/supervision/">Supervision board</a></li><li><a href="/footprint/#partners">Partners</a></li><li><a href="/">The AHEAD Fortnightly</a></li><li><a href="/privacy/">Privacy (POPIA)</a></li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="/research/">Research pillars</a></li><li><a href="/supervision/">Supervision board</a></li><li><a href="/pathway/">AHEAD Pathway (candidates)</a></li><li><a href="/footprint/#partners">Partners</a></li><li><a href="/">The AHEAD Fortnightly</a></li><li><a href="/privacy/">Privacy (POPIA)</a></li></ul></div>
       <div><h4>University</h4><ul><li><a href="https://www.wits.ac.za">Wits home</a></li><li><a href="https://www.wits.ac.za/humanities/">Faculty of Humanities</a></li><li><a href="https://www.wits.ac.za/education/">Wits School of Education</a></li><li><a href="https://www.wits.ac.za/research/">Research and Innovation</a></li></ul></div>
       <div><h4>Contact</h4><ul><li><a href="mailto:Director@WitsAHEAD.org">Director@WitsAHEAD.org</a></li><li><a href="mailto:Ask@WitsAHEAD.org">Ask@WitsAHEAD.org</a> (general enquiries)</li><li>Private Bag 3, Wits 2050</li><li>Johannesburg, South Africa</li></ul></div>
     </div>
@@ -956,7 +956,7 @@
   tick(); setInterval(tick,1000);
 })();
 </script>
-<script>(function(){var M={"newsletter": "/", "news": "/news/", "latest": "/latest/", "about": "/about/", "research": "/research/", "people": "/people/", "supervision": "/supervision/", "footprint": "/footprint/", "partners": "/footprint/", "open": "/join/", "contact": "/join/", "privacy": "/privacy/", "pillar-1": "/research/", "pillar-2": "/research/", "pillar-3": "/research/", "pillar-4": "/research/", "pillar-5": "/research/", "pillar-6": "/research/", "top": "/", "main": "/"};document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(!id||(window.__gid||document.getElementById.bind(document))(id))return;var p=M[id];if(p&&p!==location.pathname){e.preventDefault();location.href=p+'#'+id;}});if(location.hash){var t=(window.__gid||document.getElementById.bind(document))(location.hash.slice(1));if(t&&t.classList.contains('pillar')){var b=t.querySelector('button');if(b)setTimeout(function(){b.click();},400);}}})();</script>
+<script>(function(){var M={"newsletter": "/", "news": "/news/", "latest": "/latest/", "about": "/about/", "research": "/research/", "people": "/people/", "supervision": "/supervision/", "footprint": "/footprint/", "partners": "/footprint/", "open": "/join/", "contact": "/join/", "pathway": "/pathway/", "privacy": "/privacy/", "pillar-1": "/research/", "pillar-2": "/research/", "pillar-3": "/research/", "pillar-4": "/research/", "pillar-5": "/research/", "pillar-6": "/research/", "top": "/", "main": "/"};document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(!id||(window.__gid||document.getElementById.bind(document))(id))return;var p=M[id];if(p&&p!==location.pathname){e.preventDefault();location.href=p+'#'+id;}});if(location.hash){var t=(window.__gid||document.getElementById.bind(document))(location.hash.slice(1));if(t&&t.classList.contains('pillar')){var b=t.querySelector('button');if(b)setTimeout(function(){b.click();},400);}}})();</script>
 
 </body>
 </html>

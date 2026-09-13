@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-GVpYpV/k+4uVrXMymSQkfXWp7/V8XR0T/NX4WV4/2GQ=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-uTksE3IKkEo9xfoTRGx13iLPMCk1RbxqdizpGsHgipE=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-apwr4pW9cXDTbaIONdhP5+ge0hGaRnma29Sy/AuRsZk=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-uTksE3IKkEo9xfoTRGx13iLPMCk1RbxqdizpGsHgipE=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -75,6 +75,56 @@
   .skip{position:absolute;left:-999px;top:8px;background:var(--w-gold);color:#fff;padding:8px 14px;z-index:100}
   .skip:focus{left:8px}
 
+
+/* Pathway page v2: hero, stages, facts */
+.pw{padding-top:0}
+.pw .wrap{position:relative}
+.pwhero{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;color:#fff;margin-bottom:44px}
+.pwbg{position:absolute;inset:-6%;background-size:cover;background-position:center 40%;animation:pwken 28s ease-in-out infinite alternate;will-change:transform}
+.pwshade{position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,26,41,.92) 0%,rgba(0,47,74,.78) 45%,rgba(0,26,41,.35) 100%)}
+.pwhero-in{position:relative;z-index:1;padding:64px 0 54px}
+.pwk{color:#E0B061}
+.pwh{font-size:clamp(34px,5vw,58px);line-height:1.05;margin:10px 0 14px;color:#fff;font-weight:300;letter-spacing:-.01em}
+.pwh b{color:#E0B061;font-weight:700}
+.pwh span{display:inline-block;opacity:0;transform:translateY(18px);animation:pwrise .7s cubic-bezier(.2,.7,.2,1) forwards}
+.pwh span:nth-child(1){animation-delay:.15s}.pwh span:nth-child(2){animation-delay:.3s}.pwh span:nth-child(3){animation-delay:.45s}.pwh span:nth-child(4){animation-delay:.6s}.pwh span:nth-child(5){animation-delay:.8s}
+.pwlead{font-size:18px;max-width:56ch;color:#D6E2EC;margin:0 0 14px;opacity:0;animation:pwfade .8s ease 1s forwards}
+.pw .pwsvg{max-width:760px;margin:6px 0 10px}
+.pw .pwtrack{stroke:rgba(255,255,255,.22)}
+.pw .pwline{stroke:#E0B061;animation-delay:1.1s}
+.pw .pwstops circle{stroke:#fff;fill:#003B5C}
+.pw .pwstops .pwend{fill:#E0B061;stroke:#E0B061}
+.pw .pwstops circle:nth-child(1){animation-delay:1.2s}.pw .pwstops circle:nth-child(2){animation-delay:1.9s}.pw .pwstops circle:nth-child(3){animation-delay:2.6s}.pw .pwstops circle:nth-child(4){animation-delay:3.3s}.pw .pwstops circle:nth-child(5){animation-delay:4.1s}
+.pw .pwlabels text{fill:#fff}
+.pw .pwlabels text:nth-child(1){animation-delay:1.4s}.pw .pwlabels text:nth-child(2){animation-delay:2.1s}.pw .pwlabels text:nth-child(3){animation-delay:2.8s}.pw .pwlabels text:nth-child(4){animation-delay:3.5s}.pw .pwlabels text:nth-child(5){animation-delay:4.3s}
+.pwacts{opacity:0;animation:pwfade .8s ease 1.6s forwards}
+.pwhint{color:#B8CBDA;font-size:14px}
+.btn.gold.pwbtn{background:#B79A5E;color:#001A29;font-size:16px;padding:14px 24px}
+.btn.gold.pwbtn:hover{background:#E0B061}
+.pwstages{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:0 0 40px}
+.pwst{display:block;text-decoration:none;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 1px 2px rgba(0,26,41,.05);transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+.pwst:hover{transform:translateY(-6px);box-shadow:0 22px 40px -22px rgba(0,26,41,.45)}
+.pwimg{aspect-ratio:16/9;overflow:hidden;background:#E8EEF5}
+.pwimg img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.pwst:hover .pwimg img{transform:scale(1.08)}
+.pwtx{padding:18px 20px 22px}
+.pwn{display:inline-block;font-size:12px;letter-spacing:.2em;color:#85714D;font-weight:700;margin-bottom:6px}
+.pwtx h3{margin:0 0 6px;font-size:19px;color:var(--w-blue)}
+.pwtx p{margin:0;color:#4B5563;font-size:15px}
+.pwfacts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:0 0 40px;padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pwf b{display:block;font-size:40px;line-height:1;color:var(--w-blue)}
+.pwf span{display:block;font-size:13.5px;color:#4B5563;margin-top:6px}
+.pwready{display:grid;grid-template-columns:1fr 1.4fr;gap:28px;align-items:center;background:#FBF8F2;border:1px solid #EFE4CC;border-radius:12px;padding:26px 28px;margin:0 0 26px}
+.pwready h3{margin:4px 0 0;font-size:26px;color:var(--w-blue)}
+.pwready ol{margin:0;padding:0;list-style:none;counter-reset:pw;display:grid;gap:10px}
+.pwready li{counter-increment:pw;display:flex;align-items:center;gap:12px;font-size:15.5px}
+.pwready li::before{content:counter(pw);width:30px;height:30px;border-radius:50%;background:var(--w-blue);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;flex:0 0 30px}
+.pwfoot{font-size:13px;color:#6B7280;max-width:92ch;margin:0}
+.pwfoot a{color:var(--w-blue)}
+.pwst.reveal.pre,.pwfacts.reveal.pre,.pwready.reveal.pre{opacity:0;transform:translateY(22px)}
+.pwst.reveal,.pwfacts.reveal,.pwready.reveal{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+@keyframes pwken{from{transform:scale(1) translate(0,0)}to{transform:scale(1.08) translate(-1.5%,1%)}}
+@media (max-width:900px){.pwstages{grid-template-columns:1fr}.pwfacts{grid-template-columns:repeat(2,1fr)}.pwready{grid-template-columns:1fr}.pwhero{min-height:0}.pwhero-in{padding:48px 0 40px}}
 /* AHEAD Pathway: welcome ribbon and animated welcome */
 .pwrib{background:linear-gradient(90deg,#001A29,#003B5C 55%,#0B4468);color:#F1F5FB;border-bottom:2px solid #B79A5E;position:relative;overflow:hidden}
 .pwrib::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.10) 50%,transparent 70%);transform:translateX(-100%);animation:pwsheen 6s ease-in-out infinite}
@@ -839,11 +889,15 @@
 
   /* Reveal on scroll, from a visible resting state */
   if(!reduce && 'IntersectionObserver' in window){
-    var targets=document.querySelectorAll('section.block .head, .pillar, .person, .fp, .wcard, .ledger .row');
+    var targets=document.querySelectorAll('section.block .head, .pillar, .person, .fp, .wcard, .ledger .row, .pwst, .pwfacts, .pwready');
     var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.remove('pre'); io.unobserve(en.target); } }); },{rootMargin:'0px 0px -6% 0px'});
     targets.forEach(function(t){ var r=t.getBoundingClientRect(); if(r.top>window.innerHeight){ t.classList.add('reveal','pre'); io.observe(t); } });
   }
 
+
+  /* Pathway page counters */
+  (function(){ var els=document.querySelectorAll('.pwf b[data-n]'); if(!els.length) return; function run(b){ var n=parseInt(b.getAttribute('data-n'),10)||0, suf=b.getAttribute('data-suffix')||''; b.removeAttribute('data-n'); if(reduce||n===0){ b.textContent=n+suf; return; } var t0=null; (function step(ts){ if(!t0)t0=ts; var k=Math.min(1,(ts-t0)/1100); k=1-Math.pow(1-k,3); b.textContent=Math.round(n*k)+suf; if(k<1)requestAnimationFrame(step); })(performance.now()); }
+    if('IntersectionObserver' in window){ var o=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ run(e.target); o.unobserve(e.target); } }); },{threshold:.4}); els.forEach(function(b){ o.observe(b); }); } else { els.forEach(run); } })();
   /* Search */
   var so=document.getElementById('so'), soInput=document.getElementById('soInput'), soRes=document.getElementById('soRes');
   var INDEX=[];

@@ -1,0 +1,1 @@
+{"name": "Emmanuel Ojo \u00b7 Card", "short_name": "My card", "start_url": "/card/", "scope": "/card/", "display": "standalone", "background_color": "#001B29", "theme_color": "#003B5C", "icons": [{"src": "/card/icon-512.png", "sizes": "512x512", "type": "image/png"}]}

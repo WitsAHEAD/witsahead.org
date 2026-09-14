@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-AK6dfUbW/w1fFqjdl+p7etyf7vpbkPA7H/GHVTdKh+4=' 'sha256-uv4LNe/pvH4AxmjcrpDGqI3XNtoDd75C51U4roncqwY=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-WBFJdh7EoYMzBmkULt+LqZGHTkETn8ghyAlZMac/1fo=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-AK6dfUbW/w1fFqjdl+p7etyf7vpbkPA7H/GHVTdKh+4=' 'sha256-uv4LNe/pvH4AxmjcrpDGqI3XNtoDd75C51U4roncqwY=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-IUT//5j2jOVhnHTrxXBQiDgbgPOJmLCVcgMblKb0AQ0=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -247,6 +247,21 @@
 .pja-week li small{display:block;color:var(--muted);font-size:12.5px;margin:2px 0 4px}
 .pja-week li p{margin:0 0 4px;font-size:14px;color:#3A4A5A}.pja-why{color:#5B4B2E;font-size:13.5px}
 @media (max-width:900px){.pjfeed{grid-template-columns:1fr}.pja-week{grid-template-columns:1fr}}
+.psgrid line{stroke:rgba(255,255,255,.12);stroke-width:1}
+.psarea{fill:url(#psarea);opacity:0;animation:pwfade 1.4s ease .8s forwards}
+.psline{fill:none;stroke:#E0B061;stroke-width:3;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;animation:pwdraw 2.2s cubic-bezier(.2,.7,.2,1) .3s forwards}
+.psdots circle{fill:#fff;stroke:#003B5C;stroke-width:2;opacity:0;animation:pwfade .4s forwards}
+.psdots circle:nth-child(1){animation-delay:.5s}.psdots circle:nth-child(2){animation-delay:.8s}.psdots circle:nth-child(3){animation-delay:1.1s}.psdots circle:nth-child(4){animation-delay:1.4s}.psdots circle:nth-child(5){animation-delay:1.7s}.psdots circle:nth-child(6){animation-delay:2s}.psdots circle:nth-child(7){animation-delay:2.3s}
+.psflag circle:first-child{fill:none;stroke:#E36B5C;stroke-width:2;animation:psping 2.4s ease-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.psflag circle:last-child{fill:#E36B5C}
+@keyframes psping{0%{transform:scale(.5);opacity:1}100%{transform:scale(2.2);opacity:0}}
+.psbars rect{fill:rgba(255,255,255,.35);transform-origin:bottom;animation:psgrow 1s cubic-bezier(.2,.7,.2,1) both;transform-box:fill-box}
+.psbars rect:nth-child(2){animation-delay:.2s;fill:rgba(224,176,97,.8)}.psbars rect:nth-child(3){animation-delay:.4s}.psbars rect:nth-child(4){animation-delay:.6s;fill:rgba(224,176,97,.8)}
+@keyframes psgrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.pscard rect{fill:rgba(255,255,255,.12);stroke:rgba(255,255,255,.35)}
+.pscard text{fill:#fff;font-size:11px;font-weight:700}.pscard .v{fill:#E0B061;font-weight:400}
+.psscan rect{fill:rgba(255,255,255,.5);animation:psscan 6s linear 2.6s infinite}
+@keyframes psscan{from{transform:translateX(0)}to{transform:translateX(300px)}}
 @keyframes pwken{from{transform:scale(1) translate(0,0)}to{transform:scale(1.08) translate(-1.5%,1%)}}
 @media (max-width:900px){.pwstages{grid-template-columns:1fr}.pwfacts{grid-template-columns:repeat(2,1fr)}.pwready{grid-template-columns:1fr}.pwhero{min-height:0}.pwhero-in{padding:48px 0 40px}}
 /* AHEAD Pathway: welcome ribbon and animated welcome */
@@ -1245,7 +1260,7 @@
   tick(); setInterval(tick,1000);
 })();
 </script>
-<script>(function(){var M={"newsletter": "/", "news": "/news/", "latest": "/latest/", "about": "/about/", "research": "/research/", "people": "/people/", "supervision": "/supervision/", "footprint": "/footprint/", "partners": "/footprint/", "open": "/join/", "contact": "/join/", "pathway": "/pathway/", "projects": "/projects/", "project-gamification": "/projects/gamification/", "privacy": "/privacy/", "pillar-1": "/research/", "pillar-2": "/research/", "pillar-3": "/research/", "pillar-4": "/research/", "pillar-5": "/research/", "pillar-6": "/research/", "top": "/", "main": "/"};document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(!id||(window.__gid||document.getElementById.bind(document))(id))return;var p=M[id];if(p&&p!==location.pathname){e.preventDefault();location.href=p+'#'+id;}});if(location.hash){var t=(window.__gid||document.getElementById.bind(document))(location.hash.slice(1));if(t&&t.classList.contains('pillar')){var b=t.querySelector('button');if(b)setTimeout(function(){b.click();},400);}}})();</script>
+<script>(function(){var M={"newsletter": "/", "news": "/news/", "latest": "/latest/", "about": "/about/", "research": "/research/", "people": "/people/", "supervision": "/supervision/", "footprint": "/footprint/", "partners": "/footprint/", "open": "/join/", "contact": "/join/", "pathway": "/pathway/", "projects": "/projects/", "project-gamification": "/projects/gamification/", "project-pass": "/projects/pass/", "privacy": "/privacy/", "pillar-1": "/research/", "pillar-2": "/research/", "pillar-3": "/research/", "pillar-4": "/research/", "pillar-5": "/research/", "pillar-6": "/research/", "top": "/", "main": "/"};document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(!id||(window.__gid||document.getElementById.bind(document))(id))return;var p=M[id];if(p&&p!==location.pathname){e.preventDefault();location.href=p+'#'+id;}});if(location.hash){var t=(window.__gid||document.getElementById.bind(document))(location.hash.slice(1));if(t&&t.classList.contains('pillar')){var b=t.querySelector('button');if(b)setTimeout(function(){b.click();},400);}}})();</script>
 
 </body>
 </html>

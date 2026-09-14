@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-AK6dfUbW/w1fFqjdl+p7etyf7vpbkPA7H/GHVTdKh+4=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-p0mtnjG8W1CLLpTaVTSF8jNgwQR0GMDLVKPhrfBZaiM=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-IUT//5j2jOVhnHTrxXBQiDgbgPOJmLCVcgMblKb0AQ0=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-Fy4YhtfQjiotEiE4/GNFZDZ4U4vQ04NYMxiLnE3jASo=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-p0mtnjG8W1CLLpTaVTSF8jNgwQR0GMDLVKPhrfBZaiM=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-IUT//5j2jOVhnHTrxXBQiDgbgPOJmLCVcgMblKb0AQ0=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -262,6 +262,14 @@
 .pscard text{fill:#fff;font-size:11px;font-weight:700}.pscard .v{fill:#E0B061;font-weight:400}
 .psscan rect{fill:rgba(255,255,255,.5);animation:psscan 6s linear 2.6s infinite}
 @keyframes psscan{from{transform:translateX(0)}to{transform:translateX(300px)}}
+.pjlatest{border:1px solid var(--line);border-radius:16px;padding:22px 24px;background:#FAFBFD;margin:0 0 26px}
+.pjlatest .pjctx-head{margin-bottom:12px}.pjlatest h3{font-size:20px}
+.pjlatest-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pjl{display:flex;flex-direction:column;gap:4px;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:inherit;opacity:0;transform:translateY(12px);animation:pwrise .5s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.1s + var(--i,0) * .1s);transition:box-shadow .2s}
+.pjl:hover{box-shadow:0 10px 24px -16px rgba(0,26,41,.4)}
+.pjl-p{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:#B79A5E;font-weight:700}
+.pjl b{color:var(--w-blue);font-size:14px;line-height:1.3}.pjl small{color:var(--muted);font-size:12px}
+@media (max-width:900px){.pjlatest-list{grid-template-columns:1fr}}
 @keyframes pwken{from{transform:scale(1) translate(0,0)}to{transform:scale(1.08) translate(-1.5%,1%)}}
 @media (max-width:900px){.pwstages{grid-template-columns:1fr}.pwfacts{grid-template-columns:repeat(2,1fr)}.pwready{grid-template-columns:1fr}.pwhero{min-height:0}.pwhero-in{padding:48px 0 40px}}
 /* AHEAD Pathway: welcome ribbon and animated welcome */
@@ -1044,18 +1052,24 @@
   }
 
 
-  /* Project context feed (rendered from the inline JSON; featured = latest batch, archive = the rest) */
-  (function(){ var el=document.getElementById('pjGamData'), feed=document.getElementById('pjfeed'); if(!el||!feed) return; var D; try{ D=JSON.parse(el.textContent.replace(/<!--PJGAM-DATA-(START|END)-->/g,'')); }catch(e){ return; }
-    function esc(x){ return String(x==null?'':x).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  /* Project context feeds (rendered from inline JSON per project; featured = latest batch, archive = the rest) and the index strip */
+  (function(){ function esc(x){ return String(x==null?'':x).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
     function fmt(d){ var x=new Date(d); return isNaN(x)?esc(d):x.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}); }
-    var items=(D.items||[]).slice().sort(function(a,b){ return (b.added||'').localeCompare(a.added||'') || (b.date||'').localeCompare(a.date||''); });
-    var latest=items.length?items[0].added:''; var feat=items.filter(function(i){ return i.added===latest; }).slice(0,3); var rest=items.filter(function(i){ return feat.indexOf(i)<0; });
-    var up=document.getElementById('pjctxUpdated'); if(up) up.textContent='Updated '+fmt(D.updated||latest)+' · '+items.length+' case'+(items.length===1?'':'s')+' so far';
-    function card(i,n){ return '<article class="pjc" style="--i:'+n+'"><div class="pjc-top"><span class="pjc-type">'+esc(i.type||'case')+'</span><span class="pjc-where">'+esc(i.region||'')+(i.institution?' · '+esc(i.institution):'')+'</span></div><h4><a href="'+esc(i.url)+'" target="_blank" rel="noopener">'+esc(i.title)+'</a></h4><div class="pjc-src">'+esc(i.source)+(i.date?' · '+fmt(i.date):'')+'</div><p>'+esc(i.summary)+'</p><div class="pjc-why"><b>Why it matters here</b>'+esc(i.connection)+'</div>'+(i.tags&&i.tags.length?'<div class="pjc-tags">'+i.tags.map(function(t){ return '<span>'+esc(t)+'</span>'; }).join('')+'</div>':'')+'</article>'; }
-    feed.innerHTML=feat.map(card).join('')||'<p class="muted">The first cases are on their way.</p>';
-    var arch=document.getElementById('pjarch'), cnt=document.getElementById('pjarchCount'); if(cnt) cnt.textContent=rest.length?rest.length+' earlier case'+(rest.length===1?'':'s'):'(the archive grows as cases are featured)';
-    if(arch){ var byWeek={}, order=[]; rest.forEach(function(i){ var k=i.added||''; if(!byWeek[k]){ byWeek[k]=[]; order.push(k); } byWeek[k].push(i); });
-      arch.innerHTML=order.map(function(k){ return '<div class="pja-week"><div class="pja-date">'+fmt(k)+'</div><ul>'+byWeek[k].map(function(i){ return '<li><a href="'+esc(i.url)+'" target="_blank" rel="noopener">'+esc(i.title)+'</a><small>'+esc(i.region||'')+(i.institution?' · '+esc(i.institution):'')+' · '+esc(i.source)+'</small><p>'+esc(i.summary)+'</p><p class="pja-why">'+esc(i.connection)+'</p></li>'; }).join('')+'</ul></div>'; }).join(''); }
+    function parse(el){ try{ return JSON.parse(el.textContent.replace(/<!--PJ[A-Z]+-DATA-(START|END)-->/g,'')); }catch(e){ return null; } }
+    var blocks=document.querySelectorAll('.pjctx[data-pjfeed]');
+    for(var b=0;b<blocks.length;b++){ (function(box){ var slug=box.getAttribute('data-pjfeed'), el=document.querySelector('script[data-pjfeed="'+slug+'"]'); if(!el) return; var D=parse(el); if(!D) return;
+      var feed=box.querySelector('.pjfeed'), arch=box.querySelector('.pjarch'), cnt=box.querySelector('.pjarch-count'), up=box.querySelector('.pjctx-updated');
+      var items=(D.items||[]).slice().sort(function(a,b){ return (b.added||'').localeCompare(a.added||'') || (b.date||'').localeCompare(a.date||''); });
+      var latest=items.length?items[0].added:''; var feat=items.filter(function(i){ return i.added===latest; }).slice(0,3); var rest=items.filter(function(i){ return feat.indexOf(i)<0; });
+      if(up) up.textContent='Updated '+fmt(D.updated||latest)+' · '+items.length+' case'+(items.length===1?'':'s')+' so far';
+      function card(i,n){ return '<article class="pjc" style="--i:'+n+'"><div class="pjc-top"><span class="pjc-type">'+esc(i.type||'case')+'</span><span class="pjc-where">'+esc(i.region||'')+(i.institution?' · '+esc(i.institution):'')+'</span></div><h4><a href="'+esc(i.url)+'" target="_blank" rel="noopener">'+esc(i.title)+'</a></h4><div class="pjc-src">'+esc(i.source)+(i.date?' · '+fmt(i.date):'')+'</div><p>'+esc(i.summary)+'</p><div class="pjc-why"><b>Why it matters here</b>'+esc(i.connection)+'</div>'+(i.tags&&i.tags.length?'<div class="pjc-tags">'+i.tags.map(function(t){ return '<span>'+esc(t)+'</span>'; }).join('')+'</div>':'')+'</article>'; }
+      if(feed) feed.innerHTML=feat.map(card).join('')||'<p class="muted">The first cases are on their way.</p>';
+      if(cnt) cnt.textContent=rest.length?rest.length+' earlier case'+(rest.length===1?'':'s'):'(the archive grows as cases are featured)';
+      if(arch){ var byWeek={}, order=[]; rest.forEach(function(i){ var k=i.added||''; if(!byWeek[k]){ byWeek[k]=[]; order.push(k); } byWeek[k].push(i); });
+        arch.innerHTML=order.map(function(k){ return '<div class="pja-week"><div class="pja-date">'+fmt(k)+'</div><ul>'+byWeek[k].map(function(i){ return '<li><a href="'+esc(i.url)+'" target="_blank" rel="noopener">'+esc(i.title)+'</a><small>'+esc(i.region||'')+(i.institution?' · '+esc(i.institution):'')+' · '+esc(i.source)+'</small><p>'+esc(i.summary)+'</p><p class="pja-why">'+esc(i.connection)+'</p></li>'; }).join('')+'</ul></div>'; }).join(''); }
+    })(blocks[b]); }
+    var lel=document.querySelector('script[data-pjlatest]'), lbox=document.querySelector('.pjlatest'); if(lel&&lbox){ var L=parse(lel); if(L){ var list=lbox.querySelector('.pjlatest-list'), lup=lbox.querySelector('.pjlatest-updated'); if(lup) lup.textContent='Updated '+fmt(L.updated);
+      if(list) list.innerHTML=(L.items||[]).map(function(i,n){ return '<a class="pjl" href="'+esc(i.url)+'" target="_blank" rel="noopener" style="--i:'+n+'"><span class="pjl-p">'+esc(i.project)+'</span><b>'+esc(i.title)+'</b><small>'+esc(i.region||'')+(i.institution?' · '+esc(i.institution):'')+' · added '+fmt(i.added)+'</small></a>'; }).join(''); } }
   })();
   /* Pathway page counters */
   (function(){ var els=document.querySelectorAll('.pwf b[data-n]'); if(!els.length) return; function run(b){ var n=parseInt(b.getAttribute('data-n'),10)||0, suf=b.getAttribute('data-suffix')||''; b.removeAttribute('data-n'); if(reduce||n===0){ b.textContent=n+suf; return; } var t0=null; (function step(ts){ if(!t0)t0=ts; var k=Math.min(1,(ts-t0)/1100); k=1-Math.pow(1-k,3); b.textContent=Math.round(n*k)+suf; if(k<1)requestAnimationFrame(step); })(performance.now()); }

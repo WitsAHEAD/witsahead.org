@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-12",
+ "updated": "2026-09-14",
  "editor": "Curated daily for Wits AHEAD. Every item is checked against its source before it is listed. Summaries are the group's own; follow the link for the original.",
  "items": [
   {
@@ -15,7 +15,9 @@
    "summary": "From September 2026 every student and staff member at Leicester has full Copilot access across Microsoft 365, paired with mandatory digital-skills modules completed in Blackboard before access opens. Manchester announced a similar whole-institution rollout in January.",
    "why": "Whole-institution AI provision changes the baseline for academic integrity, assessment design and equity of access. It is a live test case for Pillar 1 and a benchmark South African universities will be measured against.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Depuis septembre 2026, chaque étudiant et membre du personnel de Leicester dispose d'un accès complet à Copilot dans Microsoft 365, assorti de modules obligatoires de compétences numériques à suivre dans Blackboard avant l'ouverture de l'accès. Manchester a annoncé en janvier un déploiement similaire à l'échelle de l'établissement.",
+   "why_fr": "Une dotation en IA à l'échelle d'un établissement change la donne pour l'intégrité académique, la conception de l'évaluation et l'équité d'accès. C'est un cas d'étude vivant pour l'axe 1 et une référence à laquelle les universités sud-africaines seront comparées."
   },
   {
    "id": "2026-09-12-wdr2026",
@@ -29,7 +31,9 @@
    "credibility": "Intergovernmental flagship report",
    "summary": "The Bank's first dedicated assessment of AI for low- and middle-income countries, framed as adopt, adapt, advance. Middle-income countries made up half of ChatGPT's traffic within six months of launch, faster diffusion than any earlier general-purpose technology, yet the report sets out the electricity, connectivity and data conditions that must be met before AI improves public services.",
    "why": "The report is the policy frame funders will use for the next five years. AHEAD's Global South, capability-first stance is a direct response to its adopt-adapt-advance agenda.",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Première évaluation de la Banque consacrée à l'IA pour les pays à revenu faible et intermédiaire, articulée autour d'adopter, adapter, avancer. Les pays à revenu intermédiaire représentaient la moitié du trafic de ChatGPT six mois après son lancement, une diffusion plus rapide que toute technologie générique antérieure ; le rapport pose néanmoins les conditions d'électricité, de connectivité et de données à remplir avant que l'IA n'améliore les services publics.",
+   "why_fr": "Ce rapport est le cadre politique que les bailleurs utiliseront pendant cinq ans. La posture de AHEAD, ancrée dans les Suds et fondée sur les capabilités, répond directement à son programme adopter-adapter-avancer."
   },
   {
    "id": "2026-09-12-statssa-q2",
@@ -44,7 +48,9 @@
    "summary": "The official youth unemployment rate increased by 1.5 percentage points to 47.4% in Q2 2026. Unemployed youth rose by 264,000 to 5.0 million while employed youth fell by 40,000 to 5.6 million.",
    "why": "This is the single defensible figure the group uses for graduate pathways and just transitions. Pillar 4 asks how AI reshapes the route from qualification to livelihood for exactly this cohort.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Le taux officiel de chômage des jeunes a augmenté de 1,5 point pour atteindre 47,4 % au deuxième trimestre 2026. Le nombre de jeunes sans emploi a progressé de 264 000 pour atteindre 5,0 millions, tandis que celui des jeunes en emploi a reculé de 40 000 à 5,6 millions.",
+   "why_fr": "C'est le seul chiffre défendable que le groupe utilise pour les parcours des diplômés et les transitions justes. L'axe 4 demande comment l'IA remodèle le passage du diplôme au moyen de subsistance pour précisément cette cohorte."
   },
   {
    "id": "2026-09-12-berkeley-law",
@@ -58,7 +64,9 @@
    "credibility": "Institutional policy document",
    "summary": "Students may not use generative AI to conceptualise, outline, draft, revise, translate or edit graded work, nor in any exam, and may not upload course materials into AI systems. The trigger was a measurable spike in hallucinated citations and flawed analysis in submissions.",
    "why": "The opposite pole to Leicester. Together they bracket the design space for assessment and integrity policy that Pillar 1 studies, and they show why evidence, not instinct, should decide.",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Les étudiants ne peuvent pas utiliser l'IA générative pour concevoir, structurer, rédiger, réviser, traduire ou corriger un travail noté, ni lors d'un examen, et ne peuvent pas verser les supports de cours dans des systèmes d'IA. Le déclencheur : une hausse mesurable des citations inventées et des analyses erronées dans les travaux remis.",
+   "why_fr": "Le pôle opposé à Leicester. Ensemble, ils délimitent l'espace de conception des politiques d'évaluation et d'intégrité qu'étudie l'axe 1, et montrent pourquoi ce sont les données probantes, et non l'instinct, qui doivent trancher."
   },
   {
    "id": "2026-09-12-hepi-2026",
@@ -73,7 +81,9 @@
    "summary": "Use rose from 66% in 2024 to 92% in 2025 and 95% in 2026, but use to generate text fell from 64% to 56%. Institutional provision of AI tools rose to 38% of students, from 9% two years earlier. Concerns about fairness and skill erosion persist.",
    "why": "A three-year longitudinal series is exactly the evidence base Pillar 1 lacks in South Africa. It is the model for the national student survey the group should run.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "L'usage est passé de 66 % en 2024 à 92 % en 2025 et 95 % en 2026, mais l'usage pour générer du texte a reculé de 64 % à 56 %. La mise à disposition d'outils d'IA par les établissements concerne désormais 38 % des étudiants, contre 9 % deux ans plus tôt. Les inquiétudes sur l'équité et l'érosion des compétences persistent.",
+   "why_fr": "Une série longitudinale sur trois ans est exactement la base de données probantes qui manque à l'axe 1 en Afrique du Sud. C'est le modèle de l'enquête nationale auprès des étudiants que le groupe devrait mener."
   },
   {
    "id": "2026-09-12-oecd-deo",
@@ -88,7 +98,9 @@
    "summary": "The Outlook reviews generative AI used by students alone, by students and teachers together, and by teachers alone. Intelligent tutoring can scale personalised learning, including in low-infrastructure settings, but over-reliance on tools that give direct answers reduces engagement and yields performance gains without learning gains.",
    "why": "The performance-versus-learning distinction is the core measurement problem for Pillars 1 and 2, and it maps onto the capability approach: what students can actually do, not what their outputs look like.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Le rapport examine l'IA générative utilisée par les étudiants seuls, par les étudiants et les enseignants ensemble, et par les enseignants seuls. Le tutorat intelligent peut mettre à l'échelle l'apprentissage personnalisé, y compris dans des contextes peu équipés, mais la dépendance excessive à des outils qui donnent directement les réponses réduit l'engagement et produit des gains de performance sans gains d'apprentissage.",
+   "why_fr": "La distinction entre performance et apprentissage est le problème central de mesure des axes 1 et 2, et elle rejoint l'approche par les capabilités : ce que les étudiants savent réellement faire, et non l'apparence de leurs productions."
   },
   {
    "id": "2026-09-12-unesco-ichei",
@@ -103,7 +115,9 @@
    "summary": "The study maps digitalisation and AI adoption across sub-Saharan African universities and finds ambition running ahead of infrastructure, governance and staff capacity.",
    "why": "The clearest recent evidence of the gap AHEAD exists to fill: a Global South-anchored research entity that treats AI in higher education as its object and method.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "L'étude cartographie la numérisation et l'adoption de l'IA dans les universités d'Afrique subsaharienne et constate que l'ambition devance les infrastructures, la gouvernance et les capacités du personnel.",
+   "why_fr": "La preuve récente la plus claire de l'écart que AHEAD existe pour combler : une entité de recherche ancrée dans les Suds qui prend l'IA dans l'enseignement supérieur comme objet et comme méthode."
   },
   {
    "id": "2026-09-12-mdpi-la-sa",
@@ -118,7 +132,9 @@
    "summary": "Reviews the move from dashboards to deep-learning early-alert systems that combine behavioural, cognitive and affective indicators, with cases from UNISA (risk profiling and progression dashboards) and the University of Pretoria (analytics-enabled advising and gateway-course redesign). Adoption is held back by fragmented data systems, weak interoperability, low data literacy and ethical concerns.",
    "why": "Pillar 2 in one paper: the South African state of the art in predictive analytics for retention, and the barriers a research group can help remove.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Passe en revue le passage des tableaux de bord aux systèmes d'alerte précoce par apprentissage profond combinant indicateurs comportementaux, cognitifs et affectifs, avec les cas de l'UNISA (profilage des risques et tableaux de progression) et de l'Université de Pretoria (conseil appuyé par l'analytique et refonte des cours d'entrée). L'adoption est freinée par des systèmes de données fragmentés, une faible interopérabilité, une littératie des données limitée et des préoccupations éthiques.",
+   "why_fr": "L'axe 2 en un article : l'état de l'art sud-africain de l'analytique prédictive pour la persévérance, et les obstacles qu'un groupe de recherche peut aider à lever."
   },
   {
    "id": "2026-09-12-frontiers-reframing",
@@ -133,7 +149,9 @@
    "summary": "A critical scoping review of 31 studies (2019 to 2026) on AI and learning analytics implementation across Latin America, sub-Saharan Africa, South Asia and the Middle East, arguing for human-centred, context-responsive design over imported models.",
    "why": "The review's Global South frame and its human-centred thesis are AHEAD's own. It is a reference point for the group's positioning papers and a map of collaborators.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Une revue critique de portée de 31 études (2019 à 2026) sur la mise en œuvre de l'IA et de l'analytique de l'apprentissage en Amérique latine, en Afrique subsaharienne, en Asie du Sud et au Moyen-Orient, plaidant pour une conception centrée sur l'humain et adaptée au contexte plutôt que pour des modèles importés.",
+   "why_fr": "Le cadre des Suds de cette revue et sa thèse centrée sur l'humain sont ceux de AHEAD. C'est un point de référence pour les textes de positionnement du groupe et une carte de collaborateurs potentiels."
   },
   {
    "id": "2026-09-12-educause-work",
@@ -148,7 +166,9 @@
    "summary": "EDUCAUSE surveys how AI is changing academic and professional work inside universities: which tasks are being automated, where staff want support, and how institutions are governing use.",
    "why": "Pillar 5 is about evidence for institutional decision-making. This is the kind of instrument the group can adapt for South African universities.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "EDUCAUSE enquête sur la manière dont l'IA transforme le travail académique et professionnel dans les universités : quelles tâches sont automatisées, où le personnel souhaite un soutien, et comment les établissements encadrent les usages.",
+   "why_fr": "L'axe 5 porte sur les données probantes pour la décision institutionnelle. C'est le type d'instrument que le groupe peut adapter aux universités sud-africaines."
   },
   {
    "id": "2026-09-12-jobs-summit",
@@ -162,7 +182,9 @@
    "credibility": "National newspaper",
    "summary": "Business, technology and youth leaders called for urgent collaboration, digital infrastructure investment and AI-driven reskilling, and described the T-shaped graduate employers now seek: deep expertise plus AI literacy, data analytics and ethical judgement.",
    "why": "Employers are redefining employability in real time. Pillar 4 reframes that demand as capability for work and life, not only a skills list.",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Dirigeants d'entreprise, du numérique et de la jeunesse ont appelé à une collaboration urgente, à l'investissement dans les infrastructures numériques et à la requalification par l'IA, et ont décrit le diplômé en T que recherchent désormais les employeurs : une expertise approfondie, plus la littératie en IA, l'analytique des données et le jugement éthique.",
+   "why_fr": "Les employeurs redéfinissent l'employabilité en temps réel. L'axe 4 recadre cette demande comme une capabilité pour le travail et pour la vie, et non seulement comme une liste de compétences."
   },
   {
    "id": "2026-09-12-african-business",
@@ -177,7 +199,9 @@
    "summary": "African universities are exploring AI's potential while ambition outpaces infrastructure, governance and faculty capacity; the piece surveys institutional responses across the continent.",
    "why": "Context for the group's differentiation line: concentration on AI as research object and method is what most African universities still lack.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Les universités africaines explorent le potentiel de l'IA tandis que l'ambition devance les infrastructures, la gouvernance et les capacités du corps enseignant ; l'article passe en revue les réponses institutionnelles à travers le continent.",
+   "why_fr": "Contexte pour la ligne de différenciation du groupe : la concentration sur l'IA comme objet et méthode de recherche est ce qui manque encore à la plupart des universités africaines."
   },
   {
    "id": "2026-09-12-frontiers-still-emerging",
@@ -192,7 +216,9 @@
    "summary": "An empirical study of how students and academics are actually using generative AI, finding practice still unsettled and unevenly supported by institutions.",
    "why": "Useful comparator for the group's own bibliometric and survey work under Pillar 1.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Une étude empirique sur les usages réels de l'IA générative par les étudiants et les universitaires, qui constate des pratiques encore instables et inégalement soutenues par les établissements.",
+   "why_fr": "Un point de comparaison utile pour les travaux bibliométriques et d'enquête du groupe au titre de l'axe 1."
   },
   {
    "id": "2026-09-12-sa-dataset",
@@ -207,7 +233,9 @@
    "summary": "A de-identified student dataset released for learning-analytics research, one of very few open South African datasets of its kind.",
    "why": "Open, local data is the scarcest input for Pillar 2. This is a candidate training and benchmarking set for the group's early-warning work.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Un jeu de données étudiantes dépersonnalisé publié pour la recherche en analytique de l'apprentissage, l'un des très rares jeux de données ouverts de ce type en Afrique du Sud.",
+   "why_fr": "Des données ouvertes et locales sont l'intrant le plus rare de l'axe 2. C'est un candidat pour l'entraînement et l'étalonnage des travaux d'alerte précoce du groupe."
   },
   {
    "id": "2026-09-12-ai-safety-report",
@@ -222,7 +250,9 @@
    "summary": "The second edition of the independent international synthesis of evidence on general-purpose AI capabilities, risks and mitigations.",
    "why": "Pillar 6 draws its risk vocabulary from here. Essential background for responsible-AI policy in Global South higher education.",
    "datePrecision": "month",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "La deuxième édition de la synthèse internationale indépendante des données probantes sur les capacités, les risques et les mesures d'atténuation de l'IA à usage général.",
+   "why_fr": "L'axe 6 y puise son vocabulaire du risque. Une lecture de fond indispensable pour les politiques d'IA responsable dans l'enseignement supérieur des Suds."
   },
   {
    "id": "2026-09-12-v-ft-graduates",
@@ -238,7 +268,9 @@
    "credibility": "Financial Times",
    "summary": "Working It editor Isabel Berwick looks at how institutions worldwide are helping graduates into first jobs, and the tools and skills that now drive a successful search.",
    "why": "The graduate-transition question of Pillar 4, told from the employer and graduate side.",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Isabel Berwick, rédactrice de Working It, examine comment les établissements du monde entier aident les diplômés à décrocher un premier emploi, et les outils et compétences qui font désormais la différence dans la recherche.",
+   "why_fr": "La question de la transition des diplômés de l'axe 4, racontée du côté des employeurs et des diplômés."
   },
   {
    "id": "2026-09-12-v-tedx-bruckman",
@@ -254,7 +286,9 @@
    "credibility": "TEDx; Regents' Professor, Georgia Institute of Technology",
    "summary": "A computing professor on what teaching is for when AI can do the assignments, drawing on years in the classroom.",
    "why": "A clear statement of the pedagogical redesign problem at the heart of Pillar 1.",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Un professeur d'informatique sur la raison d'être de l'enseignement quand l'IA peut faire les devoirs, à partir d'années passées en classe.",
+   "why_fr": "Un énoncé clair du problème de refonte pédagogique au cœur de l'axe 1."
   },
   {
    "id": "2026-09-12-v-harvard-garber",
@@ -270,7 +304,9 @@
    "credibility": "Harvard University President, public lecture",
    "summary": "Alan Garber on why the real challenge is not what AI can do but what humans must learn to do better.",
    "why": "A capability argument from the top of the sector: the question is human development, not tool adoption.",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Alan Garber sur le vrai défi : non pas ce que l'IA peut faire, mais ce que les humains doivent apprendre à mieux faire.",
+   "why_fr": "Un argument de capabilité venu du sommet du secteur : la question est celle du développement humain, pas de l'adoption d'outils."
   },
   {
    "id": "2026-09-12-v-bloomberg-cabrera",
@@ -286,7 +322,9 @@
    "credibility": "Bloomberg; President, Georgia Institute of Technology",
    "summary": "Ángel Cabrera on the outlook for higher education amid economic uncertainty and how AI is changing how students learn.",
    "why": "Institutional strategy under AI, the decision-making layer Pillar 5 serves with evidence.",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Ángel Cabrera sur les perspectives de l'enseignement supérieur dans un climat économique incertain et sur la manière dont l'IA change la façon d'apprendre des étudiants.",
+   "why_fr": "La stratégie institutionnelle sous l'IA, la couche de décision que l'axe 5 sert avec des données probantes."
   },
   {
    "id": "2026-09-12-v-mwenda",
@@ -302,7 +340,9 @@
    "credibility": "Vice-Chancellor, USIU-Africa; Education Collaborative convening",
    "summary": "Recorded at the Collaborative's Kigali convening ahead of its Nairobi East Africa Hub meeting in October 2026: collaboration, hub progress and technology's role in African higher education.",
    "why": "African leadership on exactly the collaborative, cross-institution model AHEAD is built on.",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Enregistré lors de la rencontre du Collaborative à Kigali, avant la réunion de son pôle Afrique de l'Est à Nairobi en octobre 2026 : collaboration, avancement des pôles et rôle de la technologie dans l'enseignement supérieur africain.",
+   "why_fr": "Un leadership africain sur exactement le modèle collaboratif et inter-établissements sur lequel AHEAD est bâti."
   },
   {
    "id": "2026-09-12-v-newscentral-unilag",
@@ -318,7 +358,9 @@
    "credibility": "Pan-African news channel",
    "summary": "Education experts at UNILAG on how AI is shaping classrooms and academic work, and the call for guidance, regulation and responsible use.",
    "why": "From a partner institution on the group's footprint, and squarely on Pillar 6.",
-   "added": "2026-09-12"
+   "added": "2026-09-12",
+   "summary_fr": "Des experts en éducation de l'UNILAG sur la manière dont l'IA façonne les salles de classe et le travail académique, et l'appel à des orientations, une régulation et un usage responsable.",
+   "why_fr": "Depuis un établissement partenaire de l'empreinte du groupe, et en plein sur l'axe 6."
   },
   {
    "id": "reading-sen-1999",
@@ -332,7 +374,9 @@
    "credibility": "Foundational text, Nobel laureate",
    "summary": "The capability approach in its original statement: development as the expansion of the real freedoms people have reason to value.",
    "why": "The H in AHEAD. Start here.",
-   "datePrecision": "year"
+   "datePrecision": "year",
+   "summary_fr": "L'approche par les capabilités dans sa formulation d'origine : le développement comme expansion des libertés réelles que les personnes ont des raisons de valoriser.",
+   "why_fr": "Le H de AHEAD. Commencez ici."
   },
   {
    "id": "reading-walker-mclean-2013",
@@ -346,7 +390,9 @@
    "credibility": "Peer-reviewed monograph, South African research base",
    "summary": "The capability approach translated into higher education, built on South African case studies of professional education.",
    "why": "The bridge from Sen to universities, written from this country.",
-   "datePrecision": "year"
+   "datePrecision": "year",
+   "summary_fr": "L'approche par les capabilités transposée à l'enseignement supérieur, à partir d'études de cas sud-africaines sur la formation professionnelle.",
+   "why_fr": "Le pont entre Sen et les universités, écrit depuis ce pays."
   },
   {
    "id": "reading-unesco-genai-2023",
@@ -360,7 +406,9 @@
    "credibility": "UNESCO normative guidance",
    "summary": "The first global guidance on generative AI in education: human agency, inclusion, equity, age limits, data protection and teacher capacity.",
    "why": "The policy baseline for Pillar 6 and for any South African institutional policy.",
-   "datePrecision": "year"
+   "datePrecision": "year",
+   "summary_fr": "Les premières orientations mondiales sur l'IA générative en éducation : agentivité humaine, inclusion, équité, limites d'âge, protection des données et capacités des enseignants.",
+   "why_fr": "La référence politique pour l'axe 6 et pour toute politique institutionnelle sud-africaine."
   },
   {
    "id": "reading-dignazio-klein-2020",
@@ -374,7 +422,9 @@
    "credibility": "Peer-reviewed monograph, open access",
    "summary": "Seven principles for data science that examines power and works toward justice.",
    "why": "The data-justice grounding for analytics that reduce rather than reproduce inequality.",
-   "datePrecision": "year"
+   "datePrecision": "year",
+   "summary_fr": "Sept principes pour une science des données qui interroge le pouvoir et œuvre pour la justice.",
+   "why_fr": "L'ancrage en justice des données pour une analytique qui réduit les inégalités au lieu de les reproduire."
   },
   {
    "id": "reading-birhane-2021",
@@ -388,7 +438,9 @@
    "credibility": "Peer-reviewed, open access",
    "summary": "Why fairness cannot be fixed technically alone: a relational ethics for algorithmic systems, from an African scholar.",
    "why": "The decolonial-computing thread in the group's theoretical spine.",
-   "datePrecision": "year"
+   "datePrecision": "year",
+   "summary_fr": "Pourquoi l'équité ne peut pas se régler techniquement seule : une éthique relationnelle pour les systèmes algorithmiques, par une chercheuse africaine.",
+   "why_fr": "Le fil de l'informatique décoloniale dans la colonne vertébrale théorique du groupe."
   }
  ]
 }

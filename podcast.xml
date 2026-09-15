@@ -12,6 +12,7 @@
 <itunes:category text="Education"/>
 <itunes:explicit>false</itunes:explicit>
 <atom:link href="https://witsahead.org/podcast.xml" rel="self" type="application/rss+xml"/>
+<item><title>The AHEAD Daily, 15 September 2026</title><description>4 items. Lead: Education ministers adopt a joint statement to keep education a common good in the age of AI</description><pubDate>Tue, 15 Sep 2026 07:00:00 +0200</pubDate><guid isPermaLink="false">witsahead-daily-2026-09-15-en</guid><enclosure url="https://witsahead.org/audio/briefing-2026-09-15.en.m4a" length="1579825" type="audio/mp4"/><itunes:duration>241</itunes:duration><link>https://witsahead.org/news/</link></item>
 <item><title>The AHEAD Daily, 14 September 2026</title><description>4 items. Lead: University of Leicester gives Microsoft 365 Copilot to all 21,000 students and 4,000 staff</description><pubDate>Mon, 14 Sep 2026 07:00:00 +0200</pubDate><guid isPermaLink="false">witsahead-daily-2026-09-14-en</guid><enclosure url="https://witsahead.org/audio/briefing-2026-09-14.en.m4a" length="1091660" type="audio/mp4"/><itunes:duration>165</itunes:duration><link>https://witsahead.org/news/</link></item>
 </channel>
 </rss>

@@ -7,7 +7,7 @@ X-WR-CALNAME:Wits AHEAD
 X-WR-TIMEZONE:Africa/Johannesburg
 BEGIN:VEVENT
 UID:fortnightly-1@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20261001T070000
 DTEND;TZID=Africa/Johannesburg:20261001T071500
 SUMMARY:The AHEAD Fortnightly, Issue 1
@@ -16,7 +16,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-2@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20261015T070000
 DTEND;TZID=Africa/Johannesburg:20261015T071500
 SUMMARY:The AHEAD Fortnightly, Issue 2
@@ -25,7 +25,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-3@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20261029T070000
 DTEND;TZID=Africa/Johannesburg:20261029T071500
 SUMMARY:The AHEAD Fortnightly, Issue 3
@@ -34,7 +34,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-4@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20261112T070000
 DTEND;TZID=Africa/Johannesburg:20261112T071500
 SUMMARY:The AHEAD Fortnightly, Issue 4
@@ -43,7 +43,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-5@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20261126T070000
 DTEND;TZID=Africa/Johannesburg:20261126T071500
 SUMMARY:The AHEAD Fortnightly, Issue 5
@@ -52,7 +52,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-6@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20261210T070000
 DTEND;TZID=Africa/Johannesburg:20261210T071500
 SUMMARY:The AHEAD Fortnightly, Issue 6
@@ -61,7 +61,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-7@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20261224T070000
 DTEND;TZID=Africa/Johannesburg:20261224T071500
 SUMMARY:The AHEAD Fortnightly, Issue 7
@@ -70,7 +70,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-8@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270107T070000
 DTEND;TZID=Africa/Johannesburg:20270107T071500
 SUMMARY:The AHEAD Fortnightly, Issue 8
@@ -79,7 +79,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-9@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270121T070000
 DTEND;TZID=Africa/Johannesburg:20270121T071500
 SUMMARY:The AHEAD Fortnightly, Issue 9
@@ -88,7 +88,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-10@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270204T070000
 DTEND;TZID=Africa/Johannesburg:20270204T071500
 SUMMARY:The AHEAD Fortnightly, Issue 10
@@ -97,7 +97,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-11@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270218T070000
 DTEND;TZID=Africa/Johannesburg:20270218T071500
 SUMMARY:The AHEAD Fortnightly, Issue 11
@@ -106,7 +106,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-12@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270304T070000
 DTEND;TZID=Africa/Johannesburg:20270304T071500
 SUMMARY:The AHEAD Fortnightly, Issue 12
@@ -115,7 +115,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-13@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270318T070000
 DTEND;TZID=Africa/Johannesburg:20270318T071500
 SUMMARY:The AHEAD Fortnightly, Issue 13
@@ -124,7 +124,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-14@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270401T070000
 DTEND;TZID=Africa/Johannesburg:20270401T071500
 SUMMARY:The AHEAD Fortnightly, Issue 14
@@ -133,7 +133,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-15@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270415T070000
 DTEND;TZID=Africa/Johannesburg:20270415T071500
 SUMMARY:The AHEAD Fortnightly, Issue 15
@@ -142,7 +142,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-16@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270429T070000
 DTEND;TZID=Africa/Johannesburg:20270429T071500
 SUMMARY:The AHEAD Fortnightly, Issue 16
@@ -151,7 +151,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-17@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270513T070000
 DTEND;TZID=Africa/Johannesburg:20270513T071500
 SUMMARY:The AHEAD Fortnightly, Issue 17
@@ -160,7 +160,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-18@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270527T070000
 DTEND;TZID=Africa/Johannesburg:20270527T071500
 SUMMARY:The AHEAD Fortnightly, Issue 18
@@ -169,7 +169,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-19@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270610T070000
 DTEND;TZID=Africa/Johannesburg:20270610T071500
 SUMMARY:The AHEAD Fortnightly, Issue 19
@@ -178,7 +178,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-20@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270624T070000
 DTEND;TZID=Africa/Johannesburg:20270624T071500
 SUMMARY:The AHEAD Fortnightly, Issue 20
@@ -187,7 +187,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-21@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270708T070000
 DTEND;TZID=Africa/Johannesburg:20270708T071500
 SUMMARY:The AHEAD Fortnightly, Issue 21
@@ -196,7 +196,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-22@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270722T070000
 DTEND;TZID=Africa/Johannesburg:20270722T071500
 SUMMARY:The AHEAD Fortnightly, Issue 22
@@ -205,7 +205,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-23@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270805T070000
 DTEND;TZID=Africa/Johannesburg:20270805T071500
 SUMMARY:The AHEAD Fortnightly, Issue 23
@@ -214,7 +214,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-24@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270819T070000
 DTEND;TZID=Africa/Johannesburg:20270819T071500
 SUMMARY:The AHEAD Fortnightly, Issue 24
@@ -223,7 +223,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-25@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270902T070000
 DTEND;TZID=Africa/Johannesburg:20270902T071500
 SUMMARY:The AHEAD Fortnightly, Issue 25
@@ -232,7 +232,7 @@ URL:https://witsahead.org/newsletter/
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnightly-26@witsahead.org
-DTSTAMP:20260915T062130Z
+DTSTAMP:20260915T062541Z
 DTSTART;TZID=Africa/Johannesburg:20270916T070000
 DTEND;TZID=Africa/Johannesburg:20270916T071500
 SUMMARY:The AHEAD Fortnightly, Issue 26

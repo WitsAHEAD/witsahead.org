@@ -328,19 +328,21 @@
   .util .links{display:flex;gap:14px}
   .util .links a{color:var(--on-blue-2);text-decoration:none}
   .brandbar{background:#fff;border-bottom:1px solid #E5E7EB}
-  .brandbar .wrap{display:flex;align-items:center;justify-content:flex-start;height:96px;gap:22px}
+  .brandbar .wrap{display:flex;align-items:center;justify-content:flex-start;height:100px;gap:14px}
   .brandbar .uni{display:block;flex:none}
-  .brandbar .uni img{height:66px;width:auto;display:block}
-  .brandbar .unirule{width:1px;height:56px;background:#CCCCCC;flex:none}
-  .brandbar .search{margin-left:auto}
-  @media (max-width:1100px){ .brandbar .search{display:none} }
+  .brandbar .uni img{height:60px;width:auto;display:block}
+  .brandbar .unirule{width:1px;height:60px;background:#D5DAE0;flex:none}
+  .brandbar .search{margin-left:auto;flex:0 1 260px;width:auto;min-width:150px}
+.lockup{margin-right:8px}
+.brandbar .langs{flex:none}
+  @media (max-width:1280px){ .brandbar .search{display:none} }
   @media (max-width:760px){ .brandbar .wrap{height:auto;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;gap:12px} .brandbar .unirule{display:none} .brandbar .uni img{height:52px} }
-  .lockup{display:flex;align-items:center;gap:14px;text-decoration:none;color:#003B5C}
-  .lockup svg{height:56px;width:auto;flex:none}
-  .lockup .t{line-height:1.1}
+  .lockup{display:flex;align-items:center;gap:14px;text-decoration:none;color:#003B5C;flex:0 1 auto;min-width:0}
+  .lockup svg{height:60px;width:auto;flex:none}
+  .lockup .t{line-height:1.1;display:flex;flex-direction:column;justify-content:center;min-width:0;flex:none}
   .lockup .t .w{font-size:12px;letter-spacing:.32em;color:#85714D;font-weight:600}
   .lockup .t .a{font-size:26px;font-weight:800;letter-spacing:.01em;color:#003B5C;display:block}
-  .lockup .t .s{font-size:11.5px;color:#515050;display:block;margin-top:2px}
+  .lockup .t .s{font-size:11px;line-height:1.3;color:#515050;display:block;margin-top:3px;width:max-content;max-width:min(250px,38vw)}
   .search{display:flex;align-items:center;gap:8px;border:1px solid #CCCCCC;padding:0 10px;height:40px;width:min(320px,40vw);background:#fff;color:#343434}
   .search input{border:0;outline:0;font:inherit;font-size:14px;flex:1;background:transparent;color:#343434;min-width:0}
   .search kbd{font:600 11px var(--font);border:1px solid #CCCCCC;border-radius:3px;padding:1px 6px;color:#718096}

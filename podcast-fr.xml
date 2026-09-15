@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>The AHEAD Daily (français)</title>
+<link>https://witsahead.org/fr/news/</link>
+<language>fr</language>
+<description>L&#x27;édition parlée de deux minutes du briefing Wits AHEAD : IA, données et capabilité humaine dans l&#x27;enseignement supérieur, chaque matin. Wits School of Education, Université du Witwatersrand.</description>
+<itunes:author>Wits AHEAD Research Group</itunes:author>
+<itunes:owner><itunes:name>Wits AHEAD Research Group</itunes:name><itunes:email>Ask@WitsAHEAD.org</itunes:email></itunes:owner>
+<itunes:image href="https://witsahead.org/assets/podcast-cover.png"/>
+<itunes:category text="Education"/>
+<itunes:explicit>false</itunes:explicit>
+<atom:link href="https://witsahead.org/podcast-fr.xml" rel="self" type="application/rss+xml"/>
+<item><title>The AHEAD Daily, 14/9/2026</title><description>4 éléments. À la une : University of Leicester gives Microsoft 365 Copilot to all 21,000 students and 4,000 staff</description><pubDate>Mon, 14 Sep 2026 07:00:00 +0200</pubDate><guid isPermaLink="false">witsahead-daily-2026-09-14-fr</guid><enclosure url="https://witsahead.org/audio/briefing-2026-09-14.fr.m4a" length="992488" type="audio/mp4"/><itunes:duration>149</itunes:duration><link>https://witsahead.org/fr/news/</link></item>
+</channel>
+</rss>

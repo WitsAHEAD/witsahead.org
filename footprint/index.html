@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-Fy4YhtfQjiotEiE4/GNFZDZ4U4vQ04NYMxiLnE3jASo=' 'sha256-uv4LNe/pvH4AxmjcrpDGqI3XNtoDd75C51U4roncqwY=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-MlJUJxR6BaNF4zYH52YsUWsN5H3irVFPfc+Ntt29RyE=' 'sha256-06mt64cEUKram4yanEy42SyskQdlIx4aAxZcyd3CKr4=' 'sha256-3YU2XhrGitoWy9Cx3Jxvuaki7NzgJ8X55/QNMkVlVy4=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-Fy4YhtfQjiotEiE4/GNFZDZ4U4vQ04NYMxiLnE3jASo=' 'sha256-uv4LNe/pvH4AxmjcrpDGqI3XNtoDd75C51U4roncqwY=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-MlJUJxR6BaNF4zYH52YsUWsN5H3irVFPfc+Ntt29RyE=' 'sha256-06mt64cEUKram4yanEy42SyskQdlIx4aAxZcyd3CKr4=' 'sha256-3YU2XhrGitoWy9Cx3Jxvuaki7NzgJ8X55/QNMkVlVy4=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -822,6 +822,13 @@
 .nfopts{display:grid;gap:8px;margin:6px 0 14px}.nfopts label{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;font-size:14.5px}.nfopts input{width:18px;height:18px;accent-color:#003B5C}.nfopts span{font-weight:700;color:#003B5C}.nfopts small{margin-left:auto;color:#85714D;font-size:12px}
 .nfstate{font-size:13.5px;color:#2E7D5B;font-weight:600;min-height:1.2em;margin:0 0 6px}
 .fwhow .btn{margin-right:8px;margin-bottom:6px}
+
+/* Listen band (15 September 2026) */
+.listen{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:18px 0 6px;padding:14px 18px;background:#fff;border:1px solid var(--line);border-left:5px solid #85714D;border-radius:10px}
+.listen .lst{flex:1 1 260px;font-size:14px;line-height:1.5}.listen .lst b{color:#003B5C}.lsdur{color:#85714D;font-weight:700;margin-left:6px}.lsnote{color:#5b6b7a}.lsnote a{color:#003B5C;font-weight:700}
+.lsdot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#2E7D5B;margin-right:8px;box-shadow:0 0 0 0 rgba(46,125,91,.5);animation:lsp 2s ease-out infinite}@keyframes lsp{70%{box-shadow:0 0 0 8px rgba(46,125,91,0)}100%{box-shadow:0 0 0 0 rgba(46,125,91,0)}}
+.listen audio{flex:1 1 320px;max-width:100%;height:40px}
+@media (prefers-reduced-motion:reduce){.lsdot{animation:none}}
 </style>
 
 <link rel="manifest" href="/manifest.webmanifest">
@@ -832,6 +839,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="alternate" type="application/atom+xml" title="Wits AHEAD · Daily briefing" href="/feed.xml">
 <link rel="alternate" type="application/atom+xml" title="Wits AHEAD · Project context feeds" href="/projects/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="The AHEAD Daily (podcast)" href="/podcast.xml">
 
 <style>
   .pageband{background:#fff;border-bottom:1px solid var(--line);font-size:13px;color:var(--text-3);padding:10px 0}

@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-Fy4YhtfQjiotEiE4/GNFZDZ4U4vQ04NYMxiLnE3jASo=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-MlJUJxR6BaNF4zYH52YsUWsN5H3irVFPfc+Ntt29RyE=' 'sha256-06mt64cEUKram4yanEy42SyskQdlIx4aAxZcyd3CKr4=' 'sha256-3YU2XhrGitoWy9Cx3Jxvuaki7NzgJ8X55/QNMkVlVy4=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-piGk+47PAzsadS0EXmFx3oKTHH6XGnLVBhs1MzAc49g=' 'sha256-GhKRbc8lhu+Qlt7AFzHpIWwBjtXAF17xcjoerjgaT9M=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-Fy4YhtfQjiotEiE4/GNFZDZ4U4vQ04NYMxiLnE3jASo=' 'sha256-n4pAlpg4LR78tkQ3/ou8PhxCSNR8kClPTEbOBkhZBWg=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-MlJUJxR6BaNF4zYH52YsUWsN5H3irVFPfc+Ntt29RyE=' 'sha256-06mt64cEUKram4yanEy42SyskQdlIx4aAxZcyd3CKr4=' 'sha256-3YU2XhrGitoWy9Cx3Jxvuaki7NzgJ8X55/QNMkVlVy4=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -817,6 +817,11 @@
 .fwhow{font-size:13.5px;color:var(--text-3,#5b6b7a)}.fwhow em{font-style:normal;font-weight:700;color:#003B5C}.fwhow small{display:block;margin-top:8px;line-height:1.45}
 .fwfeeds{list-style:none;margin:0;padding:0}.fwfeeds li{padding:7px 0;border-top:1px solid #EEF2F6;font-size:14px}.fwfeeds li:first-child{border-top:0}.fwfeeds a{color:#003B5C;font-weight:700;text-decoration:none}.fwfeeds a:hover{text-decoration:underline}.fwfeeds small{color:#85714D;margin-left:6px}
 .fwnote{margin:26px 0 0;font-size:13.5px;color:var(--text-3,#5b6b7a);max-width:70ch}
+
+.fwnotif{grid-column:1/-1;background:linear-gradient(135deg,#F7F9FB,#fff)}
+.nfopts{display:grid;gap:8px;margin:6px 0 14px}.nfopts label{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;font-size:14.5px}.nfopts input{width:18px;height:18px;accent-color:#003B5C}.nfopts span{font-weight:700;color:#003B5C}.nfopts small{margin-left:auto;color:#85714D;font-size:12px}
+.nfstate{font-size:13.5px;color:#2E7D5B;font-weight:600;min-height:1.2em;margin:0 0 6px}
+.fwhow .btn{margin-right:8px;margin-bottom:6px}
 </style>
 
 <link rel="manifest" href="/manifest.webmanifest">
@@ -939,8 +944,43 @@
         <p>One address to save Professor Ojo's contact, or to scan in a meeting.</p>
         <p class="fwhow"><a class="btn blue" href="/card/">witsahead.org/card</a></p>
       </div>
+      <div class="fwcard fwnotif" id="notif">
+        <div class="fwn">7</div><h3>Notifications you choose</h3>
+        <p>Have your phone or computer tell you when something new is published. Only what you tick, nothing else; turn it off here at any time.</p>
+        <div class="nfopts">
+          <label><input type="checkbox" name="topic" value="briefing" checked> <span>The daily briefing</span> <small>one a day, 07:00 SAST</small></label>
+          <label><input type="checkbox" name="topic" value="projects"> <span>Project cases</span> <small>Mon, Wed, Fri</small></label>
+          <label><input type="checkbox" name="topic" value="fortnightly" checked> <span>The AHEAD Fortnightly</span> <small>every second Thursday</small></label>
+        </div>
+        <p class="fwhow"><button type="button" class="btn blue" id="nfOn">Turn on notifications</button> <button type="button" class="btn white" id="nfOff" hidden>Turn off</button></p>
+        <p class="nfstate" id="nfState" aria-live="polite"></p>
+        <p class="fwhow"><small id="nfIos">On iPhone and iPad, notifications work once the site is installed on the Home Screen (card 1); open it from there, then come back to this page.</small></p>
+      </div>
     </div>
-    <p class="fwnote">Coming next: notifications you choose (a new briefing, one project, the Fortnightly), a WhatsApp channel and a two-minute spoken edition of the briefing. Nothing is sent without your asking; nothing is tracked.</p>
+    <p class="fwnote">Coming next: a WhatsApp channel and a two-minute spoken edition of the briefing. Nothing is sent without your asking; nothing is tracked.</p>
+<script>
+(function(){var box=document.getElementById('notif');if(!box)return;var on=document.getElementById('nfOn'),off=document.getElementById('nfOff'),st=document.getElementById('nfState'),ios=document.getElementById('nfIos');
+var FR=document.documentElement.lang==='fr';var T={unsupported:FR?'Ce navigateur ne prend pas en charge les notifications.':'This browser does not support notifications.',denied:FR?'Les notifications sont bloquées pour ce site dans les réglages du navigateur.':'Notifications are blocked for this site in the browser settings.',on:FR?'Notifications activées pour : ':'Notifications on for: ',off:FR?'Notifications désactivées.':'Notifications off.',working:FR?'Un instant…':'One moment…',fail:FR?'Cela n\'a pas fonctionné ; réessayez dans un instant.':'That did not work; please try again in a moment.',pick:FR?'Cochez au moins un sujet.':'Tick at least one topic.',install:FR?'Sur iPhone, installez d\'abord le site sur l\'écran d\'accueil, ouvrez-le depuis l\'icône, puis revenez ici.':'On iPhone, install the site on your Home Screen first, open it from the icon, then come back here.'};
+var N={briefing:FR?'briefing quotidien':'daily briefing',projects:FR?'cas de projets':'project cases',fortnightly:'The AHEAD Fortnightly'};
+var isIOS=/iPhone|iPad|iPod/.test(navigator.userAgent),standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+if(!isIOS||standalone)ios.hidden=true;
+function topics(){return Array.prototype.map.call(box.querySelectorAll('input[name=topic]:checked'),function(i){return i.value;});}
+function b64(s){var p='='.repeat((4-s.length%4)%4),b=(s+p).replace(/-/g,'+').replace(/_/g,'/'),r=atob(b),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a;}
+function tell(prefs){navigator.serviceWorker.ready.then(function(reg){if(reg.active)reg.active.postMessage({type:'prefs',prefs:prefs});});}
+function show(sub,tp){if(sub){on.textContent=FR?'Mettre à jour':'Update';off.hidden=false;st.textContent=T.on+tp.map(function(t){return N[t]||t;}).join(', ')+'.';}else{on.textContent=FR?'Activer les notifications':'Turn on notifications';off.hidden=true;st.textContent='';}}
+if(!('serviceWorker' in navigator)||!('PushManager' in window)||!('Notification' in window)){st.textContent=isIOS&&!standalone?T.install:T.unsupported;on.disabled=true;return;}
+var saved={};try{saved=JSON.parse(localStorage.getItem('wa-notif')||'{}');}catch(e){}
+if(saved.topics){saved.topics.forEach(function(t){var i=box.querySelector('input[value="'+t+'"]');if(i)i.checked=true;});Array.prototype.forEach.call(box.querySelectorAll('input[name=topic]'),function(i){i.checked=saved.topics.indexOf(i.value)>-1;});}
+navigator.serviceWorker.ready.then(function(reg){return reg.pushManager.getSubscription();}).then(function(sub){show(sub,saved.topics||[]);}).catch(function(){});
+on.addEventListener('click',function(){var tp=topics();if(!tp.length){st.textContent=T.pick;return;}st.textContent=T.working;
+ Notification.requestPermission().then(function(perm){if(perm!=='granted'){st.textContent=T.denied;return;}
+  return fetch('https://notify.witsahead.org/vapid').then(function(r){return r.json();}).then(function(v){return navigator.serviceWorker.ready.then(function(reg){return reg.pushManager.getSubscription().then(function(s){return s||reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64(v.key)});}).then(function(sub){
+   var prefs={topics:tp,lang:FR?'fr':'en',key:v.key,subscribedAt:Date.now()};tell(prefs);try{localStorage.setItem('wa-notif',JSON.stringify({topics:tp}));}catch(e){}
+   return fetch('https://notify.witsahead.org/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({subscription:sub.toJSON(),topics:tp,lang:FR?'fr':'en'})}).then(function(r){if(!r.ok)throw new Error('subscribe');show(sub,tp);});});});});
+ }).catch(function(){st.textContent=T.fail;});});
+off.addEventListener('click',function(){st.textContent=T.working;navigator.serviceWorker.ready.then(function(reg){return reg.pushManager.getSubscription();}).then(function(sub){if(!sub)return;var ep=sub.endpoint;return sub.unsubscribe().then(function(){return fetch('https://notify.witsahead.org/unsubscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({endpoint:ep})});});}).then(function(){try{localStorage.removeItem('wa-notif');}catch(e){}tell({});show(null,[]);st.textContent=T.off;}).catch(function(){st.textContent=T.fail;});});
+})();
+</script>
   </div>
 </section>
 </main>

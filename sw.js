@@ -1,6 +1,6 @@
-/* witsahead.org offline layer, version 202609151456. Pages and data: network first, cached copy when offline.
+/* witsahead.org offline layer, version 202609152204. Pages and data: network first, cached copy when offline.
    Assets: cache first. Nothing is cached from other origins except the fonts. The visitor counter is never cached. */
-var V='wa-202609151456', PAGES=["/", "/news/", "/projects/", "/fr/", "/fr/news/", "/news.json", "/fr/news.json", "/offline/", "/assets/favicon.svg", "/assets/app-icon-192.png"];
+var V='wa-202609152204', PAGES=["/", "/news/", "/projects/", "/fr/", "/fr/news/", "/news.json", "/fr/news.json", "/offline/", "/assets/favicon.svg", "/assets/app-icon-192.png"];
 self.addEventListener('install',function(e){e.waitUntil(caches.open(V).then(function(c){return Promise.all(PAGES.map(function(u){return fetch(u,{cache:'no-store'}).then(function(r){if(r.ok)return c.put(u,r);}).catch(function(){});}));}).then(function(){return self.skipWaiting();}));});
 self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==V;}).map(function(k){return caches.delete(k);}));}).then(function(){return self.clients.claim();}));});
 self.addEventListener('fetch',function(e){var r=e.request;if(r.method!=='GET')return;var u=new URL(r.url);

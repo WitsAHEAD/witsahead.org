@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/feeds/feed.xsl"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>The AHEAD Daily (español)</title>
+<link>https://witsahead.org/es/news/</link>
+<language>es</language>
+<description>La edición hablada de dos minutos del boletín de Wits AHEAD: IA, datos y capacidad humana en la educación superior, cada mañana. Wits School of Education, Universidad del Witwatersrand.</description>
+<itunes:author>Wits AHEAD Research Group</itunes:author>
+<itunes:owner><itunes:name>Wits AHEAD Research Group</itunes:name><itunes:email>Ask@WitsAHEAD.org</itunes:email></itunes:owner>
+<itunes:image href="https://witsahead.org/assets/podcast-cover.png"/>
+<itunes:category text="Education"/>
+<itunes:explicit>false</itunes:explicit>
+<atom:link href="https://witsahead.org/podcast-es.xml" rel="self" type="application/rss+xml"/>
+<item><title>The AHEAD Daily, 2026-09-15</title><description>4 temas. Portada: Education ministers adopt a joint statement to keep education a common good in the age of AI</description><pubDate>Tue, 15 Sep 2026 07:00:00 +0200</pubDate><guid isPermaLink="false">witsahead-daily-2026-09-15-es</guid><enclosure url="https://witsahead.org/audio/briefing-2026-09-15.es.m4a" length="1375082" type="audio/mp4"/><itunes:duration>208</itunes:duration><link>https://witsahead.org/es/news/</link></item>
+</channel>
+</rss>

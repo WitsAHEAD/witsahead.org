@@ -393,8 +393,53 @@
   .tiles .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   .tile{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;color:var(--text);display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease}
   .tile:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,59,92,.14)}
-  .tile .art{height:96px;background:linear-gradient(135deg,#003B5C,#508BAC);position:relative;overflow:hidden}
-  .tile .art svg{position:absolute;right:14px;bottom:-6px;height:110px;width:auto;opacity:.5}
+  .tile .art{height:120px;background:linear-gradient(180deg,#FBFCFE,#EEF3F8);position:relative;overflow:hidden;border-bottom:1px solid #E5EBF2}
+  .tile .art svg.ta{position:absolute;inset:0;width:100%;height:100%;display:block}
+  /* Tile scenes: one short entrance, then a quiet loop; all stop under prefers-reduced-motion (global rule) */
+  @keyframes taRise{from{transform:translateY(34px);opacity:0}to{transform:none;opacity:1}}
+  @keyframes taGlow{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+  @keyframes taDraw{to{stroke-dashoffset:0}}
+  @keyframes taPop{from{transform:scale(0)}to{transform:scale(1)}}
+  @keyframes taGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  @keyframes taFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  @keyframes taRing{0%{transform:scale(.4);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+  @keyframes taSwing{0%,100%{transform:rotate(0)}20%{transform:rotate(-14deg)}40%{transform:rotate(12deg)}60%{transform:rotate(-8deg)}80%{transform:rotate(5deg)}}
+  @keyframes taSlideIn{from{transform:translateY(-26px);opacity:0}to{transform:none;opacity:1}}
+  @keyframes taWave{0%,100%{opacity:.25}50%{opacity:1}}
+  @keyframes taBlink{0%,100%{opacity:1}50%{opacity:.3}}
+  .ta .ta-sun{animation:taRise 1.6s cubic-bezier(.2,.7,.2,1) both}
+  .ta .ta-glow{transform-origin:252px 70px;animation:taGlow 4s ease-in-out 1.6s infinite}
+  .ta .ta-line{stroke-dasharray:120;stroke-dashoffset:120;animation:taDraw .7s ease-out both}
+  .ta .ta-line:nth-of-type(1){animation-delay:.5s}.ta .ta-line:nth-of-type(2){animation-delay:.75s}.ta .ta-line:nth-of-type(3){animation-delay:1s}.ta .ta-line:nth-of-type(4){animation-delay:1.25s}
+  .ta .ta-dot{animation:taBlink 3s ease-in-out 1.6s infinite}
+  .ta .ta-pil{transform-origin:50% 100px;transform-box:view-box;animation:taGrow .8s cubic-bezier(.2,.7,.2,1) both}
+  .ta .ta-pil:nth-child(1){animation-delay:.1s}.ta .ta-pil:nth-child(2){animation-delay:.25s}.ta .ta-pil:nth-child(3){animation-delay:.4s}.ta .ta-pil:nth-child(4){animation-delay:.55s}.ta .ta-pil:nth-child(5){animation-delay:.7s}.ta .ta-pil:nth-child(6){animation-delay:.85s}
+  .ta .ta-orb{transform-origin:154px 18px;transform-box:view-box;animation:taPop .6s cubic-bezier(.2,.7,.2,1) 1s both}
+  .ta .ta-orbring{transform-origin:154px 18px;transform-box:view-box;animation:taGlow 3.5s ease-in-out 1.6s infinite}
+  .ta .ta-tie{stroke-dasharray:200;stroke-dashoffset:200;animation:taDraw 1.2s ease-out 1.1s both}
+  .ta .ta-link{stroke-dasharray:90;stroke-dashoffset:90;animation:taDraw .6s ease-out both}
+  .ta .ta-link:nth-child(1){animation-delay:.3s}.ta .ta-link:nth-child(2){animation-delay:.5s}.ta .ta-link:nth-child(3){animation-delay:.7s}.ta .ta-link:nth-child(4){animation-delay:.9s}.ta .ta-link:nth-child(5){animation-delay:.6s}.ta .ta-link:nth-child(6){animation-delay:.9s}.ta .ta-link:nth-child(7){animation-delay:1.1s}
+  .ta .ta-node{transform-box:fill-box;transform-origin:center;animation:taPop .5s cubic-bezier(.2,.7,.2,1) both}
+  .ta .ta-node:nth-child(1){animation-delay:.1s}.ta .ta-node:nth-child(2){animation-delay:.35s}.ta .ta-node:nth-child(3){animation-delay:.55s}.ta .ta-node:nth-child(4){animation-delay:.75s}.ta .ta-node:nth-child(5){animation-delay:.95s}.ta .ta-node:nth-child(6){animation-delay:.7s}.ta .ta-node:nth-child(7){animation-delay:1s}.ta .ta-node:nth-child(8){animation-delay:1.2s}
+  .ta .ta-q{animation:taBlink 3s ease-in-out 1.6s infinite}
+  .ta .ta-road{stroke-dasharray:420;stroke-dashoffset:420;animation:taDraw 1.8s ease-out .2s both}
+  .ta .ta-roadon{stroke-dasharray:1 9;animation:taRoadMove 3s linear 2s infinite}
+  @keyframes taRoadMove{to{stroke-dashoffset:-40}}
+  .ta .ta-m{transform-box:fill-box;transform-origin:center;animation:taPop .5s cubic-bezier(.2,.7,.2,1) both}
+  .ta .ta-m:nth-child(1){animation-delay:.3s}.ta .ta-m:nth-child(2){animation-delay:.8s}.ta .ta-m:nth-child(3){animation-delay:1.3s}.ta .ta-m:nth-child(4){animation-delay:1.8s}
+  .ta .ta-cap{transform-box:fill-box;transform-origin:center;animation:taPop .6s cubic-bezier(.2,.7,.2,1) 2.1s both}
+  .ta .ta-page1,.ta .ta-page2{animation:taRise 1.2s cubic-bezier(.2,.7,.2,1) both}
+  .ta .ta-page2{animation-delay:.15s}
+  .ta .ta-pages{animation:taFloat 5s ease-in-out 1.4s infinite}
+  .ta .ta-sig{stroke-dasharray:80;stroke-dashoffset:80;animation:taDraw .9s ease-out 1.2s both}
+  .ta .ta-tick{stroke-dasharray:30;stroke-dashoffset:30;animation:taDraw .5s ease-out 1.9s both}
+  .ta .ta-toast{animation:taSlideIn .7s cubic-bezier(.2,.7,.2,1) 1.1s both}
+  .ta .ta-bell{transform-origin:28px 88px;transform-box:view-box;animation:taSwing 1.4s ease-in-out 1.3s both}
+  .ta .ta-ring{transform-box:fill-box;transform-origin:center;animation:taRing 2.6s ease-out 1.5s infinite}
+  .ta .ta-ring2{animation-delay:2.4s}
+  .ta .ta-wave{animation:taWave 2.6s ease-in-out infinite}
+  .ta .ta-wave:nth-child(2),.ta .ta-wave:nth-child(4){animation-delay:.4s}
+  .tile:hover .ta .ta-pil,.tile:hover .ta .ta-node,.tile:hover .ta .ta-m{animation-duration:.35s}
   .tile.wide{grid-column:1/-1;flex-direction:row;align-items:stretch}.tile.wide .art{width:140px;min-height:0;flex:0 0 140px}.tile.wide>div:last-child{display:flex;flex-direction:column;justify-content:center;flex:1}.tile.wide .lab{font-size:15px}@media (max-width:720px){.tile.wide{flex-direction:column}.tile.wide .art{width:auto;flex:0 0 auto}}.tile .lab{background:#003B5C;color:#fff;font-weight:700;font-size:14px;padding:10px 14px}
   .tile .d{padding:12px 14px 14px;font-size:13.5px;color:var(--text-2)}
   @media (max-width:880px){ .tiles .wrap{grid-template-columns:repeat(2,1fr)} }

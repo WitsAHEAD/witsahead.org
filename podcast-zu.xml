@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/feeds/feed.xsl"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>The AHEAD Daily (isiZulu)</title>
+<link>https://witsahead.org/zu/news/</link>
+<language>zu</language>
+<description>Uhlelo olukhulunywayo lwemizuzu emibili lwesifinyezo se-Wits AHEAD: i-AI, idatha nekhono lomuntu emfundweni ephakeme, njalo ekuseni. Wits School of Education, University of the Witwatersrand.</description>
+<itunes:author>Wits AHEAD Research Group</itunes:author>
+<itunes:owner><itunes:name>Wits AHEAD Research Group</itunes:name><itunes:email>Ask@WitsAHEAD.org</itunes:email></itunes:owner>
+<itunes:image href="https://witsahead.org/assets/podcast-cover.png"/>
+<itunes:category text="Education"/>
+<itunes:explicit>false</itunes:explicit>
+<atom:link href="https://witsahead.org/podcast-zu.xml" rel="self" type="application/rss+xml"/>
+</channel>
+</rss>

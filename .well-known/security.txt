@@ -1,6 +1,6 @@
 Contact: mailto:Director@WitsAHEAD.org
 Contact: https://witsahead.org/#contact
-Expires: 2027-09-18T00:00:00.000Z
+Expires: 2027-09-19T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://witsahead.org/.well-known/security.txt
 Policy: https://witsahead.org/#privacy

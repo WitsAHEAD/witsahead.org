@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-o/ZuCaHha77SB7si7huvIS+ishdM/EJla5F2CZ6QBjs=' 'sha256-E4znpF9c3Mq7bJUyLwgrNRbPq1yAqdwEsd0zhTW8Ins=' 'sha256-sHiK9yIxeYP1BYQpfCywEHaINFfMSy5iFcUGfN6w2j8=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-BOKDRErB7nF0Zy919l25rcmuaKq7mOiEaEI2xPlK/P8=' 'sha256-XVw9YFQIu2ZmAt0YniOhFyQ7YD+AEc9na1nmApgjgII=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-CO0FZtpjnXSf5iwtgq+6phxjlyPouZ1O5TY2LI4Yowg=' 'sha256-QYZTFRl5wgtteM8WYPrCf2QbieEp57Ap5HIPknnCSzg=' 'sha256-pFwtzFptNVFyQZFWBYubtAhNxQ6vuO6CB+J0sKThT6c=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-o/ZuCaHha77SB7si7huvIS+ishdM/EJla5F2CZ6QBjs=' 'sha256-/lOjUlb4S3uwthGo50SF7HpERfuYiQsMPd2N2tmR4jQ=' 'sha256-sHiK9yIxeYP1BYQpfCywEHaINFfMSy5iFcUGfN6w2j8=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-BOKDRErB7nF0Zy919l25rcmuaKq7mOiEaEI2xPlK/P8=' 'sha256-XVw9YFQIu2ZmAt0YniOhFyQ7YD+AEc9na1nmApgjgII=' 'sha256-UP7rVHBWSYWY//SP+7DYqNPn383//zYGxIX+eh1GkeY=' 'sha256-CO0FZtpjnXSf5iwtgq+6phxjlyPouZ1O5TY2LI4Yowg=' 'sha256-QYZTFRl5wgtteM8WYPrCf2QbieEp57Ap5HIPknnCSzg=' 'sha256-pFwtzFptNVFyQZFWBYubtAhNxQ6vuO6CB+J0sKThT6c=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -485,22 +485,16 @@
   .acro b{font-size:40px;font-weight:800;color:var(--w-blue);line-height:1;display:block}
   .acro span{display:block;font-weight:600;margin-top:8px}
   .acro small{display:block;color:var(--text-3);font-size:13px}
-/* About: the ascent (20 September 2026) */
-.ascent{position:relative;margin-bottom:34px}.ascent .acro{margin-bottom:0}
-.asc-band{position:relative;height:112px;margin-bottom:14px}
-.acro div{position:relative;transition:transform .35s ease,box-shadow .35s ease}
-.acro div:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,59,92,.12)}
-.asc-bars rect{fill:#003B5C;opacity:.9;transform-box:fill-box;transform-origin:bottom;transform:scaleY(1);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-.asc-bars rect:nth-child(2){fill:#85714D}.asc-bars rect:nth-child(odd){fill:#1E5A82}.asc-bars rect:nth-child(5){fill:#003B5C}
-.ascent.pre .asc-bars rect{transform:scaleY(0)}.ascent.go .asc-bars rect{transform:scaleY(1)}
+/* About: the ascent field (20 September 2026) */
+.ascent{position:relative;margin-bottom:34px;padding-top:96px}.ascent .acro{margin-bottom:0;position:relative;z-index:1}
+.asc-field{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.acro div{position:relative;background:rgba(255,255,255,.72);backdrop-filter:blur(1px);-webkit-backdrop-filter:blur(1px);transition:transform .35s ease,box-shadow .35s ease,background .35s ease}
+.acro div:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,59,92,.12);background:rgba(255,255,255,.92)}
 .ascent.pre .acro div{opacity:0;transform:translateY(26px)}
 .ascent.pre .acro b{opacity:0;transform:translateY(14px)}
 .ascent.go .acro div{opacity:1;transform:none;transition:opacity .7s ease calc(.2s + var(--i)*.16s),transform .8s cubic-bezier(.2,.7,.2,1) calc(.2s + var(--i)*.16s)}
 .ascent.go .acro b{opacity:1;transform:none;transition:opacity .6s ease calc(.45s + var(--i)*.16s),transform .6s cubic-bezier(.2,.7,.2,1) calc(.45s + var(--i)*.16s)}
-.asc-arrow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
-.asc-path{fill:none;stroke:#B79A5E;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
-.asc-head{fill:#B79A5E;opacity:0;transform-origin:center;transition:opacity .4s ease}.asc-head.on{opacity:1}
-.asc-spark{fill:#fff;stroke:#B79A5E;stroke-width:2;opacity:0;filter:drop-shadow(0 0 6px rgba(183,154,94,.9))}
+@media(max-width:800px){.ascent{padding-top:64px}}
 .two>div{position:relative}.two h3::after{content:'';display:block;width:46px;height:2px;background:var(--w-gold);margin-top:8px;transform-origin:left;transform:scaleX(1)}
 .two.pre>div{opacity:0;transform:translateY(22px)}.two.pre h3::after{transform:scaleX(0)}
 .two.go>div{opacity:1;transform:none;transition:opacity .7s ease calc(var(--i)*.22s),transform .8s cubic-bezier(.2,.7,.2,1) calc(var(--i)*.22s)}
@@ -512,7 +506,7 @@
 .stance.go::before{transform:scaleY(1);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
 .stance.go p{opacity:1;transform:none;transition:opacity .7s ease .2s,transform .7s ease .2s}.stance.go p+p{transition-delay:.45s}
 .stance.go strong{background-size:100% 42%;transition:background-size 1.1s cubic-bezier(.2,.7,.2,1) .8s}.stance.go p+p strong{transition-delay:1.5s}
-@media(prefers-reduced-motion:reduce){.acro div,.asc-bars rect,.acro b,.two>div,.two h3::after,.stance::before,.stance p,.stance strong{transition:none!important}}
+@media(prefers-reduced-motion:reduce){.acro div,.acro b,.two>div,.two h3::after,.stance::before,.stance p,.stance strong{transition:none!important}}
 
   .two{display:grid;grid-template-columns:1fr 1fr;gap:36px}
   .two h3{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--w-gold);font-weight:700;margin-bottom:8px}
@@ -1048,7 +1042,7 @@ footer .cols ul.fol a{display:inline-flex;align-items:center;gap:7px}footer .col
   <div class="wrap">
     <div class="head"><div class="over">About</div><h2>The name is <b>the argument.</b></h2><p>Every letter names a commitment. Together they describe a group that intends to move the field rather than follow it, and that lets the Global South claim a research frontier first.</p></div>
     <div class="ascent" id="ascent">
-    <div class="asc-band" aria-hidden="true"><svg class="asc-arrow"><g class="asc-bars"></g><path class="asc-path" d=""/><path class="asc-head" d=""/><circle class="asc-spark" r="4"/></svg></div>
+    <canvas class="asc-field" aria-hidden="true"></canvas>
     <div class="acro">
       <div style="--i:0;--h:22%"><b>A</b><span>Advancing</span><small>a forward posture</small></div>
       <div style="--i:1;--h:38%"><b>H</b><span>Human capabilities</span><small>real freedoms, not only productive value</small></div>
@@ -1068,35 +1062,34 @@ footer .cols ul.fol a{display:inline-flex;align-items:center;gap:7px}footer .col
   </div>
 <script>
 (function(){
-  /* About: the ascent (20 September 2026). The five letters rise as the bars of the Wits AHEAD mark, the golden arrow draws itself
-     across their tops, and a spark keeps travelling forward along it. Vision and Mission lift in, the stance's gold rule grows and its
-     two lead sentences are marked as a reader would. Everything rests in its final state without JavaScript or with reduced motion. */
+  /* About: the ascent field (20 September 2026). Behind and through the five letters of the name runs the same living graph as the
+     home page: a field of thin bars that rise from left to right and breathe, a gold line along their tops, and a spark that keeps
+     travelling forward and starting again. It never stops moving ahead. The letters and cards lift in as the field comes into view.
+     Reduced motion, or no JavaScript: a still frame and the finished page. */
   var asc=document.getElementById('ascent'); if(!asc) return;
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var acro=asc.querySelector('.acro'), svg=asc.querySelector('.asc-arrow'), path=svg.querySelector('.asc-path'), head=svg.querySelector('.asc-head'), spark=svg.querySelector('.asc-spark');
+  var cv=asc.querySelector('.asc-field'), ctx=cv.getContext('2d'), W,H,bars=[],t0=performance.now(),running=false,dpr=Math.min(2,window.devicePixelRatio||1);
   var two=document.querySelector('#about .two'), stance=document.querySelector('#about .stance');
-  var pts=[], len=0, drawn=false, t0=null;
-  var bars=svg.querySelector('.asc-bars'), BH=112, HS=[0.22,0.38,0.54,0.70,0.86];
-  function layout(){
-    var band=asc.querySelector('.asc-band'), r=band.getBoundingClientRect(); if(r.width<760){ band.style.display='none'; return; } band.style.display='';
-    svg.setAttribute('viewBox','0 0 '+r.width+' '+BH); svg.setAttribute('width',r.width); svg.setAttribute('height',BH);
-    pts=[]; var cards=acro.children, ns='http://www.w3.org/2000/svg'; while(bars.firstChild) bars.removeChild(bars.firstChild);
-    for(var i=0;i<cards.length;i++){ var c=cards[i].getBoundingClientRect(); var cx=c.left-r.left+c.width/2, bh=BH*HS[i]; var rc=document.createElementNS(ns,'rect'); rc.setAttribute('x',cx-8); rc.setAttribute('y',BH-bh); rc.setAttribute('width',16); rc.setAttribute('height',bh); rc.setAttribute('rx',4); rc.style.transitionDelay=(0.1+i*0.16)+'s'; bars.appendChild(rc); pts.push([cx, BH-bh-10]); }
-    var last=pts[pts.length-1], prev=pts[pts.length-2], dx=last[0]-prev[0], dy=last[1]-prev[1], L=Math.sqrt(dx*dx+dy*dy)||1, ux=dx/L, uy=dy/L;
-    var tip=[last[0]+ux*40, last[1]+uy*40];
-    var d='M'+pts[0][0]+','+pts[0][1]; for(var j=1;j<pts.length;j++) d+=' L'+pts[j][0]+','+pts[j][1]; d+=' L'+tip[0]+','+tip[1];
-    path.setAttribute('d',d); len=path.getTotalLength();
-    var px=-uy, py=ux, s=12;
-    head.setAttribute('d','M'+tip[0]+','+tip[1]+' L'+(tip[0]-ux*s*1.6+px*s)+','+(tip[1]-uy*s*1.6+py*s)+' L'+(tip[0]-ux*s*1.1)+','+(tip[1]-uy*s*1.1)+' L'+(tip[0]-ux*s*1.6-px*s)+','+(tip[1]-uy*s*1.6-py*s)+' Z');
-    path.style.strokeDasharray=len; path.style.strokeDashoffset=drawn?0:len;
+  function size(){ var r=asc.getBoundingClientRect(); W=cv.width=Math.floor(r.width*dpr); H=cv.height=Math.floor(r.height*dpr); cv.style.width=r.width+'px'; cv.style.height=r.height+'px'; bars=[]; var gap=12*dpr, w=5*dpr, n=Math.ceil(W/gap)+1; for(var i=0;i<n;i++){ bars.push({x:i*gap, base:0.12+0.62*Math.pow(i/n,1.35), ph:Math.random()*6.28, sp:0.35+Math.random()*0.5, w:w}); } }
+  function amp(b,i,t){ return reduce?0:(0.06*Math.sin(t*b.sp+b.ph)+0.05*Math.sin(t*0.8-i*0.11)); }
+  function draw(now){
+    if(!running) return; if(!reduce) requestAnimationFrame(draw);
+    var t=Math.max(0,(now-t0)/1000); ctx.clearRect(0,0,W,H);
+    for(var i=0;i<bars.length;i++){ var b=bars[i]; var hh=H*(b.base+amp(b,i,t)); var y=H-hh; var g=ctx.createLinearGradient(0,y,0,H); g.addColorStop(0,'rgba(127,166,192,0.30)'); g.addColorStop(1,'rgba(127,166,192,0.02)'); ctx.fillStyle=g; ctx.fillRect(b.x,y,b.w,hh); }
+    var pts=[]; for(var j=0;j<bars.length;j+=2){ var bb=bars[j]; pts.push([bb.x, H-H*(bb.base+amp(bb,j,t))-6*dpr]); }
+    ctx.strokeStyle='rgba(183,154,94,0.55)'; ctx.lineWidth=2*dpr; ctx.lineJoin='round'; ctx.beginPath(); for(var k=0;k<pts.length;k++){ if(k===0)ctx.moveTo(pts[k][0],pts[k][1]); else ctx.lineTo(pts[k][0],pts[k][1]); } ctx.stroke();
+    if(!reduce&&pts.length>1){ var u=(((t*0.09)%1)+1)%1, f=u*(pts.length-1), a=Math.max(0,Math.floor(f)), q=f-a, p0=pts[a], p1=pts[Math.min(a+1,pts.length-1)]; var px=p0[0]+(p1[0]-p0[0])*q, py=p0[1]+(p1[1]-p0[1])*q; var r=6*dpr; var rg=ctx.createRadialGradient(px,py,0,px,py,r*4); rg.addColorStop(0,'rgba(183,154,94,0.85)'); rg.addColorStop(1,'rgba(183,154,94,0)'); ctx.fillStyle=rg; ctx.beginPath(); ctx.arc(px,py,r*4,0,6.283); ctx.fill(); ctx.fillStyle='#E9D9A8'; ctx.beginPath(); ctx.arc(px,py,r*0.55,0,6.283); ctx.fill();
+      // the trail the spark leaves behind: the line already travelled, a little brighter
+      ctx.strokeStyle='rgba(183,154,94,0.9)'; ctx.lineWidth=2.6*dpr; ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for(var m=1;m<=a;m++) ctx.lineTo(pts[m][0],pts[m][1]); ctx.lineTo(px,py); ctx.stroke(); }
   }
-  function sparkLoop(ts){ if(!t0) t0=ts; var k=((ts-t0)%5200)/5200; var e=k<0.55? (1-Math.pow(1-k/0.55,3)) : 1; var p=path.getPointAtLength(Math.min(len-56,len*e)); spark.setAttribute('cx',p.x); spark.setAttribute('cy',p.y); spark.style.opacity= k<0.55? String(1-Math.pow(k/0.55,6)) : '0'; requestAnimationFrame(sparkLoop); }
-  function go(){ if(drawn) return; drawn=true; asc.classList.add('go'); path.style.transition='stroke-dashoffset 1.5s cubic-bezier(.2,.7,.2,1) 1s'; path.style.strokeDashoffset=0; setTimeout(function(){ head.classList.add('on'); if(!reduce && len) requestAnimationFrame(sparkLoop); },2300); }
-  layout(); window.addEventListener('resize',function(){ layout(); },{passive:true});
-  if(reduce || !('IntersectionObserver' in window)){ drawn=true; asc.classList.add('go'); path.style.strokeDashoffset=0; head.classList.add('on'); if(two) two.classList.add('go'); if(stance) stance.classList.add('go'); return; }
+  function start(){ if(running) return; running=true; size(); requestAnimationFrame(draw); }
+  function stop(){ running=false; }
+  window.addEventListener('resize',function(){ if(running){ size(); } },{passive:true});
+  if(reduce || !('IntersectionObserver' in window)){ asc.classList.add('go'); if(two) two.classList.add('go'); if(stance) stance.classList.add('go'); size(); running=true; draw(performance.now()); running=!reduce; return; }
   [asc,two,stance].forEach(function(el){ if(el) el.classList.add('pre'); });
-  var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(!en.isIntersecting) return; var el=en.target; io.unobserve(el); if(el===asc) go(); else el.classList.add('go'); }); },{threshold:0.25});
+  var io=new IntersectionObserver(function(es){ es.forEach(function(en){ var el=en.target; if(el===asc){ if(en.isIntersecting){ asc.classList.add('go'); start(); } else stop(); return; } if(en.isIntersecting){ el.classList.add('go'); io.unobserve(el); } }); },{threshold:0.15});
   [asc,two,stance].forEach(function(el){ if(el) io.observe(el); });
+  document.addEventListener('visibilitychange',function(){ if(document.hidden) stop(); else if(asc.classList.contains('go')) start(); });
 })();
 </script>
 </section>

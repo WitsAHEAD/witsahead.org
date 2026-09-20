@@ -485,22 +485,16 @@
   .acro b{font-size:40px;font-weight:800;color:var(--w-blue);line-height:1;display:block}
   .acro span{display:block;font-weight:600;margin-top:8px}
   .acro small{display:block;color:var(--text-3);font-size:13px}
-/* About: the ascent (20 September 2026) */
-.ascent{position:relative;margin-bottom:34px}.ascent .acro{margin-bottom:0}
-.asc-band{position:relative;height:112px;margin-bottom:14px}
-.acro div{position:relative;transition:transform .35s ease,box-shadow .35s ease}
-.acro div:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,59,92,.12)}
-.asc-bars rect{fill:#003B5C;opacity:.9;transform-box:fill-box;transform-origin:bottom;transform:scaleY(1);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-.asc-bars rect:nth-child(2){fill:#85714D}.asc-bars rect:nth-child(odd){fill:#1E5A82}.asc-bars rect:nth-child(5){fill:#003B5C}
-.ascent.pre .asc-bars rect{transform:scaleY(0)}.ascent.go .asc-bars rect{transform:scaleY(1)}
+/* About: the ascent field (20 September 2026) */
+.ascent{position:relative;margin-bottom:34px;padding-top:96px}.ascent .acro{margin-bottom:0;position:relative;z-index:1}
+.asc-field{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.acro div{position:relative;background:rgba(255,255,255,.72);backdrop-filter:blur(1px);-webkit-backdrop-filter:blur(1px);transition:transform .35s ease,box-shadow .35s ease,background .35s ease}
+.acro div:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,59,92,.12);background:rgba(255,255,255,.92)}
 .ascent.pre .acro div{opacity:0;transform:translateY(26px)}
 .ascent.pre .acro b{opacity:0;transform:translateY(14px)}
 .ascent.go .acro div{opacity:1;transform:none;transition:opacity .7s ease calc(.2s + var(--i)*.16s),transform .8s cubic-bezier(.2,.7,.2,1) calc(.2s + var(--i)*.16s)}
 .ascent.go .acro b{opacity:1;transform:none;transition:opacity .6s ease calc(.45s + var(--i)*.16s),transform .6s cubic-bezier(.2,.7,.2,1) calc(.45s + var(--i)*.16s)}
-.asc-arrow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
-.asc-path{fill:none;stroke:#B79A5E;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
-.asc-head{fill:#B79A5E;opacity:0;transform-origin:center;transition:opacity .4s ease}.asc-head.on{opacity:1}
-.asc-spark{fill:#fff;stroke:#B79A5E;stroke-width:2;opacity:0;filter:drop-shadow(0 0 6px rgba(183,154,94,.9))}
+@media(max-width:800px){.ascent{padding-top:64px}}
 .two>div{position:relative}.two h3::after{content:'';display:block;width:46px;height:2px;background:var(--w-gold);margin-top:8px;transform-origin:left;transform:scaleX(1)}
 .two.pre>div{opacity:0;transform:translateY(22px)}.two.pre h3::after{transform:scaleX(0)}
 .two.go>div{opacity:1;transform:none;transition:opacity .7s ease calc(var(--i)*.22s),transform .8s cubic-bezier(.2,.7,.2,1) calc(var(--i)*.22s)}
@@ -512,7 +506,7 @@
 .stance.go::before{transform:scaleY(1);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
 .stance.go p{opacity:1;transform:none;transition:opacity .7s ease .2s,transform .7s ease .2s}.stance.go p+p{transition-delay:.45s}
 .stance.go strong{background-size:100% 42%;transition:background-size 1.1s cubic-bezier(.2,.7,.2,1) .8s}.stance.go p+p strong{transition-delay:1.5s}
-@media(prefers-reduced-motion:reduce){.acro div,.asc-bars rect,.acro b,.two>div,.two h3::after,.stance::before,.stance p,.stance strong{transition:none!important}}
+@media(prefers-reduced-motion:reduce){.acro div,.acro b,.two>div,.two h3::after,.stance::before,.stance p,.stance strong{transition:none!important}}
 
   .two{display:grid;grid-template-columns:1fr 1fr;gap:36px}
   .two h3{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--w-gold);font-weight:700;margin-bottom:8px}

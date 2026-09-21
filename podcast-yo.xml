@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/feeds/feed.xsl"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>The AHEAD Daily (Yorùbá)</title>
+<link>https://witsahead.org/yo/news/</link>
+<language>yo</language>
+<description>Ẹ̀dà ìṣẹ́jú méjì tí a kà sókè ti ìròyìn Wits AHEAD: AI, dátà àti agbára ènìyàn ní ẹ̀kọ́ gíga, ní àárọ̀ ojoojúmọ́. Wits School of Education, University of the Witwatersrand.</description>
+<itunes:author>Wits AHEAD Research Group</itunes:author>
+<itunes:owner><itunes:name>Wits AHEAD Research Group</itunes:name><itunes:email>Ask@WitsAHEAD.org</itunes:email></itunes:owner>
+<itunes:image href="https://witsahead.org/assets/podcast-cover.png"/>
+<itunes:category text="Education"/>
+<itunes:explicit>false</itunes:explicit>
+<atom:link href="https://witsahead.org/podcast-yo.xml" rel="self" type="application/rss+xml"/>
+</channel>
+</rss>

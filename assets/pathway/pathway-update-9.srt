@@ -1,0 +1,39 @@
+1
+00:00:00,500 --> 00:00:15,729
+Welcome to Update 9 of AHEAD Pathway, the supervision platform of the Wits AHEAD Research Group. Three new things are waiting for you: your research notebook, meeting invitations, and a place for your ideas.
+
+2
+00:00:17,129 --> 00:00:35,199
+First, your research notebook. It keeps everything you do for your degree in one place: a daily log of your work, notes on your readings, ideas, methods, writing and meetings. The counts and the twelve-week view show your rhythm of work.
+
+3
+00:00:36,599 --> 00:00:52,009
+Choose the kind of entry and write freely. Add tags, and attach photos of handwritten pages, or any file. For a reading, keep the reference and the link, and rate how useful the source is to your study.
+
+4
+00:00:53,409 --> 00:01:08,179
+Your notebook is private. Share an entry with the Director only when you would like comments. And download the whole notebook, or any part of it, as a Word document or a web page, whenever you like.
+
+5
+00:01:09,579 --> 00:01:25,049
+Second, meeting invitations. On the Meetings page you can now invite the Director to a meeting, and answer the invitations you receive: accept, maybe, decline, or suggest a time that suits you better.
+
+6
+00:01:26,450 --> 00:01:39,620
+A month calendar shows every meeting. You are reminded shortly before each one, and each meeting has its own video and voice room on Pathway, with the written record filed for everyone afterwards.
+
+7
+00:01:41,020 --> 00:01:51,450
+The Director can also invite several of you together, for a seminar, a writing circle, or a group conversation, where everyone can contribute.
+
+8
+00:01:52,850 --> 00:02:03,150
+Third, the new Updates page. Every improvement to Pathway is now numbered, so you can see what has been built for you, and where to find it.
+
+9
+00:02:04,550 --> 00:02:19,450
+And you can shape what comes next. Suggest a new feature, an app or tool you already use, or an improvement to something that exists. Your idea goes straight to the Director, and you will get a reply.
+
+10
+00:02:20,850 --> 00:02:35,490
+All of this has one purpose: to make your masters or PhD as clear, as well supported, and as enjoyable as it can be. Open Pathway, try Update 9, and tell us what you would like next.

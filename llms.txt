@@ -25,6 +25,7 @@ The site is published in eight editions: English (/), French (/fr/), Spanish (/e
 ## Pages
 - [Wits AHEAD Research Group](https://witsahead.org/): Wits AHEAD, the Wits Research Group for Advancing Human Capabilities through Education, Analytics and Development, Wits School of Education, University of the Witwatersrand. AI, analytics and data for human capability in higher education.
 - [News and insights](https://witsahead.org/news/): Daily briefing on AI, data and human capability in higher education: news, research, video and readings, curated every morning by Wits AHEAD.
+- [Where the insight comes from](https://witsahead.org/news/map/): Where the evidence in the AHEAD Daily comes from: every story since 12 September placed on a world map by the country or region its evidence comes from, filtered by period and by research pillar.
 - [The AHEAD Fortnightly](https://witsahead.org/newsletter/): The AHEAD Fortnightly: a free two-page newsletter every second Thursday from Wits AHEAD, signed by the Director. Subscribe, read online or download the PDF.
 - [Latest from the group](https://witsahead.org/latest/): The latest supervision, research and website developments at Wits AHEAD, Wits School of Education.
 - [About Wits AHEAD](https://witsahead.org/about/): What AHEAD stands for: the mission, remit and complementary place of Wits AHEAD within the Wits School of Education, University of the Witwatersrand.

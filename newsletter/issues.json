@@ -1,6 +1,39 @@
 {
  "issues": [
   {
+   "issue": 1,
+   "date": "2026-10-01",
+   "label": "Issue 1",
+   "dateLabel": "1 October 2026",
+   "preview": false,
+   "items": [
+    "2026-09-30-ghana-tvet-ai-empowered",
+    "2026-09-30-instructure-edtech-ai-gap",
+    "2026-09-30-unesco-china-asean-rural-ai-stem",
+    "2026-09-30-the-summit-cape-town-ai",
+    "2026-09-29-ethiopia-ai-digital-transformation",
+    "2026-09-25-un-news-africa-own-ai-solutions",
+    "2026-09-25-mastercard-aheft-accra-talent"
+   ],
+   "html": "newsletter/2026-10-01/issue-1.html",
+   "pdf": "newsletter/2026-10-01/issue-1.pdf",
+   "lead": "Ghana commits to train 100,000 TVET facilitators in AI under new UNESCO and Microsoft partnership",
+   "html_fr": "newsletter/2026-10-01/issue-1-fr.html",
+   "pdf_fr": "newsletter/2026-10-01/issue-1-fr.pdf",
+   "html_es": "newsletter/2026-10-01/issue-1-es.html",
+   "pdf_es": "newsletter/2026-10-01/issue-1-es.pdf",
+   "html_pt": "newsletter/2026-10-01/issue-1-pt.html",
+   "pdf_pt": "newsletter/2026-10-01/issue-1-pt.pdf",
+   "html_zh": "newsletter/2026-10-01/issue-1-zh.html",
+   "pdf_zh": "newsletter/2026-10-01/issue-1-zh.pdf",
+   "html_zu": "newsletter/2026-10-01/issue-1-zu.html",
+   "pdf_zu": "newsletter/2026-10-01/issue-1-zu.pdf",
+   "html_yo": "newsletter/2026-10-01/issue-1-yo.html",
+   "pdf_yo": "newsletter/2026-10-01/issue-1-yo.pdf",
+   "html_pcm": "newsletter/2026-10-01/issue-1-pcm.html",
+   "pdf_pcm": "newsletter/2026-10-01/issue-1-pcm.pdf"
+  },
+  {
    "issue": 0,
    "date": "2026-09-12",
    "label": "Issue 0 (launch preview)",

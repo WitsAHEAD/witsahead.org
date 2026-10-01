@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-o/ZuCaHha77SB7si7huvIS+ishdM/EJla5F2CZ6QBjs=' 'sha256-0AA1e37QZN0Dy0goItxUk2Tu4RXZe9E5uZNsrmL3IZA=' 'sha256-RvFw9G6ivFGSXFSyXl7h5/7cWFw5niNUDGpgFO+964k=' 'sha256-JG3JK6+YToBZcYsweNISgjfRA9MZzo49meL4nZ9b9+8=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-UXRWj+aLvyhMHNIBJDmPmRY4L68PqlvUhKGQQe70FKk=' 'sha256-C8wOdBvH0KIdEzxJSgOMq7AylecoNBcihDK23nWN1oA=' 'sha256-FDt2b3tgks8ApQ88Zfb5nJhlzENxI66hHs6Gv7vvQhQ=' 'sha256-oqBMetCQR06+pnTTHoPIha3nZcRN5FP7/JwcDnG7o4U=' 'sha256-eelntDBjzymFGE9phyDOkyxwQOM2pTCBRy036O37X9Y=' 'sha256-AGaF43AA/ETPU2MapY4Di/xveaHmNug118udTfBym3k=' 'sha256-pFwtzFptNVFyQZFWBYubtAhNxQ6vuO6CB+J0sKThT6c=' 'sha256-REzl+9nA+UfIvi84r0wH0M1DjVABt9sL0vVFE2rGLlc=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-o/ZuCaHha77SB7si7huvIS+ishdM/EJla5F2CZ6QBjs=' 'sha256-0AA1e37QZN0Dy0goItxUk2Tu4RXZe9E5uZNsrmL3IZA=' 'sha256-RvFw9G6ivFGSXFSyXl7h5/7cWFw5niNUDGpgFO+964k=' 'sha256-JG3JK6+YToBZcYsweNISgjfRA9MZzo49meL4nZ9b9+8=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-UXRWj+aLvyhMHNIBJDmPmRY4L68PqlvUhKGQQe70FKk=' 'sha256-C8wOdBvH0KIdEzxJSgOMq7AylecoNBcihDK23nWN1oA=' 'sha256-ueiHVqsLBb2unFINc4WpYnVav+8erTojbSTHHypnMkY=' 'sha256-oqBMetCQR06+pnTTHoPIha3nZcRN5FP7/JwcDnG7o4U=' 'sha256-eelntDBjzymFGE9phyDOkyxwQOM2pTCBRy036O37X9Y=' 'sha256-AGaF43AA/ETPU2MapY4Di/xveaHmNug118udTfBym3k=' 'sha256-pFwtzFptNVFyQZFWBYubtAhNxQ6vuO6CB+J0sKThT6c=' 'sha256-REzl+9nA+UfIvi84r0wH0M1DjVABt9sL0vVFE2rGLlc=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -749,6 +749,9 @@
   .ncard .why b{color:var(--w-gold);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:2px}
   .ncard .go{margin-top:auto;padding-top:4px;font-size:13px;font-weight:700;color:var(--w-blue);text-decoration:none}
   .ncard .go:hover{text-decoration:underline}
+  /* Deep link to one item (1 October 2026): the card is brought to the middle of the screen and marked briefly in gold */
+  .ncard.ndeep,.rd.ndeep{animation:ndeep 3.2s ease-out both;position:relative;z-index:1}
+  @keyframes ndeep{0%{box-shadow:0 0 0 0 rgba(183,154,94,0)}10%{box-shadow:0 0 0 4px #B79A5E,0 12px 30px rgba(0,59,92,.22)}65%{box-shadow:0 0 0 4px #B79A5E,0 12px 30px rgba(0,59,92,.22)}100%{box-shadow:0 0 0 0 rgba(183,154,94,0)}}
   .ncard .thumb{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#003B5C,#508BAC);display:block;overflow:hidden}
   .ncard .thumb img{width:100%;height:100%;object-fit:cover;display:block}
   @supports not (aspect-ratio:16/9){ .ncard .thumb{height:0;padding-bottom:56.25%} .ncard .thumb img{position:absolute;top:0;left:0} }
@@ -1438,7 +1441,7 @@ input.hasmic{padding-right:40px}
   function card(it){
     var v=it.type==='video';
     var thumb=v?'<a class="thumb" href="'+esc(it.url)+'" target="_blank" rel="noopener"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/'+esc(it.videoId)+'/maxresdefault.jpg" data-yt="1"><span class="play"><i></i></span>'+(it.duration?'<span class="dur">'+esc(it.duration)+'</span>':'')+'</a>':'';
-    return '<article class="ncard" data-t="'+esc(it.type)+'" data-p="'+it.pillar+'">'+thumb+'<div class="nb"><div class="meta"><span class="tb '+esc(it.type)+'">'+TYPE[it.type]+'</span><span>'+fdate(it)+'</span><span>·</span><span>'+esc(it.region)+'</span><span class="pl">'+(PILL[it.pillar]||'')+'</span></div><h3><a href="'+esc(it.url)+'" target="_blank" rel="noopener">'+esc(it.title)+'</a></h3><div class="src"><b>'+esc(it.source)+'</b> · '+esc(host(it.url))+'</div><span class="cred">'+esc(it.credibility)+'</span><p class="sum">'+esc(it.summary)+'</p><div class="why"><b>Why it matters for AHEAD</b>'+esc(it.why)+'</div><a class="go" href="'+esc(it.url)+'" target="_blank" rel="noopener">'+(v?'Watch on YouTube':'Read at source')+' ↗</a></div></article>';
+    return '<article class="ncard"'+(it.id?' id="'+esc(it.id)+'"':'')+' data-t="'+esc(it.type)+'" data-p="'+it.pillar+'">'+thumb+'<div class="nb"><div class="meta"><span class="tb '+esc(it.type)+'">'+TYPE[it.type]+'</span><span>'+fdate(it)+'</span><span>·</span><span>'+esc(it.region)+'</span><span class="pl">'+(PILL[it.pillar]||'')+'</span></div><h3><a href="'+esc(it.url)+'" target="_blank" rel="noopener">'+esc(it.title)+'</a></h3><div class="src"><b>'+esc(it.source)+'</b> · '+esc(host(it.url))+'</div><span class="cred">'+esc(it.credibility)+'</span><p class="sum">'+esc(it.summary)+'</p><div class="why"><b>Why it matters for AHEAD</b>'+esc(it.why)+'</div><a class="go" href="'+esc(it.url)+'" target="_blank" rel="noopener">'+(v?'Watch on YouTube':'Read at source')+' ↗</a></div></article>';
   }
   function match(it){ if(nt!=='all'&&it.type!==nt) return false; if(np&&it.pillar!==np) return false; if(nq){ var h=(it.title+' '+it.source+' '+it.summary+' '+it.why+' '+it.region).toLowerCase(); if(h.indexOf(nq)<0) return false; } return true; }
   function render(){
@@ -1451,15 +1454,43 @@ input.hasmic{padding-right:40px}
     items.forEach(function(it){ if(!match(it)) return; var a=new Date((it.added||DATA.updated)+'T00:00:00'), d=new Date(it.date+'T00:00:00'); (a>=wk?g.This:d>=mo?g.Month:g.Arch).push(it); });
     ['This','Month','Arch'].forEach(function(k){ var el=document.getElementById('g'+k); el.innerHTML=g[k].length?g[k].map(card).join(''):'<div class="nempty" style="grid-column:1/-1">Nothing here for this filter.</div>'; document.getElementById('c'+k).textContent=g[k].length; document.getElementById('ng'+k).style.display=g[k].length?'':'none'; });
     var rd=DATA.items.filter(function(i){return i.type==='reading'&&(!np||i.pillar===np)&&(!nq||(i.title+' '+i.source+' '+i.summary).toLowerCase().indexOf(nq)>=0);});
-    document.getElementById('gRead').innerHTML=rd.map(function(r){return '<div class="rd"><b><a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+'</a></b><small>'+esc(r.source)+'</small><p>'+esc(r.summary)+'</p><div class="why">'+esc(r.why)+'</div></div>';}).join('');
+    document.getElementById('gRead').innerHTML=rd.map(function(r){return '<div class="rd"'+(r.id?' id="'+esc(r.id)+'"':'')+'><b><a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+'</a></b><small>'+esc(r.source)+'</small><p>'+esc(r.summary)+'</p><div class="why">'+esc(r.why)+'</div></div>';}).join('');
     document.getElementById('cRead').textContent=rd.length; document.getElementById('ngRead').style.display=(nt==='all'&&rd.length)?'':'none';
+    if(deepOn&&Date.now()-deepOn.t<3200){ var de=deepEl(deepOn.id); if(de){ de.style.animationDelay=-(Date.now()-deepOn.t)+'ms'; de.classList.add('ndeep'); } }
+    if(deepWant) setTimeout(deep,0);
   }
+  /* Item deep links (1 October 2026): /news/#<item id> clears any filter that hides the item, opens the archive if it sits there,
+     brings the card to the middle of the screen once the list has rendered, and marks it briefly. Works in every edition (no new text). */
+  var deepWant=null, deepOn=null, deepUser=false;
+  function deepEl(id){ var e=(window.__gid||document.getElementById.bind(document))(id); return e&&e.isConnected?e:null; }
+  /* a card that fits is centred; a taller one (small phones) starts just below the sticky menu, so its heading is never hidden */
+  function deepFits(e){ return e.getBoundingClientRect().height<=window.innerHeight-170; }
+  function deepGo(e,now){ var b=deepFits(e)?'center':'start'; if(!now){ e.scrollIntoView({behavior:'smooth',block:b}); return; } var h=document.documentElement,prev=h.style.scrollBehavior; h.style.scrollBehavior='auto'; e.scrollIntoView({block:b}); h.style.scrollBehavior=prev; }
+  function deepOff(e){ var r=e.getBoundingClientRect(); return deepFits(e)?Math.abs(r.top+r.height/2-window.innerHeight/2)>60:(r.top<60||r.top>200); }
+  function deep(){
+    var id=location.hash.slice(1); try{ id=decodeURIComponent(id); }catch(e){} if(!id||!DATA) return;
+    var it=null; DATA.items.forEach(function(i){ if(i.id===id) it=i; });
+    if(!it){ deepWant=null; if(!deepEl(id)) deepWant=id; return; }   /* not in this copy: a fresher news.json may carry it */
+    deepWant=null;
+    if(!match(it)){ nt='all'; np=0; nq=''; document.querySelectorAll('button[data-nt]').forEach(function(x){ x.setAttribute('aria-pressed',x.getAttribute('data-nt')==='all'?'true':'false'); }); document.getElementById('newsPillar').value='0'; document.getElementById('newsQ').value=''; render(); }
+    var el=deepEl(id); if(!el) return;
+    var ga=document.getElementById('ngArch'); if(ga.contains(el)&&ga.classList.contains('collapsed')) document.getElementById('archToggle').click();
+    deepOn={id:id,t:Date.now()}; deepUser=false;
+    el.classList.remove('ndeep'); el.style.animationDelay=''; void el.offsetWidth; el.classList.add('ndeep');
+    var y0=window.scrollY; deepGo(el);
+    /* thumbnails above the card can still be loading: settle on the card again unless the reader has started scrolling;
+       if the smooth scroll never moved the page (some in-app browsers), go there directly */
+    setTimeout(function(){ var e2=deepEl(id); if(!e2||deepUser) return; if(deepOff(e2)) deepGo(e2,Math.abs(window.scrollY-y0)<4); },1100);
+    setTimeout(function(){ var e3=deepEl(id); if(e3){ e3.classList.remove('ndeep'); e3.style.animationDelay=''; } deepOn=null; },3300);
+  }
+  ['wheel','touchstart','keydown'].forEach(function(ev){ window.addEventListener(ev,function(){ deepUser=true; },{passive:true}); });
   try{ DATA=JSON.parse(document.getElementById('newsData').textContent.replace(/<!--NEWS-DATA-(START|END)-->/g,'')); }catch(e){ DATA={updated:'2026-09-12',items:[]}; }
   render();
   document.querySelectorAll('button[data-nt]').forEach(function(b){ b.addEventListener('click',function(){ nt=b.getAttribute('data-nt'); document.querySelectorAll('button[data-nt]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');}); render(); }); });
   document.getElementById('newsPillar').addEventListener('change',function(e){ np=+e.target.value; render(); });
   document.getElementById('newsQ').addEventListener('input',function(e){ nq=e.target.value.trim().toLowerCase(); render(); });
   document.getElementById('archToggle').addEventListener('click',function(){ var g=document.getElementById('ngArch'); var c=g.classList.toggle('collapsed'); this.textContent=c?'Show archive':'Hide archive'; });
+  window.addEventListener('load',function(){ setTimeout(deep,150); }); window.addEventListener('hashchange',function(){ setTimeout(deep,30); });
   /* A fresher news.json published beside the page wins over the inline copy; checked again every 45 seconds while the page is visible, so the page stays alive (18 September 2026) */
   function pwNewsPulse(){ if(document.hidden) return; try{ fetch('/fr/news.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(j){ if(j&&j.items&&j.updated>=DATA.updated){ DATA=j; render(); } }).catch(function(){}); }catch(e){} }
   pwNewsPulse(); setInterval(pwNewsPulse,45000); document.addEventListener('visibilitychange',function(){ if(!document.hidden) pwNewsPulse(); });

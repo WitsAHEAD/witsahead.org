@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="/feeds/feed.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title>Wits AHEAD · Daily briefing</title>
-<subtitle>News, research, video and things to read on AI, data and human ability for higher education.</subtitle>
+<subtitle>News, research, video and things to read on AI, data and human capability for higher education.</subtitle>
 <link rel="self" href="https://witsahead.org/pcm/feed.xml"/>
 <link rel="alternate" type="text/html" href="https://witsahead.org/pcm/news/"/>
 <id>https://witsahead.org/pcm/news/</id>

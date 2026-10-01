@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-o/ZuCaHha77SB7si7huvIS+ishdM/EJla5F2CZ6QBjs=' 'sha256-0AA1e37QZN0Dy0goItxUk2Tu4RXZe9E5uZNsrmL3IZA=' 'sha256-RvFw9G6ivFGSXFSyXl7h5/7cWFw5niNUDGpgFO+964k=' 'sha256-JG3JK6+YToBZcYsweNISgjfRA9MZzo49meL4nZ9b9+8=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-UXRWj+aLvyhMHNIBJDmPmRY4L68PqlvUhKGQQe70FKk=' 'sha256-C8wOdBvH0KIdEzxJSgOMq7AylecoNBcihDK23nWN1oA=' 'sha256-pmxY7RV7fH2I8KOlJoUM0EWII7gpDlXAKaIgfsrmNlM=' 'sha256-oqBMetCQR06+pnTTHoPIha3nZcRN5FP7/JwcDnG7o4U=' 'sha256-eelntDBjzymFGE9phyDOkyxwQOM2pTCBRy036O37X9Y=' 'sha256-AGaF43AA/ETPU2MapY4Di/xveaHmNug118udTfBym3k=' 'sha256-pFwtzFptNVFyQZFWBYubtAhNxQ6vuO6CB+J0sKThT6c=' 'sha256-REzl+9nA+UfIvi84r0wH0M1DjVABt9sL0vVFE2rGLlc=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-o/ZuCaHha77SB7si7huvIS+ishdM/EJla5F2CZ6QBjs=' 'sha256-0AA1e37QZN0Dy0goItxUk2Tu4RXZe9E5uZNsrmL3IZA=' 'sha256-RvFw9G6ivFGSXFSyXl7h5/7cWFw5niNUDGpgFO+964k=' 'sha256-JG3JK6+YToBZcYsweNISgjfRA9MZzo49meL4nZ9b9+8=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-UXRWj+aLvyhMHNIBJDmPmRY4L68PqlvUhKGQQe70FKk=' 'sha256-C8wOdBvH0KIdEzxJSgOMq7AylecoNBcihDK23nWN1oA=' 'sha256-pmxY7RV7fH2I8KOlJoUM0EWII7gpDlXAKaIgfsrmNlM=' 'sha256-xWE6etsVFtUQUW5SdlUI1sr+8+/EqAmRo31dROBWAiA=' 'sha256-eelntDBjzymFGE9phyDOkyxwQOM2pTCBRy036O37X9Y=' 'sha256-AGaF43AA/ETPU2MapY4Di/xveaHmNug118udTfBym3k=' 'sha256-pFwtzFptNVFyQZFWBYubtAhNxQ6vuO6CB+J0sKThT6c=' 'sha256-REzl+9nA+UfIvi84r0wH0M1DjVABt9sL0vVFE2rGLlc=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -1528,14 +1528,15 @@ input.hasmic{padding-right:40px}
 </script>
 <script>
 (function(){
-  /* Two clocks in the footer (30 September 2026): Johannesburg, and the reader's own city, country and local time.
-     Where the location comes from: the browser's own time-zone setting, Intl.DateTimeFormat().resolvedOptions().timeZone,
-     which the device already knows. No IP address is looked up, nothing is sent to a location service, and no third party
-     is involved. The zone names the city; the IANA table below turns the zone into a country code and the browser names
-     the country in the reader's own language. A reader on a VPN sees their device's zone, which is the honest answer:
-     this is the clock their own computer keeps, not a guess about where they are sitting.
-     The same zone is counted once per device per day, as an event on the group's cookie-free counter, so the Director
-     can see which cities the site is read in. What the reader is shown is exactly what is counted, and nothing more. */
+  /* Two clocks in the footer: Johannesburg, the group's home, and the reader's own city, country and local time.
+     Where the reader's location comes from (1 October 2026, on the Director's instruction): the connection's IP address,
+     as read by Cloudflare at the group's own server (notify.witsahead.org/where), which answers with a city, a country and
+     a time zone and stores nothing. The IP address itself never reaches the page and no outside location service is used.
+     Until that answer arrives, or if it cannot be had, the clock uses the device's own time-zone setting. A reader on a VPN
+     is shown the VPN's exit city. When the reader is in Johannesburg itself, the second clock is hidden rather than
+     showing the same city twice.
+     The zone is counted once per device per day, as an event on the group's cookie-free counter, so the Director can see
+     which cities the site is read in. What the reader is shown is what is counted, and nothing more. */
   var za=document.getElementById('clkZA'), here=document.getElementById('clkHere'), hn=document.getElementById('clkHereName'), hz=document.getElementById('clkHereZone');
   if(!za) return;
   var tz='UTC'; try{ tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'UTC'; }catch(e){}
@@ -1548,20 +1549,43 @@ input.hasmic{padding-right:40px}
     if(!/^[A-Z]{2}$/.test(cc)) return '';
     try{ return new Intl.DisplayNames([document.documentElement.lang||'en'],{type:'region'}).of(cc)||cc; }catch(e){ return cc; }
   }
-  var country=countryOf(tz), place=(!country?city:(country===city?country:city+', '+country));   /* Asia/Qatar would otherwise read "Qatar, Qatar" */
-  hn.textContent = (tz==='Africa/Johannesburg')?('Here ('+place+')'):('Where you are ('+place+')');
+  var shown=tz;
+  function nameOf(cc){ try{ return new Intl.DisplayNames([document.documentElement.lang||'en'],{type:'region'}).of(cc)||cc; }catch(e){ return cc; } }
+  var box=here.closest?here.closest('.clk'):null;
+  function label(zone,cityName,cc){
+    var country=cc?nameOf(cc):countryOf(zone), c=cityName||(zone.split('/').pop()||zone).replace(/_/g,' ');
+    var place=!country?c:(country===c?country:c+', '+country);   /* Asia/Qatar would otherwise read "Qatar, Qatar" */
+    shown=zone;
+    var home=(zone==='Africa/Johannesburg')&&(!cityName||/^johannesburg$/i.test(cityName));
+    if(box) box.style.display=home?'none':'';
+    hn.textContent=(zone==='Africa/Johannesburg')?('Here ('+place+')'):('Where you are ('+place+')');
+  }
+  label(tz,null,null);
   function fmt(d,zone){ try{ return new Intl.DateTimeFormat('en-GB',{timeZone:zone,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(d); }catch(e){ return d.toTimeString().slice(0,8); } }
   function abbr(d,zone){ try{ var p=new Intl.DateTimeFormat('en-GB',{timeZone:zone,timeZoneName:'short'}).formatToParts(d); var z=p.filter(function(x){return x.type==='timeZoneName';})[0]; return z?z.value:''; }catch(e){ return ''; } }
-  function tick(){ var d=new Date(); za.textContent=fmt(d,'Africa/Johannesburg'); here.textContent=fmt(d,tz); hz.textContent=abbr(d,tz); }
+  function tick(){ var d=new Date(); za.textContent=fmt(d,'Africa/Johannesburg'); here.textContent=fmt(d,shown); hz.textContent=abbr(d,shown); }
   tick(); setInterval(tick,1000);
   /* Count the zone once per device per day. The counter sets no cookie and keeps no IP address; the date marker below
      lives in this browser only, so a reader is counted once a day rather than on every page. */
   function cnt(p,n){ var g=window.goatcounter; if(g&&g.count){ try{ g.count({path:p,title:p,event:true}); }catch(e){} } else if((n||0)<12){ setTimeout(function(){ cnt(p,(n||0)+1); },700); } }
+  function countOnce(zone){
+    try{
+      var day=new Date().toISOString().slice(0,10), mk='wa-tz-day', seen=null;
+      try{ seen=localStorage.getItem(mk); }catch(e){}
+      if(seen!==day){ try{ localStorage.setItem(mk,day); }catch(e){} cnt('tz-'+zone); }
+    }catch(e){}
+  }
+  var settled=false;
+  function settle(zone){ if(settled) return; settled=true; countOnce(zone); }
   try{
-    var day=new Date().toISOString().slice(0,10), mk='wa-tz-day', seen=null;
-    try{ seen=localStorage.getItem(mk); }catch(e){}
-    if(seen!==day){ try{ localStorage.setItem(mk,day); }catch(e){} cnt('tz-'+tz); }
-  }catch(e){}
+    var ctl=window.AbortController?new AbortController():null;
+    var to=setTimeout(function(){ if(ctl) ctl.abort(); settle(tz); },4000);
+    fetch('https://notify.witsahead.org/where',{cache:'no-store',signal:ctl?ctl.signal:undefined}).then(function(r){ return r.ok?r.json():null; }).then(function(w){
+      clearTimeout(to);
+      var ok=false; if(w&&w.tz){ try{ new Intl.DateTimeFormat('en-GB',{timeZone:w.tz}); ok=true; }catch(e){} }
+      if(ok){ label(w.tz,w.city||null,w.country||null); tick(); settle(w.tz); } else settle(tz);
+    }).catch(function(){ clearTimeout(to); settle(tz); });
+  }catch(e){ settle(tz); }
 })();
 </script>
 <script>(function(){var M={"newsletter": "/fr/", "news": "/fr/news/", "readers-map": "/fr/news/readers/", "insight-map": "/fr/news/map/", "latest": "/fr/latest/", "about": "/fr/about/", "faq": "/fr/about/", "research": "/fr/research/", "people": "/fr/people/", "supervision": "/fr/supervision/", "footprint": "/fr/footprint/", "partners": "/fr/footprint/", "open": "/fr/join/", "contact": "/fr/join/", "pathway": "/fr/pathway/", "projects": "/fr/projects/", "project-gamification": "/fr/projects/gamification/", "project-pass": "/fr/projects/pass/", "project-enable": "/fr/projects/enable/", "project-erasmus": "/fr/projects/erasmus/", "follow": "/fr/follow/", "privacy": "/fr/privacy/", "pillar-1": "/fr/research/", "pillar-2": "/fr/research/", "pillar-3": "/fr/research/", "pillar-4": "/fr/research/", "pillar-5": "/fr/research/", "pillar-6": "/fr/research/", "top": "/fr/", "main": "/fr/"};document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(!id||(window.__gid||document.getElementById.bind(document))(id))return;var p=M[id];if(p&&p!==location.pathname){e.preventDefault();location.href=p+'#'+id;}});if(location.hash){var t=(window.__gid||document.getElementById.bind(document))(location.hash.slice(1));if(t&&t.classList.contains('pillar')){var b=t.querySelector('button');if(b)setTimeout(function(){b.click();},400);}}function jump(){var id=location.hash.slice(1);if(!id)return;var t=(window.__gid||document.getElementById.bind(document))(id);if(!t||!t.getClientRects().length)return;var h=document.documentElement,prev=h.style.scrollBehavior;h.style.scrollBehavior='auto';t.scrollIntoView();h.style.scrollBehavior=prev;}window.addEventListener('load',function(){setTimeout(jump,60);var y=window.scrollY;setTimeout(function(){if(Math.abs(window.scrollY-y)<4)jump();},700);});window.addEventListener('hashchange',jump);})();</script>

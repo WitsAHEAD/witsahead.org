@@ -967,54 +967,67 @@ footer .cols ul.fol a{display:inline-flex;align-items:center;gap:7px}footer .col
 .herofol{flex-basis:100%;margin-top:12px;font-size:13.5px;color:#B8CBDA}.herofol a{color:#fff;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-left:10px;padding:5px 11px;border:1px solid rgba(255,255,255,.28);border-radius:999px}.herofol a:hover{background:rgba(255,255,255,.12)}.herofol svg{width:14px;height:14px;fill:#E0B061}
 </style>
 <style>
-/* Enquiry forms (2 October 2026) */
+/* Enquiry forms (2 October 2026; type scale and contrast refined 3 October 2026).
+   One scale, Open Sans throughout: section 13 / label 16.5 / answer 17 / option 16 / hint 15 / note 14.
+   Every text colour is 4.5:1 or better on the section's pale background (#F1F5FB) and on white. */
+#apply{--ap-ink:#1F2933;--ap-text:#343434;--ap-quiet:#4B5563;--ap-gold:#6F5C3A;--ap-line:#C3CDD9}
 #apply .head p{max-width:72ch}
 .apanchor{display:block;height:0;scroll-margin-top:96px}
-.aptabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:8px 0 28px}
-.aptabs button{appearance:none;font:600 15px/1.35 var(--font,inherit);text-align:start;padding:16px 18px;border:1px solid var(--line-2,#D1D5DB);border-top:4px solid #85714D;background:var(--surface,#fff);color:#003B5C;cursor:pointer;display:flex;flex-direction:column;gap:6px;min-height:84px}
-.aptabs button .apn{font-size:12px;letter-spacing:1.6px;color:#85714D;font-weight:700}
+.apform,.aptabs{font-kerning:normal;font-variant-ligatures:common-ligatures;text-rendering:optimizeLegibility}
+.aptabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:12px 0 32px}
+.aptabs button{appearance:none;font:600 16px/1.35 var(--font,inherit);text-align:start;padding:18px 20px;border:1px solid var(--ap-line);border-top:4px solid #85714D;background:var(--surface,#fff);color:#003B5C;cursor:pointer;display:flex;flex-direction:column;gap:8px;min-height:92px;transition:background-color .15s,color .15s}
+.aptabs button .apn{font-size:12.5px;line-height:1;letter-spacing:1.8px;color:var(--ap-gold);font-weight:700}
+.aptabs button:hover{background:#F7F9FC}
 .aptabs button[aria-selected="true"]{background:#003B5C;color:#fff;border-color:#003B5C;border-top-color:#E0B061}
 .aptabs button[aria-selected="true"] .apn{color:#E0B061}
 .aptabs button:focus-visible{outline:3px solid #E0B061;outline-offset:2px}
-.apform{max-width:880px}
-.apintro{max-width:72ch;font-size:16.5px;line-height:1.7;margin:0 0 20px;color:var(--text,#343434)}
-.apset{border:0;border-top:1px solid var(--line,#E5E7EB);margin:0;padding:22px 0 8px;min-width:0}
-.apset legend{float:left;width:100%;padding:0;margin:0 0 14px;color:#85714D;font-size:12.5px;letter-spacing:1.2px;text-transform:uppercase;font-weight:700}
+.apform{max-width:880px;color:var(--ap-text)}
+.apintro{max-width:66ch;font-size:17px;line-height:1.7;margin:0 0 24px;color:var(--ap-text)}
+.apset{border:0;border-top:1px solid var(--line,#E5E7EB);margin:0;padding:28px 0 10px;min-width:0}
+.apset legend{float:left;width:100%;padding:0;margin:0 0 18px;color:var(--ap-gold);font-size:13px;line-height:1.4;letter-spacing:1.8px;text-transform:uppercase;font-weight:700}
 .apset legend+*{clear:both}
-.apgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px;margin-bottom:12px}
-.apf{display:flex;flex-direction:column;gap:6px;min-width:0;margin-bottom:12px}
+.apgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;margin-bottom:16px}
+.apf{display:flex;flex-direction:column;gap:8px;min-width:0;margin-bottom:18px}
 .apgrid .apf{margin-bottom:0}
 .apf.apwide{grid-column:1/-1}
-.apf label,.apq{font-weight:600;font-size:15px;color:var(--text,#1f2937);line-height:1.4;margin:0}
-.apq{margin:4px 0 10px}
-.apf small,.apq small{font-weight:400;color:var(--muted,#6b7280)}
-.aphint{font-size:14px;line-height:1.55;color:var(--muted,#6b7280);margin:0 0 8px;max-width:72ch}
-.apform input:not([type=checkbox]):not([type=radio]):not([type=file]),.apform select,.apform textarea{width:100%;max-width:100%;box-sizing:border-box;font:400 16px/1.5 var(--font,inherit);color:var(--text,#1f2937);background:var(--surface,#fff);border:1px solid var(--line-2,#C9D2DD);border-radius:0;padding:10px 12px;min-height:46px}
-.apform textarea{resize:vertical;min-height:140px}
-.apform input:focus,.apform select:focus,.apform textarea:focus{outline:3px solid rgba(224,176,97,.55);outline-offset:0;border-color:#003B5C}
-.apchecks,.apradios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;margin:0 0 16px}
-.apradios{grid-template-columns:1fr}
-.apchecks label,.apradios label,.apconsent{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;cursor:pointer}
-.apchecks input,.apradios input,.apconsent input{width:18px;height:18px;margin:3px 0 0;flex:none;accent-color:#003B5C}
-.apmore{font-weight:400;font-size:14px;margin-inline-start:8px;color:#003B5C}
-.apfile{display:flex;align-items:center;gap:14px;flex-wrap:wrap;cursor:pointer;margin:4px 0 14px}
-.apfbtn{display:inline-block;padding:10px 18px;border:1px solid #003B5C;color:#003B5C;font-weight:600;font-size:15px}
+.apf label,.apq{font-weight:600;font-size:16.5px;color:var(--ap-ink);line-height:1.45;margin:0}
+.apq{margin:6px 0 12px}
+.apf small,.apq small{font-weight:400;font-size:14px;color:var(--ap-quiet);letter-spacing:.1px}
+.aphint{font-size:15px;line-height:1.6;color:var(--ap-quiet);margin:-2px 0 6px;max-width:66ch}
+.apset>.aphint{margin:0 0 12px}
+.apform input:not([type=checkbox]):not([type=radio]):not([type=file]),.apform select,.apform textarea{width:100%;max-width:100%;box-sizing:border-box;font:400 17px/1.5 var(--font,inherit);color:var(--ap-ink);background:#fff;border:1px solid #9AA8B8;border-radius:2px;padding:11px 14px;min-height:50px;transition:border-color .15s,box-shadow .15s}
+.apform input::placeholder,.apform textarea::placeholder{color:#6B7280;opacity:1}
+.apform select{line-height:1.5;padding-inline-end:36px}
+.apform textarea{resize:vertical;min-height:160px;line-height:1.6}
+.apform input:not([type=checkbox]):not([type=radio]):hover,.apform select:hover,.apform textarea:hover{border-color:#6B7B8E}
+.apform input:focus,.apform select:focus,.apform textarea:focus{outline:3px solid rgba(224,176,97,.6);outline-offset:0;border-color:#003B5C}
+.apchecks,.apradios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;margin:0 0 20px}
+.apradios{grid-template-columns:1fr;gap:12px}
+.apchecks label,.apradios label,.apconsent{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.55;color:var(--ap-text);cursor:pointer}
+.apchecks input,.apradios input,.apconsent input{width:20px;height:20px;margin:2px 0 0;flex:none;accent-color:#003B5C;cursor:pointer}
+.apmore{font-weight:600;font-size:15px;margin-inline-start:10px;color:#003B5C;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.apfile{display:flex;align-items:center;gap:16px;flex-wrap:wrap;cursor:pointer;margin:6px 0 16px}
+.apfbtn{display:inline-block;padding:12px 22px;border:1.5px solid #003B5C;color:#003B5C;font-weight:600;font-size:16px;line-height:1.4;background:#fff}
 .apfile:hover .apfbtn{background:#003B5C;color:#fff}
-.apfnames{font-size:14px;color:var(--muted,#6b7280);overflow-wrap:anywhere;min-width:0}
+.apfnames{font-size:15px;line-height:1.5;color:var(--ap-quiet);overflow-wrap:anywhere;min-width:0}
 #ap-files{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
-#ap-files:focus-visible+*,.apfile:focus-within .apfbtn{outline:3px solid #E0B061;outline-offset:2px}
-.apconsent{margin:6px 0 10px;max-width:72ch}
-.apsend{border-top:1px solid var(--line,#E5E7EB);padding-top:22px;margin-top:8px}
-.apstatus{margin:14px 0 0;font-size:15.5px;line-height:1.6;max-width:72ch}
-.apstatus.err{color:#B3261E;font-weight:600}
-.apstatus.ok{color:#14532D;background:#ECFDF3;border-inline-start:4px solid #16A34A;padding:16px 18px;font-weight:600}
-.aperr input:not([type=checkbox]):not([type=radio]),.aperr select,.aperr textarea{border-color:#B3261E;box-shadow:0 0 0 1px #B3261E}
-.apchecks.aperr,.apradios.aperr,.apconsent.aperr,.apfile.aperr{outline:2px solid #B3261E;outline-offset:6px}
+.apfile:focus-within .apfbtn{outline:3px solid #E0B061;outline-offset:2px}
+.apconsent{margin:8px 0 12px;max-width:68ch;line-height:1.6}
+.apconsent a{color:#003B5C;font-weight:600;text-underline-offset:3px}
+.apsend{border-top:1px solid var(--line,#E5E7EB);padding-top:28px;margin-top:10px}
+#ap-submit{font-size:16.5px;line-height:1.3;letter-spacing:.2px;padding:16px 34px;min-height:54px}
+.apstatus{margin:16px 0 0;font-size:16px;line-height:1.6;max-width:66ch}
+.apstatus.err{color:#A3221B;font-weight:600}
+.apstatus.ok{color:#14532D;background:#ECFDF3;border-inline-start:4px solid #16A34A;padding:18px 20px;font-weight:600}
+.aperr input:not([type=checkbox]):not([type=radio]),.aperr select,.aperr textarea{border-color:#A3221B;box-shadow:0 0 0 1px #A3221B}
+.apchecks.aperr,.apradios.aperr,.apconsent.aperr,.apfile.aperr{outline:2px solid #A3221B;outline-offset:6px}
 .aphp{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;margin:-1px;padding:0;border:0}
 [data-k][hidden]{display:none!important}
+:lang(zh) .apset legend,:lang(ar) .apset legend{letter-spacing:0;font-size:14px}
+:lang(ar) .apform,:lang(ar) .aptabs{font-kerning:auto;font-variant-ligatures:normal}
 @media (max-width:900px){.aptabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:600px){.apgrid,.apchecks{grid-template-columns:minmax(0,1fr)}.aptabs button{padding:12px 14px;min-height:72px;font-size:14px}}
-@media (prefers-color-scheme: dark){.aptabs button{color:#cfe0ee}.aptabs button[aria-selected="true"]{color:#fff;background:#0B4A70}.apfbtn{color:#cfe0ee;border-color:#cfe0ee}.apmore{color:#9cc3e0}.apstatus.ok{background:#0f2e1c;color:#bbf7d0}}
+@media (max-width:600px){.apgrid,.apchecks{grid-template-columns:minmax(0,1fr)}.aptabs button{padding:14px 16px;min-height:78px;font-size:15px}.apf label,.apq{font-size:16px}.apintro{font-size:16.5px}#ap-submit{width:100%}}
+@media (prefers-color-scheme: dark){#apply{--ap-ink:#E8EEF4;--ap-text:#D6DEE6;--ap-quiet:#AEBBC8;--ap-gold:#D9C29A;--ap-line:#3B4B5C}.aptabs button{color:#cfe0ee}.aptabs button:hover{background:#13293A}.aptabs button[aria-selected="true"]{color:#fff;background:#0B4A70}.apform input:not([type=checkbox]):not([type=radio]):not([type=file]),.apform select,.apform textarea,.apfbtn{background:#0F1E2A;color:#E8EEF4;border-color:#4A5D70}.apfbtn{color:#cfe0ee;border-color:#cfe0ee}.apmore,.apconsent a{color:#9cc3e0}.apstatus.ok{background:#0f2e1c;color:#bbf7d0}}
 </style>
 <style>
 /* Reading blocks (2 October 2026, the Director's request): long text reads as calm blocks on every page, as on the researcher

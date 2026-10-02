@@ -1,0 +1,31 @@
+1
+00:00:00,500 --> 00:00:14,529
+Welcome. The Wits AHEAD website now speaks thirteen languages. Afrikaans and isiXhosa have joined the other eleven. Here is what is new, and how you can share it.
+
+2
+00:00:15,929 --> 00:00:45,700
+Every page has a globe at the top. Tap it, and you see thirteen languages in two groups. The global languages: English, French, Spanish, Portuguese, Chinese and Arabic. And the African languages: Kiswahili, isiZulu, isiXhosa, Afrikaans, Yoruba, Hausa and Naija. Your choice is remembered, so the site opens in your language next time.
+
+3
+00:00:47,100 --> 00:00:54,230
+Welkom. U kan nou die Wits AHEAD-oorsig elke oggend in Afrikaans lees en daarna luister.
+
+4
+00:00:55,630 --> 00:01:09,959
+And isiXhosa. Every briefing item, every research case and every researcher profile is now written in isiXhosa, the language of so many of our students and colleagues at the Wits School of Education.
+
+5
+00:01:11,359 --> 00:01:26,989
+Nine editions can also be heard. Each morning the briefing is read aloud in English, French, Spanish, Portuguese, Chinese, isiZulu, Kiswahili, Arabic, and now Afrikaans.
+
+6
+00:01:28,390 --> 00:01:42,530
+Hausa, Yoruba, Naija and isiXhosa are written editions for now, because no natural voice for them exists yet. Every research case and every profile is there, in each of them.
+
+7
+00:01:43,930 --> 00:02:04,599
+Now, please share it. Send the website to your friends, your family and your colleagues, in the language they read best. Each language has its own address: witsahead dot org, slash, and then the language, such as a f for Afrikaans, or x h for isiXhosa.
+
+8
+00:02:06,000 --> 00:02:16,969
+The work of this group, yours included, can now be read across Africa and beyond, in the languages people think in. Thank you for sharing it.

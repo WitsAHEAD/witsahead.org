@@ -216,7 +216,7 @@
 .pjfacts div{border-left:3px solid #E0B061;padding-left:10px}
 .pjfacts dt{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:700}
 .pjfacts dd{margin:2px 0 0;font-size:14px;color:var(--text)}
-.pjtrack{list-style:none;margin:0 0 16px;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
+.pjtrack{list-style:none;margin:0 0 16px;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;position:relative}
 .pjtrack::before{content:"";position:absolute;left:8%;right:8%;top:11px;height:3px;background:#E5E7EB}
 .pjtrack li{position:relative;text-align:center;font-size:12px;color:var(--muted)}
 .pjtrack li i{display:block;width:22px;height:22px;margin:0 auto 6px;border-radius:50%;background:#fff;border:3px solid #C9D2DD;position:relative;z-index:1}
@@ -991,6 +991,9 @@ main{overflow-wrap:break-word}
   .newsctl select{flex:1 1 100%;width:100%;max-width:100%;min-width:0}
   .newsctl input{flex:1 1 0;width:auto;min-width:0}
   .newsctl .vmic{flex:none}
+  .pjtrack{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:14px}
+  .pjtrack::before{display:none}
+  .pjtrack li span{overflow-wrap:anywhere}
 }
 </style>
 
@@ -1210,12 +1213,12 @@ function init(){ids.forEach(function(p){mk(document.getElementById(p[0]),p[1]);}
 init();document.addEventListener('DOMContentLoaded',init);})();
 </script>
 <style>
-.vmic{appearance:none;border:0;background:transparent;color:#003B5C;width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;margin-left:-38px;vertical-align:middle;position:relative;z-index:2}
+.vmic{appearance:none;border:0;background:transparent;color:#003B5C;width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;margin-inline-start:-38px;vertical-align:middle;position:relative;z-index:2}
 .vmic svg rect{fill:currentColor}.vmic:hover{background:rgba(0,59,92,.08)}.vmic.on{color:#B3261E;animation:vpulse 1s ease-in-out infinite}
 @keyframes vpulse{0%,100%{box-shadow:0 0 0 0 rgba(179,38,30,.35)}50%{box-shadow:0 0 0 8px rgba(179,38,30,0)}}
-input.hasmic{padding-right:40px}
-#botForm .vmic{margin-left:0;flex:0 0 34px}#botForm input.hasmic{padding-right:10px}
-#so .box{position:relative}#so .vmic{position:absolute;right:14px;top:10px;margin:0;color:#003B5C}
+input.hasmic{padding-inline-end:40px}
+#botForm .vmic{margin-inline-start:0;flex:0 0 34px}#botForm input.hasmic{padding-right:10px}
+#so .box{position:relative}#so .vmic{position:absolute;inset-inline-end:14px;top:10px;margin:0;color:#003B5C}
 @media (prefers-color-scheme: dark){.vmic{color:#cfe0ee}}
 
   /* The AHEAD Daily, always within reach (22 September 2026): a small radio on every page, back to the spoken briefing. */

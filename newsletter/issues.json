@@ -31,7 +31,13 @@
    "html_yo": "newsletter/2026-10-01/issue-1-yo.html",
    "pdf_yo": "newsletter/2026-10-01/issue-1-yo.pdf",
    "html_pcm": "newsletter/2026-10-01/issue-1-pcm.html",
-   "pdf_pcm": "newsletter/2026-10-01/issue-1-pcm.pdf"
+   "pdf_pcm": "newsletter/2026-10-01/issue-1-pcm.pdf",
+   "html_sw": "newsletter/2026-10-01/issue-1-sw.html",
+   "pdf_sw": "newsletter/2026-10-01/issue-1-sw.pdf",
+   "html_ha": "newsletter/2026-10-01/issue-1-ha.html",
+   "pdf_ha": "newsletter/2026-10-01/issue-1-ha.pdf",
+   "html_ar": "newsletter/2026-10-01/issue-1-ar.html",
+   "pdf_ar": "newsletter/2026-10-01/issue-1-ar.pdf"
   },
   {
    "issue": 0,

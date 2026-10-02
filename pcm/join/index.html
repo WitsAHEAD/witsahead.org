@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-o/ZuCaHha77SB7si7huvIS+ishdM/EJla5F2CZ6QBjs=' 'sha256-BfQ360V3OqNTVnPCXPK7O/1To5I9GJgUXRfVGEZFDZk=' 'sha256-0AA1e37QZN0Dy0goItxUk2Tu4RXZe9E5uZNsrmL3IZA=' 'sha256-qPLeeLT2kK78h6/FUTJfy6LMH8OTQK1M6lNRzepmDa0=' 'sha256-JG3JK6+YToBZcYsweNISgjfRA9MZzo49meL4nZ9b9+8=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-UXRWj+aLvyhMHNIBJDmPmRY4L68PqlvUhKGQQe70FKk=' 'sha256-C8wOdBvH0KIdEzxJSgOMq7AylecoNBcihDK23nWN1oA=' 'sha256-f6bdurSN1uBwN819wmbfkjYxzhAEma4BB9UxhBdxCyU=' 'sha256-zanRHI04Al3INAHL64BvoOPOlJ9MpdDS3kBO8ur+viU=' 'sha256-BmGtYaPjwPgqff+1NSLI9BvkHM5OJ+hRLVjTWfVggPE=' 'sha256-pFwtzFptNVFyQZFWBYubtAhNxQ6vuO6CB+J0sKThT6c=' 'sha256-/ZZyz/E2j2ZBGJHemY8Bmv/LE8yUyz3CMFosvck/Gno=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-o/ZuCaHha77SB7si7huvIS+ishdM/EJla5F2CZ6QBjs=' 'sha256-7VLRa7RNPFQdmWjmO+lyDhMzHTL0wl5kMzNjj193ElY=' 'sha256-0AA1e37QZN0Dy0goItxUk2Tu4RXZe9E5uZNsrmL3IZA=' 'sha256-qPLeeLT2kK78h6/FUTJfy6LMH8OTQK1M6lNRzepmDa0=' 'sha256-JG3JK6+YToBZcYsweNISgjfRA9MZzo49meL4nZ9b9+8=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-UXRWj+aLvyhMHNIBJDmPmRY4L68PqlvUhKGQQe70FKk=' 'sha256-C8wOdBvH0KIdEzxJSgOMq7AylecoNBcihDK23nWN1oA=' 'sha256-f6bdurSN1uBwN819wmbfkjYxzhAEma4BB9UxhBdxCyU=' 'sha256-zanRHI04Al3INAHL64BvoOPOlJ9MpdDS3kBO8ur+viU=' 'sha256-BmGtYaPjwPgqff+1NSLI9BvkHM5OJ+hRLVjTWfVggPE=' 'sha256-pFwtzFptNVFyQZFWBYubtAhNxQ6vuO6CB+J0sKThT6c=' 'sha256-/ZZyz/E2j2ZBGJHemY8Bmv/LE8yUyz3CMFosvck/Gno=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -972,6 +972,14 @@ footer .cols ul.fol a{display:inline-flex;align-items:center;gap:7px}footer .col
    Every text colour is 4.5:1 or better on the section's pale background (#F1F5FB) and on white. */
 #apply{--ap-ink:#1F2933;--ap-text:#343434;--ap-quiet:#4B5563;--ap-gold:#6F5C3A;--ap-line:#C3CDD9}
 #apply .head p{max-width:72ch}
+#apply.apclosed{display:none}
+#apply:not(.apclosed){animation:apin .4s ease both}
+@keyframes apin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.apbar{display:flex;justify-content:flex-end;margin:0 0 4px}
+.apclose{appearance:none;display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--font,inherit);color:#003B5C;background:transparent;border:1px solid var(--ap-line);padding:10px 16px;cursor:pointer}
+.apclose::before{content:"";width:12px;height:12px;background:linear-gradient(45deg,transparent 45%,currentColor 45%,currentColor 55%,transparent 55%),linear-gradient(-45deg,transparent 45%,currentColor 45%,currentColor 55%,transparent 55%)}
+.apclose:hover{background:#003B5C;color:#fff;border-color:#003B5C}
+.apclose:focus-visible{outline:3px solid #E0B061;outline-offset:2px}
 .apanchor{display:block;height:0;scroll-margin-top:96px}
 .apform,.aptabs{font-kerning:normal;font-variant-ligatures:common-ligatures;text-rendering:optimizeLegibility}
 .aptabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:12px 0 32px}
@@ -1027,7 +1035,7 @@ footer .cols ul.fol a{display:inline-flex;align-items:center;gap:7px}footer .col
 :lang(ar) .apform,:lang(ar) .aptabs{font-kerning:auto;font-variant-ligatures:normal}
 @media (max-width:900px){.aptabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.apgrid,.apchecks{grid-template-columns:minmax(0,1fr)}.aptabs button{padding:14px 16px;min-height:78px;font-size:15px}.apf label,.apq{font-size:16px}.apintro{font-size:16.5px}#ap-submit{width:100%}}
-@media (prefers-color-scheme: dark){#apply{--ap-ink:#E8EEF4;--ap-text:#D6DEE6;--ap-quiet:#AEBBC8;--ap-gold:#D9C29A;--ap-line:#3B4B5C}.aptabs button{color:#cfe0ee}.aptabs button:hover{background:#13293A}.aptabs button[aria-selected="true"]{color:#fff;background:#0B4A70}.apform input:not([type=checkbox]):not([type=radio]):not([type=file]),.apform select,.apform textarea,.apfbtn{background:#0F1E2A;color:#E8EEF4;border-color:#4A5D70}.apfbtn{color:#cfe0ee;border-color:#cfe0ee}.apmore,.apconsent a{color:#9cc3e0}.apstatus.ok{background:#0f2e1c;color:#bbf7d0}}
+@media (prefers-color-scheme: dark){#apply{--ap-ink:#E8EEF4;--ap-text:#D6DEE6;--ap-quiet:#AEBBC8;--ap-gold:#D9C29A;--ap-line:#3B4B5C}.aptabs button{color:#cfe0ee}.aptabs button:hover{background:#13293A}.aptabs button[aria-selected="true"]{color:#fff;background:#0B4A70}.apform input:not([type=checkbox]):not([type=radio]):not([type=file]),.apform select,.apform textarea,.apfbtn{background:#0F1E2A;color:#E8EEF4;border-color:#4A5D70}.apfbtn{color:#cfe0ee;border-color:#cfe0ee}.apmore,.apconsent a,.apclose{color:#9cc3e0}.apstatus.ok{background:#0f2e1c;color:#bbf7d0}}
 </style>
 <style>
 /* Reading blocks (2 October 2026, the Director's request): long text reads as calm blocks on every page, as on the researcher
@@ -1194,8 +1202,9 @@ main{overflow-wrap:break-word}
     </div>
   </div>
 </section>
-<section class="block" id="apply">
+<section class="block apclosed" id="apply">
   <div class="wrap">
+    <div class="apbar"><button type="button" class="apclose" id="apClose" aria-controls="apply">Close</button></div>
     <div class="head"><div class="over">Tell us more</div><h2>One short form <b>for each of the four.</b></h2><p>Choose the form wey fit you. E go take about ten minutes, and you fit attach CV, proposal or anything else wey go help. The Director dey read every enquiry by imself and e dey reply within ten working days.</p></div>
     <span id="apply-postdoc" class="apanchor"></span><span id="apply-phd" class="apanchor"></span><span id="apply-partner" class="apanchor"></span><span id="apply-affiliation" class="apanchor"></span>
     <div class="aptabs" role="tablist" aria-label="Choose one form">
@@ -1347,11 +1356,11 @@ tabs.forEach(function(b){var on=b.getAttribute('data-kind')===k;b.setAttribute('
 f.setAttribute('aria-labelledby','apt-'+k);
 q('[data-k]',f).forEach(function(el){var on=(' '+el.getAttribute('data-k')+' ').indexOf(' '+k+' ')>=0;el.hidden=!on;var ins=/^(INPUT|SELECT|TEXTAREA)$/.test(el.tagName)?[el]:q('input,select,textarea',el);ins.forEach(function(i){i.disabled=!on;});});
 q('.aperr',f).forEach(function(e){e.classList.remove('aperr');});st.textContent='';}
-function fromHash(scroll){var m=(location.hash||'').match(/^#apply-(postdoc|phd|partner|affiliation)$/);if(m){setKind(m[1]);if(scroll){var a=document.getElementById('apply-'+m[1]);if(a&&a.scrollIntoView)a.scrollIntoView();}}}
+var sec=document.getElementById('apply'),opener=null,trig=q('a[href*="#apply"]').filter(function(a){return a.pathname===location.pathname&&/^#apply(-(postdoc|phd|partner|affiliation))?$/.test(a.hash);});trig.forEach(function(a){a.setAttribute('aria-controls','apply');a.setAttribute('aria-expanded','false');});function setOpen(on){sec.classList.toggle('apclosed',!on);trig.forEach(function(a){a.setAttribute('aria-expanded',on?'true':'false');});}function openForm(k,scroll){setOpen(true);setKind(k||kind);if(scroll){var a=document.getElementById('apply-'+kind);if(a&&a.scrollIntoView)a.scrollIntoView({behavior:'smooth',block:'start'});}var t=document.getElementById('apt-'+kind);if(t)try{t.focus({preventScroll:true});}catch(e){}}function closeForm(){setOpen(false);try{history.replaceState(null,'',location.pathname+location.search);}catch(e){}var o=opener||document.getElementById('open');if(o&&o.scrollIntoView)o.scrollIntoView({behavior:'smooth',block:'center'});if(opener)try{opener.focus({preventScroll:true});}catch(e){}}trig.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();opener=a.closest('.aptabs')?opener:a;var m=a.hash.match(/^#apply-(\w+)$/);openForm(m?m[1]:kind,true);try{history.replaceState(null,'','#apply-'+kind);}catch(err){}});});document.getElementById('apClose').addEventListener('click',closeForm);function fromHash(scroll){var m=(location.hash||'').match(/^#apply(?:-(postdoc|phd|partner|affiliation))?$/);if(m)openForm(m[1]||'postdoc',scroll);}
 tabs.forEach(function(b,i){b.addEventListener('click',function(){setKind(b.getAttribute('data-kind'));try{history.replaceState(null,'','#apply-'+kind);}catch(e){}});
 b.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(document.documentElement.dir==='rtl')d=-d;if(!d)return;e.preventDefault();var n=tabs[(i+d+tabs.length)%tabs.length];n.focus();n.click();});});
 window.addEventListener('hashchange',function(){fromHash(true);});
-setKind('postdoc');fromHash(false);
+setKind('postdoc');fromHash(true);
 function showFiles(){var fs=fi.files||[];fn.textContent=!fs.length?M.none:fs.length===1?fs[0].name:fs.length+' '+M.chosen;}
 fi.addEventListener('change',showFiles);
 function bad(el){var b=el.closest('.apf,.apchecks,.apradios,.apconsent,.apfile')||el;b.classList.add('aperr');el.setAttribute('aria-invalid','true');return el;}

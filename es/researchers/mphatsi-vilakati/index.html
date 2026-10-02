@@ -972,6 +972,14 @@ footer .cols ul.fol a{display:inline-flex;align-items:center;gap:7px}footer .col
    Every text colour is 4.5:1 or better on the section's pale background (#F1F5FB) and on white. */
 #apply{--ap-ink:#1F2933;--ap-text:#343434;--ap-quiet:#4B5563;--ap-gold:#6F5C3A;--ap-line:#C3CDD9}
 #apply .head p{max-width:72ch}
+#apply.apclosed{display:none}
+#apply:not(.apclosed){animation:apin .4s ease both}
+@keyframes apin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.apbar{display:flex;justify-content:flex-end;margin:0 0 4px}
+.apclose{appearance:none;display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--font,inherit);color:#003B5C;background:transparent;border:1px solid var(--ap-line);padding:10px 16px;cursor:pointer}
+.apclose::before{content:"";width:12px;height:12px;background:linear-gradient(45deg,transparent 45%,currentColor 45%,currentColor 55%,transparent 55%),linear-gradient(-45deg,transparent 45%,currentColor 45%,currentColor 55%,transparent 55%)}
+.apclose:hover{background:#003B5C;color:#fff;border-color:#003B5C}
+.apclose:focus-visible{outline:3px solid #E0B061;outline-offset:2px}
 .apanchor{display:block;height:0;scroll-margin-top:96px}
 .apform,.aptabs{font-kerning:normal;font-variant-ligatures:common-ligatures;text-rendering:optimizeLegibility}
 .aptabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:12px 0 32px}
@@ -1027,7 +1035,7 @@ footer .cols ul.fol a{display:inline-flex;align-items:center;gap:7px}footer .col
 :lang(ar) .apform,:lang(ar) .aptabs{font-kerning:auto;font-variant-ligatures:normal}
 @media (max-width:900px){.aptabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.apgrid,.apchecks{grid-template-columns:minmax(0,1fr)}.aptabs button{padding:14px 16px;min-height:78px;font-size:15px}.apf label,.apq{font-size:16px}.apintro{font-size:16.5px}#ap-submit{width:100%}}
-@media (prefers-color-scheme: dark){#apply{--ap-ink:#E8EEF4;--ap-text:#D6DEE6;--ap-quiet:#AEBBC8;--ap-gold:#D9C29A;--ap-line:#3B4B5C}.aptabs button{color:#cfe0ee}.aptabs button:hover{background:#13293A}.aptabs button[aria-selected="true"]{color:#fff;background:#0B4A70}.apform input:not([type=checkbox]):not([type=radio]):not([type=file]),.apform select,.apform textarea,.apfbtn{background:#0F1E2A;color:#E8EEF4;border-color:#4A5D70}.apfbtn{color:#cfe0ee;border-color:#cfe0ee}.apmore,.apconsent a{color:#9cc3e0}.apstatus.ok{background:#0f2e1c;color:#bbf7d0}}
+@media (prefers-color-scheme: dark){#apply{--ap-ink:#E8EEF4;--ap-text:#D6DEE6;--ap-quiet:#AEBBC8;--ap-gold:#D9C29A;--ap-line:#3B4B5C}.aptabs button{color:#cfe0ee}.aptabs button:hover{background:#13293A}.aptabs button[aria-selected="true"]{color:#fff;background:#0B4A70}.apform input:not([type=checkbox]):not([type=radio]):not([type=file]),.apform select,.apform textarea,.apfbtn{background:#0F1E2A;color:#E8EEF4;border-color:#4A5D70}.apfbtn{color:#cfe0ee;border-color:#cfe0ee}.apmore,.apconsent a,.apclose{color:#9cc3e0}.apstatus.ok{background:#0f2e1c;color:#bbf7d0}}
 </style>
 <style>
 /* Reading blocks (2 October 2026, the Director's request): long text reads as calm blocks on every page, as on the researcher

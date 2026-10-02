@@ -974,6 +974,8 @@ footer .cols ul.fol a{display:inline-flex;align-items:center;gap:7px}footer .col
 #apply .head p{max-width:72ch}
 #apply.apclosed{display:none}
 #apply:not(.apclosed){animation:apin .4s ease both}
+/* On phones the floating briefing and Ask AHEAD buttons step aside while the form is on screen, so no field is covered. */
+@media (max-width:760px){html.apfocus .dradio,html.apfocus .bot-pill,html.apfocus .bot-nudge{opacity:0!important;transform:translateY(160%)!important;pointer-events:none!important;transition:opacity .25s ease,transform .3s ease}}
 @keyframes apin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .apbar{display:flex;justify-content:flex-end;margin:0 0 4px}
 .apclose{appearance:none;display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--font,inherit);color:#003B5C;background:transparent;border:1px solid var(--ap-line);padding:10px 16px;cursor:pointer}

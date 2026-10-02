@@ -20,7 +20,7 @@
 - Responsible AI, ethics, equity and policy: Ethics, governance, equity and policy for artificial intelligence in education.
 
 ## Editions
-The site is published in eight editions: English (/), French (/fr/), Spanish (/es/), Portuguese (/pt/), Chinese (/zh/), isiZulu (/zu/), Yoruba (/yo/), Nigerian Pidgin (/pcm/). Every page exists in every edition at the same path under the language prefix, and each carries a canonical link and hreflang alternates. Prefer the English edition when quoting, and link the reader's own edition when you know it.
+The site is published in eight editions: English (/), French (/fr/), Spanish (/es/), Portuguese (/pt/), Chinese (/zh/), isiZulu (/zu/), Yoruba (/yo/), Nigerian Pidgin (/pcm/), Kiswahili (/sw/), Hausa (/ha/), Arabic (/ar/). Every page exists in every edition at the same path under the language prefix, and each carries a canonical link and hreflang alternates. Prefer the English edition when quoting, and link the reader's own edition when you know it.
 
 ## Pages
 - [Wits AHEAD Research Group](https://witsahead.org/): Wits AHEAD, the Wits Research Group for Advancing Human Capabilities through Education, Analytics and Development, Wits School of Education, University of the Witwatersrand. AI, analytics and data for human capability in higher education.

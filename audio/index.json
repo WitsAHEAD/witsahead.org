@@ -3,7 +3,71 @@
   {
    "stem": "briefing-2026-10-10",
    "date": "2026-10-10",
-   "files": {}
+   "files": {
+    "en": {
+     "file": "briefing-2026-10-10.en.m4a",
+     "seconds": 155,
+     "size": 941228,
+     "lead": "Global Employment Trends for Youth 2026: Back to the Future",
+     "n": 3
+    },
+    "fr": {
+     "file": "briefing-2026-10-10.fr.m4a",
+     "seconds": 136,
+     "size": 775655,
+     "lead": "Global Employment Trends for Youth 2026: Back to the Future",
+     "n": 3
+    },
+    "es": {
+     "file": "briefing-2026-10-10.es.m4a",
+     "seconds": 134,
+     "size": 758697,
+     "lead": "Global Employment Trends for Youth 2026: Back to the Future",
+     "n": 3
+    },
+    "pt": {
+     "file": "briefing-2026-10-10.pt.m4a",
+     "seconds": 142,
+     "size": 837309,
+     "lead": "Global Employment Trends for Youth 2026: Back to the Future",
+     "n": 3
+    },
+    "zh": {
+     "file": "briefing-2026-10-10.zh.m4a",
+     "seconds": 140,
+     "size": 862051,
+     "lead": "Global Employment Trends for Youth 2026: Back to the Future",
+     "n": 3
+    },
+    "sw": {
+     "file": "briefing-2026-10-10.sw.m4a",
+     "seconds": 149,
+     "size": 937823,
+     "lead": "Global Employment Trends for Youth 2026: Back to the Future",
+     "n": 3
+    },
+    "ar": {
+     "file": "briefing-2026-10-10.ar.m4a",
+     "seconds": 172,
+     "size": 1023636,
+     "lead": "Global Employment Trends for Youth 2026: Back to the Future",
+     "n": 3
+    },
+    "af": {
+     "file": "briefing-2026-10-10.af.m4a",
+     "seconds": 136,
+     "size": 811848,
+     "lead": "Global Employment Trends for Youth 2026: Back to the Future",
+     "n": 3
+    },
+    "zu": {
+     "file": "briefing-2026-10-10.zu.m4a",
+     "seconds": 185,
+     "size": 1095768,
+     "lead": "Global Employment Trends for Youth 2026: Back to the Future",
+     "n": 3
+    }
+   }
   },
   {
    "stem": "briefing-2026-10-09",

@@ -1,0 +1,27 @@
+1
+00:00:00,500 --> 00:00:20,200
+Welcome to Update 16 of AHEAD Pathway. Our calls now carry everything a supervision meeting or a rehearsal needs: your slides, a board to write on, a chat, and a timer that everyone can see. And it all works from a computer or a phone, even on a modest connection.
+
+2
+00:00:21,600 --> 00:00:44,470
+When you join, choose your microphone only, or your camera as well. Calls are recorded and transcribed, and a written record follows. Under your name, others can see the city and the local time you are joining from, which helps when we are spread across the world. If you would rather not show it, untick the box before you join.
+
+3
+00:00:45,870 --> 00:01:02,700
+Everyone in the call is on one screen, each picture shown whole, with names and places beneath, never on top. If your background is busy, open Background beside the camera button and choose Blur: you stay sharp and the room behind you softens.
+
+4
+00:01:04,100 --> 00:01:23,670
+To present, press Share screen and choose a window, a PowerPoint slide show, or a browser tab. Tick share audio if your slides play a video. What you share fills the stage for everyone, sharp and whole, and the faces move to the side, so we can still see one another.
+
+5
+00:01:25,070 --> 00:01:46,900
+Press Board to open a blackboard, or a whiteboard, that everyone sees as you write: with a pen, a mouse, or your trackpad. Choose from six colours, highlight, rub out, and save a picture to the chat. While you share your slides, press Draw on it to underline and circle on the slide itself.
+
+6
+00:01:48,300 --> 00:02:11,870
+Open Chat to write to everyone, paste a link, add an emoji, or share a document. The chat is kept with the call's written record. In rehearsals, a timer at the top of every screen counts down and warns at five minutes and at two. Presenting? Press Keep on top, and the timer floats above your slides.
+
+7
+00:02:13,270 --> 00:02:24,310
+Bring your slides, your questions, and your ideas to your next call. That is AHEAD Pathway: your degree, well supported, every step of the way.

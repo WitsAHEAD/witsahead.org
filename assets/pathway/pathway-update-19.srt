@@ -1,0 +1,23 @@
+1
+00:00:00,500 --> 00:00:12,500
+Welcome to Update 19 of AHEAD Pathway. You can now read the transcript of a voice or video message before you send it, and correct any word the transcription got wrong.
+
+2
+00:00:13,900 --> 00:00:36,570
+In Messages, record a voice or video message and press Stop. Within a few seconds, the transcript appears in a box under the recording. Read it as you listen back. Here, the message says the principal at Site B has now agreed to the interviews. But the transcription heard: has not agreed.
+
+3
+00:00:37,969 --> 00:00:55,710
+One small word, and the meaning is reversed. So correct it, then press Send. It matters, because the transcript is what the Director reads, and what stays on the record of your supervision. You stay in control of your words.
+
+4
+00:00:57,109 --> 00:01:08,149
+Your message arrives with your corrected transcript, marked: checked by the sender. The recording itself is unchanged: your voice stays exactly as you spoke.
+
+5
+00:01:09,549 --> 00:01:30,250
+Already sent one with an error? Open its transcript, choose Correct the transcript, change the word, and press Save. Here: consent letters, not content letters, which matters in an ethics application. And transcription stays on the group's own platform.
+
+6
+00:01:31,650 --> 00:01:46,390
+Record, listen back, read, correct, and send. Try it the next time you write to the Director in Messages. That is AHEAD Pathway: your degree, well supported, every step of the way.

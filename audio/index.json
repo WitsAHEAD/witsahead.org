@@ -3,7 +3,71 @@
   {
    "stem": "briefing-2026-10-15",
    "date": "2026-10-15",
-   "files": {}
+   "files": {
+    "en": {
+     "file": "briefing-2026-10-15.en.m4a",
+     "seconds": 161,
+     "size": 984899,
+     "lead": "Wits researchers argue Africa must set its own AI research agenda, not just apply others' tools",
+     "n": 3
+    },
+    "fr": {
+     "file": "briefing-2026-10-15.fr.m4a",
+     "seconds": 144,
+     "size": 843957,
+     "lead": "Wits researchers argue Africa must set its own AI research agenda, not just apply others' tools",
+     "n": 3
+    },
+    "es": {
+     "file": "briefing-2026-10-15.es.m4a",
+     "seconds": 136,
+     "size": 785387,
+     "lead": "Wits researchers argue Africa must set its own AI research agenda, not just apply others' tools",
+     "n": 3
+    },
+    "pt": {
+     "file": "briefing-2026-10-15.pt.m4a",
+     "seconds": 148,
+     "size": 902802,
+     "lead": "Wits researchers argue Africa must set its own AI research agenda, not just apply others' tools",
+     "n": 3
+    },
+    "zh": {
+     "file": "briefing-2026-10-15.zh.m4a",
+     "seconds": 135,
+     "size": 829698,
+     "lead": "Wits researchers argue Africa must set its own AI research agenda, not just apply others' tools",
+     "n": 3
+    },
+    "sw": {
+     "file": "briefing-2026-10-15.sw.m4a",
+     "seconds": 150,
+     "size": 948374,
+     "lead": "Wits researchers argue Africa must set its own AI research agenda, not just apply others' tools",
+     "n": 3
+    },
+    "ar": {
+     "file": "briefing-2026-10-15.ar.m4a",
+     "seconds": 173,
+     "size": 1052112,
+     "lead": "Wits researchers argue Africa must set its own AI research agenda, not just apply others' tools",
+     "n": 3
+    },
+    "af": {
+     "file": "briefing-2026-10-15.af.m4a",
+     "seconds": 133,
+     "size": 795436,
+     "lead": "Wits researchers argue Africa must set its own AI research agenda, not just apply others' tools",
+     "n": 3
+    },
+    "zu": {
+     "file": "briefing-2026-10-15.zu.m4a",
+     "seconds": 192,
+     "size": 1148817,
+     "lead": "Wits researchers argue Africa must set its own AI research agenda, not just apply others' tools",
+     "n": 3
+    }
+   }
   },
   {
    "stem": "briefing-2026-10-14",

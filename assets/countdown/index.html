@@ -189,8 +189,8 @@ input[type=range]{accent-color:var(--accent)}
 
 <section class="panel" id="music" hidden aria-label="Music">
   <h2>Music <button class="x" data-close="music" aria-label="Close">×</button></h2>
-  <div class="chips" id="moods"><button data-mood="calm" class="on">Calm</button><button data-mood="warm">Warm</button><button data-mood="bright">Bright</button><button data-mood="file">My own file</button></div>
-  <p class="hint" id="moodhint">Calm, slow chords made in this page as it plays: no recordings, so there is nothing to licence and nothing to download.</p>
+  <div class="chips" id="moods"><button data-mood="africa">African drums and mbira</button><button data-mood="mbira">Mbira, gentle</button><button data-mood="calm">Calm chords</button><button data-mood="file">My own file</button></div>
+  <p class="hint" id="moodhint"></p>
   <label class="f" id="filewrap" hidden>Choose an audio file on this computer<input type="file" id="file" accept="audio/*"></label>
   <div class="track"><button class="play" id="play" aria-label="Play">▶</button><label class="f" style="flex:1;margin:0">Volume<input type="range" id="vol" min="0" max="100" value="45"></label></div>
   <label class="chk"><input type="checkbox" id="m_stop2"> Fade the music out when the countdown reaches zero</label>
@@ -201,7 +201,7 @@ input[type=range]{accent-color:var(--accent)}
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
-  var KEY = 'witsahead-countdown-v2';
+  var KEY = 'witsahead-countdown-v3';
   var PILLARS = ['Generative AI in higher education', 'Analytics for student success', 'STEM and teacher education', 'Graduate capability and transitions', 'Data for education systems', 'Responsible AI and policy'];
   var PHOTOS = [['../wits/education-campus.jpg', 'k0'], ['../wits/graduates.jpg', 'k1'], ['../wits/students-writing.jpg', 'k2'], ['../wits/teacher-experiment.jpg', 'k1']];
   var AFRICA = ["M594.2,276.9L604.7,284.4L604.9,286.5L608.9,290.0L607.6,294.3L609.6,297.6L608.9,303.3L612.0,309.8L604.1,314.2L596.0,314.0L593.7,306.6L585.4,302.8L581.7,294.4L581.5,289.4L585.4,285.4L584.5,277.6L594.2,276.9Z","M475.9,176.6L475.9,182.8L466.8,182.6L466.8,191.6L464.2,191.9L464.1,198.8L453.2,198.8L452.6,199.9L452.7,198.4L459.0,198.2L461.4,190.5L465.3,186.7L468.4,179.3L475.6,178.5L475.9,176.6Z","M581.5,289.4L582.3,296.5L585.4,302.8L579.8,303.5L578.8,314.9L582.3,316.3L582.5,320.1L580.4,320.1L575.5,314.3L573.8,315.4L567.4,312.0L561.5,312.5L560.4,299.2L557.0,299.2L557.2,297.9L555.8,297.9L553.9,298.7L552.8,301.6L548.5,301.9L545.4,294.2L534.2,295.0L533.8,293.9L537.8,289.4L540.5,291.0L544.5,286.0L545.6,279.7L549.0,275.1L551.5,258.8L554.1,255.9L562.2,259.5L563.4,257.1L571.3,255.1L576.0,255.2L579.0,258.5L582.5,257.4L585.6,261.3L585.5,265.4L586.6,265.9L583.0,271.5L580.6,283.5L581.5,289.4Z","M615.5,279.5L613.9,276.6L613.8,263.8L617.0,258.7L621.3,256.2L624.9,256.0L635.9,240.4L636.0,233.6L642.0,231.4L640.4,241.3L635.0,254.9L629.3,263.6L619.8,272.6L615.5,279.5Z","M608.9,290.0L604.9,286.5L604.7,284.4L594.2,276.9L594.1,273.2L597.3,266.9L594.5,258.7L598.0,254.3L600.4,258.0L602.4,258.0L605.9,261.0L609.9,261.6L613.2,258.6L616.3,259.8L613.8,263.8L613.9,276.6L615.5,279.5L611.8,282.6L608.9,290.0Z","M568.2,244.7L565.2,242.2L565.4,238.2L561.9,229.2L560.9,229.4L564.0,218.6L566.4,218.8L566.2,203.4L569.4,203.4L569.4,196.4L602.4,196.4L604.1,208.3L606.7,210.5L602.4,214.1L600.7,226.0L595.2,236.3L594.4,243.1L592.2,230.9L591.0,230.6L589.1,231.6L590.0,234.7L587.1,239.2L585.7,239.5L583.3,237.5L580.5,240.6L574.3,240.4L571.6,237.1L569.6,237.5L568.2,242.3L566.4,243.4L568.2,244.7Z","M566.2,204.9L566.4,218.8L564.0,218.6L560.9,229.4L561.9,229.2L563.5,234.5L560.3,236.5L558.3,240.3L552.3,242.1L549.9,245.9L542.4,247.5L541.6,242.7L538.8,240.1L539.4,238.4L543.0,238.6L540.5,226.8L538.8,226.7L537.6,223.2L538.8,218.6L542.4,215.3L544.2,202.1L541.9,198.8L541.3,193.4L544.1,191.5L566.2,204.9Z","M545.4,373.8L546.7,372.1L548.3,374.5L551.3,375.5L555.3,373.4L555.3,360.5L558.0,367.7L560.0,367.3L564.8,362.2L567.3,363.6L571.3,363.0L575.3,356.3L581.8,351.1L586.6,351.6L588.7,359.1L588.4,364.2L586.2,363.8L585.2,367.4L586.9,369.3L591.2,367.4L590.2,372.8L578.4,388.5L571.6,392.6L562.7,392.4L555.8,395.6L552.4,394.4L549.8,388.0L550.6,384.6L545.4,373.8ZM580.5,375.1L578.0,374.8L575.0,378.4L577.1,381.1L580.1,379.0L581.5,376.2L580.5,375.1Z","M580.5,375.1L581.5,376.2L580.1,379.0L577.1,381.1L575.0,378.4L578.0,374.8L580.5,375.1Z","M586.6,351.6L577.8,348.9L577.0,345.5L572.7,341.3L570.2,335.8L575.1,336.5L580.4,329.9L584.1,328.0L584.3,329.3L586.6,329.2L591.2,332.2L590.7,344.8L586.6,351.6Z","M581.8,351.1L575.3,356.3L571.3,363.0L567.3,363.6L564.8,362.2L560.0,367.3L558.0,367.7L555.3,360.5L555.3,350.2L558.0,350.1L558.1,337.6L564.4,336.3L565.5,337.7L570.2,335.8L572.7,341.3L577.0,345.5L577.8,348.9L581.8,351.1Z","M555.3,360.5L555.3,373.4L551.3,375.5L548.3,374.5L546.7,372.1L545.4,373.8L542.3,368.6L539.6,351.1L532.6,334.3L537.4,333.1L539.1,334.7L550.7,334.3L552.7,336.0L559.4,336.5L566.8,334.2L569.7,335.2L565.5,337.7L564.4,336.3L558.1,337.6L558.0,350.1L555.3,350.2L555.3,360.5Z","M453.6,225.9L451.0,221.9L455.2,215.9L459.5,215.4L462.7,217.3L466.2,222.3L468.0,229.9L453.7,230.1L453.2,227.5L461.5,226.2L458.1,224.9L453.6,225.9Z","M468.0,229.9L466.2,222.3L467.6,219.6L470.4,220.5L473.5,219.3L484.6,219.2L482.1,186.0L486.3,186.0L508.7,204.5L508.8,206.7L511.9,206.4L511.9,214.5L510.1,219.0L503.8,219.8L502.8,221.1L497.0,221.1L491.4,226.1L488.9,226.3L485.5,232.5L485.0,237.2L483.2,238.2L482.8,236.7L481.0,238.0L477.7,237.8L474.6,230.4L471.8,232.0L468.2,231.2L468.0,229.9Z","M452.6,199.9L453.2,198.8L464.1,198.8L464.2,191.9L466.8,191.6L466.8,182.6L475.9,182.8L475.9,177.5L486.3,186.0L482.1,186.0L484.6,219.2L473.5,219.3L470.4,220.5L467.6,219.6L466.2,222.3L462.7,217.3L459.5,215.4L454.3,217.0L454.8,203.1L452.6,199.9Z","M507.5,251.6L505.2,252.0L504.6,241.6L502.1,236.9L504.0,233.1L507.9,230.7L510.0,232.7L510.5,235.9L507.6,243.7L507.5,251.6Z","M541.3,193.4L541.9,198.8L544.2,202.1L542.4,215.3L538.8,218.6L537.6,223.2L538.8,226.7L540.5,226.8L539.4,229.8L536.3,225.9L534.2,227.9L530.5,226.6L525.0,228.6L521.7,226.8L518.9,227.6L515.1,224.9L511.4,226.1L510.0,232.7L507.9,230.7L506.0,231.7L506.0,229.3L502.8,228.5L501.0,221.2L510.1,219.0L511.9,214.5L511.9,206.4L515.8,204.8L533.3,191.3L539.3,194.7L541.3,193.4Z","M507.5,251.6L507.6,243.7L510.3,238.3L510.2,229.6L512.1,225.4L515.1,224.9L518.9,227.6L521.7,226.8L525.0,228.6L530.5,226.6L534.2,227.9L537.0,226.0L540.5,231.2L532.6,249.1L530.7,250.3L528.1,248.9L525.6,251.0L523.6,256.8L518.6,258.7L516.4,258.6L512.0,251.6L507.5,251.6Z","M540.3,228.5L543.0,238.6L539.4,238.4L538.8,240.1L541.6,242.7L542.9,246.6L540.4,251.7L540.2,257.0L544.1,263.0L544.3,267.5L539.8,265.8L526.8,265.6L527.2,262.8L523.6,257.8L524.3,254.4L528.1,248.9L530.7,250.3L532.6,249.1L537.7,235.7L540.0,233.0L540.3,228.5Z","M502.5,235.0L502.1,236.9L504.6,241.6L505.2,252.0L502.9,252.8L499.9,236.0L500.1,234.9L502.5,235.0Z","M500.1,234.9L502.9,252.8L494.5,257.1L492.1,256.1L491.0,251.7L492.9,244.8L491.8,235.1L500.1,234.9Z","M477.7,237.8L481.0,238.0L482.8,236.7L483.2,238.2L485.0,237.2L488.0,239.9L490.2,238.9L492.1,239.8L492.9,244.8L491.0,251.7L492.1,256.1L487.1,255.5L478.6,258.3L479.0,253.6L476.1,250.9L476.9,244.4L478.2,243.5L476.9,239.2L477.7,237.8Z","M461.9,229.4L468.0,229.9L468.2,231.2L471.8,232.0L474.6,230.4L477.7,237.8L476.9,239.2L478.2,243.5L477.0,246.6L474.4,247.9L472.9,243.6L470.8,244.3L469.1,238.3L465.5,239.1L463.2,242.4L458.0,234.9L461.8,232.2L461.9,229.4Z","M453.7,230.1L461.9,229.4L461.8,232.2L458.0,234.9L453.7,230.1Z","M476.6,246.6L476.1,250.9L479.0,253.6L478.6,258.3L475.0,256.6L468.2,249.8L471.6,244.1L472.9,243.6L474.4,247.9L476.6,246.6Z","M463.2,242.4L465.5,239.1L469.1,238.3L471.6,244.1L468.2,249.8L464.0,246.2L463.2,242.4Z","M485.0,237.2L485.5,232.5L488.9,226.3L491.4,226.1L497.0,221.1L501.0,221.2L502.8,228.5L506.0,229.3L505.4,232.7L502.5,235.0L491.8,235.1L492.1,239.8L490.2,238.9L488.0,239.9L485.0,237.2Z","M576.0,255.2L567.8,255.7L563.4,257.1L562.2,259.5L554.1,255.9L551.5,258.8L551.3,261.3L547.6,260.5L544.5,265.6L540.2,254.5L542.4,247.5L549.9,245.9L552.3,242.1L558.3,240.3L560.3,236.5L563.5,234.5L565.4,238.2L565.2,242.2L569.8,246.1L576.0,255.2Z","M551.3,261.3L549.0,275.1L545.6,279.7L544.5,286.0L540.5,291.0L539.3,289.4L536.8,290.7L535.1,289.1L533.1,291.3L530.8,287.5L532.9,285.6L531.9,283.3L534.7,282.0L534.9,280.4L538.9,282.2L540.1,278.3L538.5,273.4L539.7,269.4L536.9,269.0L536.3,265.6L544.3,267.5L547.6,260.5L551.3,261.3Z","M531.3,265.6L536.0,265.4L536.9,269.0L539.7,269.4L538.5,273.4L540.1,278.3L538.9,282.2L534.9,280.4L534.7,282.0L531.9,283.3L532.9,285.6L530.8,287.5L524.4,277.5L526.4,270.0L531.3,269.9L531.3,265.6Z","M526.8,265.6L531.3,265.6L531.3,269.9L526.4,270.0L526.8,265.6Z","M585.4,302.8L592.3,307.5L592.5,317.2L590.8,321.7L592.3,322.6L583.8,325.5L584.1,328.0L580.4,329.9L575.1,336.5L568.6,334.4L564.5,335.0L560.8,330.0L560.9,318.8L566.7,318.9L566.4,311.9L571.5,314.9L575.5,314.3L580.4,320.1L582.5,320.1L582.3,316.3L578.8,314.9L579.0,305.7L580.6,303.1L585.4,302.8Z","M591.0,306.0L593.7,306.6L595.2,309.2L596.0,321.2L599.1,324.8L599.4,329.3L597.3,332.5L595.5,330.3L595.7,324.8L590.8,321.7L593.0,310.5L591.0,306.0Z","M596.0,314.0L604.1,314.2L612.0,309.8L613.3,325.1L609.6,332.2L603.9,335.3L596.6,343.0L598.8,351.1L598.5,358.2L591.7,362.5L590.5,363.8L591.2,367.4L589.1,367.3L586.6,351.6L590.7,344.8L591.2,332.2L586.6,329.2L584.3,329.3L583.8,325.5L592.3,322.6L595.7,324.8L595.5,330.3L597.3,332.5L599.4,329.3L599.1,324.8L596.0,321.2L596.0,314.0Z","M589.1,367.3L586.9,369.3L585.2,367.4L586.2,363.8L588.4,364.2L589.1,367.3Z","M536.1,290.4L533.8,293.9L533.1,291.3L535.1,289.1L536.1,290.4ZM534.2,295.0L545.4,294.2L548.5,301.9L552.8,301.6L553.9,298.7L555.8,297.9L557.2,297.9L557.0,299.2L560.4,299.2L561.5,312.5L565.2,311.7L566.7,313.0L566.7,318.9L560.9,318.8L560.8,330.0L564.5,335.0L559.4,336.5L552.7,336.0L550.7,334.3L539.1,334.7L537.4,333.1L532.6,334.3L533.8,324.3L538.2,313.2L534.2,295.0Z","M584.6,282.0L585.4,285.4L581.5,289.4L580.6,283.5L584.6,282.0Z","M637.6,317.3L639.9,328.7L639.4,329.7L638.5,327.6L638.0,328.7L638.3,332.8L630.8,361.1L626.1,363.4L622.3,361.2L620.4,353.5L620.6,348.4L621.9,347.8L623.5,341.7L622.1,334.6L623.5,330.5L628.6,328.9L632.5,324.8L633.0,321.5L634.1,321.9L636.7,315.8L637.6,317.3Z","M453.6,225.9L458.1,224.9L461.5,226.2L453.2,227.5L453.6,225.9Z","M526.3,167.3L525.2,161.0L521.1,156.6L520.9,154.0L522.6,152.0L523.4,144.0L526.4,142.6L528.4,143.0L528.3,144.8L530.6,143.5L529.4,145.9L530.0,151.4L528.2,153.2L531.9,157.4L531.8,160.0L527.6,163.5L527.7,166.5L526.3,167.3Z","M475.9,177.5L475.9,172.4L485.4,168.4L489.7,165.2L489.9,162.6L496.4,160.4L494.0,150.2L496.6,148.3L504.1,145.2L514.8,144.8L517.4,143.4L523.4,144.0L522.6,152.0L520.9,154.0L521.1,156.6L525.2,161.0L527.2,170.4L527.0,180.6L525.9,182.1L528.6,188.1L529.9,187.4L533.3,191.3L515.8,204.8L508.8,206.7L508.7,204.5L475.9,177.5Z","M601.2,223.0L602.4,214.1L606.7,210.5L609.1,217.7L619.7,229.0L617.6,229.6L611.2,222.7L607.0,222.7L605.3,221.1L604.4,223.7L601.2,223.0Z","M494.0,150.2L496.4,160.4L489.9,162.6L489.7,165.2L485.4,168.4L475.9,172.4L475.6,178.5L468.4,179.3L465.3,186.7L461.4,190.5L459.0,198.2L452.7,198.4L459.9,181.5L464.9,175.2L467.5,174.9L473.4,168.6L472.7,164.2L476.0,157.0L480.8,153.9L483.5,148.2L494.0,150.2Z","M602.4,196.4L569.4,196.4L568.6,168.2L569.9,162.9L573.6,162.8L580.3,165.3L586.0,162.9L588.8,165.1L589.4,163.9L593.8,165.0L595.2,164.1L597.0,170.1L594.2,176.6L589.8,169.2L599.1,189.7L598.7,192.6L602.4,196.4Z","M569.4,196.4L569.4,203.4L566.2,203.4L566.2,204.9L544.1,191.5L539.3,194.7L533.3,191.3L529.9,187.4L528.6,188.1L525.9,182.1L527.4,172.0L526.3,167.3L527.7,166.5L527.6,163.5L531.8,160.0L531.9,157.4L542.3,160.4L543.6,163.5L553.0,167.4L555.7,164.9L555.1,162.2L557.9,158.9L563.6,159.1L564.5,160.7L569.2,161.7L569.4,196.4Z","M632.7,245.5L624.9,256.0L621.3,256.2L616.3,259.8L613.2,258.6L609.9,261.6L600.4,258.0L596.4,250.5L593.2,246.5L591.5,246.3L594.0,244.2L595.2,236.3L599.6,229.5L601.2,223.0L604.4,223.7L605.3,221.1L607.0,222.7L611.2,222.7L615.6,226.4L617.6,229.6L616.0,234.8L618.8,235.3L618.2,236.5L621.3,241.4L632.7,245.5Z","M617.6,229.6L619.7,229.0L620.3,230.1L618.7,232.4L619.8,233.4L618.8,235.3L616.0,234.8L617.6,229.6Z","M636.0,233.6L635.9,240.4L632.7,245.5L621.3,241.4L618.2,236.5L619.8,233.4L622.5,236.9L636.0,233.6Z","M594.2,276.9L582.2,278.3L583.0,271.5L586.6,265.9L585.5,265.4L585.6,261.3L592.7,260.3L594.5,258.7L597.3,266.9L594.1,273.2L594.2,276.9Z","M584.5,277.6L585.4,281.6L580.6,283.5L581.4,279.3L584.5,277.6Z","M585.6,261.3L582.5,257.4L577.7,258.1L569.8,246.1L566.4,243.4L568.2,242.3L569.6,237.5L571.6,237.1L574.3,240.4L580.5,240.6L583.3,237.5L585.7,239.5L587.1,239.2L590.0,234.7L589.1,231.6L592.2,230.9L594.4,243.1L591.5,246.3L594.7,248.2L598.0,254.3L592.7,260.3L585.6,261.3Z"];
@@ -217,7 +217,7 @@ input[type=range]{accent-color:var(--accent)}
     ['Writing retreat', 'We begin in', 'Welcome to the\nwriting retreat', 'Powerful readers, thinkers and writers\nWits AHEAD Research Group']
   ];
   var D = { kicker: 'Session begins in', title: 'Welcome to the\nWits AHEAD Research Group', sub: 'Wits School of Education, University of the Witwatersrand, Johannesburg', host: '', org: 'Research Group',
-    scene: 'africa', accent: 'gold', now: true, tz: true, chime: true, hide: true, line: 'We are starting now.\nThank you for joining us.', pulse: true, stop: true, mood: 'calm', vol: 45, lastMin: 5 };
+    scene: 'africa', accent: 'gold', now: true, tz: true, chime: true, hide: true, line: 'We are starting now.\nThank you for joining us.', pulse: true, stop: true, mood: 'africa', vol: 60, lastMin: 5 };
   var S = {}; try { S = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { S = {}; }
   for (var k in D) if (!(k in S)) S[k] = D[k];
   var q = new URLSearchParams(location.search);
@@ -302,11 +302,55 @@ input[type=range]{accent-color:var(--accent)}
       o.connect(g); g.connect(out); o.start(t + n[1]); o.stop(t + n[1] + 3.8);
     });
   }
+  var AHINT = { africa: 'African rhythm made live in this page: the West African 12/8 bell pattern, djembe, shaker and a talking drum, with an mbira line in the spirit of Zimbabwe over a deep bass. It builds bar by bar, plays at full strength in the final minute, and the drums land on the start. Nothing is recorded, so there is nothing to licence.', mbira: 'The mbira alone, interlocking over a deep bass: gentle, for a quieter room.' };
   var MOODS = {
     calm: { chords: [[48, 55, 64, 71], [45, 52, 60, 67], [41, 48, 57, 64], [43, 50, 59, 62]], len: 7.5, wave: 'sine', hint: 'Calm, slow chords made in this page as it plays: no recordings, so there is nothing to licence and nothing to download.' },
     warm: { chords: [[50, 57, 62, 66], [47, 54, 59, 62], [43, 50, 55, 59], [45, 52, 57, 61]], len: 6.5, wave: 'triangle', hint: 'A warmer, fuller pad, still slow and quiet.' },
     bright: { chords: [[52, 59, 64, 68], [49, 56, 61, 64], [45, 52, 57, 64], [47, 54, 59, 63]], len: 5, wave: 'triangle', hint: 'Brighter chords with a gentle pulse, for a livelier room.' }
   };
+  // African rhythm, made live: the West African 12/8 bell pattern, djembe (bass, tone and slap), shaker, a talking drum and an
+  // interlocking mbira line in the spirit of Zimbabwe, over a deep bass. It builds bar by bar: mbira, then shaker, bell, drums and
+  // the talking drum, so the room fills as the start comes closer. One pulse is an eighth note of 12/8 at 112 beats a minute.
+  var AFR = (function () {
+    var PULSE = 60 / 112 / 3, NOISE = null;
+    var BELL = [1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1], D1 = 'B--TT-S--TT-', D2 = '--S-TS--S-TS', D3 = 'B-----B--S-S';
+    var CH = [[43, 55, 59, 62, 67, 71], [40, 52, 55, 59, 64, 67], [36, 48, 55, 60, 64, 67], [38, 50, 54, 57, 62, 66]];   // G, Em, C, D: a four-bar cycle
+    var RH = [[5, 3], [4, 2], [5, 4], [3, 2]];   // right-hand figure: indices into each chord, played between the left-hand notes
+    var TALK = [[0, 160, 230, .22], [2, 230, 150, .2], [3, 150, 150, .12], [5, 190, 260, .3], [8, 260, 140, .25], [10, 150, 200, .18]];
+    function noise(c) { if (NOISE) return NOISE; var b = c.createBuffer(1, c.sampleRate, c.sampleRate), d = b.getChannelData(0); for (var i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; return (NOISE = b); }
+    function env(c, g, t, peak, dec) { g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(peak, t + .004); g.gain.exponentialRampToValueAtTime(.0008, t + dec); }
+    function osc(c, out, type, f0, f1, t, peak, dec, glide) { var o = c.createOscillator(), g = c.createGain(); o.type = type; o.frequency.setValueAtTime(f0, t); if (f1 !== f0) o.frequency.exponentialRampToValueAtTime(f1, t + (glide || dec * .5)); env(c, g, t, peak, dec); o.connect(g); g.connect(out); o.start(t); o.stop(t + dec + .05); }
+    function hiss(c, out, t, type, f, q, peak, dec) { var n = c.createBufferSource(), fl = c.createBiquadFilter(), g = c.createGain(); n.buffer = noise(c); n.playbackRate.value = .8 + Math.random() * .4; fl.type = type; fl.frequency.value = f; fl.Q.value = q; env(c, g, t, peak, dec); n.connect(fl); fl.connect(g); g.connect(out); n.start(t, Math.random() * .5); n.stop(t + dec + .05); }
+    var hz = function (m) { return 440 * Math.pow(2, (m - 69) / 12); };
+    function djembe(c, out, kind, t, v) {
+      if (kind === 'B') { osc(c, out, 'sine', 120, 52, t, .95 * v, .42, .1); hiss(c, out, t, 'lowpass', 300, .7, .25 * v, .06); }
+      if (kind === 'T') { osc(c, out, 'sine', 330, 255, t, .42 * v, .2, .05); hiss(c, out, t, 'bandpass', 700, 1.2, .22 * v, .08); }
+      if (kind === 'S') { hiss(c, out, t, 'bandpass', 2100, .9, .55 * v, .07); osc(c, out, 'triangle', 480, 400, t, .16 * v, .06); }
+    }
+    function mbira(c, out, wet, m, t, v) {
+      var f = hz(m), g = c.createGain(); g.connect(out); g.connect(wet);
+      osc(c, g, 'sine', f, f, t, .3 * v, 1.5); osc(c, g, 'sine', f * 2.01, f * 2.01, t, .07 * v, .5); osc(c, g, 'triangle', f * 4.2, f * 4.2, t, .02 * v, .12);
+      hiss(c, g, t + .003, 'bandpass', Math.min(9000, f * 9), 6, .035 * v, .32);   // the buzz of the bottle caps
+    }
+    return {
+      PULSE: PULSE,
+      step: function (c, bus, wet, i, t, mood, lvl) {
+        var p = i % 12, bar = Math.floor(i / 12), ch = CH[bar % 4], full = mood === 'africa', build = full ? Math.min(5, Math.floor(bar / 2)) : 0;
+        if (typeof lvl === 'number') build = Math.max(build, lvl);
+        // mbira: left hand on the main beats, right hand interlocking between them
+        var lh = [0, 3, 6, 9].indexOf(p) >= 0, note = lh ? ch[[0, 1, 0, 2][p / 3]] : ch[RH[bar % 4][(p % 3) - 1]] + (p > 6 && bar % 2 ? 12 : 0);
+        if (p % 3 !== 0 || lh) mbira(c, bus, wet, note + 12, t + (lh ? 0 : .012), lh ? .9 : .75);
+        if (p === 0 || p === 6) osc(c, bus, 'sine', hz(ch[0] - 12), hz(ch[0] - 12), t, full ? .5 : .28, .9);   // deep bass
+        if (!full) return;
+        if (build >= 1) hiss(c, bus, t, 'highpass', 6500, .7, p % 3 === 0 ? .2 : .09, .05);   // shaker
+        if (build >= 2 && BELL[p]) { osc(c, bus, 'sine', 1180, 1180, t, .2, .22); osc(c, bus, 'sine', 3050, 3050, t, .06, .1); }   // the 12/8 bell
+        if (build >= 3) { var k = D1[p]; if (k !== '-') djembe(c, bus, k, t, 1); }
+        if (build >= 4) { var k2 = (bar % 4 === 3 ? D3 : D2)[p]; if (k2 !== '-') djembe(c, bus, k2, t + .006, .75); }
+        if (build >= 5 && bar % 2 === 1) TALK.forEach(function (n) { if (n[0] === p) osc(c, bus, 'triangle', n[1], n[2], t, .35, n[3] + .15, n[3]); });
+      },
+      flourish: function (c, bus, t) { for (var i = 0; i < 9; i++) djembe(c, bus, i % 3 === 2 ? 'T' : 'S', t + i * .07, .6 + i * .05); djembe(c, bus, 'B', t + .66, 1.2); osc(c, bus, 'sine', 70, 40, t + .66, .9, 1.6, .5); }
+    };
+  })();
   var Music = {
     on: false, mood: S.mood || 'calm', gain: null, timer: null, el: null, src: null, i: 0,
     bus: function () {
@@ -316,9 +360,11 @@ input[type=range]{accent-color:var(--accent)}
       for (var ch = 0; ch < 2; ch++) { var d = ir.getChannelData(ch); for (var i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.6); }
       conv.buffer = ir; var wet = c.createGain(); wet.gain.value = .55; var dry = c.createGain(); dry.gain.value = .6;
       lp.connect(dry); lp.connect(conv); conv.connect(wet); dry.connect(g); wet.connect(g); g.connect(c.destination);
-      this.gain = g; this.input = lp; return g;
+      var comp = c.createDynamicsCompressor(); comp.threshold.value = -18; comp.ratio.value = 4; comp.attack.value = .004; comp.release.value = .2; comp.connect(g);
+      var send = c.createGain(); send.gain.value = .35; send.connect(conv);
+      this.gain = g; this.input = lp; this.drums = comp; this.wet = send; return g;
     },
-    level: function () { return Math.pow((S.vol || 0) / 100, 1.6) * .5; },
+    level: function () { return Math.pow((S.vol || 0) / 100, 1.6) * (this.mood === 'africa' || this.mood === 'mbira' ? 1.1 : .5); },
     chord: function () {
       var c = ctx(), m = MOODS[this.mood] || MOODS.calm, notes = m.chords[this.i++ % m.chords.length], t = c.currentTime, dur = m.len + 2.5;
       notes.concat([notes[0] - 12]).forEach(function (n, j) {
@@ -335,14 +381,22 @@ input[type=range]{accent-color:var(--accent)}
       var c = ctx(); this.bus(); this.on = true; $('play').textContent = '❚❚'; $('musicbtn').classList.add('on');
       if (this.mood === 'file') { if (!this.el) { toast('Choose an audio file first.'); this.stop(); return; } this.el.volume = Math.min(1, (S.vol || 0) / 100); this.el.play(); return; }
       this.gain.gain.cancelScheduledValues(c.currentTime); this.gain.gain.setValueAtTime(this.gain.gain.value, c.currentTime); this.gain.gain.linearRampToValueAtTime(this.level(), c.currentTime + 2);
-      var self = this; clearInterval(this.timer); this.chord(); this.timer = setInterval(function () { self.chord(); }, (MOODS[this.mood] || MOODS.calm).len * 1000);
+      var self = this; clearInterval(this.timer);
+      if (this.mood === 'africa' || this.mood === 'mbira') {   // a look-ahead scheduler: every pulse is placed exactly on the audio clock
+        this.pi = 0; this.nt = c.currentTime + .12;
+        this.timer = setInterval(function () { var lvl = (remaining() <= 60000 && remaining() > 0) ? 5 : undefined; while (self.nt < c.currentTime + .2) { AFR.step(c, self.drums, self.wet, self.pi, self.nt, self.mood, lvl); self.nt += AFR.PULSE; self.pi++; } }, 25);
+        return;
+      }
+      this.chord(); this.timer = setInterval(function () { self.chord(); }, (MOODS[this.mood] || MOODS.calm).len * 1000);
     },
     stop: function () { this.on = false; clearInterval(this.timer); $('play').textContent = '▶'; $('musicbtn').classList.remove('on'); if (this.el) this.el.pause(); if (this.gain && AC) { this.gain.gain.cancelScheduledValues(AC.currentTime); this.gain.gain.setValueAtTime(this.gain.gain.value, AC.currentTime); this.gain.gain.linearRampToValueAtTime(0, AC.currentTime + .8); } },
     fade: function () {
       if (!this.on) return; var self = this;
       if (this.mood === 'file' && this.el) { var v = this.el.volume, f = setInterval(function () { v -= .04; if (v <= 0) { clearInterval(f); self.stop(); } else self.el.volume = v; }, 120); return; }
-      if (this.gain && AC) { this.gain.gain.cancelScheduledValues(AC.currentTime); this.gain.gain.setValueAtTime(this.gain.gain.value, AC.currentTime); this.gain.gain.linearRampToValueAtTime(0, AC.currentTime + 4); }
-      setTimeout(function () { self.stop(); }, 4200);
+      var fadeAt = 0;
+      if ((this.mood === 'africa' || this.mood === 'mbira') && AC) { clearInterval(this.timer); AFR.flourish(AC, this.drums, AC.currentTime + .05); fadeAt = 1.4; }   // the drums land on the start
+      if (this.gain && AC) { var g = this.gain.gain, t0 = AC.currentTime + fadeAt; g.cancelScheduledValues(AC.currentTime); g.setValueAtTime(g.value, t0); g.linearRampToValueAtTime(0, t0 + 4); }
+      setTimeout(function () { self.stop(); }, (fadeAt + 4.2) * 1000);
     }
   };
   $('play').addEventListener('click', function () { if (Music.on) Music.stop(); else Music.play(); });
@@ -352,11 +406,14 @@ input[type=range]{accent-color:var(--accent)}
     b.addEventListener('click', function () {
       var was = Music.on; if (was) Music.stop(); Music.mood = S.mood = b.getAttribute('data-mood'); save();
       [].forEach.call(document.querySelectorAll('#moods button'), function (x) { x.classList.toggle('on', x === b); });
-      $('filewrap').hidden = Music.mood !== 'file'; $('moodhint').textContent = Music.mood === 'file' ? 'Play a track of your own from this computer. It stays on this computer: nothing is uploaded. Use music you have the right to play to an audience.' : MOODS[Music.mood].hint;
+      $('filewrap').hidden = Music.mood !== 'file'; moodHint();
       if (was && Music.mood !== 'file') setTimeout(function () { Music.play(); }, 900);
     });
   });
   $('filewrap').hidden = Music.mood !== 'file';
+  function moodHint() { $('moodhint').textContent = Music.mood === 'file' ? 'Play a track of your own from this computer. It stays on this computer: nothing is uploaded. Use music you have the right to play to an audience.' : AHINT[Music.mood] || (MOODS[Music.mood] || MOODS.calm).hint; }
+  if (!document.querySelector('#moods button[data-mood="' + Music.mood + '"]')) Music.mood = 'africa';
+  [].forEach.call(document.querySelectorAll('#moods button'), function (x) { x.classList.toggle('on', x.getAttribute('data-mood') === Music.mood); }); moodHint();
   $('file').addEventListener('change', function () { var f = this.files && this.files[0]; if (!f) return; if (Music.el) { Music.el.pause(); URL.revokeObjectURL(Music.el.src); } Music.el = new Audio(URL.createObjectURL(f)); Music.el.loop = true; toast(f.name + ' is ready. Press play.'); });
 
   // ---------- Wits photographs, dissolving slowly one into the next ----------

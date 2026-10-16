@@ -9,75 +9,86 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <!-- The Wits AHEAD session countdown (16 October 2026). A holding screen to share in Zoom or a Pathway meeting before a session
      begins: the time left, a welcome line, the group's mark rising out of the mist, calm music made in the page itself (no
      recordings, so nothing to licence), a chime at the start, and controls that hide themselves so the shared screen stays clean.
      Settings stay in this browser; "Copy link" carries them to another computer. Nothing is sent anywhere. -->
 <style>
-:root{--ink:#F1F5FB;--quiet:#A9B6CB;--gold:#D4B866;--gold2:#EADBA6;--deep:#0B1830;--wits:#192F59;--panel:rgba(0,26,41,.92);--line:rgba(255,255,255,.12);--accent:var(--gold)}
+:root{--accent:#D9C29A;--ink:#F1F5FB;--quiet:#B8CBDA;--gold:#D9C29A;--gold2:#E9D9A8;--kick:#B79A5E;--btn:#85714D;--deep:#003B5C;--wits:#192F59;--panel:rgba(0,26,41,.92);--line:rgba(255,255,255,.12);--accent:var(--gold)}
 :root[data-accent="blue"]{--accent:#8FB4E8;--gold2:#D3E2F7}
 :root[data-accent="white"]{--accent:#F1F5FB;--gold2:#FFFFFF}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html,body{margin:0;height:100%;background:var(--deep);color:var(--ink);font-family:'Open Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+/* witsahead.org character (16 October 2026): the white header band, the navy hero, Open Sans light with a bold close, gold kicker */
+.top{position:fixed;left:0;right:0;top:0;height:clamp(64px,11vh,104px);background:#fff;z-index:4;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;box-shadow:0 2px 0 rgba(0,0,0,.04)}
+.top .wl{height:clamp(30px,5.4vh,52px);display:block}
+.top .ah{display:flex;align-items:center;gap:14px;color:#003B5C;text-decoration:none}
+.top .ah svg{width:clamp(36px,6vh,58px);height:clamp(36px,6vh,58px)}
+.top .ah small{display:block;font-size:clamp(9px,1.2vh,12px);letter-spacing:.32em;color:#85714D;font-weight:700}
+.top .ah b{display:block;font-size:clamp(20px,3.4vh,32px);font-weight:800;letter-spacing:.01em;line-height:1}
+.top .ah em{display:block;font-style:normal;font-size:clamp(9px,1.25vh,12.5px);color:#4B5563;max-width:36ch;line-height:1.35;margin-top:3px}
+.goldline{position:fixed;left:0;right:0;top:clamp(64px,11vh,104px);height:3px;background:#85714D;z-index:4}
+html,body{margin:0;height:100%;background:#003B5C;color:var(--ink);font-family:'Open Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
 body.idle{cursor:none}
 canvas#scene{position:fixed;inset:0;width:100%;height:100%;display:block}
 .slides{position:fixed;inset:0;overflow:hidden;display:none;background:#0B1830}
-body[data-scene="africa"] .slides{display:block}
-body[data-scene="africa"] #scene{z-index:1}
-.slides img{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;opacity:0;transition:opacity 2.8s ease;filter:saturate(.75) brightness(.85) blur(1.2px)}
+body[data-scene="africa"] .slides{display:block;background:#003B5C}
+body[data-scene="africa"] #scene,body[data-scene="bars"] #scene{z-index:1}
+.slides img{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;opacity:0;transition:opacity 2.8s ease;filter:grayscale(.35) brightness(.9);mix-blend-mode:luminosity}
+.slides img.on{opacity:.2!important}
 .slides img.on{opacity:1;animation:kb 16s ease-in-out both}
 .slides img.k1.on{animation-name:kb1}.slides img.k2.on{animation-name:kb2}
 @keyframes kb{from{transform:scale(1) translate(0,0)}to{transform:scale(1.12) translate(-2%,-1.5%)}}
 @keyframes kb1{from{transform:scale(1.12) translate(2%,1%)}to{transform:scale(1) translate(0,0)}}
 @keyframes kb2{from{transform:scale(1.04) translate(-2%,1%)}to{transform:scale(1.14) translate(2%,-1%)}}
 .veil{position:fixed;inset:0;background:linear-gradient(90deg,rgba(0,18,30,.82) 0%,rgba(0,18,30,.55) 34%,rgba(0,18,30,0) 62%);pointer-events:none}
-body[data-scene="africa"] .veil{background:linear-gradient(90deg,rgba(9,20,42,.95) 0%,rgba(11,24,48,.86) 40%,rgba(11,24,48,.8) 60%,rgba(9,20,42,.86) 100%),linear-gradient(0deg,rgba(9,20,42,.9) 0%,rgba(9,20,42,0) 30%)}
+body[data-scene="africa"] .veil,body[data-scene="bars"] .veil{background:linear-gradient(90deg,rgba(0,47,74,.9) 0%,rgba(0,59,92,.55) 45%,rgba(0,59,92,0) 70%)}
 .lockup{display:flex;align-items:center;gap:16px}
 .lockup .plate{background:#fff;border-radius:8px;padding:7px 12px;display:flex;align-items:center;box-shadow:0 6px 24px rgba(0,0,0,.35)}
 .lockup .plate img{height:clamp(30px,3.6vw,46px);display:block}
 .lockup .div{width:1px;height:42px;background:rgba(255,255,255,.25)}
-.pillars{position:fixed;left:6vw;bottom:5vh;z-index:2;display:flex;align-items:center;gap:14px;font-size:clamp(10px,.85vw,13px);letter-spacing:.06em;color:var(--quiet);max-width:52vw}
+.pillars{position:fixed;left:6vw;bottom:5vh;background:rgba(0,47,74,.7);border:1px solid rgba(255,255,255,.12);padding:12px 16px;border-radius:4px;z-index:2;display:flex;align-items:center;gap:14px;font-size:clamp(10px,.85vw,13px);letter-spacing:.06em;color:var(--quiet);max-width:52vw}
 .pillars b{color:var(--gold2);font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:.85em;white-space:nowrap}
 .pillars .pdot{display:flex;gap:5px}.pillars .pdot i{width:7px;height:7px;border-radius:2px;background:rgba(255,255,255,.18);transition:background .6s,transform .6s}
 .pillars .pdot i.on{background:var(--accent);transform:scale(1.25)}
 .pillars span#pname{transition:opacity .6s}
-.tagline{font-size:clamp(10px,.8vw,12px);letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin:0 0 2.6vh;opacity:.9}
-body:not([data-scene="africa"]) .pillars{display:none}
+.tagline{display:none;font-size:clamp(10px,.8vw,12px);letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin:0 0 2.6vh;opacity:.9}
+body[data-scene="plain"] .pillars{display:none}
 body[data-scene="plain"] .veil{background:none}
-.bar{position:fixed;left:0;top:0;height:3px;background:var(--accent);box-shadow:0 0 12px var(--accent);width:0;transition:width 1s linear;z-index:3}
-.brand{position:fixed;left:6vw;top:6vh;display:flex;align-items:center;gap:14px;z-index:2}
+.bar{position:fixed;left:0;top:calc(clamp(64px,11vh,104px) + 3px);height:3px;background:var(--accent);box-shadow:0 0 12px var(--accent);width:0;transition:width 1s linear;z-index:3}
+.brand{display:none}
 .brand svg{width:44px;height:44px}
 .brand b{display:block;font-size:17px;letter-spacing:.02em;font-weight:700}
 .brand small{display:block;font-size:12px;color:var(--quiet);letter-spacing:.02em}
-.nowline{position:fixed;right:5vw;top:6vh;text-align:right;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--quiet);z-index:2;line-height:1.9}
+.nowline{position:fixed;right:4vw;top:calc(clamp(64px,11vh,104px) + 4vh);text-align:right;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--quiet);z-index:2;line-height:1.9}
 .nowline b{color:var(--ink);font-weight:600;letter-spacing:.12em}
-main{position:fixed;left:6vw;top:50%;transform:translateY(-50%);z-index:2;max-width:min(46vw,760px)}
-.kicker{font-size:clamp(10px,1vw,13px);letter-spacing:.32em;text-transform:uppercase;color:var(--quiet);margin:0 0 1.2vh}
-.clock{display:flex;align-items:flex-start;gap:.06em;font-weight:600;font-size:clamp(64px,11vw,190px);line-height:1;color:var(--accent);text-shadow:0 0 34px color-mix(in srgb,var(--accent) 45%,transparent);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+main{position:fixed;left:6vw;top:calc(50% + 5vh);transform:translateY(-50%);z-index:2;max-width:min(48vw,800px)}
+.kicker{font-size:clamp(10px,.95vw,13px);letter-spacing:.2em;text-transform:uppercase;color:var(--kick);font-weight:700;margin:0 0 1.4vh}
+.clock{display:flex;align-items:flex-start;gap:.06em;font-weight:300;font-size:clamp(64px,11vw,190px);line-height:1;color:#fff;text-shadow:0 0 40px rgba(0,20,35,.45);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .clock .u{display:flex;flex-direction:column;align-items:center}
-.clock .u small{font-size:clamp(8px,.75vw,11px);letter-spacing:.32em;text-transform:uppercase;color:var(--quiet);font-weight:600;text-shadow:none;margin-top:.9vh}
-.clock .sep{opacity:.55;font-weight:400;transform:translateY(-.06em);animation:blink 2s steps(1) infinite}
+.clock .u small{font-size:clamp(8px,.75vw,11px);letter-spacing:.24em;text-transform:uppercase;color:var(--kick);font-weight:700;text-shadow:none;margin-top:.9vh}
+.clock .sep{color:var(--accent);opacity:.9;font-weight:300;transform:translateY(-.06em);animation:blink 2s steps(1) infinite}
 .clock[hidden]{display:none}
 body.paused .clock .sep{animation:none;opacity:.25}
 body.paused .clock{opacity:.72}
 body.final .clock{animation:pulse 1s ease-in-out infinite}
-@keyframes pulse{50%{transform:scale(1.025);text-shadow:0 0 60px var(--accent)}}
+@keyframes pulse{50%{transform:scale(1.025);text-shadow:0 0 50px rgba(217,194,154,.6)}}
 @keyframes blink{50%{opacity:.18}}
-.rule{width:min(30vw,420px);height:1px;background:var(--line);margin:3.2vh 0}
-h1{font-family:'Source Serif 4',Georgia,serif;font-weight:400;font-size:clamp(26px,2.9vw,50px);line-height:1.18;margin:0;white-space:pre-line}
-.sub{font-family:'Source Serif 4',Georgia,serif;color:var(--quiet);font-size:clamp(13px,1.15vw,19px);margin:1.6vh 0 0;line-height:1.45;white-space:pre-line}
+.rule{width:min(30vw,420px);height:3px;background:#85714D;margin:3.2vh 0}
+h1{font-weight:300;font-size:clamp(28px,3.3vw,56px);line-height:1.12;margin:0;letter-spacing:-.01em;color:#fff}
+h1 b{font-weight:800}
+.sub{font-weight:300;color:var(--quiet);font-size:clamp(13px,1.2vw,19px);margin:1.6vh 0 0;line-height:1.45;white-space:pre-line}
 .host{font-size:clamp(11px,.9vw,14px);color:var(--gold2);margin-top:2.2vh;letter-spacing:.04em}
-.zero{font-family:'Source Serif 4',Georgia,serif;font-size:clamp(40px,5.4vw,96px);line-height:1.08;color:var(--accent);text-shadow:0 0 34px color-mix(in srgb,var(--accent) 40%,transparent);animation:rise 1.4s ease both;white-space:pre-line}
+.zero{font-weight:300;font-size:clamp(40px,5.4vw,96px);line-height:1.08;color:#fff;animation:rise 1.4s ease both;white-space:pre-line}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}}
 .paused-tag{display:none;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold2);margin-top:1vh}
 body.paused .paused-tag{display:block}
 .controls{position:fixed;right:4vw;bottom:4vh;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;z-index:4;transition:opacity .5s}
 body.idle .controls,body.idle .nowline.hide-idle{opacity:0;pointer-events:none}
-.controls button{background:rgba(0,26,41,.6);border:1px solid var(--line);color:var(--ink);font:600 10.5px 'Open Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;padding:9px 13px;border-radius:999px;cursor:pointer;backdrop-filter:blur(6px)}
+.controls button{background:rgba(0,47,74,.75);border:1px solid rgba(255,255,255,.22);color:var(--ink);font:700 11px 'Open Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:10px 14px;border-radius:4px;cursor:pointer;backdrop-filter:blur(6px)}
 .controls button:hover,.controls button.on{border-color:var(--accent);color:var(--accent)}
-.panel{position:fixed;right:4vw;top:12vh;width:min(380px,92vw);max-height:76vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;z-index:5;backdrop-filter:blur(10px);box-shadow:0 20px 60px rgba(0,0,0,.45);font-size:13px}
+.panel{position:fixed;right:4vw;top:calc(clamp(64px,11vh,104px) + 3vh);width:min(380px,92vw);max-height:76vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;z-index:5;backdrop-filter:blur(10px);box-shadow:0 20px 60px rgba(0,0,0,.45);font-size:13px}
 .panel[hidden]{display:none}
 .panel h2{margin:0 0 10px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--quiet);display:flex;justify-content:space-between;align-items:center}
 .x{background:none;border:0;color:var(--quiet);font-size:18px;cursor:pointer;padding:0 4px}
@@ -94,7 +105,7 @@ label.f input[type=range]{padding:0}
 .chips button,.go{background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--ink);font:600 11px 'Open Sans';padding:7px 10px;border-radius:999px;cursor:pointer}
 .chips button:hover,.chips button.on{border-color:var(--accent);color:var(--accent)}
 input[type=range]{accent-color:var(--accent)}
-.go{background:var(--accent);color:#001A29;border-color:var(--accent);letter-spacing:.12em;text-transform:uppercase;font-size:10.5px;padding:9px 14px}
+.go{background:#85714D;color:#fff;border-color:#85714D;border-radius:4px!important;letter-spacing:.12em;text-transform:uppercase;font-size:10.5px;padding:9px 14px}
 .chk{display:flex;gap:9px;align-items:flex-start;margin:0 0 10px;color:var(--ink);font-size:12.5px;line-height:1.4;cursor:pointer}
 .chk input{margin-top:2px;accent-color:var(--gold)}
 .hint{color:var(--quiet);font-size:11.5px;line-height:1.5;margin:4px 0 12px}
@@ -112,6 +123,8 @@ input[type=range]{accent-color:var(--accent)}
 <div class="slides" id="slides" aria-hidden="true"></div>
 <canvas id="scene" aria-hidden="true"></canvas>
 <div class="veil"></div>
+<header class="top"><img class="wl" src="../wits-wsoe-lockup.png" alt="University of the Witwatersrand, Johannesburg · Wits School of Education"><div class="ah"><svg viewBox="0 0 160 160" aria-hidden="true"><rect x="32" y="94" width="26" height="50" rx="5" fill="#7FA6C0"/><rect x="67" y="66" width="26" height="78" rx="5" fill="#1E5A82"/><rect x="102" y="36" width="26" height="108" rx="5" fill="#003B5C"/><path d="M30 122 L64 94 L100 66 L128 40" fill="none" stroke="#85714D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 0 L-20 -11 L-14.4 0 L-20 11 Z" fill="#85714D" transform="translate(140 29) rotate(-43)"/></svg><div><small>WITS</small><b>AHEAD</b><em>Research Group for Advancing Human Capabilities through Education, Analytics and Development</em></div></div></header>
+<div class="goldline"></div>
 <div class="bar" id="bar"></div>
 
 <div class="brand lockup" id="brand">
@@ -163,14 +176,14 @@ input[type=range]{accent-color:var(--accent)}
   </div>
   <div class="tab" data-tab="text" hidden>
     <label class="f">Above the clock<input id="t_kicker" maxlength="60"></label>
-    <label class="f">Welcome line<textarea id="t_title" maxlength="160"></textarea></label>
+    <label class="f">Welcome line <small>(*stars* make words bold, as on the website)</small><textarea id="t_title" maxlength="160"></textarea></label>
     <label class="f">Under it<textarea id="t_sub" maxlength="240"></textarea></label>
     <label class="f">Host or facilitator <small>(optional)</small><input id="t_host" maxlength="120" placeholder="With Professor Emmanuel Ojo"></label>
     <label class="f">Beside the mark<input id="t_org" maxlength="80"></label>
   </div>
   <div class="tab" data-tab="look" hidden>
-    <label class="f">Picture<select id="l_scene"><option value="africa">Africa and Wits: the campus, and the continent alive with connections</option><option value="path">The way ahead: the Wits AHEAD mark rising out of the mist</option><option value="night">Night sky over the horizon</option><option value="plain">Plain navy</option></select></label>
-    <label class="f">Clock colour<select id="l_accent"><option value="gold">Wits gold</option><option value="blue">Wits blue</option><option value="white">White</option></select></label>
+    <label class="f">Picture<select id="l_scene"><option value="africa">Wits AHEAD: Africa alive with connections, the campus and the moving bars</option><option value="bars">Wits AHEAD: the moving bars of the website</option><option value="path">The way ahead: the mark rising out of the mist</option><option value="plain">Plain navy</option></select></label>
+    <label class="f">Clock colour<select id="l_accent"><option value="gold">Wits AHEAD gold</option><option value="blue">Wits blue</option><option value="white">White</option></select></label>
     <label class="chk"><input type="checkbox" id="l_now"> Show the time now and the start time (top right)</label>
     <label class="chk"><input type="checkbox" id="l_tz"> Show the time zone (SAST) beside the times</label>
   </div>
@@ -201,7 +214,7 @@ input[type=range]{accent-color:var(--accent)}
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
-  var KEY = 'witsahead-countdown-v3';
+  var KEY = 'witsahead-countdown-v4';
   var PILLARS = ['Generative AI in higher education', 'Analytics for student success', 'STEM and teacher education', 'Graduate capability and transitions', 'Data for education systems', 'Responsible AI and policy'];
   var PHOTOS = [['../wits/education-campus.jpg', 'k0'], ['../wits/graduates.jpg', 'k1'], ['../wits/students-writing.jpg', 'k2'], ['../wits/teacher-experiment.jpg', 'k1']];
   var AFRICA = ["M594.2,276.9L604.7,284.4L604.9,286.5L608.9,290.0L607.6,294.3L609.6,297.6L608.9,303.3L612.0,309.8L604.1,314.2L596.0,314.0L593.7,306.6L585.4,302.8L581.7,294.4L581.5,289.4L585.4,285.4L584.5,277.6L594.2,276.9Z","M475.9,176.6L475.9,182.8L466.8,182.6L466.8,191.6L464.2,191.9L464.1,198.8L453.2,198.8L452.6,199.9L452.7,198.4L459.0,198.2L461.4,190.5L465.3,186.7L468.4,179.3L475.6,178.5L475.9,176.6Z","M581.5,289.4L582.3,296.5L585.4,302.8L579.8,303.5L578.8,314.9L582.3,316.3L582.5,320.1L580.4,320.1L575.5,314.3L573.8,315.4L567.4,312.0L561.5,312.5L560.4,299.2L557.0,299.2L557.2,297.9L555.8,297.9L553.9,298.7L552.8,301.6L548.5,301.9L545.4,294.2L534.2,295.0L533.8,293.9L537.8,289.4L540.5,291.0L544.5,286.0L545.6,279.7L549.0,275.1L551.5,258.8L554.1,255.9L562.2,259.5L563.4,257.1L571.3,255.1L576.0,255.2L579.0,258.5L582.5,257.4L585.6,261.3L585.5,265.4L586.6,265.9L583.0,271.5L580.6,283.5L581.5,289.4Z","M615.5,279.5L613.9,276.6L613.8,263.8L617.0,258.7L621.3,256.2L624.9,256.0L635.9,240.4L636.0,233.6L642.0,231.4L640.4,241.3L635.0,254.9L629.3,263.6L619.8,272.6L615.5,279.5Z","M608.9,290.0L604.9,286.5L604.7,284.4L594.2,276.9L594.1,273.2L597.3,266.9L594.5,258.7L598.0,254.3L600.4,258.0L602.4,258.0L605.9,261.0L609.9,261.6L613.2,258.6L616.3,259.8L613.8,263.8L613.9,276.6L615.5,279.5L611.8,282.6L608.9,290.0Z","M568.2,244.7L565.2,242.2L565.4,238.2L561.9,229.2L560.9,229.4L564.0,218.6L566.4,218.8L566.2,203.4L569.4,203.4L569.4,196.4L602.4,196.4L604.1,208.3L606.7,210.5L602.4,214.1L600.7,226.0L595.2,236.3L594.4,243.1L592.2,230.9L591.0,230.6L589.1,231.6L590.0,234.7L587.1,239.2L585.7,239.5L583.3,237.5L580.5,240.6L574.3,240.4L571.6,237.1L569.6,237.5L568.2,242.3L566.4,243.4L568.2,244.7Z","M566.2,204.9L566.4,218.8L564.0,218.6L560.9,229.4L561.9,229.2L563.5,234.5L560.3,236.5L558.3,240.3L552.3,242.1L549.9,245.9L542.4,247.5L541.6,242.7L538.8,240.1L539.4,238.4L543.0,238.6L540.5,226.8L538.8,226.7L537.6,223.2L538.8,218.6L542.4,215.3L544.2,202.1L541.9,198.8L541.3,193.4L544.1,191.5L566.2,204.9Z","M545.4,373.8L546.7,372.1L548.3,374.5L551.3,375.5L555.3,373.4L555.3,360.5L558.0,367.7L560.0,367.3L564.8,362.2L567.3,363.6L571.3,363.0L575.3,356.3L581.8,351.1L586.6,351.6L588.7,359.1L588.4,364.2L586.2,363.8L585.2,367.4L586.9,369.3L591.2,367.4L590.2,372.8L578.4,388.5L571.6,392.6L562.7,392.4L555.8,395.6L552.4,394.4L549.8,388.0L550.6,384.6L545.4,373.8ZM580.5,375.1L578.0,374.8L575.0,378.4L577.1,381.1L580.1,379.0L581.5,376.2L580.5,375.1Z","M580.5,375.1L581.5,376.2L580.1,379.0L577.1,381.1L575.0,378.4L578.0,374.8L580.5,375.1Z","M586.6,351.6L577.8,348.9L577.0,345.5L572.7,341.3L570.2,335.8L575.1,336.5L580.4,329.9L584.1,328.0L584.3,329.3L586.6,329.2L591.2,332.2L590.7,344.8L586.6,351.6Z","M581.8,351.1L575.3,356.3L571.3,363.0L567.3,363.6L564.8,362.2L560.0,367.3L558.0,367.7L555.3,360.5L555.3,350.2L558.0,350.1L558.1,337.6L564.4,336.3L565.5,337.7L570.2,335.8L572.7,341.3L577.0,345.5L577.8,348.9L581.8,351.1Z","M555.3,360.5L555.3,373.4L551.3,375.5L548.3,374.5L546.7,372.1L545.4,373.8L542.3,368.6L539.6,351.1L532.6,334.3L537.4,333.1L539.1,334.7L550.7,334.3L552.7,336.0L559.4,336.5L566.8,334.2L569.7,335.2L565.5,337.7L564.4,336.3L558.1,337.6L558.0,350.1L555.3,350.2L555.3,360.5Z","M453.6,225.9L451.0,221.9L455.2,215.9L459.5,215.4L462.7,217.3L466.2,222.3L468.0,229.9L453.7,230.1L453.2,227.5L461.5,226.2L458.1,224.9L453.6,225.9Z","M468.0,229.9L466.2,222.3L467.6,219.6L470.4,220.5L473.5,219.3L484.6,219.2L482.1,186.0L486.3,186.0L508.7,204.5L508.8,206.7L511.9,206.4L511.9,214.5L510.1,219.0L503.8,219.8L502.8,221.1L497.0,221.1L491.4,226.1L488.9,226.3L485.5,232.5L485.0,237.2L483.2,238.2L482.8,236.7L481.0,238.0L477.7,237.8L474.6,230.4L471.8,232.0L468.2,231.2L468.0,229.9Z","M452.6,199.9L453.2,198.8L464.1,198.8L464.2,191.9L466.8,191.6L466.8,182.6L475.9,182.8L475.9,177.5L486.3,186.0L482.1,186.0L484.6,219.2L473.5,219.3L470.4,220.5L467.6,219.6L466.2,222.3L462.7,217.3L459.5,215.4L454.3,217.0L454.8,203.1L452.6,199.9Z","M507.5,251.6L505.2,252.0L504.6,241.6L502.1,236.9L504.0,233.1L507.9,230.7L510.0,232.7L510.5,235.9L507.6,243.7L507.5,251.6Z","M541.3,193.4L541.9,198.8L544.2,202.1L542.4,215.3L538.8,218.6L537.6,223.2L538.8,226.7L540.5,226.8L539.4,229.8L536.3,225.9L534.2,227.9L530.5,226.6L525.0,228.6L521.7,226.8L518.9,227.6L515.1,224.9L511.4,226.1L510.0,232.7L507.9,230.7L506.0,231.7L506.0,229.3L502.8,228.5L501.0,221.2L510.1,219.0L511.9,214.5L511.9,206.4L515.8,204.8L533.3,191.3L539.3,194.7L541.3,193.4Z","M507.5,251.6L507.6,243.7L510.3,238.3L510.2,229.6L512.1,225.4L515.1,224.9L518.9,227.6L521.7,226.8L525.0,228.6L530.5,226.6L534.2,227.9L537.0,226.0L540.5,231.2L532.6,249.1L530.7,250.3L528.1,248.9L525.6,251.0L523.6,256.8L518.6,258.7L516.4,258.6L512.0,251.6L507.5,251.6Z","M540.3,228.5L543.0,238.6L539.4,238.4L538.8,240.1L541.6,242.7L542.9,246.6L540.4,251.7L540.2,257.0L544.1,263.0L544.3,267.5L539.8,265.8L526.8,265.6L527.2,262.8L523.6,257.8L524.3,254.4L528.1,248.9L530.7,250.3L532.6,249.1L537.7,235.7L540.0,233.0L540.3,228.5Z","M502.5,235.0L502.1,236.9L504.6,241.6L505.2,252.0L502.9,252.8L499.9,236.0L500.1,234.9L502.5,235.0Z","M500.1,234.9L502.9,252.8L494.5,257.1L492.1,256.1L491.0,251.7L492.9,244.8L491.8,235.1L500.1,234.9Z","M477.7,237.8L481.0,238.0L482.8,236.7L483.2,238.2L485.0,237.2L488.0,239.9L490.2,238.9L492.1,239.8L492.9,244.8L491.0,251.7L492.1,256.1L487.1,255.5L478.6,258.3L479.0,253.6L476.1,250.9L476.9,244.4L478.2,243.5L476.9,239.2L477.7,237.8Z","M461.9,229.4L468.0,229.9L468.2,231.2L471.8,232.0L474.6,230.4L477.7,237.8L476.9,239.2L478.2,243.5L477.0,246.6L474.4,247.9L472.9,243.6L470.8,244.3L469.1,238.3L465.5,239.1L463.2,242.4L458.0,234.9L461.8,232.2L461.9,229.4Z","M453.7,230.1L461.9,229.4L461.8,232.2L458.0,234.9L453.7,230.1Z","M476.6,246.6L476.1,250.9L479.0,253.6L478.6,258.3L475.0,256.6L468.2,249.8L471.6,244.1L472.9,243.6L474.4,247.9L476.6,246.6Z","M463.2,242.4L465.5,239.1L469.1,238.3L471.6,244.1L468.2,249.8L464.0,246.2L463.2,242.4Z","M485.0,237.2L485.5,232.5L488.9,226.3L491.4,226.1L497.0,221.1L501.0,221.2L502.8,228.5L506.0,229.3L505.4,232.7L502.5,235.0L491.8,235.1L492.1,239.8L490.2,238.9L488.0,239.9L485.0,237.2Z","M576.0,255.2L567.8,255.7L563.4,257.1L562.2,259.5L554.1,255.9L551.5,258.8L551.3,261.3L547.6,260.5L544.5,265.6L540.2,254.5L542.4,247.5L549.9,245.9L552.3,242.1L558.3,240.3L560.3,236.5L563.5,234.5L565.4,238.2L565.2,242.2L569.8,246.1L576.0,255.2Z","M551.3,261.3L549.0,275.1L545.6,279.7L544.5,286.0L540.5,291.0L539.3,289.4L536.8,290.7L535.1,289.1L533.1,291.3L530.8,287.5L532.9,285.6L531.9,283.3L534.7,282.0L534.9,280.4L538.9,282.2L540.1,278.3L538.5,273.4L539.7,269.4L536.9,269.0L536.3,265.6L544.3,267.5L547.6,260.5L551.3,261.3Z","M531.3,265.6L536.0,265.4L536.9,269.0L539.7,269.4L538.5,273.4L540.1,278.3L538.9,282.2L534.9,280.4L534.7,282.0L531.9,283.3L532.9,285.6L530.8,287.5L524.4,277.5L526.4,270.0L531.3,269.9L531.3,265.6Z","M526.8,265.6L531.3,265.6L531.3,269.9L526.4,270.0L526.8,265.6Z","M585.4,302.8L592.3,307.5L592.5,317.2L590.8,321.7L592.3,322.6L583.8,325.5L584.1,328.0L580.4,329.9L575.1,336.5L568.6,334.4L564.5,335.0L560.8,330.0L560.9,318.8L566.7,318.9L566.4,311.9L571.5,314.9L575.5,314.3L580.4,320.1L582.5,320.1L582.3,316.3L578.8,314.9L579.0,305.7L580.6,303.1L585.4,302.8Z","M591.0,306.0L593.7,306.6L595.2,309.2L596.0,321.2L599.1,324.8L599.4,329.3L597.3,332.5L595.5,330.3L595.7,324.8L590.8,321.7L593.0,310.5L591.0,306.0Z","M596.0,314.0L604.1,314.2L612.0,309.8L613.3,325.1L609.6,332.2L603.9,335.3L596.6,343.0L598.8,351.1L598.5,358.2L591.7,362.5L590.5,363.8L591.2,367.4L589.1,367.3L586.6,351.6L590.7,344.8L591.2,332.2L586.6,329.2L584.3,329.3L583.8,325.5L592.3,322.6L595.7,324.8L595.5,330.3L597.3,332.5L599.4,329.3L599.1,324.8L596.0,321.2L596.0,314.0Z","M589.1,367.3L586.9,369.3L585.2,367.4L586.2,363.8L588.4,364.2L589.1,367.3Z","M536.1,290.4L533.8,293.9L533.1,291.3L535.1,289.1L536.1,290.4ZM534.2,295.0L545.4,294.2L548.5,301.9L552.8,301.6L553.9,298.7L555.8,297.9L557.2,297.9L557.0,299.2L560.4,299.2L561.5,312.5L565.2,311.7L566.7,313.0L566.7,318.9L560.9,318.8L560.8,330.0L564.5,335.0L559.4,336.5L552.7,336.0L550.7,334.3L539.1,334.7L537.4,333.1L532.6,334.3L533.8,324.3L538.2,313.2L534.2,295.0Z","M584.6,282.0L585.4,285.4L581.5,289.4L580.6,283.5L584.6,282.0Z","M637.6,317.3L639.9,328.7L639.4,329.7L638.5,327.6L638.0,328.7L638.3,332.8L630.8,361.1L626.1,363.4L622.3,361.2L620.4,353.5L620.6,348.4L621.9,347.8L623.5,341.7L622.1,334.6L623.5,330.5L628.6,328.9L632.5,324.8L633.0,321.5L634.1,321.9L636.7,315.8L637.6,317.3Z","M453.6,225.9L458.1,224.9L461.5,226.2L453.2,227.5L453.6,225.9Z","M526.3,167.3L525.2,161.0L521.1,156.6L520.9,154.0L522.6,152.0L523.4,144.0L526.4,142.6L528.4,143.0L528.3,144.8L530.6,143.5L529.4,145.9L530.0,151.4L528.2,153.2L531.9,157.4L531.8,160.0L527.6,163.5L527.7,166.5L526.3,167.3Z","M475.9,177.5L475.9,172.4L485.4,168.4L489.7,165.2L489.9,162.6L496.4,160.4L494.0,150.2L496.6,148.3L504.1,145.2L514.8,144.8L517.4,143.4L523.4,144.0L522.6,152.0L520.9,154.0L521.1,156.6L525.2,161.0L527.2,170.4L527.0,180.6L525.9,182.1L528.6,188.1L529.9,187.4L533.3,191.3L515.8,204.8L508.8,206.7L508.7,204.5L475.9,177.5Z","M601.2,223.0L602.4,214.1L606.7,210.5L609.1,217.7L619.7,229.0L617.6,229.6L611.2,222.7L607.0,222.7L605.3,221.1L604.4,223.7L601.2,223.0Z","M494.0,150.2L496.4,160.4L489.9,162.6L489.7,165.2L485.4,168.4L475.9,172.4L475.6,178.5L468.4,179.3L465.3,186.7L461.4,190.5L459.0,198.2L452.7,198.4L459.9,181.5L464.9,175.2L467.5,174.9L473.4,168.6L472.7,164.2L476.0,157.0L480.8,153.9L483.5,148.2L494.0,150.2Z","M602.4,196.4L569.4,196.4L568.6,168.2L569.9,162.9L573.6,162.8L580.3,165.3L586.0,162.9L588.8,165.1L589.4,163.9L593.8,165.0L595.2,164.1L597.0,170.1L594.2,176.6L589.8,169.2L599.1,189.7L598.7,192.6L602.4,196.4Z","M569.4,196.4L569.4,203.4L566.2,203.4L566.2,204.9L544.1,191.5L539.3,194.7L533.3,191.3L529.9,187.4L528.6,188.1L525.9,182.1L527.4,172.0L526.3,167.3L527.7,166.5L527.6,163.5L531.8,160.0L531.9,157.4L542.3,160.4L543.6,163.5L553.0,167.4L555.7,164.9L555.1,162.2L557.9,158.9L563.6,159.1L564.5,160.7L569.2,161.7L569.4,196.4Z","M632.7,245.5L624.9,256.0L621.3,256.2L616.3,259.8L613.2,258.6L609.9,261.6L600.4,258.0L596.4,250.5L593.2,246.5L591.5,246.3L594.0,244.2L595.2,236.3L599.6,229.5L601.2,223.0L604.4,223.7L605.3,221.1L607.0,222.7L611.2,222.7L615.6,226.4L617.6,229.6L616.0,234.8L618.8,235.3L618.2,236.5L621.3,241.4L632.7,245.5Z","M617.6,229.6L619.7,229.0L620.3,230.1L618.7,232.4L619.8,233.4L618.8,235.3L616.0,234.8L617.6,229.6Z","M636.0,233.6L635.9,240.4L632.7,245.5L621.3,241.4L618.2,236.5L619.8,233.4L622.5,236.9L636.0,233.6Z","M594.2,276.9L582.2,278.3L583.0,271.5L586.6,265.9L585.5,265.4L585.6,261.3L592.7,260.3L594.5,258.7L597.3,266.9L594.1,273.2L594.2,276.9Z","M584.5,277.6L585.4,281.6L580.6,283.5L581.4,279.3L584.5,277.6Z","M585.6,261.3L582.5,257.4L577.7,258.1L569.8,246.1L566.4,243.4L568.2,242.3L569.6,237.5L571.6,237.1L574.3,240.4L580.5,240.6L583.3,237.5L585.7,239.5L587.1,239.2L590.0,234.7L589.1,231.6L592.2,230.9L594.4,243.1L591.5,246.3L594.7,248.2L598.0,254.3L592.7,260.3L585.6,261.3Z"];
@@ -209,15 +222,15 @@ input[type=range]{accent-color:var(--accent)}
   var CITIES = [['Cape Town', 18.42, -33.92], ['Nairobi', 36.82, -1.29], ['Lagos', 3.38, 6.52], ['Accra', -0.19, 5.6], ['Addis Ababa', 38.75, 9.03], ['Cairo', 31.24, 30.04], ['Kampala', 32.58, 0.35], ['Dar es Salaam', 39.28, -6.79], ['Kinshasa', 15.27, -4.44], ['Dakar', -17.47, 14.72], ['Harare', 31.05, -17.83], ['Lusaka', 28.28, -15.42], ['Maputo', 32.57, -25.97], ['Windhoek', 17.08, -22.56], ['Kigali', 30.06, -1.94], ['Rabat', -6.84, 34.02], ['Abuja', 7.49, 9.06], ['Lilongwe', 33.79, -13.96], ['Antananarivo', 47.52, -18.88], ['Durban', 31.02, -29.86], ['Tunis', 10.18, 36.81], ['Yaoundé', 11.5, 3.85], ['Luanda', 13.23, -8.84], ['Khartoum', 32.53, 15.5], ['Bamako', -8.0, 12.64]];
   var JHB = [28.05, -26.2];
   var TEMPLATES = [
-    ['Monthly supervision', 'Session begins in', 'Welcome to our monthly\nsupervision meeting', 'Wits AHEAD Research Group\nWits School of Education, University of the Witwatersrand'],
-    ['Research Degrees Weekend', 'We begin in', 'Welcome to the\nResearch Degrees Weekend', 'Postgraduate presentations\nWits School of Education'],
-    ['Proposal rehearsal', 'Rehearsal begins in', 'Welcome to the\nproposal rehearsal', 'Present, answer, improve\nWits AHEAD Research Group'],
-    ['Group meeting', 'Meeting begins in', 'Welcome, everyone', 'Wits AHEAD Research Group\nWits School of Education'],
-    ['Seminar', 'The seminar begins in', 'Welcome to the\nWits AHEAD seminar', 'Wits School of Education, University of the Witwatersrand'],
-    ['Writing retreat', 'We begin in', 'Welcome to the\nwriting retreat', 'Powerful readers, thinkers and writers\nWits AHEAD Research Group']
+    ['Monthly supervision', 'Session begins in', 'Welcome to our monthly\n*supervision meeting.*', 'Wits AHEAD Research Group\nWits School of Education, University of the Witwatersrand'],
+    ['Research Degrees Weekend', 'We begin in', 'Welcome to the\n*Research Degrees Weekend.*', 'Postgraduate presentations\nWits School of Education'],
+    ['Proposal rehearsal', 'Rehearsal begins in', 'Welcome to the\n*proposal rehearsal.*', 'Present, answer, improve\nWits AHEAD Research Group'],
+    ['Group meeting', 'Meeting begins in', 'Welcome,\n*everyone.*', 'Wits AHEAD Research Group\nWits School of Education'],
+    ['Seminar', 'The seminar begins in', 'Welcome to the\n*Wits AHEAD seminar.*', 'Wits School of Education, University of the Witwatersrand'],
+    ['Writing retreat', 'We begin in', 'Welcome to the\n*writing retreat.*', 'Powerful readers, thinkers and writers\nWits AHEAD Research Group']
   ];
-  var D = { kicker: 'Session begins in', title: 'Welcome to the\nWits AHEAD Research Group', sub: 'Wits School of Education, University of the Witwatersrand, Johannesburg', host: '', org: 'Research Group',
-    scene: 'africa', accent: 'gold', now: true, tz: true, chime: true, hide: true, line: 'We are starting now.\nThank you for joining us.', pulse: true, stop: true, mood: 'africa', vol: 60, lastMin: 5 };
+  var D = { kicker: 'Session begins in', title: 'Welcome to the\n*Wits AHEAD Research Group.*', sub: 'Wits School of Education, University of the Witwatersrand, Johannesburg', host: '', org: 'Research Group',
+    scene: 'africa', accent: 'gold', now: true, tz: true, chime: true, hide: true, line: 'We are starting now.\n*Thank you for joining us.*', pulse: true, stop: true, mood: 'africa', vol: 60, lastMin: 5 };
   var S = {}; try { S = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { S = {}; }
   for (var k in D) if (!(k in S)) S[k] = D[k];
   var q = new URLSearchParams(location.search);
@@ -248,16 +261,17 @@ input[type=range]{accent-color:var(--accent)}
   function atZero() {
     if (S.chime) chime();
     if (S.stop) Music.fade();
-    if (S.hide) { $('clock').hidden = true; $('kicker').style.visibility = 'hidden'; $('zero').textContent = S.line || 'We are starting now.'; $('zero').hidden = false; }
+    if (S.hide) { $('clock').hidden = true; $('kicker').style.visibility = 'hidden'; $('zero').innerHTML = rich(S.line || 'We are starting now.'); $('zero').hidden = false; }
     document.body.classList.remove('final');
   }
   setInterval(tick, 250);
 
   // ---------- text and look ----------
+  function rich(t) { return String(t || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }).replace(/\*([^*]+)\*/g, '<b>$1</b>').replace(/\n/g, '<br>'); }
   function apply() {
-    $('kicker').textContent = S.kicker; $('title').textContent = S.title; $('sub').textContent = S.sub; $('host').textContent = S.host || ''; $('orgline').textContent = S.org;
+    $('kicker').textContent = S.kicker; $('title').innerHTML = rich(S.title); $('sub').textContent = S.sub; $('host').textContent = S.host || ''; $('orgline').textContent = S.org;
     document.documentElement.setAttribute('data-accent', S.accent); document.body.setAttribute('data-scene', S.scene);
-    $('nowline').hidden = !S.now; if (!$('zero').hidden) $('zero').textContent = S.line;
+    $('nowline').hidden = !S.now; if (!$('zero').hidden) $('zero').innerHTML = rich(S.line);
   }
   var bind = [['t_kicker', 'kicker'], ['t_title', 'title'], ['t_sub', 'sub'], ['t_host', 'host'], ['t_org', 'org'], ['e_line', 'line'], ['l_scene', 'scene'], ['l_accent', 'accent']];
   var binds = [['l_now', 'now'], ['l_tz', 'tz'], ['e_chime', 'chime'], ['e_hide', 'hide'], ['e_pulse', 'pulse'], ['e_stop', 'stop'], ['m_stop2', 'stop']];
@@ -430,21 +444,31 @@ input[type=range]{accent-color:var(--accent)}
   function size() { W = cv.clientWidth; H = cv.clientHeight; cv.width = W * DPR; cv.height = H * DPR; g2.setTransform(DPR, 0, 0, DPR, 0, 0); motes = []; stars = []; for (var i = 0; i < 70; i++) motes.push({ x: Math.random() * W, y: H * (.08 + Math.random() * .88), r: .6 + Math.random() * 1.8, v: .05 + Math.random() * .2, a: Math.random() * 6.28 }); for (var j = 0; j < 160; j++) stars.push({ x: Math.random() * W, y: Math.random() * H * .62, r: Math.random() * 1.2, a: Math.random() * 6.28 }); }
   window.addEventListener('resize', size); size();
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function accentRGB() { return S.accent === 'blue' ? [143, 180, 232] : S.accent === 'white' ? [241, 245, 251] : [212, 184, 102]; }
+  function accentRGB() { return S.accent === 'blue' ? [143, 180, 232] : S.accent === 'white' ? [241, 245, 251] : [217, 194, 154]; }
   // Africa: the continent's outline, a light that moves across it, and arcs of light from Johannesburg to cities across Africa
   var AP = AFRICA.map(function (d) { return new Path2D(d); }), AFALL = new Path2D(AFRICA.join(' ')), arcs = [], nextArc = 0, order = [];
   var PX = function (lon) { return (lon + 180) / 360 * 1000; }, PY = function (lat) { return 273.75 - 3.5 * lat; };
   var BB = { x0: 451, x1: 642, y0: 142.6, y1: 395.6 };
   function mapBox() {
-    var mob = W < 760, rx = mob ? W * .08 : W * .52, ry = mob ? H * .06 : H * .1, rw = mob ? W * .84 : W * .42, rh = mob ? H * .42 : H * .8;
+    var top = Math.max(64, Math.min(104, H * .11)) + 20, mob = W < 760, rx = mob ? W * .08 : W * .54, ry = mob ? top : top + H * .03, rw = mob ? W * .84 : W * .4, rh = mob ? H * .38 : H - ry - H * .1;
     var sc = Math.min(rw / (BB.x1 - BB.x0), rh / (BB.y1 - BB.y0)); return { sc: sc, ox: rx + (rw - (BB.x1 - BB.x0) * sc) / 2 - BB.x0 * sc, oy: ry + (rh - (BB.y1 - BB.y0) * sc) / 2 - BB.y0 * sc };
   }
+  // the moving bars field and its gold line with a travelling light, as in the hero of witsahead.org
+  var BARS = []; function barsInit() { BARS = []; var gap = 14, n = Math.ceil(W / gap); for (var i = 0; i < n; i++) BARS.push({ x: i * gap, base: .1 + .42 * Math.pow(i / n, 1.6), ph: Math.random() * 6.28, sp: .4 + Math.random() * .6 }); }
+  function drawBars(t) {
+    if (BARS.length !== Math.ceil(W / 14)) barsInit();
+    var amp = function (b, i) { return reduce ? 0 : (.11 * Math.sin(t * b.sp + b.ph) + .06 * Math.sin(t * .9 - i * .09)); }, pts = [];
+    BARS.forEach(function (b, i) { var h = H * (b.base + amp(b, i)), y = H - h, gg = g2.createLinearGradient(0, y, 0, H); gg.addColorStop(0, 'rgba(127,166,192,.30)'); gg.addColorStop(1, 'rgba(127,166,192,.02)'); g2.fillStyle = gg; g2.fillRect(b.x, y, 6, h); if (i % 3 === 0) pts.push([b.x, y - 8]); });
+    g2.strokeStyle = 'rgba(183,154,94,.6)'; g2.lineWidth = 2.2; g2.beginPath(); pts.forEach(function (p, k) { if (k) g2.lineTo(p[0], p[1]); else g2.moveTo(p[0], p[1]); }); g2.stroke();
+    if (!reduce && pts.length > 1) { var u = (t * .06) % 1, f = u * (pts.length - 1), a = Math.floor(f), q = f - a, p0 = pts[a], p1 = pts[Math.min(a + 1, pts.length - 1)], px = p0[0] + (p1[0] - p0[0]) * q, py = p0[1] + (p1[1] - p0[1]) * q;
+      var rg = g2.createRadialGradient(px, py, 0, px, py, 28); rg.addColorStop(0, 'rgba(183,154,94,.9)'); rg.addColorStop(1, 'rgba(183,154,94,0)'); g2.fillStyle = rg; g2.beginPath(); g2.arc(px, py, 28, 0, 6.283); g2.fill(); g2.fillStyle = '#E9D9A8'; g2.beginPath(); g2.arc(px, py, 4, 0, 6.283); g2.fill(); }
+  }
   function drawAfrica(t, A) {
-    g2.clearRect(0, 0, W, H);
+    g2.clearRect(0, 0, W, H); drawBars(t);
     var m = mapBox(), P = function (lon, lat) { return [m.ox + PX(lon) * m.sc, m.oy + PY(lat) * m.sc]; };
     g2.save(); g2.translate(m.ox, m.oy); g2.scale(m.sc, m.sc);
     // countries: a faint fill and fine borders, the continent outlined in gold
-    g2.fillStyle = 'rgba(30,58,108,.78)'; AP.forEach(function (p) { g2.fill(p); });
+    g2.fillStyle = 'rgba(30,90,130,.72)'; AP.forEach(function (p) { g2.fill(p); });
     g2.lineWidth = .55 / m.sc * 1.6; g2.strokeStyle = 'rgba(234,219,166,.32)'; AP.forEach(function (p) { g2.stroke(p); });
     // a slow light passing over the continent
     g2.save(); g2.clip(AFALL); var lx = BB.x0 + (BB.x1 - BB.x0) * (.5 + .5 * Math.sin(t * .18)), ly = BB.y0 + (BB.y1 - BB.y0) * (.5 + .45 * Math.cos(t * .13));
@@ -479,6 +503,7 @@ input[type=range]{accent-color:var(--accent)}
   function draw(ts) {
     var t = (ts || 0) / 1000, A = accentRGB(), hz = H * .7;
     if (S.scene === 'africa') { drawAfrica(t, A); requestAnimationFrame(draw); return; }
+    if (S.scene === 'bars') { g2.clearRect(0, 0, W, H); drawBars(t); requestAnimationFrame(draw); return; }
     var sky = g2.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, '#00121D'); sky.addColorStop(.62, S.scene === 'night' ? '#062033' : '#0A2A3F'); sky.addColorStop(1, '#00121D');
     g2.fillStyle = sky; g2.fillRect(0, 0, W, H);
     if (S.scene === 'plain') { requestAnimationFrame(draw); return; }

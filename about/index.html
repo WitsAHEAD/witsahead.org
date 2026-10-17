@@ -785,6 +785,27 @@
   .nempty{padding:24px;text-align:center;color:var(--text-3);font-size:14px;border:1px dashed var(--line-2)}
   .newsfoot{margin-top:26px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--text-3);border-top:1px solid var(--line);padding-top:14px}
   .newsfoot a{color:var(--w-blue);font-weight:700;text-decoration:none}
+  /* Share a story and get the briefing every morning (17 October 2026, after the Laurvo News pattern the Director liked) */
+  .nshare{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:8px;padding-top:10px;border-top:1px solid var(--line)}
+  .nshare>span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);font-weight:700;margin-right:2px}
+  .nshare a,.nshare button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--w-blue);background:var(--surface-2);border-radius:999px;padding:5px 10px;line-height:1}
+  .nshare a:hover,.nshare button:hover{background:var(--w-blue);color:#fff}
+  .nshare a.wa{background:#25D366;color:#073B1E} .nshare a.wa:hover{background:#1DA851;color:#fff}
+  .nshare svg{width:13px;height:13px;fill:currentColor}
+  .nshare a:focus-visible,.nshare button:focus-visible,.getit a:focus-visible,.getit button:focus-visible{outline:2px solid var(--w-gold);outline-offset:2px}
+  .getit{margin-top:34px;border-radius:14px;padding:26px 24px;background:radial-gradient(130% 140% at 0% 0%,#0B4468 0%,#003B5C 45%,#001A29 100%);color:#F1F5FB;display:grid;grid-template-columns:1fr 1.5fr;gap:22px;align-items:start}
+  .getit .over{color:#D9C29A} .getit h3{font-size:26px;line-height:1.2;color:#fff;margin:6px 0 8px;font-weight:700} .getit p{color:#C9D8E4;font-size:14.5px;line-height:1.5;margin:0}
+  .gi-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .gi-opts a{display:flex;gap:11px;align-items:center;text-decoration:none;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 13px;color:#fff;transition:background .2s}
+  .gi-opts a:hover{background:rgba(255,255,255,.14)}
+  .gi-opts i{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#fff} .gi-opts i svg{width:20px;height:20px;fill:#003B5C}
+  .gi-opts a.gwa i{background:#25D366} .gi-opts a.gwa i svg{fill:#fff} .gi-opts a.gli i{background:#0A66C2} .gi-opts a.gli i svg{fill:#fff}
+  .gi-opts b{display:block;font-size:14.5px;color:#fff} .gi-opts small{display:block;font-size:12.5px;color:#B8CBDA;margin-top:2px;line-height:1.35}
+  .gi-fwd{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;border-top:1px solid rgba(255,255,255,.16);padding-top:16px}
+  .gi-fwd button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 18px}
+  .gi-fwd button:hover{background:#1DA851;color:#fff} .gi-fwd button svg{width:18px;height:18px;fill:currentColor}
+  .gi-fwd small{color:#B8CBDA;font-size:12.5px;max-width:520px}
+  @media (max-width:860px){ .getit{grid-template-columns:1fr} } @media (max-width:520px){ .gi-opts{grid-template-columns:1fr} .getit{padding:22px 16px} .getit h3{font-size:22px} }
   @media (max-width:1000px){ .newsgrid{grid-template-columns:1fr 1fr} .readings{grid-template-columns:1fr 1fr} } @media (max-width:640px){ .newsgrid,.readings{grid-template-columns:1fr} }
   .opens{grid-template-columns:repeat(4,1fr)}
   @media (max-width:1000px){ .opens{grid-template-columns:1fr 1fr} } @media (max-width:640px){ .opens{grid-template-columns:1fr} }

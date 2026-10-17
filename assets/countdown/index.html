@@ -117,6 +117,10 @@ input[type=range]{accent-color:var(--accent)}
 .keys{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:12px}
 .keys kbd{background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:5px;padding:1px 7px;font:600 11px 'Open Sans';color:var(--ink);justify-self:start}
 .track{display:flex;align-items:center;gap:10px;margin:6px 0 12px}
+.vol{flex:1;margin:0!important}
+/* inside a Pathway meeting (embed=1): only Music is offered; nothing can be changed or saved */
+body.embed .controls button:not([data-act=music]),body.embed #settings{display:none!important}
+body.embed .controls{opacity:1!important;pointer-events:auto!important}
 .play{width:40px;height:40px;border-radius:50%;border:0;background:var(--accent);color:#001A29;font-size:15px;cursor:pointer;flex:none}
 .toast{position:fixed;left:50%;bottom:4vh;transform:translateX(-50%);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:12.5px;z-index:6;opacity:0;transition:opacity .3s;pointer-events:none}
 .toast.on{opacity:1}
@@ -218,7 +222,7 @@ input[type=range]{accent-color:var(--accent)}
   <div class="chips" id="moods"><button data-mood="africa">African drums and mbira</button><button data-mood="mbira">Mbira, gentle</button><button data-mood="calm">Calm chords</button><button data-mood="file">My own file</button></div>
   <p class="hint" id="moodhint"></p>
   <label class="f" id="filewrap" hidden>Choose an audio file on this computer<input type="file" id="file" accept="audio/*"></label>
-  <div class="track"><button class="play" id="play" aria-label="Play">▶</button><label class="f" style="flex:1;margin:0">Volume<input type="range" id="vol" min="0" max="100" value="45"></label></div>
+  <div class="track"><button class="play" id="play" aria-label="Play">▶</button><label class="f vol">Volume<input type="range" id="vol" min="0" max="100" value="45"></label></div>
   <label class="chk"><input type="checkbox" id="m_stop2"> Fade the music out when the countdown reaches zero</label>
 </section>
 <div class="toast" id="toast"></div>
@@ -249,7 +253,9 @@ input[type=range]{accent-color:var(--accent)}
   for (var k in D) if (!(k in S)) S[k] = D[k];
   var q = new URLSearchParams(location.search);
   ['kicker', 'title', 'sub', 'host', 'org', 'line', 'scene', 'accent', 'mood'].forEach(function (k) { if (q.has(k)) S[k] = q.get(k); });
-  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+  if (q.get('embed') === '1') { S.at = null; if (!q.has('mood')) S.mood = 'africa'; }
+  var EMBED = q.get('embed') === '1'; if (EMBED) document.body.classList.add('embed');
+  function save() { if (EMBED) return; try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 
   // ---------- time ----------
   var T = { target: 0, left: 0, paused: false, total: 300000, fired: false };
@@ -277,6 +283,7 @@ input[type=range]{accent-color:var(--accent)}
     if (S.stop) Music.fade();
     if (S.hide) { $('clock').hidden = true; $('kicker').style.visibility = 'hidden'; $('zero').innerHTML = rich(S.line || 'We are starting now.'); $('zero').hidden = false; }
     document.body.classList.remove('final');
+    if (EMBED && window.parent !== window) try { window.parent.postMessage({ type: 'witsahead-countdown-zero' }, location.origin); } catch (e) {}
   }
   setInterval(tick, 250);
 
@@ -311,7 +318,7 @@ input[type=range]{accent-color:var(--accent)}
   });
   document.addEventListener('keydown', function (e) {
     if (/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) { if (e.key === 'Escape') e.target.blur(); return; }
-    var k = e.key.toLowerCase();
+    var k = e.key.toLowerCase(); if (EMBED && k !== 'm' && k !== 'f' && k !== 'escape') return;
     if (k === ' ') { e.preventDefault(); pause(); } else if (k === 'arrowup') adjust(60000); else if (k === 'arrowdown') adjust(-60000);
     else if (k === 'f') full(); else if (k === 's') panel('settings'); else if (k === 'm') panel('music'); else if (k === 'r') startIn((S.lastMin || 5) * 60000);
     else if (k === 'escape') panel('none'); else return; wake();

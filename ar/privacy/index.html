@@ -805,6 +805,13 @@
   .gi-fwd button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 18px}
   .gi-fwd button:hover{background:#1DA851;color:#fff} .gi-fwd button svg{width:18px;height:18px;fill:currentColor}
   .gi-fwd small{color:#B8CBDA;font-size:12.5px;max-width:520px}
+  .gi-mail{grid-column:1/-1;display:grid;gap:8px} .gi-mail[hidden]{display:none}
+  .gi-mail label{font-weight:700;color:#fff;font-size:15px}
+  .gi-row{display:flex;gap:10px;flex-wrap:wrap}
+  .gi-row input[type=email]{flex:1;min-width:220px;font:inherit;font-size:15px;padding:11px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:#fff;color:#1F2933}
+  .gi-row button{all:unset;cursor:pointer;background:#D9C29A;color:#001A29;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 20px} .gi-row button:hover{background:#fff}
+  .gi-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  .gi-note{color:#B8CBDA;font-size:12.5px} .gi-msg{margin:0;font-weight:700;color:#D9C29A;font-size:14px} .gi-msg:empty{display:none}
   @media (max-width:860px){ .getit{grid-template-columns:1fr} } @media (max-width:520px){ .gi-opts{grid-template-columns:1fr} .getit{padding:22px 16px} .getit h3{font-size:22px} }
   @media (max-width:1000px){ .newsgrid{grid-template-columns:1fr 1fr} .readings{grid-template-columns:1fr 1fr} } @media (max-width:640px){ .newsgrid,.readings{grid-template-columns:1fr} }
   .opens{grid-template-columns:repeat(4,1fr)}
@@ -1227,7 +1234,7 @@ main{overflow-wrap:break-word}
   <div class="wrap">
     <div class="head"><div class="over">الخصوصية والتحقق</div><h2>باختصار.</h2></div>
     <div class="two">
-      <div><h3>Privacy (POPIA)</h3><p>لا ملفات تعريف ارتباط، ولا تتبّع عبر المواقع، ولا جمع لبيانات شخصية، ولا إعلانات. يسجّل عدّاد لا يستخدم ملفات تعريف الارتباط مشاهدات الصفحات، ومعها البلد والمتصفح وحجم الشاشة والموقع المُحيل، ولا شيء من ذلك يحدّد هوية أحد. تعرض الساعة أسفل الصفحة مدينتك وتوقيتك المحلي، ويحسبهما خادم المجموعة نفسها من عنوان IP لاتصالك؛ ولا يُحتفظ بالعنوان نفسه، وعند استخدام VPN تعرض الساعة موقع الـ VPN. تُحتسب تلك المدينة مرة واحدة يوميًا لتعرف المجموعة أين يُقرأ موقعها. وما يُعرض عليك هو بالضبط ما يُحتسب. يُعرض الطلاب حسب الدرجة وموضوع البحث، ولا تُذكر أسماؤهم أبدًا. يقدّم مشتركو النشرة موافقتهم؛ وتبقى بياناتهم في حساب المجموعة نفسها ولا تجري مشاركتها أبدًا. يمكنك إلغاء الاشتراك برسالة واحدة. للاستفسارات: <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>.</p></div>
+      <div><h3>Privacy (POPIA)</h3><p>لا ملفات تعريف ارتباط، ولا تتبّع عبر المواقع، ولا جمع لبيانات شخصية دون موافقتك، ولا إعلانات. يسجّل عدّاد لا يستخدم ملفات تعريف الارتباط مشاهدات الصفحات، ومعها البلد والمتصفح وحجم الشاشة والموقع المُحيل، ولا شيء من ذلك يحدّد هوية أحد. تعرض الساعة أسفل الصفحة مدينتك وتوقيتك المحلي، ويحسبهما خادم المجموعة نفسها من عنوان IP لاتصالك؛ ولا يُحتفظ بالعنوان نفسه، وعند استخدام VPN تعرض الساعة موقع الـ VPN. تُحتسب تلك المدينة مرة واحدة يوميًا لتعرف المجموعة أين يُقرأ موقعها. وما يُعرض عليك هو بالضبط ما يُحتسب. يُعرض الطلاب حسب الدرجة وموضوع البحث، ولا تُذكر أسماؤهم أبدًا. يقدّم مشتركو النشرة موافقتهم؛ وتبقى بياناتهم في حساب المجموعة نفسها ولا تجري مشاركتها أبدًا. يمكنك إلغاء الاشتراك برسالة واحدة. للاستفسارات: <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>. لا يحتفظ الموجز الصباحي بالبريد الإلكتروني إلا بعنوانك ولغتك وتاريخ آخر إرسال، لغرض إرساله فقط؛ ويؤدي إلغاء الاشتراك بنقرة واحدة إلى حذفها.</p></div>
       <div><h3>التحقق</h3><p>كل معلومة مصدرها سجلات المجموعة أو مصدر عام مذكور، ويجري التحقق منها قبل إدراجها. تُحمَّل معاينات الفيديو من YouTube والخطوط من Google Fonts. التصويبات: <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>.</p></div>
     </div>
   </div>

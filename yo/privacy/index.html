@@ -805,6 +805,13 @@
   .gi-fwd button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 18px}
   .gi-fwd button:hover{background:#1DA851;color:#fff} .gi-fwd button svg{width:18px;height:18px;fill:currentColor}
   .gi-fwd small{color:#B8CBDA;font-size:12.5px;max-width:520px}
+  .gi-mail{grid-column:1/-1;display:grid;gap:8px} .gi-mail[hidden]{display:none}
+  .gi-mail label{font-weight:700;color:#fff;font-size:15px}
+  .gi-row{display:flex;gap:10px;flex-wrap:wrap}
+  .gi-row input[type=email]{flex:1;min-width:220px;font:inherit;font-size:15px;padding:11px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:#fff;color:#1F2933}
+  .gi-row button{all:unset;cursor:pointer;background:#D9C29A;color:#001A29;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 20px} .gi-row button:hover{background:#fff}
+  .gi-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  .gi-note{color:#B8CBDA;font-size:12.5px} .gi-msg{margin:0;font-weight:700;color:#D9C29A;font-size:14px} .gi-msg:empty{display:none}
   @media (max-width:860px){ .getit{grid-template-columns:1fr} } @media (max-width:520px){ .gi-opts{grid-template-columns:1fr} .getit{padding:22px 16px} .getit h3{font-size:22px} }
   @media (max-width:1000px){ .newsgrid{grid-template-columns:1fr 1fr} .readings{grid-template-columns:1fr 1fr} } @media (max-width:640px){ .newsgrid,.readings{grid-template-columns:1fr} }
   .opens{grid-template-columns:repeat(4,1fr)}
@@ -1226,7 +1233,7 @@ main{overflow-wrap:break-word}
   <div class="wrap">
     <div class="head"><div class="over">Ìpamọ́ àti ìfẹ̀rí</div><h2>Ẹ̀yà kúkúrú.</h2></div>
     <div class="two">
-      <div><h3>Privacy (POPIA)</h3><p>Kò sí kúkì, kò sí ìtọpinpin láti ojú-òpó kan sí òmíràn, a kò gba ìsọfúnni ẹni, kò sí ìpolówó. Oníkà aláìní-kúkì ń kọ iye ìwò ojú-ìwé sílẹ̀, pẹ̀lú orílẹ̀-èdè, aṣàwákiri, ìwọ̀n ojú-iboju àti ojú-òpó tí ó tọ́ka síni, kò sì sí èyí tí ó ń fi ẹni hàn. Aago ìsàlẹ̀ ojú-ìwé ń fi ìlú rẹ àti àkókò ibẹ̀ hàn, èyí tí kọ̀ǹpútà ẹgbẹ́ náà fúnra rẹ̀ ń ṣírò láti inú àdírẹ́sì IP ìsopọ̀ rẹ; a kò tọ́jú àdírẹ́sì náà, bí o bá sì ń lo VPN, aago náà yóò fi ibi tí VPN wà hàn. A ń ka ìlú náà lẹ́ẹ̀kan lójúmọ́ kí ẹgbẹ́ lè mọ ibi tí wọ́n ti ń kà á. Ohun tí a fi hàn ọ́ gan-an ni ohun tí a kà. Àwọn akẹ́kọ̀ọ́ ń hàn ní ìbámu pẹ̀lú oyè àti kókó ìwádìí, kì í ṣe orúkọ láé. Àwọn olùforúkọsílẹ̀ ìwé-ìròyìn fúnni ní ìgbanilaaye; àlàyé wọn wà nínú àkáǹtì ẹgbẹ́ náà fúnra rẹ̀, a kì í sì í pín wọn láé. Yọ orúkọ kúrò pẹ̀lú ímeèlì kan. Ìbéèrè: <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>.</p></div>
+      <div><h3>Privacy (POPIA)</h3><p>Kò sí kúkì, kò sí ìtọpinpin láti ojú-òpó kan sí òmíràn, a kò gba ìsọfúnni ẹni láìsí àṣẹ rẹ, kò sí ìpolówó. Oníkà aláìní-kúkì ń kọ iye ìwò ojú-ìwé sílẹ̀, pẹ̀lú orílẹ̀-èdè, aṣàwákiri, ìwọ̀n ojú-iboju àti ojú-òpó tí ó tọ́ka síni, kò sì sí èyí tí ó ń fi ẹni hàn. Aago ìsàlẹ̀ ojú-ìwé ń fi ìlú rẹ àti àkókò ibẹ̀ hàn, èyí tí kọ̀ǹpútà ẹgbẹ́ náà fúnra rẹ̀ ń ṣírò láti inú àdírẹ́sì IP ìsopọ̀ rẹ; a kò tọ́jú àdírẹ́sì náà, bí o bá sì ń lo VPN, aago náà yóò fi ibi tí VPN wà hàn. A ń ka ìlú náà lẹ́ẹ̀kan lójúmọ́ kí ẹgbẹ́ lè mọ ibi tí wọ́n ti ń kà á. Ohun tí a fi hàn ọ́ gan-an ni ohun tí a kà. Àwọn akẹ́kọ̀ọ́ ń hàn ní ìbámu pẹ̀lú oyè àti kókó ìwádìí, kì í ṣe orúkọ láé. Àwọn olùforúkọsílẹ̀ ìwé-ìròyìn fúnni ní ìgbanilaaye; àlàyé wọn wà nínú àkáǹtì ẹgbẹ́ náà fúnra rẹ̀, a kì í sì í pín wọn láé. Yọ orúkọ kúrò pẹ̀lú ímeèlì kan. Ìbéèrè: <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>. Ìsọfúnni àárọ̀ nípasẹ̀ ímeèlì ń tọ́jú àdírẹ́sì rẹ, èdè rẹ àti ọjọ́ tí a fi ránṣẹ́ kẹ́yìn nìkan, láti fi ránṣẹ́ sí ọ nìkan; yíyọ orúkọ rẹ kúrò pẹ̀lú títẹ̀ kan ń pa wọ́n rẹ́.</p></div>
       <div><h3>Ìfẹ̀rí</h3><p>Gbogbo òtítọ́ wá láti inú àkọsílẹ̀ ẹgbẹ́ náà tàbí orísun gbogbogbò tí a tọ́ka sí, tí a yẹ̀ wò kí a tó tò ó. Àwọn àwòrán-ìṣáájú fídíò ń wá láti YouTube àti àwọn fọ́ǹtì láti Google Fonts. Àtúnṣe: <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>.</p></div>
     </div>
   </div>

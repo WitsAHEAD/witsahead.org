@@ -805,6 +805,13 @@
   .gi-fwd button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 18px}
   .gi-fwd button:hover{background:#1DA851;color:#fff} .gi-fwd button svg{width:18px;height:18px;fill:currentColor}
   .gi-fwd small{color:#B8CBDA;font-size:12.5px;max-width:520px}
+  .gi-mail{grid-column:1/-1;display:grid;gap:8px} .gi-mail[hidden]{display:none}
+  .gi-mail label{font-weight:700;color:#fff;font-size:15px}
+  .gi-row{display:flex;gap:10px;flex-wrap:wrap}
+  .gi-row input[type=email]{flex:1;min-width:220px;font:inherit;font-size:15px;padding:11px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:#fff;color:#1F2933}
+  .gi-row button{all:unset;cursor:pointer;background:#D9C29A;color:#001A29;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 20px} .gi-row button:hover{background:#fff}
+  .gi-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  .gi-note{color:#B8CBDA;font-size:12.5px} .gi-msg{margin:0;font-weight:700;color:#D9C29A;font-size:14px} .gi-msg:empty{display:none}
   @media (max-width:860px){ .getit{grid-template-columns:1fr} } @media (max-width:520px){ .gi-opts{grid-template-columns:1fr} .getit{padding:22px 16px} .getit h3{font-size:22px} }
   @media (max-width:1000px){ .newsgrid{grid-template-columns:1fr 1fr} .readings{grid-template-columns:1fr 1fr} } @media (max-width:640px){ .newsgrid,.readings{grid-template-columns:1fr} }
   .opens{grid-template-columns:repeat(4,1fr)}
@@ -1226,7 +1233,7 @@ main{overflow-wrap:break-word}
   <div class="wrap">
     <div class="head"><div class="over">Privacidad y verificación</div><h2>En breve.</h2></div>
     <div class="two">
-      <div><h3>Privacy (POPIA)</h3><p>Sin cookies, sin rastreo entre sitios, sin recopilación de datos personales, sin publicidad. Un contador sin cookies registra las páginas vistas y, con ellas, el país, el navegador, el tamaño de pantalla y el sitio de procedencia, nada de lo cual identifica a nadie. El reloj del pie de página muestra su ciudad y su hora local, calculadas por el propio servidor del grupo a partir de la dirección IP de su conexión; la dirección no se conserva y, con una VPN, el reloj muestra la ubicación de la VPN. Esa ciudad se cuenta una vez al día para que el grupo sepa dónde se le lee. Lo que se le muestra es exactamente lo que se cuenta. Los estudiantes aparecen por título y tema de investigación, nunca por su nombre. Los suscriptores del boletín dan su consentimiento; sus datos permanecen en la cuenta del grupo y nunca se comparten. Basta un correo para darse de baja. Preguntas: <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>.</p></div>
+      <div><h3>Privacy (POPIA)</h3><p>Sin cookies, sin rastreo entre sitios, ningún dato personal recogido sin su consentimiento, sin publicidad. Un contador sin cookies registra las páginas vistas y, con ellas, el país, el navegador, el tamaño de pantalla y el sitio de procedencia, nada de lo cual identifica a nadie. El reloj del pie de página muestra su ciudad y su hora local, calculadas por el propio servidor del grupo a partir de la dirección IP de su conexión; la dirección no se conserva y, con una VPN, el reloj muestra la ubicación de la VPN. Esa ciudad se cuenta una vez al día para que el grupo sepa dónde se le lee. Lo que se le muestra es exactamente lo que se cuenta. Los estudiantes aparecen por título y tema de investigación, nunca por su nombre. Los suscriptores del boletín dan su consentimiento; sus datos permanecen en la cuenta del grupo y nunca se comparten. Basta un correo para darse de baja. Preguntas: <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>. El boletín matinal por correo solo guarda su dirección, su idioma y la fecha del último envío, únicamente para enviárselo; darse de baja con un clic los borra.</p></div>
       <div><h3>Verificación</h3><p>Cada dato proviene de los registros del grupo o de una fuente pública citada, verificada antes de publicarse. Las vistas previas de vídeo se cargan desde YouTube y las fuentes tipográficas desde Google Fonts. Correcciones: <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>.</p></div>
     </div>
   </div>

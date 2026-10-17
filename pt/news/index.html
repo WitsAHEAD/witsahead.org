@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-o/ZuCaHha77SB7si7huvIS+ishdM/EJla5F2CZ6QBjs=' 'sha256-0AA1e37QZN0Dy0goItxUk2Tu4RXZe9E5uZNsrmL3IZA=' 'sha256-FQWlNR18VttJbJ4z37JpSXvyjkbxTioNq8cOFf6I+pQ=' 'sha256-JG3JK6+YToBZcYsweNISgjfRA9MZzo49meL4nZ9b9+8=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-zFqje2n7BGbPlvsyg4GG9FyhE9p1VGdQZojq7nsYOgo=' 'sha256-C8wOdBvH0KIdEzxJSgOMq7AylecoNBcihDK23nWN1oA=' 'sha256-aIUCML1Uq0iwwSM7LxOd9KtuSOyGQnzgUrVZKbGMl0o=' 'sha256-f6bdurSN1uBwN819wmbfkjYxzhAEma4BB9UxhBdxCyU=' 'sha256-P85V1vsjGvV0P90vHPGD5PvJ3kfJPbSgWgPBmoyfu4M=' 'sha256-BmGtYaPjwPgqff+1NSLI9BvkHM5OJ+hRLVjTWfVggPE=' 'sha256-pFwtzFptNVFyQZFWBYubtAhNxQ6vuO6CB+J0sKThT6c=' 'sha256-mCxScy948dMqN9Qiw8uBr62UR+58tWOR+kseaeE/Xcg=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-66lH3wgnI6+Js9oWpRPs5KwPVZFZnGEqKHrYdR1l1X4=' 'sha256-BVRnTttf4jvgmSGcQnxP5I/WuR0ucGaBGQ0wDWSXWCc=' 'sha256-o/ZuCaHha77SB7si7huvIS+ishdM/EJla5F2CZ6QBjs=' 'sha256-0AA1e37QZN0Dy0goItxUk2Tu4RXZe9E5uZNsrmL3IZA=' 'sha256-FQWlNR18VttJbJ4z37JpSXvyjkbxTioNq8cOFf6I+pQ=' 'sha256-JG3JK6+YToBZcYsweNISgjfRA9MZzo49meL4nZ9b9+8=' 'sha256-53+x248FiSJK24yX8bJIRaxWEVgw94SWZdNiQDjpy10=' 'sha256-zFqje2n7BGbPlvsyg4GG9FyhE9p1VGdQZojq7nsYOgo=' 'sha256-C8wOdBvH0KIdEzxJSgOMq7AylecoNBcihDK23nWN1oA=' 'sha256-g1nbFHwqeqL5mMglle+ZSSVVkO5Ybg3pPdexh6lgmak=' 'sha256-f6bdurSN1uBwN819wmbfkjYxzhAEma4BB9UxhBdxCyU=' 'sha256-P85V1vsjGvV0P90vHPGD5PvJ3kfJPbSgWgPBmoyfu4M=' 'sha256-BmGtYaPjwPgqff+1NSLI9BvkHM5OJ+hRLVjTWfVggPE=' 'sha256-pFwtzFptNVFyQZFWBYubtAhNxQ6vuO6CB+J0sKThT6c=' 'sha256-mCxScy948dMqN9Qiw8uBr62UR+58tWOR+kseaeE/Xcg=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https://i.ytimg.com https://witsahead.goatcounter.com; media-src 'self'; connect-src 'self' https://witsahead.goatcounter.com https://notify.witsahead.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="copyright" content="Wits AHEAD Research Group, Wits School of Education, University of the Witwatersrand, Johannesburg. All rights reserved.">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.display='none';}}</script>
@@ -805,6 +805,13 @@
   .gi-fwd button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 18px}
   .gi-fwd button:hover{background:#1DA851;color:#fff} .gi-fwd button svg{width:18px;height:18px;fill:currentColor}
   .gi-fwd small{color:#B8CBDA;font-size:12.5px;max-width:520px}
+  .gi-mail{grid-column:1/-1;display:grid;gap:8px} .gi-mail[hidden]{display:none}
+  .gi-mail label{font-weight:700;color:#fff;font-size:15px}
+  .gi-row{display:flex;gap:10px;flex-wrap:wrap}
+  .gi-row input[type=email]{flex:1;min-width:220px;font:inherit;font-size:15px;padding:11px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:#fff;color:#1F2933}
+  .gi-row button{all:unset;cursor:pointer;background:#D9C29A;color:#001A29;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 20px} .gi-row button:hover{background:#fff}
+  .gi-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  .gi-note{color:#B8CBDA;font-size:12.5px} .gi-msg{margin:0;font-weight:700;color:#D9C29A;font-size:14px} .gi-msg:empty{display:none}
   @media (max-width:860px){ .getit{grid-template-columns:1fr} } @media (max-width:520px){ .gi-opts{grid-template-columns:1fr} .getit{padding:22px 16px} .getit h3{font-size:22px} }
   @media (max-width:1000px){ .newsgrid{grid-template-columns:1fr 1fr} .readings{grid-template-columns:1fr 1fr} } @media (max-width:640px){ .newsgrid,.readings{grid-template-columns:1fr} }
   .opens{grid-template-columns:repeat(4,1fr)}
@@ -1243,6 +1250,13 @@ main{overflow-wrap:break-word}
         <a href="/pt/follow/#notif"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.5-2.5h-5A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.8V3.5a1.5 1.5 0 0 0-3 0v.7A7 7 0 0 0 5 11v5l-2 2v1h18v-1z"/></svg></i><span><b>Uma notificação às 07:00</b><small>Neste telemóvel ou computador; um toque, e desliga quando quiser</small></span></a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpTgqHdqnR4oueU8zgY_uULnaDU5MuIqtjCCb9rHlQKojfhg/viewform" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v1.9L12 14l7.5-5.1V7z"/></svg></i><span><b>The Fortnightly por e-mail</b><small>Duas páginas, de quinze em quinze dias, à quinta-feira</small></span></a>
       </div>
+      <form class="gi-mail" id="giMail" hidden novalidate>
+        <label for="giEmail">Ou todas as manhãs por e-mail</label>
+        <div class="gi-row"><input type="email" id="giEmail" required autocomplete="email" placeholder="O seu endereço de e-mail"><input type="text" name="website" class="gi-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit">Subscrever</button></div>
+        <small class="gi-note">No máximo um e-mail por dia, por volta das 07:30. Confirme uma vez na sua caixa de entrada; cancele com um clique.</small>
+        <p class="gi-msg" id="giMsg" role="status" aria-live="polite"></p>
+        <span id="giOk" hidden>Quase pronto: verifique a sua caixa de entrada e confirme com um clique.</span><span id="giActive" hidden>Já está subscrito. Até amanhã de manhã.</span><span id="giBad" hidden>Introduza um endereço de e-mail válido.</span><span id="giErr" hidden>Não funcionou. Tente novamente mais tarde.</span>
+      </form>
       <div class="gi-fwd"><button type="button" id="fwdToday"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4z"/></svg><span>Reencaminhar o briefing de hoje pelo WhatsApp</span></button><small>Envia as manchetes mais recentes e a ligação a quem escolher: um colega, um estudante, um grupo.</small><span id="fwdIntro" hidden>O briefing de hoje da Wits AHEAD</span><span id="fwdMore" hidden>Leia-o e ouça a edição falada:</span><span id="nCopied" hidden>Ligação copiada</span></div>
     </section>
 </main>
@@ -1680,6 +1694,22 @@ input.hasmic{padding-inline-end:40px}
   document.getElementById('archToggle').addEventListener('click',function(){ var g=document.getElementById('ngArch'); var c=g.classList.toggle('collapsed'); this.textContent=c?'Show archive':'Hide archive'; });
   /* Forward today's briefing (17 October 2026): the three newest stories as a WhatsApp message, in the edition's own words for the
      introduction and the closing line (two hidden spans in the panel, translated with the page), ending with the edition's news link. */
+  /* The briefing by email (17 October 2026): the form shows only when the group's notification service answers, so it appears
+     by itself once the service is live; the address goes to notify.witsahead.org, which sends a confirmation (double opt-in). */
+  (function(){
+    var f=document.getElementById('giMail'); if(!f||!window.fetch) return;
+    var msg=document.getElementById('giMsg'), say=function(id){ var s=document.getElementById(id); msg.textContent=s?s.textContent:''; };
+    fetch('https://notify.witsahead.org/brief',{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; }).then(function(j){ if(j&&j.ok) f.hidden=false; }).catch(function(){});
+    f.addEventListener('submit',function(e){
+      e.preventDefault(); var em=document.getElementById('giEmail').value.trim();
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){ say('giBad'); return; }
+      var btn=f.querySelector('button'); btn.disabled=true;
+      fetch('https://notify.witsahead.org/brief/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:em,lang:(document.documentElement.lang||'en').toLowerCase().split('-')[0],website:f.querySelector('.gi-hp').value})})
+        .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return {ok:r.ok,j:j}; }); })
+        .then(function(x){ if(x.ok&&x.j.state==='active') say('giActive'); else if(x.ok) { say('giOk'); f.reset(); } else say(x.j&&x.j.error==='email'?'giBad':'giErr'); })
+        .catch(function(){ say('giErr'); }).then(function(){ btn.disabled=false; });
+    });
+  })();
   var fwd=document.getElementById('fwdToday');
   if(fwd) fwd.addEventListener('click',function(){
     if(!DATA) return;

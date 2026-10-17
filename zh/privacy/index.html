@@ -805,6 +805,13 @@
   .gi-fwd button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 18px}
   .gi-fwd button:hover{background:#1DA851;color:#fff} .gi-fwd button svg{width:18px;height:18px;fill:currentColor}
   .gi-fwd small{color:#B8CBDA;font-size:12.5px;max-width:520px}
+  .gi-mail{grid-column:1/-1;display:grid;gap:8px} .gi-mail[hidden]{display:none}
+  .gi-mail label{font-weight:700;color:#fff;font-size:15px}
+  .gi-row{display:flex;gap:10px;flex-wrap:wrap}
+  .gi-row input[type=email]{flex:1;min-width:220px;font:inherit;font-size:15px;padding:11px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:#fff;color:#1F2933}
+  .gi-row button{all:unset;cursor:pointer;background:#D9C29A;color:#001A29;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 20px} .gi-row button:hover{background:#fff}
+  .gi-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  .gi-note{color:#B8CBDA;font-size:12.5px} .gi-msg{margin:0;font-weight:700;color:#D9C29A;font-size:14px} .gi-msg:empty{display:none}
   @media (max-width:860px){ .getit{grid-template-columns:1fr} } @media (max-width:520px){ .gi-opts{grid-template-columns:1fr} .getit{padding:22px 16px} .getit h3{font-size:22px} }
   @media (max-width:1000px){ .newsgrid{grid-template-columns:1fr 1fr} .readings{grid-template-columns:1fr 1fr} } @media (max-width:640px){ .newsgrid,.readings{grid-template-columns:1fr} }
   .opens{grid-template-columns:repeat(4,1fr)}
@@ -1227,7 +1234,7 @@ main{overflow-wrap:break-word}
   <div class="wrap">
     <div class="head"><div class="over">隐私与核实</div><h2>简要说明。</h2></div>
     <div class="two">
-      <div><h3>Privacy (POPIA)</h3><p>无 Cookie，不跨站追踪，不收集个人数据，无广告。一个无 Cookie 的计数器记录页面浏览量，以及国家、浏览器、屏幕尺寸和来源网站，这些都无法识别任何人。页脚时钟显示您所在的城市和当地时间，由研究组自己的服务器根据您网络连接的 IP 地址得出；该地址本身不会保存，使用 VPN 时，时钟显示的是 VPN 的位置。该城市每天计数一次，以便研究组了解网站在哪里被阅读。您看到的正是被计数的内容。研究生仅按学位与研究主题显示，绝不显示姓名。通讯订阅者自愿同意；其信息保存在研究组自己的账户中，绝不外传。一封邮件即可退订。咨询： <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>.</p></div>
+      <div><h3>Privacy (POPIA)</h3><p>无 Cookie，不跨站追踪，未经您同意不收集个人数据，无广告。一个无 Cookie 的计数器记录页面浏览量，以及国家、浏览器、屏幕尺寸和来源网站，这些都无法识别任何人。页脚时钟显示您所在的城市和当地时间，由研究组自己的服务器根据您网络连接的 IP 地址得出；该地址本身不会保存，使用 VPN 时，时钟显示的是 VPN 的位置。该城市每天计数一次，以便研究组了解网站在哪里被阅读。您看到的正是被计数的内容。研究生仅按学位与研究主题显示，绝不显示姓名。通讯订阅者自愿同意；其信息保存在研究组自己的账户中，绝不外传。一封邮件即可退订。咨询： <a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>. 电子邮件早间简报只保存您的邮箱地址、语言和最近一次发送日期，仅用于发送简报；一键退订即会删除这些信息。</p></div>
       <div><h3>核实</h3><p>每一项事实都来自研究组的记录或注明出处的公开来源，收录前经过核实。视频预览来自 YouTube，字体来自 Google Fonts。更正：<a href="mailto:Ask@WitsAHEAD.org" style="color:var(--w-blue);font-weight:700;text-decoration:none">Ask@WitsAHEAD.org</a>。</p></div>
     </div>
   </div>

@@ -6,36 +6,64 @@
    "files": {
     "en": {
      "file": "briefing-2026-10-20.en.m4a",
-     "seconds": 148,
-     "size": 970335,
+     "seconds": 157,
+     "size": 968987,
      "lead": "Universities in Korea, Singapore and the United Kingdom take different paths to redesign teaching for AI",
      "n": 3
     },
     "fr": {
      "file": "briefing-2026-10-20.fr.m4a",
-     "seconds": 145,
-     "size": 905217,
+     "seconds": 157,
+     "size": 936178,
      "lead": "Universities in Korea, Singapore and the United Kingdom take different paths to redesign teaching for AI",
      "n": 3
     },
     "es": {
      "file": "briefing-2026-10-20.es.m4a",
-     "seconds": 128,
-     "size": 837446,
+     "seconds": 153,
+     "size": 913423,
      "lead": "Universities in Korea, Singapore and the United Kingdom take different paths to redesign teaching for AI",
      "n": 3
     },
     "pt": {
      "file": "briefing-2026-10-20.pt.m4a",
-     "seconds": 161,
-     "size": 1040612,
+     "seconds": 159,
+     "size": 983859,
      "lead": "Universities in Korea, Singapore and the United Kingdom take different paths to redesign teaching for AI",
      "n": 3
     },
     "zh": {
      "file": "briefing-2026-10-20.zh.m4a",
-     "seconds": 164,
-     "size": 1054459,
+     "seconds": 163,
+     "size": 1024896,
+     "lead": "Universities in Korea, Singapore and the United Kingdom take different paths to redesign teaching for AI",
+     "n": 3
+    },
+    "sw": {
+     "file": "briefing-2026-10-20.sw.m4a",
+     "seconds": 218,
+     "size": 1427406,
+     "lead": "Universities in Korea, Singapore and the United Kingdom take different paths to redesign teaching for AI",
+     "n": 3
+    },
+    "ar": {
+     "file": "briefing-2026-10-20.ar.m4a",
+     "seconds": 240,
+     "size": 1501894,
+     "lead": "Universities in Korea, Singapore and the United Kingdom take different paths to redesign teaching for AI",
+     "n": 3
+    },
+    "af": {
+     "file": "briefing-2026-10-20.af.m4a",
+     "seconds": 192,
+     "size": 1201257,
+     "lead": "Universities in Korea, Singapore and the United Kingdom take different paths to redesign teaching for AI",
+     "n": 3
+    },
+    "zu": {
+     "file": "briefing-2026-10-20.zu.m4a",
+     "seconds": 236,
+     "size": 1454866,
      "lead": "Universities in Korea, Singapore and the United Kingdom take different paths to redesign teaching for AI",
      "n": 3
     }

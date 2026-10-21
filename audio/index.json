@@ -3,7 +3,43 @@
   {
    "stem": "briefing-2026-10-21",
    "date": "2026-10-21",
-   "files": {}
+   "files": {
+    "en": {
+     "file": "briefing-2026-10-21.en.m4a",
+     "seconds": 144,
+     "size": 940191,
+     "lead": "UNESCO opens global consultation on governing AI so that education remains a common good",
+     "n": 3
+    },
+    "fr": {
+     "file": "briefing-2026-10-21.fr.m4a",
+     "seconds": 126,
+     "size": 786944,
+     "lead": "UNESCO opens global consultation on governing AI so that education remains a common good",
+     "n": 3
+    },
+    "es": {
+     "file": "briefing-2026-10-21.es.m4a",
+     "seconds": 113,
+     "size": 736456,
+     "lead": "UNESCO opens global consultation on governing AI so that education remains a common good",
+     "n": 3
+    },
+    "pt": {
+     "file": "briefing-2026-10-21.pt.m4a",
+     "seconds": 145,
+     "size": 938976,
+     "lead": "UNESCO opens global consultation on governing AI so that education remains a common good",
+     "n": 3
+    },
+    "zh": {
+     "file": "briefing-2026-10-21.zh.m4a",
+     "seconds": 141,
+     "size": 906825,
+     "lead": "UNESCO opens global consultation on governing AI so that education remains a common good",
+     "n": 3
+    }
+   }
   },
   {
    "stem": "briefing-2026-10-20",

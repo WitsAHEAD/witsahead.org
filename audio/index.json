@@ -67,6 +67,40 @@
      "lead": "Study combines AI-TPACK and Freire's critical pedagogy to rethink AI in African STEM curricula",
      "n": 3
     }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-10-31.en-luke.m4a",
+      "seconds": 128,
+      "size": 731745,
+      "voice": "en-ZA-LukeNeural"
+     },
+     "abeo": {
+      "file": "briefing-2026-10-31.en-abeo.m4a",
+      "seconds": 136,
+      "size": 807647,
+      "voice": "en-NG-AbeoNeural"
+     },
+     "asilia": {
+      "file": "briefing-2026-10-31.en-asilia.m4a",
+      "seconds": 148,
+      "size": 907846,
+      "voice": "en-KE-AsiliaNeural"
+     },
+     "sonia": {
+      "file": "briefing-2026-10-31.en-sonia.m4a",
+      "seconds": 132,
+      "size": 816971,
+      "voice": "en-GB-Sonia:DragonHDLatestNeural"
+     },
+     "andrew": {
+      "file": "briefing-2026-10-31.en-andrew.m4a",
+      "seconds": 133,
+      "size": 744544,
+      "voice": "en-US-Andrew:DragonHDLatestNeural"
+     }
+    }
    }
   },
   {

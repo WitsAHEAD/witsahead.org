@@ -1,6 +1,141 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-03",
+   "date": "2026-11-03",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-03.en.m4a",
+     "seconds": 118,
+     "size": 813478,
+     "lead": "Short hands-on workshop lifts science teachers' confidence in using AI for adaptive teaching, German pilot study finds",
+     "n": 2
+    },
+    "fr": {
+     "file": "briefing-2026-11-03.fr.m4a",
+     "seconds": 108,
+     "size": 744862,
+     "lead": "Short hands-on workshop lifts science teachers' confidence in using AI for adaptive teaching, German pilot study finds",
+     "n": 2
+    },
+    "es": {
+     "file": "briefing-2026-11-03.es.m4a",
+     "seconds": 101,
+     "size": 688239,
+     "lead": "Short hands-on workshop lifts science teachers' confidence in using AI for adaptive teaching, German pilot study finds",
+     "n": 2
+    },
+    "pt": {
+     "file": "briefing-2026-11-03.pt.m4a",
+     "seconds": 109,
+     "size": 739433,
+     "lead": "Short hands-on workshop lifts science teachers' confidence in using AI for adaptive teaching, German pilot study finds",
+     "n": 2
+    },
+    "zh": {
+     "file": "briefing-2026-11-03.zh.m4a",
+     "seconds": 101,
+     "size": 722413,
+     "lead": "Short hands-on workshop lifts science teachers' confidence in using AI for adaptive teaching, German pilot study finds",
+     "n": 2
+    },
+    "sw": {
+     "file": "briefing-2026-11-03.sw.m4a",
+     "seconds": 104,
+     "size": 730422,
+     "lead": "Short hands-on workshop lifts science teachers' confidence in using AI for adaptive teaching, German pilot study finds",
+     "n": 2
+    },
+    "ar": {
+     "file": "briefing-2026-11-03.ar.m4a",
+     "seconds": 124,
+     "size": 863200,
+     "lead": "Short hands-on workshop lifts science teachers' confidence in using AI for adaptive teaching, German pilot study finds",
+     "n": 2
+    },
+    "af": {
+     "file": "briefing-2026-11-03.af.m4a",
+     "seconds": 94,
+     "size": 651683,
+     "lead": "Short hands-on workshop lifts science teachers' confidence in using AI for adaptive teaching, German pilot study finds",
+     "n": 2
+    },
+    "zu": {
+     "file": "briefing-2026-11-03.zu.m4a",
+     "seconds": 141,
+     "size": 993454,
+     "lead": "Short hands-on workshop lifts science teachers' confidence in using AI for adaptive teaching, German pilot study finds",
+     "n": 2
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-03.en-luke.m4a",
+      "seconds": 97,
+      "size": 683943,
+      "voice": "en-ZA-LukeNeural"
+     },
+     "abeo": {
+      "file": "briefing-2026-11-03.en-abeo.m4a",
+      "seconds": 104,
+      "size": 746949,
+      "voice": "en-NG-AbeoNeural"
+     },
+     "asilia": {
+      "file": "briefing-2026-11-03.en-asilia.m4a",
+      "seconds": 113,
+      "size": 795421,
+      "voice": "en-KE-AsiliaNeural"
+     },
+     "sonia": {
+      "file": "briefing-2026-11-03.en-sonia.m4a",
+      "seconds": 105,
+      "size": 774891,
+      "voice": "en-GB-Sonia:DragonHDLatestNeural"
+     },
+     "andrew": {
+      "file": "briefing-2026-11-03.en-andrew.m4a",
+      "seconds": 103,
+      "size": 780119,
+      "voice": "en-US-Andrew:DragonHDLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-03.fr-henri.m4a",
+      "seconds": 100,
+      "size": 704662,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-03.fr-vivienne.m4a",
+      "seconds": 103,
+      "size": 747743,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-03.fr-remy.m4a",
+      "seconds": 105,
+      "size": 765774,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-03.fr-sylvie.m4a",
+      "seconds": 107,
+      "size": 780201,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-03.fr-gerard.m4a",
+      "seconds": 104,
+      "size": 729010,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-10-31",
    "date": "2026-10-31",
    "files": {

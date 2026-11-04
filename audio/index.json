@@ -1,6 +1,141 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-04",
+   "date": "2026-11-04",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-04.en.m4a",
+     "seconds": 163,
+     "size": 1188560,
+     "lead": "UCT engineering pairs AI-enabled early warning with a multilingual support hub to lift student success",
+     "n": 3
+    },
+    "fr": {
+     "file": "briefing-2026-11-04.fr.m4a",
+     "seconds": 149,
+     "size": 1042347,
+     "lead": "UCT engineering pairs AI-enabled early warning with a multilingual support hub to lift student success",
+     "n": 3
+    },
+    "es": {
+     "file": "briefing-2026-11-04.es.m4a",
+     "seconds": 144,
+     "size": 1024800,
+     "lead": "UCT engineering pairs AI-enabled early warning with a multilingual support hub to lift student success",
+     "n": 3
+    },
+    "pt": {
+     "file": "briefing-2026-11-04.pt.m4a",
+     "seconds": 153,
+     "size": 1071075,
+     "lead": "UCT engineering pairs AI-enabled early warning with a multilingual support hub to lift student success",
+     "n": 3
+    },
+    "zh": {
+     "file": "briefing-2026-11-04.zh.m4a",
+     "seconds": 150,
+     "size": 1071963,
+     "lead": "UCT engineering pairs AI-enabled early warning with a multilingual support hub to lift student success",
+     "n": 3
+    },
+    "zu": {
+     "file": "briefing-2026-11-04.zu.m4a",
+     "seconds": 192,
+     "size": 1396571,
+     "lead": "UCT engineering pairs AI-enabled early warning with a multilingual support hub to lift student success",
+     "n": 3
+    },
+    "sw": {
+     "file": "briefing-2026-11-04.sw.m4a",
+     "seconds": 141,
+     "size": 1019747,
+     "lead": "UCT engineering pairs AI-enabled early warning with a multilingual support hub to lift student success",
+     "n": 3
+    },
+    "ar": {
+     "file": "briefing-2026-11-04.ar.m4a",
+     "seconds": 164,
+     "size": 1171473,
+     "lead": "UCT engineering pairs AI-enabled early warning with a multilingual support hub to lift student success",
+     "n": 3
+    },
+    "af": {
+     "file": "briefing-2026-11-04.af.m4a",
+     "seconds": 130,
+     "size": 918147,
+     "lead": "UCT engineering pairs AI-enabled early warning with a multilingual support hub to lift student success",
+     "n": 3
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-04.en-luke.m4a",
+      "seconds": 136,
+      "size": 987588,
+      "voice": "en-ZA-LukeNeural"
+     },
+     "abeo": {
+      "file": "briefing-2026-11-04.en-abeo.m4a",
+      "seconds": 145,
+      "size": 1044182,
+      "voice": "en-NG-AbeoNeural"
+     },
+     "asilia": {
+      "file": "briefing-2026-11-04.en-asilia.m4a",
+      "seconds": 157,
+      "size": 1121585,
+      "voice": "en-KE-AsiliaNeural"
+     },
+     "sonia": {
+      "file": "briefing-2026-11-04.en-sonia.m4a",
+      "seconds": 147,
+      "size": 1081078,
+      "voice": "en-GB-Sonia:DragonHDLatestNeural"
+     },
+     "andrew": {
+      "file": "briefing-2026-11-04.en-andrew.m4a",
+      "seconds": 142,
+      "size": 1054457,
+      "voice": "en-US-Andrew:DragonHDLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-04.fr-henri.m4a",
+      "seconds": 138,
+      "size": 994810,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-04.fr-vivienne.m4a",
+      "seconds": 147,
+      "size": 1072600,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-04.fr-remy.m4a",
+      "seconds": 148,
+      "size": 1076728,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-04.fr-sylvie.m4a",
+      "seconds": 148,
+      "size": 1084500,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-04.fr-gerard.m4a",
+      "seconds": 144,
+      "size": 1045146,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-03",
    "date": "2026-11-03",
    "files": {

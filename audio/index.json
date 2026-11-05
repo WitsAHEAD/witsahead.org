@@ -1,6 +1,141 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-05",
+   "date": "2026-11-05",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-05.en.m4a",
+     "seconds": 175,
+     "size": 1250103,
+     "lead": "Proposal 14: Student outcomes indicators",
+     "n": 3
+    },
+    "fr": {
+     "file": "briefing-2026-11-05.fr.m4a",
+     "seconds": 150,
+     "size": 1048186,
+     "lead": "Proposal 14: Student outcomes indicators",
+     "n": 3
+    },
+    "es": {
+     "file": "briefing-2026-11-05.es.m4a",
+     "seconds": 149,
+     "size": 1046805,
+     "lead": "Proposal 14: Student outcomes indicators",
+     "n": 3
+    },
+    "pt": {
+     "file": "briefing-2026-11-05.pt.m4a",
+     "seconds": 157,
+     "size": 1092706,
+     "lead": "Proposal 14: Student outcomes indicators",
+     "n": 3
+    },
+    "zh": {
+     "file": "briefing-2026-11-05.zh.m4a",
+     "seconds": 156,
+     "size": 1128848,
+     "lead": "Proposal 14: Student outcomes indicators",
+     "n": 3
+    },
+    "zu": {
+     "file": "briefing-2026-11-05.zu.m4a",
+     "seconds": 191,
+     "size": 1393428,
+     "lead": "Proposal 14: Student outcomes indicators",
+     "n": 3
+    },
+    "sw": {
+     "file": "briefing-2026-11-05.sw.m4a",
+     "seconds": 150,
+     "size": 1073818,
+     "lead": "Proposal 14: Student outcomes indicators",
+     "n": 3
+    },
+    "ar": {
+     "file": "briefing-2026-11-05.ar.m4a",
+     "seconds": 179,
+     "size": 1288558,
+     "lead": "Proposal 14: Student outcomes indicators",
+     "n": 3
+    },
+    "af": {
+     "file": "briefing-2026-11-05.af.m4a",
+     "seconds": 139,
+     "size": 998151,
+     "lead": "Proposal 14: Student outcomes indicators",
+     "n": 3
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-05.en-luke.m4a",
+      "seconds": 145,
+      "size": 1045110,
+      "voice": "en-ZA-LukeNeural"
+     },
+     "abeo": {
+      "file": "briefing-2026-11-05.en-abeo.m4a",
+      "seconds": 155,
+      "size": 1135060,
+      "voice": "en-NG-AbeoNeural"
+     },
+     "asilia": {
+      "file": "briefing-2026-11-05.en-asilia.m4a",
+      "seconds": 169,
+      "size": 1225338,
+      "voice": "en-KE-AsiliaNeural"
+     },
+     "sonia": {
+      "file": "briefing-2026-11-05.en-sonia.m4a",
+      "seconds": 148,
+      "size": 1088028,
+      "voice": "en-GB-Sonia:DragonHDLatestNeural"
+     },
+     "andrew": {
+      "file": "briefing-2026-11-05.en-andrew.m4a",
+      "seconds": 150,
+      "size": 1124302,
+      "voice": "en-US-Andrew:DragonHDLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-05.fr-henri.m4a",
+      "seconds": 140,
+      "size": 1018094,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-05.fr-vivienne.m4a",
+      "seconds": 142,
+      "size": 1031182,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-05.fr-remy.m4a",
+      "seconds": 142,
+      "size": 1035700,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-05.fr-sylvie.m4a",
+      "seconds": 146,
+      "size": 1072877,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-05.fr-gerard.m4a",
+      "seconds": 144,
+      "size": 1038835,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-04",
    "date": "2026-11-04",
    "files": {

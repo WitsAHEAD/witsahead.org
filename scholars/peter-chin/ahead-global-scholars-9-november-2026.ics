@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Wits AHEAD//Global Scholars//EN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ahead-global-scholars-20261109-page@witsahead.org
+DTSTAMP:20261108T140000Z
+DTSTART:20261109T140000Z
+DTEND:20261109T150000Z
+SUMMARY:AHEAD Global Scholars: Prof Peter Chin (Queen's University)
+DESCRIPTION:The inaugural AHEAD Global Conversation. Register for the Zoom link: https://forms.gle/Sa1gyikGFNqrvCbB7
+URL:https://witsahead.org/scholars/peter-chin/
+LOCATION:Online (link sent on registration)
+END:VEVENT
+END:VCALENDAR

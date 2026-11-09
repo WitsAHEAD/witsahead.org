@@ -60,6 +60,13 @@ body.final .unit b{color:var(--red)}
 .band{position:absolute;left:0;right:0;bottom:0;height:calc(var(--u)*.7);display:flex;z-index:3}.band i{flex:1}
 .hint{position:fixed;left:10px;bottom:10px;font:12px/1.4 system-ui,sans-serif;color:#8a94a6;background:rgba(255,255,255,.9);padding:6px 9px;border-radius:4px;opacity:0;transition:opacity .4s;z-index:9}
 body.showhint .hint{opacity:1}
+.music{position:fixed;right:12px;bottom:14px;display:flex;align-items:center;gap:8px;font:13px/1 system-ui,sans-serif;color:#002452;background:rgba(255,255,255,.95);border:1px solid #E6E2D8;border-radius:999px;padding:6px 8px 6px 6px;box-shadow:0 4px 16px rgba(0,36,82,.12);opacity:0;transition:opacity .4s;z-index:9}
+body.showhint .music{opacity:1}
+.music button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:7px 12px;background:#002452;color:#fff;font-weight:700}
+.music button.on{background:#FABD0F;color:#002452}
+.music #mmood{background:transparent;color:#5E6A7D;font-weight:600;padding:7px 6px}
+.music input{width:84px;accent-color:#002452}
+.music:hover,.music:focus-within{opacity:1}
 </style>
 </head>
 <body>
@@ -100,7 +107,8 @@ body.showhint .hint{opacity:1}
  </div>
  <div class="band"><i style="background:#002452"></i><i style="background:#FABD0F"></i><i style="background:#B90E31"></i></div>
 </div>
-<div class="hint">F full screen · ↑ ↓ add or remove a minute · Space pause</div>
+<div class="music" aria-label="Music"><button type="button" id="mbtn"><span aria-hidden="true">♪ </span><span id="mlabel">Music</span></button><button type="button" id="mmood" title="Switch the music (N)">Drums and mbira</button><input type="range" id="mvol" min="0" max="100" value="60" aria-label="Music volume"></div>
+<div class="hint">F full screen · ↑ ↓ add or remove a minute · Space pause · M music · In Zoom, tick "Share sound"</div>
 <script>
 (function(){
  var q=new URLSearchParams(location.search), $=function(i){return document.getElementById(i);};
@@ -127,6 +135,90 @@ body.showhint .hint{opacity:1}
   if(e.key==='ArrowDown'){if(paused)left=Math.max(0,left-60000);else target=Math.max(Date.now(),target-60000);tick();}
   if(e.key===' '){e.preventDefault();if(paused){target=Date.now()+left;paused=false;}else{left=Math.max(0,target-Date.now());paused=true;}tick();}
  });
+ // ---------- music: the same African drums and mbira as witsahead.org/assets/countdown, made live in this page ----------
+ // Nothing is recorded, so there is nothing to licence. Browsers only allow sound after a click or a key: press M or the Music button.
+ // It builds bar by bar, plays at full strength in the final minute, and the drums land on 16:00, then fade.
+  var AC = null; function ctx() { if (!AC) AC = new (window.AudioContext || window.webkitAudioContext)(); if (AC.state === 'suspended') AC.resume(); return AC; }
+  // African rhythm, made live: the West African 12/8 bell pattern, djembe (bass, tone and slap), shaker, a talking drum and an
+  // interlocking mbira line in the spirit of Zimbabwe, over a deep bass. It builds bar by bar: mbira, then shaker, bell, drums and
+  // the talking drum, so the room fills as the start comes closer. One pulse is an eighth note of 12/8 at 112 beats a minute.
+  var AFR = (function () {
+    var PULSE = 60 / 112 / 3, NOISE = null;
+    var BELL = [1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1], D1 = 'B--TT-S--TT-', D2 = '--S-TS--S-TS', D3 = 'B-----B--S-S';
+    var CH = [[43, 55, 59, 62, 67, 71], [40, 52, 55, 59, 64, 67], [36, 48, 55, 60, 64, 67], [38, 50, 54, 57, 62, 66]];   // G, Em, C, D: a four-bar cycle
+    var RH = [[5, 3], [4, 2], [5, 4], [3, 2]];   // right-hand figure: indices into each chord, played between the left-hand notes
+    var TALK = [[0, 160, 230, .22], [2, 230, 150, .2], [3, 150, 150, .12], [5, 190, 260, .3], [8, 260, 140, .25], [10, 150, 200, .18]];
+    function noise(c) { if (NOISE) return NOISE; var b = c.createBuffer(1, c.sampleRate, c.sampleRate), d = b.getChannelData(0); for (var i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; return (NOISE = b); }
+    function env(c, g, t, peak, dec) { g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(peak, t + .004); g.gain.exponentialRampToValueAtTime(.0008, t + dec); }
+    function osc(c, out, type, f0, f1, t, peak, dec, glide) { var o = c.createOscillator(), g = c.createGain(); o.type = type; o.frequency.setValueAtTime(f0, t); if (f1 !== f0) o.frequency.exponentialRampToValueAtTime(f1, t + (glide || dec * .5)); env(c, g, t, peak, dec); o.connect(g); g.connect(out); o.start(t); o.stop(t + dec + .05); }
+    function hiss(c, out, t, type, f, q, peak, dec) { var n = c.createBufferSource(), fl = c.createBiquadFilter(), g = c.createGain(); n.buffer = noise(c); n.playbackRate.value = .8 + Math.random() * .4; fl.type = type; fl.frequency.value = f; fl.Q.value = q; env(c, g, t, peak, dec); n.connect(fl); fl.connect(g); g.connect(out); n.start(t, Math.random() * .5); n.stop(t + dec + .05); }
+    var hz = function (m) { return 440 * Math.pow(2, (m - 69) / 12); };
+    function djembe(c, out, kind, t, v) {
+      if (kind === 'B') { osc(c, out, 'sine', 120, 52, t, .95 * v, .42, .1); hiss(c, out, t, 'lowpass', 300, .7, .25 * v, .06); }
+      if (kind === 'T') { osc(c, out, 'sine', 330, 255, t, .42 * v, .2, .05); hiss(c, out, t, 'bandpass', 700, 1.2, .22 * v, .08); }
+      if (kind === 'S') { hiss(c, out, t, 'bandpass', 2100, .9, .55 * v, .07); osc(c, out, 'triangle', 480, 400, t, .16 * v, .06); }
+    }
+    function mbira(c, out, wet, m, t, v) {
+      var f = hz(m), g = c.createGain(); g.connect(out); g.connect(wet);
+      osc(c, g, 'sine', f, f, t, .3 * v, 1.5); osc(c, g, 'sine', f * 2.01, f * 2.01, t, .07 * v, .5); osc(c, g, 'triangle', f * 4.2, f * 4.2, t, .02 * v, .12);
+      hiss(c, g, t + .003, 'bandpass', Math.min(9000, f * 9), 6, .035 * v, .32);   // the buzz of the bottle caps
+    }
+    return {
+      PULSE: PULSE,
+      step: function (c, bus, wet, i, t, mood, lvl) {
+        var p = i % 12, bar = Math.floor(i / 12), ch = CH[bar % 4], full = mood === 'africa', build = full ? Math.min(5, Math.floor(bar / 2)) : 0;
+        if (typeof lvl === 'number') build = Math.max(build, lvl);
+        // mbira: left hand on the main beats, right hand interlocking between them
+        var lh = [0, 3, 6, 9].indexOf(p) >= 0, note = lh ? ch[[0, 1, 0, 2][p / 3]] : ch[RH[bar % 4][(p % 3) - 1]] + (p > 6 && bar % 2 ? 12 : 0);
+        if (p % 3 !== 0 || lh) mbira(c, bus, wet, note + 12, t + (lh ? 0 : .012), lh ? .9 : .75);
+        if (p === 0 || p === 6) osc(c, bus, 'sine', hz(ch[0] - 12), hz(ch[0] - 12), t, full ? .5 : .28, .9);   // deep bass
+        if (!full) return;
+        if (build >= 1) hiss(c, bus, t, 'highpass', 6500, .7, p % 3 === 0 ? .2 : .09, .05);   // shaker
+        if (build >= 2 && BELL[p]) { osc(c, bus, 'sine', 1180, 1180, t, .2, .22); osc(c, bus, 'sine', 3050, 3050, t, .06, .1); }   // the 12/8 bell
+        if (build >= 3) { var k = D1[p]; if (k !== '-') djembe(c, bus, k, t, 1); }
+        if (build >= 4) { var k2 = (bar % 4 === 3 ? D3 : D2)[p]; if (k2 !== '-') djembe(c, bus, k2, t + .006, .75); }
+        if (build >= 5 && bar % 2 === 1) TALK.forEach(function (n) { if (n[0] === p) osc(c, bus, 'triangle', n[1], n[2], t, .35, n[3] + .15, n[3]); });
+      },
+      flourish: function (c, bus, t) { for (var i = 0; i < 9; i++) djembe(c, bus, i % 3 === 2 ? 'T' : 'S', t + i * .07, .6 + i * .05); djembe(c, bus, 'B', t + .66, 1.2); osc(c, bus, 'sine', 70, 40, t + .66, .9, 1.6, .5); }
+    };
+  })();
+ var remaining=function(){return paused?left:Math.max(0,target-Date.now());};
+ var VOL=60;
+ var Music={on:false,mood:'africa',gain:null,timer:null,
+  bus:function(){
+   var c=ctx(); if(this.gain) return this.gain;
+   var g=c.createGain(); g.gain.value=0; var lp=c.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=1800;
+   var conv=c.createConvolver(), len=c.sampleRate*3.2, ir=c.createBuffer(2,len,c.sampleRate);
+   for(var ch=0;ch<2;ch++){var d=ir.getChannelData(ch); for(var i=0;i<len;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.6);}
+   conv.buffer=ir; var wet=c.createGain(); wet.gain.value=.55; var dry=c.createGain(); dry.gain.value=.6;
+   lp.connect(dry); lp.connect(conv); conv.connect(wet); dry.connect(g); wet.connect(g); g.connect(c.destination);
+   var comp=c.createDynamicsCompressor(); comp.threshold.value=-18; comp.ratio.value=4; comp.attack.value=.004; comp.release.value=.2; comp.connect(g);
+   var send=c.createGain(); send.gain.value=.35; send.connect(conv);
+   this.gain=g; this.drums=comp; this.wet=send; return g;
+  },
+  level:function(){return Math.pow(VOL/100,1.6)*1.1;},
+  play:function(){
+   var c=ctx(), self=this; this.bus(); this.on=true; ui();
+   this.gain.gain.cancelScheduledValues(c.currentTime); this.gain.gain.setValueAtTime(this.gain.gain.value,c.currentTime); this.gain.gain.linearRampToValueAtTime(this.level(),c.currentTime+2);
+   clearInterval(this.timer); this.pi=0; this.nt=c.currentTime+.12;
+   this.timer=setInterval(function(){var r=remaining(), lvl=(r<=60000&&r>0)?5:undefined; while(self.nt<c.currentTime+.2){AFR.step(c,self.drums,self.wet,self.pi,self.nt,self.mood,lvl); self.nt+=AFR.PULSE; self.pi++;}},25);
+  },
+  stop:function(){this.on=false; clearInterval(this.timer); ui(); if(this.gain&&AC){var g=this.gain.gain; g.cancelScheduledValues(AC.currentTime); g.setValueAtTime(g.value,AC.currentTime); g.linearRampToValueAtTime(0,AC.currentTime+.8);}},
+  fade:function(){
+   if(!this.on) return; var self=this; clearInterval(this.timer); AFR.flourish(AC,this.drums,AC.currentTime+.05);
+   var g=this.gain.gain, t0=AC.currentTime+1.4; g.cancelScheduledValues(AC.currentTime); g.setValueAtTime(g.value,t0); g.linearRampToValueAtTime(0,t0+4);
+   setTimeout(function(){self.stop();},5600);
+  }
+ };
+ function ui(){var b=$('mbtn'); b.classList.toggle('on',Music.on); $('mlabel').textContent=Music.on?'Music on':'Music'; $('mmood').textContent=Music.mood==='africa'?'Drums and mbira':'Mbira, gentle';}
+ function toggleMusic(){if(Music.on) Music.stop(); else Music.play();}
+ function nextMood(){var was=Music.on; if(was) Music.stop(); Music.mood=Music.mood==='africa'?'mbira':'africa'; ui(); if(was) setTimeout(function(){Music.play();},900);}
+ $('mbtn').addEventListener('click',toggleMusic);
+ $('mmood').addEventListener('click',nextMood);
+ $('mvol').addEventListener('input',function(){VOL=+this.value; if(Music.on&&Music.gain&&AC) Music.gain.gain.setTargetAtTime(Music.level(),AC.currentTime,.2);});
+ document.addEventListener('keydown',function(e){if(e.key==='m'||e.key==='M') toggleMusic(); if(e.key==='n'||e.key==='N') nextMood();});
+ var wasDone=remaining()<=0; setInterval(function(){var d=remaining()<=0; if(d&&!wasDone) Music.fade(); wasDone=d;},200);
+ ui();
 })();
 </script>
 </body>

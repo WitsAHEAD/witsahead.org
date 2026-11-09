@@ -57,6 +57,20 @@ h1 em{font-style:normal;color:var(--gold2)}
 .btn{display:inline-block;font-weight:700;font-size:17px;text-decoration:none;padding:13px 22px;border-radius:5px;background:var(--gold);color:var(--ink);transition:transform .2s,background .2s}
 .btn:hover{transform:translateY(-2px);background:var(--gold2)}
 .btn.ghost{background:transparent;color:#fff;border:2px solid rgba(233,217,168,.6)}
+/* film: Johannesburg at dawn behind the hero, researchers at work in the band (stock footage, credited in the footer) */
+.hero video.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7;z-index:0}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,26,41,.9) 0%,rgba(0,59,92,.62) 45%,rgba(25,47,89,.12) 100%);z-index:1}
+.stars{position:absolute;inset:0;z-index:1}
+.film{position:relative;overflow:hidden;background:#001A29;color:#fff;min-height:440px;display:flex;align-items:center}
+.film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.film:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,26,41,.94) 0%,rgba(0,26,41,.7) 45%,rgba(0,26,41,.1) 100%);z-index:1}
+.film .wrap{position:relative;z-index:2;padding-top:70px;padding-bottom:70px;width:100%}
+.film blockquote{font-size:clamp(28px,3.6vw,44px);line-height:1.15;font-weight:700;max-width:18ch}
+.film blockquote em{font-style:normal;color:var(--gold2)}
+.film p{font-size:19px;color:#DCE6EF;max-width:46ch;margin-top:18px}
+.film:after{content:'';position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--kick),var(--gold2),var(--kick));z-index:2}
+footer .credit{font-size:13px;color:#8FA3B8;width:100%}
+footer .credit a{color:#B8CBDA}
 /* sections */
 section{padding:84px 0}
 section.paper{background:var(--paper)}
@@ -112,6 +126,8 @@ footer a{color:var(--gold2);text-decoration:none}
 </header>
 <main>
 <div class="hero">
+ <video class="bg" autoplay muted loop playsinline preload="auto" poster="hero.jpg" aria-hidden="true"><source src="hero.mp4" type="video/mp4"></video>
+ <div class="shade" aria-hidden="true"></div>
  <div class="stars" aria-hidden="true"><i style="left:4%;top:20%;animation-delay:0s"></i><i style="left:17%;top:62%;animation-delay:.8s"></i><i style="left:29%;top:12%;animation-delay:1.6s"></i><i style="left:41%;top:78%;animation-delay:2.4s"></i><i style="left:53%;top:30%;animation-delay:3.2s"></i><i style="left:66%;top:70%;animation-delay:.4s"></i><i style="left:74%;top:16%;animation-delay:1.2s"></i><i style="left:83%;top:52%;animation-delay:2s"></i><i style="left:92%;top:26%;animation-delay:2.8s"></i><i style="left:96%;top:82%;animation-delay:3.6s"></i></div>
  <div class="wrap">
   <div class="crumb"><a href="/join/">Work with us</a> › Funded fellowships</div>
@@ -135,6 +151,14 @@ footer a{color:var(--gold2);text-decoration:none}
    <div class="card rv"><div class="num">04</div><h3>Scholars and partners from around the world</h3><p>Time with visiting <a href="/scholars/">AHEAD Global Scholars</a> and with the group's partners across Africa and beyond.</p></div>
    <div class="card rv"><div class="num">05</div><h3>Help with the application</h3><p>If the fit is right, we work on the application with you, including the host's part that most schemes ask for.</p></div>
   </div>
+ </div>
+</section>
+
+<section class="film" aria-label="Researchers at work">
+ <video autoplay muted loop playsinline preload="metadata" poster="research.jpg" aria-hidden="true"><source src="research.mp4" type="video/mp4"></video>
+ <div class="wrap">
+  <blockquote class="rv">Your question, <em>our community,</em> and the time to answer it well.</blockquote>
+  <p class="rv">Fellows work alongside doctoral and master's candidates, visiting scholars and partners across Africa and beyond, in the Wits School of Education in Johannesburg.</p>
  </div>
 </section>
 
@@ -216,7 +240,7 @@ footer a{color:var(--gold2);text-decoration:none}
  </div>
 </section>
 </main>
-<footer><div class="wrap"><span>Wits AHEAD Research Group · Wits School of Education · University of the Witwatersrand, Johannesburg</span><a href="/">witsahead.org</a></div></footer>
+<footer><div class="wrap"><span>Wits AHEAD Research Group · Wits School of Education · University of the Witwatersrand, Johannesburg</span><a href="/">witsahead.org</a><span class="credit">Film: Johannesburg at dawn by <a href="https://www.pexels.com/@kelly" rel="noopener">K</a>; researchers at work by <a href="https://www.pexels.com/@kampus" rel="noopener">Kampus Production</a>, on Pexels. Illustrative footage.</span></div></footer>
 <script>
 (function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});

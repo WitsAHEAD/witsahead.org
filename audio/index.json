@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-13",
+   "date": "2026-11-13",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-13.en.m4a",
+     "seconds": 106,
+     "size": 780943,
+     "lead": "South African ICT skills survey finds AI skills demand outpacing university and TVET pipelines",
+     "n": 2
+    },
+    "fr": {
+     "file": "briefing-2026-11-13.fr.m4a",
+     "seconds": 116,
+     "size": 806854,
+     "lead": "South African ICT skills survey finds AI skills demand outpacing university and TVET pipelines",
+     "n": 2
+    },
+    "es": {
+     "file": "briefing-2026-11-13.es.m4a",
+     "seconds": 102,
+     "size": 710680,
+     "lead": "South African ICT skills survey finds AI skills demand outpacing university and TVET pipelines",
+     "n": 2
+    },
+    "pt": {
+     "file": "briefing-2026-11-13.pt.m4a",
+     "seconds": 119,
+     "size": 832080,
+     "lead": "South African ICT skills survey finds AI skills demand outpacing university and TVET pipelines",
+     "n": 2
+    },
+    "zh": {
+     "file": "briefing-2026-11-13.zh.m4a",
+     "seconds": 107,
+     "size": 766928,
+     "lead": "South African ICT skills survey finds AI skills demand outpacing university and TVET pipelines",
+     "n": 2
+    },
+    "zu": {
+     "file": "briefing-2026-11-13.zu.m4a",
+     "seconds": 143,
+     "size": 1035374,
+     "lead": "South African ICT skills survey finds AI skills demand outpacing university and TVET pipelines",
+     "n": 2
+    },
+    "sw": {
+     "file": "briefing-2026-11-13.sw.m4a",
+     "seconds": 109,
+     "size": 779589,
+     "lead": "South African ICT skills survey finds AI skills demand outpacing university and TVET pipelines",
+     "n": 2
+    },
+    "ar": {
+     "file": "briefing-2026-11-13.ar.m4a",
+     "seconds": 124,
+     "size": 880849,
+     "lead": "South African ICT skills survey finds AI skills demand outpacing university and TVET pipelines",
+     "n": 2
+    },
+    "af": {
+     "file": "briefing-2026-11-13.af.m4a",
+     "seconds": 100,
+     "size": 709867,
+     "lead": "South African ICT skills survey finds AI skills demand outpacing university and TVET pipelines",
+     "n": 2
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-13.en-luke.m4a",
+      "seconds": 95,
+      "size": 682317,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-13.fr-henri.m4a",
+      "seconds": 106,
+      "size": 757548,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-13.fr-vivienne.m4a",
+      "seconds": 107,
+      "size": 782083,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-13.fr-remy.m4a",
+      "seconds": 107,
+      "size": 784807,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-13.fr-sylvie.m4a",
+      "seconds": 108,
+      "size": 795195,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-13.fr-gerard.m4a",
+      "seconds": 110,
+      "size": 799145,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-12",
    "date": "2026-11-12",
    "files": {

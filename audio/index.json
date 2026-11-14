@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-14",
+   "date": "2026-11-14",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-14.en.m4a",
+     "seconds": 108,
+     "size": 794277,
+     "lead": "Case study of a Portuguese data science school finds generative AI entering teaching cautiously and unevenly",
+     "n": 2
+    },
+    "fr": {
+     "file": "briefing-2026-11-14.fr.m4a",
+     "seconds": 102,
+     "size": 708117,
+     "lead": "Case study of a Portuguese data science school finds generative AI entering teaching cautiously and unevenly",
+     "n": 2
+    },
+    "es": {
+     "file": "briefing-2026-11-14.es.m4a",
+     "seconds": 100,
+     "size": 700893,
+     "lead": "Case study of a Portuguese data science school finds generative AI entering teaching cautiously and unevenly",
+     "n": 2
+    },
+    "pt": {
+     "file": "briefing-2026-11-14.pt.m4a",
+     "seconds": 108,
+     "size": 753168,
+     "lead": "Case study of a Portuguese data science school finds generative AI entering teaching cautiously and unevenly",
+     "n": 2
+    },
+    "zh": {
+     "file": "briefing-2026-11-14.zh.m4a",
+     "seconds": 109,
+     "size": 776268,
+     "lead": "Case study of a Portuguese data science school finds generative AI entering teaching cautiously and unevenly",
+     "n": 2
+    },
+    "zu": {
+     "file": "briefing-2026-11-14.zu.m4a",
+     "seconds": 149,
+     "size": 1082926,
+     "lead": "Case study of a Portuguese data science school finds generative AI entering teaching cautiously and unevenly",
+     "n": 2
+    },
+    "sw": {
+     "file": "briefing-2026-11-14.sw.m4a",
+     "seconds": 182,
+     "size": 1328899,
+     "lead": "Case study of a Portuguese data science school finds generative AI entering teaching cautiously and unevenly",
+     "n": 2
+    },
+    "ar": {
+     "file": "briefing-2026-11-14.ar.m4a",
+     "seconds": 211,
+     "size": 1545860,
+     "lead": "Case study of a Portuguese data science school finds generative AI entering teaching cautiously and unevenly",
+     "n": 2
+    },
+    "af": {
+     "file": "briefing-2026-11-14.af.m4a",
+     "seconds": 166,
+     "size": 1205520,
+     "lead": "Case study of a Portuguese data science school finds generative AI entering teaching cautiously and unevenly",
+     "n": 2
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-14.en-luke.m4a",
+      "seconds": 93,
+      "size": 659148,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-14.fr-henri.m4a",
+      "seconds": 94,
+      "size": 674919,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-14.fr-vivienne.m4a",
+      "seconds": 95,
+      "size": 687424,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-14.fr-remy.m4a",
+      "seconds": 95,
+      "size": 696172,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-14.fr-sylvie.m4a",
+      "seconds": 95,
+      "size": 696461,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-14.fr-gerard.m4a",
+      "seconds": 98,
+      "size": 699540,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-13",
    "date": "2026-11-13",
    "files": {

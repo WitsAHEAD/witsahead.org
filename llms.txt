@@ -31,7 +31,7 @@ The site is published in eight editions: English (/), French (/fr/), Spanish (/e
 - [Latest from the group](https://witsahead.org/latest/): The latest supervision, research and website developments at Wits AHEAD, Wits School of Education.
 - [About Wits AHEAD](https://witsahead.org/about/): What AHEAD stands for: the mission, remit and complementary place of Wits AHEAD within the Wits School of Education, University of the Witwatersrand.
 - [Research pillars](https://witsahead.org/research/): Six research pillars of Wits AHEAD: generative AI in higher education, student success analytics, STEM and teacher education, graduate capability and just transitions, data for education systems, responsible AI.
-- [People](https://witsahead.org/people/): The Director, core researchers, affiliates and postdoctoral fellow of Wits AHEAD, Wits School of Education.
+- [People](https://witsahead.org/people/): The Director, core researchers, associate members and postdoctoral fellow of Wits AHEAD, Wits School of Education.
 - [Supervision](https://witsahead.org/supervision/): The Wits AHEAD supervision board: postgraduate candidates by degree and research theme on the milestone pathway, with no personal data.
 - [Work with us](https://witsahead.org/join/): Wits AHEAD is open to postdoctoral fellows, PhD candidates aligned to its remit, partnerships and research affiliations across the Global North and South. How to get in touch.
 - [AHEAD Pathway](https://witsahead.org/pathway/): AHEAD Pathway is the private supervision workspace for postgraduate candidates supervised by the Director of Wits AHEAD: sign in with your university email to keep your record, upload documents and receive feedback.

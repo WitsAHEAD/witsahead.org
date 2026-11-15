@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-15",
+   "date": "2026-11-15",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-15.en.m4a",
+     "seconds": 179,
+     "size": 1323311,
+     "lead": "East African Community adopts a regional AI strategy with universities at its centre",
+     "n": 4
+    },
+    "fr": {
+     "file": "briefing-2026-11-15.fr.m4a",
+     "seconds": 188,
+     "size": 1295145,
+     "lead": "East African Community adopts a regional AI strategy with universities at its centre",
+     "n": 4
+    },
+    "es": {
+     "file": "briefing-2026-11-15.es.m4a",
+     "seconds": 184,
+     "size": 1280593,
+     "lead": "East African Community adopts a regional AI strategy with universities at its centre",
+     "n": 4
+    },
+    "pt": {
+     "file": "briefing-2026-11-15.pt.m4a",
+     "seconds": 194,
+     "size": 1358300,
+     "lead": "East African Community adopts a regional AI strategy with universities at its centre",
+     "n": 4
+    },
+    "zh": {
+     "file": "briefing-2026-11-15.zh.m4a",
+     "seconds": 189,
+     "size": 1366038,
+     "lead": "East African Community adopts a regional AI strategy with universities at its centre",
+     "n": 4
+    },
+    "zu": {
+     "file": "briefing-2026-11-15.zu.m4a",
+     "seconds": 208,
+     "size": 1486876,
+     "lead": "East African Community adopts a regional AI strategy with universities at its centre",
+     "n": 4
+    },
+    "sw": {
+     "file": "briefing-2026-11-15.sw.m4a",
+     "seconds": 287,
+     "size": 2093710,
+     "lead": "East African Community adopts a regional AI strategy with universities at its centre",
+     "n": 4
+    },
+    "ar": {
+     "file": "briefing-2026-11-15.ar.m4a",
+     "seconds": 331,
+     "size": 2403034,
+     "lead": "East African Community adopts a regional AI strategy with universities at its centre",
+     "n": 4
+    },
+    "af": {
+     "file": "briefing-2026-11-15.af.m4a",
+     "seconds": 257,
+     "size": 1877263,
+     "lead": "East African Community adopts a regional AI strategy with universities at its centre",
+     "n": 4
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-15.en-luke.m4a",
+      "seconds": 161,
+      "size": 1166492,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-15.fr-henri.m4a",
+      "seconds": 174,
+      "size": 1217058,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-15.fr-vivienne.m4a",
+      "seconds": 173,
+      "size": 1249824,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-15.fr-remy.m4a",
+      "seconds": 176,
+      "size": 1279686,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-15.fr-sylvie.m4a",
+      "seconds": 176,
+      "size": 1285824,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-15.fr-gerard.m4a",
+      "seconds": 181,
+      "size": 1269591,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-14",
    "date": "2026-11-14",
    "files": {

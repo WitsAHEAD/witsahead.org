@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-19",
+   "date": "2026-11-19",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-19.en.m4a",
+     "seconds": 144,
+     "size": 1058319,
+     "lead": "Universitat Jaume I video: UCL researcher Melissa Bond on AI in higher education teaching and research",
+     "n": 3
+    },
+    "fr": {
+     "file": "briefing-2026-11-19.fr.m4a",
+     "seconds": 163,
+     "size": 1133410,
+     "lead": "Universitat Jaume I video: UCL researcher Melissa Bond on AI in higher education teaching and research",
+     "n": 3
+    },
+    "es": {
+     "file": "briefing-2026-11-19.es.m4a",
+     "seconds": 157,
+     "size": 1094140,
+     "lead": "Universitat Jaume I video: UCL researcher Melissa Bond on AI in higher education teaching and research",
+     "n": 3
+    },
+    "pt": {
+     "file": "briefing-2026-11-19.pt.m4a",
+     "seconds": 164,
+     "size": 1144529,
+     "lead": "Universitat Jaume I video: UCL researcher Melissa Bond on AI in higher education teaching and research",
+     "n": 3
+    },
+    "zh": {
+     "file": "briefing-2026-11-19.zh.m4a",
+     "seconds": 151,
+     "size": 1080855,
+     "lead": "Universitat Jaume I video: UCL researcher Melissa Bond on AI in higher education teaching and research",
+     "n": 3
+    },
+    "zu": {
+     "file": "briefing-2026-11-19.zu.m4a",
+     "seconds": 207,
+     "size": 1490739,
+     "lead": "Universitat Jaume I video: UCL researcher Melissa Bond on AI in higher education teaching and research",
+     "n": 3
+    },
+    "sw": {
+     "file": "briefing-2026-11-19.sw.m4a",
+     "seconds": 220,
+     "size": 1614172,
+     "lead": "Universitat Jaume I video: UCL researcher Melissa Bond on AI in higher education teaching and research",
+     "n": 3
+    },
+    "ar": {
+     "file": "briefing-2026-11-19.ar.m4a",
+     "seconds": 246,
+     "size": 1775994,
+     "lead": "Universitat Jaume I video: UCL researcher Melissa Bond on AI in higher education teaching and research",
+     "n": 3
+    },
+    "af": {
+     "file": "briefing-2026-11-19.af.m4a",
+     "seconds": 190,
+     "size": 1377537,
+     "lead": "Universitat Jaume I video: UCL researcher Melissa Bond on AI in higher education teaching and research",
+     "n": 3
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-19.en-luke.m4a",
+      "seconds": 125,
+      "size": 912077,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-19.fr-henri.m4a",
+      "seconds": 151,
+      "size": 1079419,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-19.fr-vivienne.m4a",
+      "seconds": 143,
+      "size": 1046974,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-19.fr-remy.m4a",
+      "seconds": 146,
+      "size": 1072807,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-19.fr-sylvie.m4a",
+      "seconds": 151,
+      "size": 1109076,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-19.fr-gerard.m4a",
+      "seconds": 156,
+      "size": 1148778,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-18",
    "date": "2026-11-18",
    "files": {
@@ -4072,47 +4183,6 @@
      "seconds": 222,
      "size": 1431152,
      "lead": "African universities confront AI's impact on jobs and learning at Dar es Salaam summit",
-     "n": 4
-    }
-   }
-  },
-  {
-   "stem": "briefing-2026-09-15",
-   "date": "2026-09-15",
-   "files": {
-    "en": {
-     "file": "briefing-2026-09-15.en.m4a",
-     "seconds": 241,
-     "size": 1579825,
-     "lead": "Education ministers adopt a joint statement to keep education a common good in the age of AI",
-     "n": 4
-    },
-    "fr": {
-     "file": "briefing-2026-09-15.fr.m4a",
-     "seconds": 217,
-     "size": 1454648,
-     "lead": "Education ministers adopt a joint statement to keep education a common good in the age of AI",
-     "n": 4
-    },
-    "es": {
-     "file": "briefing-2026-09-15.es.m4a",
-     "seconds": 208,
-     "size": 1375082,
-     "lead": "Education ministers adopt a joint statement to keep education a common good in the age of AI",
-     "n": 4
-    },
-    "pt": {
-     "file": "briefing-2026-09-15.pt.m4a",
-     "seconds": 262,
-     "size": 1707934,
-     "lead": "Education ministers adopt a joint statement to keep education a common good in the age of AI",
-     "n": 4
-    },
-    "zh": {
-     "file": "briefing-2026-09-15.zh.m4a",
-     "seconds": 224,
-     "size": 1452562,
-     "lead": "Education ministers adopt a joint statement to keep education a common good in the age of AI",
      "n": 4
     }
    }

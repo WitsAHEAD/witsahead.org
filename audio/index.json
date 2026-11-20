@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-20",
+   "date": "2026-11-20",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-20.en.m4a",
+     "seconds": 171,
+     "size": 1262409,
+     "lead": "University of Alaska regents delay AI policy drafted with Claude after faculty backlash",
+     "n": 4
+    },
+    "fr": {
+     "file": "briefing-2026-11-20.fr.m4a",
+     "seconds": 186,
+     "size": 1294250,
+     "lead": "University of Alaska regents delay AI policy drafted with Claude after faculty backlash",
+     "n": 4
+    },
+    "es": {
+     "file": "briefing-2026-11-20.es.m4a",
+     "seconds": 174,
+     "size": 1240101,
+     "lead": "University of Alaska regents delay AI policy drafted with Claude after faculty backlash",
+     "n": 4
+    },
+    "pt": {
+     "file": "briefing-2026-11-20.pt.m4a",
+     "seconds": 184,
+     "size": 1276605,
+     "lead": "University of Alaska regents delay AI policy drafted with Claude after faculty backlash",
+     "n": 4
+    },
+    "zh": {
+     "file": "briefing-2026-11-20.zh.m4a",
+     "seconds": 184,
+     "size": 1333095,
+     "lead": "University of Alaska regents delay AI policy drafted with Claude after faculty backlash",
+     "n": 4
+    },
+    "zu": {
+     "file": "briefing-2026-11-20.zu.m4a",
+     "seconds": 221,
+     "size": 1587330,
+     "lead": "University of Alaska regents delay AI policy drafted with Claude after faculty backlash",
+     "n": 4
+    },
+    "sw": {
+     "file": "briefing-2026-11-20.sw.m4a",
+     "seconds": 224,
+     "size": 1642812,
+     "lead": "University of Alaska regents delay AI policy drafted with Claude after faculty backlash",
+     "n": 4
+    },
+    "ar": {
+     "file": "briefing-2026-11-20.ar.m4a",
+     "seconds": 252,
+     "size": 1821674,
+     "lead": "University of Alaska regents delay AI policy drafted with Claude after faculty backlash",
+     "n": 4
+    },
+    "af": {
+     "file": "briefing-2026-11-20.af.m4a",
+     "seconds": 201,
+     "size": 1463749,
+     "lead": "University of Alaska regents delay AI policy drafted with Claude after faculty backlash",
+     "n": 4
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-20.en-luke.m4a",
+      "seconds": 151,
+      "size": 1094155,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-20.fr-henri.m4a",
+      "seconds": 171,
+      "size": 1235759,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-20.fr-vivienne.m4a",
+      "seconds": 172,
+      "size": 1257333,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-20.fr-remy.m4a",
+      "seconds": 169,
+      "size": 1232186,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-20.fr-sylvie.m4a",
+      "seconds": 173,
+      "size": 1264992,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-20.fr-gerard.m4a",
+      "seconds": 177,
+      "size": 1278084,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-19",
    "date": "2026-11-19",
    "files": {
@@ -4142,47 +4253,6 @@
      "seconds": 182,
      "size": 1167689,
      "lead": "Hong Kong nursing school builds a Cantonese language AI patient to train counselling skills",
-     "n": 4
-    }
-   }
-  },
-  {
-   "stem": "briefing-2026-09-16",
-   "date": "2026-09-16",
-   "files": {
-    "en": {
-     "file": "briefing-2026-09-16.en.m4a",
-     "seconds": 245,
-     "size": 1603007,
-     "lead": "African universities confront AI's impact on jobs and learning at Dar es Salaam summit",
-     "n": 4
-    },
-    "fr": {
-     "file": "briefing-2026-09-16.fr.m4a",
-     "seconds": 240,
-     "size": 1501957,
-     "lead": "African universities confront AI's impact on jobs and learning at Dar es Salaam summit",
-     "n": 4
-    },
-    "es": {
-     "file": "briefing-2026-09-16.es.m4a",
-     "seconds": 214,
-     "size": 1398916,
-     "lead": "African universities confront AI's impact on jobs and learning at Dar es Salaam summit",
-     "n": 4
-    },
-    "pt": {
-     "file": "briefing-2026-09-16.pt.m4a",
-     "seconds": 262,
-     "size": 1699668,
-     "lead": "African universities confront AI's impact on jobs and learning at Dar es Salaam summit",
-     "n": 4
-    },
-    "zh": {
-     "file": "briefing-2026-09-16.zh.m4a",
-     "seconds": 222,
-     "size": 1431152,
-     "lead": "African universities confront AI's impact on jobs and learning at Dar es Salaam summit",
      "n": 4
     }
    }

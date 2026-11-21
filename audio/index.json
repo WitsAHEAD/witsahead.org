@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-21",
+   "date": "2026-11-21",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-21.en.m4a",
+     "seconds": 134,
+     "size": 987668,
+     "lead": "South African universities write their own AI rules while the national department lags",
+     "n": 3
+    },
+    "fr": {
+     "file": "briefing-2026-11-21.fr.m4a",
+     "seconds": 149,
+     "size": 1033572,
+     "lead": "South African universities write their own AI rules while the national department lags",
+     "n": 3
+    },
+    "es": {
+     "file": "briefing-2026-11-21.es.m4a",
+     "seconds": 145,
+     "size": 1026581,
+     "lead": "South African universities write their own AI rules while the national department lags",
+     "n": 3
+    },
+    "pt": {
+     "file": "briefing-2026-11-21.pt.m4a",
+     "seconds": 156,
+     "size": 1075362,
+     "lead": "South African universities write their own AI rules while the national department lags",
+     "n": 3
+    },
+    "zh": {
+     "file": "briefing-2026-11-21.zh.m4a",
+     "seconds": 142,
+     "size": 1015415,
+     "lead": "South African universities write their own AI rules while the national department lags",
+     "n": 3
+    },
+    "zu": {
+     "file": "briefing-2026-11-21.zu.m4a",
+     "seconds": 177,
+     "size": 1272510,
+     "lead": "South African universities write their own AI rules while the national department lags",
+     "n": 3
+    },
+    "sw": {
+     "file": "briefing-2026-11-21.sw.m4a",
+     "seconds": 215,
+     "size": 1578941,
+     "lead": "South African universities write their own AI rules while the national department lags",
+     "n": 3
+    },
+    "ar": {
+     "file": "briefing-2026-11-21.ar.m4a",
+     "seconds": 257,
+     "size": 1850070,
+     "lead": "South African universities write their own AI rules while the national department lags",
+     "n": 3
+    },
+    "af": {
+     "file": "briefing-2026-11-21.af.m4a",
+     "seconds": 203,
+     "size": 1486275,
+     "lead": "South African universities write their own AI rules while the national department lags",
+     "n": 3
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-21.en-luke.m4a",
+      "seconds": 121,
+      "size": 874992,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-21.fr-henri.m4a",
+      "seconds": 138,
+      "size": 980977,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-21.fr-vivienne.m4a",
+      "seconds": 136,
+      "size": 988815,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-21.fr-remy.m4a",
+      "seconds": 135,
+      "size": 971343,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-21.fr-sylvie.m4a",
+      "seconds": 138,
+      "size": 1009293,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-21.fr-gerard.m4a",
+      "seconds": 141,
+      "size": 1003796,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-20",
    "date": "2026-11-20",
    "files": {
@@ -4212,47 +4323,6 @@
      "seconds": 246,
      "size": 1439954,
      "lead": "Global survey of 45,000 students and staff finds AI use is high but guidance on using it well lags behind",
-     "n": 4
-    }
-   }
-  },
-  {
-   "stem": "briefing-2026-09-17",
-   "date": "2026-09-17",
-   "files": {
-    "en": {
-     "file": "briefing-2026-09-17.en.m4a",
-     "seconds": 176,
-     "size": 1153838,
-     "lead": "Hong Kong nursing school builds a Cantonese language AI patient to train counselling skills",
-     "n": 4
-    },
-    "fr": {
-     "file": "briefing-2026-09-17.fr.m4a",
-     "seconds": 166,
-     "size": 1034206,
-     "lead": "Hong Kong nursing school builds a Cantonese language AI patient to train counselling skills",
-     "n": 4
-    },
-    "es": {
-     "file": "briefing-2026-09-17.es.m4a",
-     "seconds": 149,
-     "size": 968857,
-     "lead": "Hong Kong nursing school builds a Cantonese language AI patient to train counselling skills",
-     "n": 4
-    },
-    "pt": {
-     "file": "briefing-2026-09-17.pt.m4a",
-     "seconds": 190,
-     "size": 1225489,
-     "lead": "Hong Kong nursing school builds a Cantonese language AI patient to train counselling skills",
-     "n": 4
-    },
-    "zh": {
-     "file": "briefing-2026-09-17.zh.m4a",
-     "seconds": 182,
-     "size": 1167689,
-     "lead": "Hong Kong nursing school builds a Cantonese language AI patient to train counselling skills",
      "n": 4
     }
    }

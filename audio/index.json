@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-22",
+   "date": "2026-11-22",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-22.en.m4a",
+     "seconds": 184,
+     "size": 1335476,
+     "lead": "Trinity College's philosophy department bans AI outright in all its courses",
+     "n": 4
+    },
+    "fr": {
+     "file": "briefing-2026-11-22.fr.m4a",
+     "seconds": 196,
+     "size": 1370014,
+     "lead": "Trinity College's philosophy department bans AI outright in all its courses",
+     "n": 4
+    },
+    "es": {
+     "file": "briefing-2026-11-22.es.m4a",
+     "seconds": 193,
+     "size": 1369840,
+     "lead": "Trinity College's philosophy department bans AI outright in all its courses",
+     "n": 4
+    },
+    "pt": {
+     "file": "briefing-2026-11-22.pt.m4a",
+     "seconds": 199,
+     "size": 1408986,
+     "lead": "Trinity College's philosophy department bans AI outright in all its courses",
+     "n": 4
+    },
+    "zh": {
+     "file": "briefing-2026-11-22.zh.m4a",
+     "seconds": 194,
+     "size": 1400491,
+     "lead": "Trinity College's philosophy department bans AI outright in all its courses",
+     "n": 4
+    },
+    "zu": {
+     "file": "briefing-2026-11-22.zu.m4a",
+     "seconds": 234,
+     "size": 1709596,
+     "lead": "Trinity College's philosophy department bans AI outright in all its courses",
+     "n": 4
+    },
+    "sw": {
+     "file": "briefing-2026-11-22.sw.m4a",
+     "seconds": 183,
+     "size": 1321700,
+     "lead": "Trinity College's philosophy department bans AI outright in all its courses",
+     "n": 4
+    },
+    "ar": {
+     "file": "briefing-2026-11-22.ar.m4a",
+     "seconds": 217,
+     "size": 1533362,
+     "lead": "Trinity College's philosophy department bans AI outright in all its courses",
+     "n": 4
+    },
+    "af": {
+     "file": "briefing-2026-11-22.af.m4a",
+     "seconds": 175,
+     "size": 1252695,
+     "lead": "Trinity College's philosophy department bans AI outright in all its courses",
+     "n": 4
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-22.en-luke.m4a",
+      "seconds": 162,
+      "size": 1180207,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-22.fr-henri.m4a",
+      "seconds": 181,
+      "size": 1303338,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-22.fr-vivienne.m4a",
+      "seconds": 175,
+      "size": 1281834,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-22.fr-remy.m4a",
+      "seconds": 185,
+      "size": 1355918,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-22.fr-sylvie.m4a",
+      "seconds": 182,
+      "size": 1338489,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-22.fr-gerard.m4a",
+      "seconds": 189,
+      "size": 1378281,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-21",
    "date": "2026-11-21",
    "files": {
@@ -4275,54 +4386,6 @@
      "seconds": 232,
      "size": 1346326,
      "lead": "South African universities move from detecting AI use to redesigning assessment",
-     "n": 4
-    }
-   }
-  },
-  {
-   "stem": "briefing-2026-09-18",
-   "date": "2026-09-18",
-   "files": {
-    "en": {
-     "file": "briefing-2026-09-18.en.m4a",
-     "seconds": 185,
-     "size": 1093665,
-     "lead": "Global survey of 45,000 students and staff finds AI use is high but guidance on using it well lags behind",
-     "n": 4
-    },
-    "fr": {
-     "file": "briefing-2026-09-18.fr.m4a",
-     "seconds": 176,
-     "size": 1029017,
-     "lead": "Global survey of 45,000 students and staff finds AI use is high but guidance on using it well lags behind",
-     "n": 4
-    },
-    "es": {
-     "file": "briefing-2026-09-18.es.m4a",
-     "seconds": 175,
-     "size": 1017441,
-     "lead": "Global survey of 45,000 students and staff finds AI use is high but guidance on using it well lags behind",
-     "n": 4
-    },
-    "pt": {
-     "file": "briefing-2026-09-18.pt.m4a",
-     "seconds": 181,
-     "size": 1069330,
-     "lead": "Global survey of 45,000 students and staff finds AI use is high but guidance on using it well lags behind",
-     "n": 4
-    },
-    "zh": {
-     "file": "briefing-2026-09-18.zh.m4a",
-     "seconds": 189,
-     "size": 1172975,
-     "lead": "Global survey of 45,000 students and staff finds AI use is high but guidance on using it well lags behind",
-     "n": 4
-    },
-    "zu": {
-     "file": "briefing-2026-09-18.zu.m4a",
-     "seconds": 246,
-     "size": 1439954,
-     "lead": "Global survey of 45,000 students and staff finds AI use is high but guidance on using it well lags behind",
      "n": 4
     }
    }

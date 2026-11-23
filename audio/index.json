@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-23",
+   "date": "2026-11-23",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-23.en.m4a",
+     "seconds": 146,
+     "size": 1065604,
+     "lead": "Brazil becomes the first country to set binding national rules for AI in every school and university",
+     "n": 3
+    },
+    "fr": {
+     "file": "briefing-2026-11-23.fr.m4a",
+     "seconds": 163,
+     "size": 1139103,
+     "lead": "Brazil becomes the first country to set binding national rules for AI in every school and university",
+     "n": 3
+    },
+    "es": {
+     "file": "briefing-2026-11-23.es.m4a",
+     "seconds": 155,
+     "size": 1081705,
+     "lead": "Brazil becomes the first country to set binding national rules for AI in every school and university",
+     "n": 3
+    },
+    "pt": {
+     "file": "briefing-2026-11-23.pt.m4a",
+     "seconds": 163,
+     "size": 1131249,
+     "lead": "Brazil becomes the first country to set binding national rules for AI in every school and university",
+     "n": 3
+    },
+    "zh": {
+     "file": "briefing-2026-11-23.zh.m4a",
+     "seconds": 147,
+     "size": 1062632,
+     "lead": "Brazil becomes the first country to set binding national rules for AI in every school and university",
+     "n": 3
+    },
+    "zu": {
+     "file": "briefing-2026-11-23.zu.m4a",
+     "seconds": 182,
+     "size": 1320485,
+     "lead": "Brazil becomes the first country to set binding national rules for AI in every school and university",
+     "n": 3
+    },
+    "sw": {
+     "file": "briefing-2026-11-23.sw.m4a",
+     "seconds": 145,
+     "size": 1034026,
+     "lead": "Brazil becomes the first country to set binding national rules for AI in every school and university",
+     "n": 3
+    },
+    "ar": {
+     "file": "briefing-2026-11-23.ar.m4a",
+     "seconds": 166,
+     "size": 1186568,
+     "lead": "Brazil becomes the first country to set binding national rules for AI in every school and university",
+     "n": 3
+    },
+    "af": {
+     "file": "briefing-2026-11-23.af.m4a",
+     "seconds": 137,
+     "size": 977070,
+     "lead": "Brazil becomes the first country to set binding national rules for AI in every school and university",
+     "n": 3
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-23.en-luke.m4a",
+      "seconds": 130,
+      "size": 935003,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-23.fr-henri.m4a",
+      "seconds": 150,
+      "size": 1087007,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-23.fr-vivienne.m4a",
+      "seconds": 148,
+      "size": 1073867,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-23.fr-remy.m4a",
+      "seconds": 151,
+      "size": 1100220,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-23.fr-sylvie.m4a",
+      "seconds": 150,
+      "size": 1098076,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-23.fr-gerard.m4a",
+      "seconds": 156,
+      "size": 1137761,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-22",
    "date": "2026-11-22",
    "files": {
@@ -4338,54 +4449,6 @@
      "seconds": 254,
      "size": 1501752,
      "lead": "PISA 2025 finds 15-year-olds who skip AI chatbots for schoolwork outscore those who rely on them, as global reading skills fall sharply",
-     "n": 4
-    }
-   }
-  },
-  {
-   "stem": "briefing-2026-09-19",
-   "date": "2026-09-19",
-   "files": {
-    "en": {
-     "file": "briefing-2026-09-19.en.m4a",
-     "seconds": 194,
-     "size": 1142111,
-     "lead": "South African universities move from detecting AI use to redesigning assessment",
-     "n": 4
-    },
-    "fr": {
-     "file": "briefing-2026-09-19.fr.m4a",
-     "seconds": 188,
-     "size": 1094903,
-     "lead": "South African universities move from detecting AI use to redesigning assessment",
-     "n": 4
-    },
-    "es": {
-     "file": "briefing-2026-09-19.es.m4a",
-     "seconds": 185,
-     "size": 1067373,
-     "lead": "South African universities move from detecting AI use to redesigning assessment",
-     "n": 4
-    },
-    "pt": {
-     "file": "briefing-2026-09-19.pt.m4a",
-     "seconds": 199,
-     "size": 1181006,
-     "lead": "South African universities move from detecting AI use to redesigning assessment",
-     "n": 4
-    },
-    "zh": {
-     "file": "briefing-2026-09-19.zh.m4a",
-     "seconds": 173,
-     "size": 1071039,
-     "lead": "South African universities move from detecting AI use to redesigning assessment",
-     "n": 4
-    },
-    "zu": {
-     "file": "briefing-2026-09-19.zu.m4a",
-     "seconds": 232,
-     "size": 1346326,
-     "lead": "South African universities move from detecting AI use to redesigning assessment",
      "n": 4
     }
    }

@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-25",
+   "date": "2026-11-25",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-25.en.m4a",
+     "seconds": 185,
+     "size": 1352403,
+     "lead": "UNESCO's first Higher Education Global Trends Report finds only one in five universities has a formal AI policy",
+     "n": 4
+    },
+    "fr": {
+     "file": "briefing-2026-11-25.fr.m4a",
+     "seconds": 192,
+     "size": 1317770,
+     "lead": "UNESCO's first Higher Education Global Trends Report finds only one in five universities has a formal AI policy",
+     "n": 4
+    },
+    "es": {
+     "file": "briefing-2026-11-25.es.m4a",
+     "seconds": 194,
+     "size": 1345010,
+     "lead": "UNESCO's first Higher Education Global Trends Report finds only one in five universities has a formal AI policy",
+     "n": 4
+    },
+    "pt": {
+     "file": "briefing-2026-11-25.pt.m4a",
+     "seconds": 204,
+     "size": 1434095,
+     "lead": "UNESCO's first Higher Education Global Trends Report finds only one in five universities has a formal AI policy",
+     "n": 4
+    },
+    "zh": {
+     "file": "briefing-2026-11-25.zh.m4a",
+     "seconds": 201,
+     "size": 1452105,
+     "lead": "UNESCO's first Higher Education Global Trends Report finds only one in five universities has a formal AI policy",
+     "n": 4
+    },
+    "zu": {
+     "file": "briefing-2026-11-25.zu.m4a",
+     "seconds": 239,
+     "size": 1698304,
+     "lead": "UNESCO's first Higher Education Global Trends Report finds only one in five universities has a formal AI policy",
+     "n": 4
+    },
+    "sw": {
+     "file": "briefing-2026-11-25.sw.m4a",
+     "seconds": 209,
+     "size": 1520553,
+     "lead": "UNESCO's first Higher Education Global Trends Report finds only one in five universities has a formal AI policy",
+     "n": 4
+    },
+    "ar": {
+     "file": "briefing-2026-11-25.ar.m4a",
+     "seconds": 241,
+     "size": 1728457,
+     "lead": "UNESCO's first Higher Education Global Trends Report finds only one in five universities has a formal AI policy",
+     "n": 4
+    },
+    "af": {
+     "file": "briefing-2026-11-25.af.m4a",
+     "seconds": 187,
+     "size": 1349369,
+     "lead": "UNESCO's first Higher Education Global Trends Report finds only one in five universities has a formal AI policy",
+     "n": 4
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-25.en-luke.m4a",
+      "seconds": 165,
+      "size": 1166912,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-25.fr-henri.m4a",
+      "seconds": 178,
+      "size": 1276870,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-25.fr-vivienne.m4a",
+      "seconds": 173,
+      "size": 1255353,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-25.fr-remy.m4a",
+      "seconds": 175,
+      "size": 1274483,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-25.fr-sylvie.m4a",
+      "seconds": 177,
+      "size": 1291592,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-25.fr-gerard.m4a",
+      "seconds": 184,
+      "size": 1328772,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-24",
    "date": "2026-11-24",
    "files": {
@@ -4451,68 +4562,6 @@
      "size": 1054381,
      "lead": "Prescriptive AI model flags Ecuadorian students at highest dropout risk, and what would change it",
      "n": 3
-    }
-   }
-  },
-  {
-   "stem": "briefing-2026-09-21",
-   "date": "2026-09-21",
-   "files": {
-    "en": {
-     "file": "briefing-2026-09-21.en.m4a",
-     "seconds": 186,
-     "size": 1102348,
-     "lead": "Gates Foundation commits 1 billion US dollars over two years to equitable AI",
-     "n": 4
-    },
-    "fr": {
-     "file": "briefing-2026-09-21.fr.m4a",
-     "seconds": 167,
-     "size": 956094,
-     "lead": "Gates Foundation commits 1 billion US dollars over two years to equitable AI",
-     "n": 4
-    },
-    "es": {
-     "file": "briefing-2026-09-21.es.m4a",
-     "seconds": 167,
-     "size": 956546,
-     "lead": "Gates Foundation commits 1 billion US dollars over two years to equitable AI",
-     "n": 4
-    },
-    "pt": {
-     "file": "briefing-2026-09-21.pt.m4a",
-     "seconds": 175,
-     "size": 1029823,
-     "lead": "Gates Foundation commits 1 billion US dollars over two years to equitable AI",
-     "n": 4
-    },
-    "zh": {
-     "file": "briefing-2026-09-21.zh.m4a",
-     "seconds": 181,
-     "size": 1113460,
-     "lead": "Gates Foundation commits 1 billion US dollars over two years to equitable AI",
-     "n": 4
-    },
-    "zu": {
-     "file": "briefing-2026-09-21.zu.m4a",
-     "seconds": 231,
-     "size": 1356621,
-     "lead": "Gates Foundation commits 1 billion US dollars over two years to equitable AI",
-     "n": 4
-    },
-    "pcm": {
-     "file": "briefing-2026-09-21.pcm.m4a",
-     "seconds": 181,
-     "size": 1063144,
-     "lead": "Gates Foundation commits 1 billion US dollars over two years to equitable AI",
-     "n": 4
-    },
-    "yo": {
-     "file": "briefing-2026-09-21.yo.m4a",
-     "seconds": 185,
-     "size": 738759,
-     "lead": "Gates Foundation commits 1 billion US dollars over two years to equitable AI",
-     "n": 4
     }
    }
   }

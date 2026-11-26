@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-26",
+   "date": "2026-11-26",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-26.en.m4a",
+     "seconds": 102,
+     "size": 743824,
+     "lead": "Study of 162 Ugandan undergraduates finds generative AI lifts fluency but can erode originality",
+     "n": 2
+    },
+    "fr": {
+     "file": "briefing-2026-11-26.fr.m4a",
+     "seconds": 110,
+     "size": 758996,
+     "lead": "Study of 162 Ugandan undergraduates finds generative AI lifts fluency but can erode originality",
+     "n": 2
+    },
+    "es": {
+     "file": "briefing-2026-11-26.es.m4a",
+     "seconds": 106,
+     "size": 737924,
+     "lead": "Study of 162 Ugandan undergraduates finds generative AI lifts fluency but can erode originality",
+     "n": 2
+    },
+    "pt": {
+     "file": "briefing-2026-11-26.pt.m4a",
+     "seconds": 111,
+     "size": 793350,
+     "lead": "Study of 162 Ugandan undergraduates finds generative AI lifts fluency but can erode originality",
+     "n": 2
+    },
+    "zh": {
+     "file": "briefing-2026-11-26.zh.m4a",
+     "seconds": 111,
+     "size": 801044,
+     "lead": "Study of 162 Ugandan undergraduates finds generative AI lifts fluency but can erode originality",
+     "n": 2
+    },
+    "zu": {
+     "file": "briefing-2026-11-26.zu.m4a",
+     "seconds": 132,
+     "size": 915767,
+     "lead": "Study of 162 Ugandan undergraduates finds generative AI lifts fluency but can erode originality",
+     "n": 2
+    },
+    "sw": {
+     "file": "briefing-2026-11-26.sw.m4a",
+     "seconds": 103,
+     "size": 751249,
+     "lead": "Study of 162 Ugandan undergraduates finds generative AI lifts fluency but can erode originality",
+     "n": 2
+    },
+    "ar": {
+     "file": "briefing-2026-11-26.ar.m4a",
+     "seconds": 118,
+     "size": 845771,
+     "lead": "Study of 162 Ugandan undergraduates finds generative AI lifts fluency but can erode originality",
+     "n": 2
+    },
+    "af": {
+     "file": "briefing-2026-11-26.af.m4a",
+     "seconds": 94,
+     "size": 670400,
+     "lead": "Study of 162 Ugandan undergraduates finds generative AI lifts fluency but can erode originality",
+     "n": 2
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-26.en-luke.m4a",
+      "seconds": 93,
+      "size": 666058,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-26.fr-henri.m4a",
+      "seconds": 102,
+      "size": 735371,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-26.fr-vivienne.m4a",
+      "seconds": 102,
+      "size": 739040,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-26.fr-remy.m4a",
+      "seconds": 102,
+      "size": 733596,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-26.fr-sylvie.m4a",
+      "seconds": 105,
+      "size": 760365,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-26.fr-gerard.m4a",
+      "seconds": 105,
+      "size": 757921,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-25",
    "date": "2026-11-25",
    "files": {
@@ -4513,54 +4624,6 @@
      "seconds": 178,
      "size": 1037292,
      "lead": "World Bank opens free AI skills training to young people across 44 African countries",
-     "n": 3
-    }
-   }
-  },
-  {
-   "stem": "briefing-2026-09-22",
-   "date": "2026-09-22",
-   "files": {
-    "en": {
-     "file": "briefing-2026-09-22.en.m4a",
-     "seconds": 145,
-     "size": 860606,
-     "lead": "Prescriptive AI model flags Ecuadorian students at highest dropout risk, and what would change it",
-     "n": 3
-    },
-    "fr": {
-     "file": "briefing-2026-09-22.fr.m4a",
-     "seconds": 139,
-     "size": 809908,
-     "lead": "Prescriptive AI model flags Ecuadorian students at highest dropout risk, and what would change it",
-     "n": 3
-    },
-    "es": {
-     "file": "briefing-2026-09-22.es.m4a",
-     "seconds": 132,
-     "size": 763165,
-     "lead": "Prescriptive AI model flags Ecuadorian students at highest dropout risk, and what would change it",
-     "n": 3
-    },
-    "pt": {
-     "file": "briefing-2026-09-22.pt.m4a",
-     "seconds": 143,
-     "size": 850079,
-     "lead": "Prescriptive AI model flags Ecuadorian students at highest dropout risk, and what would change it",
-     "n": 3
-    },
-    "zh": {
-     "file": "briefing-2026-09-22.zh.m4a",
-     "seconds": 143,
-     "size": 890318,
-     "lead": "Prescriptive AI model flags Ecuadorian students at highest dropout risk, and what would change it",
-     "n": 3
-    },
-    "zu": {
-     "file": "briefing-2026-09-22.zu.m4a",
-     "seconds": 178,
-     "size": 1054381,
-     "lead": "Prescriptive AI model flags Ecuadorian students at highest dropout risk, and what would change it",
      "n": 3
     }
    }

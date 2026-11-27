@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-27",
+   "date": "2026-11-27",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-27.en.m4a",
+     "seconds": 149,
+     "size": 1102529,
+     "lead": "UCT video marks Africa's first Times Higher Education World Academic Summit, held under the banner of AI and justice",
+     "n": 3
+    },
+    "fr": {
+     "file": "briefing-2026-11-27.fr.m4a",
+     "seconds": 161,
+     "size": 1128466,
+     "lead": "UCT video marks Africa's first Times Higher Education World Academic Summit, held under the banner of AI and justice",
+     "n": 3
+    },
+    "es": {
+     "file": "briefing-2026-11-27.es.m4a",
+     "seconds": 154,
+     "size": 1070634,
+     "lead": "UCT video marks Africa's first Times Higher Education World Academic Summit, held under the banner of AI and justice",
+     "n": 3
+    },
+    "pt": {
+     "file": "briefing-2026-11-27.pt.m4a",
+     "seconds": 164,
+     "size": 1145913,
+     "lead": "UCT video marks Africa's first Times Higher Education World Academic Summit, held under the banner of AI and justice",
+     "n": 3
+    },
+    "zh": {
+     "file": "briefing-2026-11-27.zh.m4a",
+     "seconds": 151,
+     "size": 1083374,
+     "lead": "UCT video marks Africa's first Times Higher Education World Academic Summit, held under the banner of AI and justice",
+     "n": 3
+    },
+    "zu": {
+     "file": "briefing-2026-11-27.zu.m4a",
+     "seconds": 192,
+     "size": 1397169,
+     "lead": "UCT video marks Africa's first Times Higher Education World Academic Summit, held under the banner of AI and justice",
+     "n": 3
+    },
+    "sw": {
+     "file": "briefing-2026-11-27.sw.m4a",
+     "seconds": 152,
+     "size": 1102620,
+     "lead": "UCT video marks Africa's first Times Higher Education World Academic Summit, held under the banner of AI and justice",
+     "n": 3
+    },
+    "ar": {
+     "file": "briefing-2026-11-27.ar.m4a",
+     "seconds": 170,
+     "size": 1203603,
+     "lead": "UCT video marks Africa's first Times Higher Education World Academic Summit, held under the banner of AI and justice",
+     "n": 3
+    },
+    "af": {
+     "file": "briefing-2026-11-27.af.m4a",
+     "seconds": 139,
+     "size": 997232,
+     "lead": "UCT video marks Africa's first Times Higher Education World Academic Summit, held under the banner of AI and justice",
+     "n": 3
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-27.en-luke.m4a",
+      "seconds": 130,
+      "size": 939437,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-27.fr-henri.m4a",
+      "seconds": 149,
+      "size": 1062159,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-27.fr-vivienne.m4a",
+      "seconds": 146,
+      "size": 1059068,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-27.fr-remy.m4a",
+      "seconds": 146,
+      "size": 1067233,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-27.fr-sylvie.m4a",
+      "seconds": 151,
+      "size": 1110567,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-27.fr-gerard.m4a",
+      "seconds": 155,
+      "size": 1124625,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-26",
    "date": "2026-11-26",
    "files": {
@@ -4576,54 +4687,6 @@
      "seconds": 182,
      "size": 1071293,
      "lead": "UNESCO: over 25 education ministers declare AI must serve the 'common good'",
-     "n": 3
-    }
-   }
-  },
-  {
-   "stem": "briefing-2026-09-23",
-   "date": "2026-09-23",
-   "files": {
-    "en": {
-     "file": "briefing-2026-09-23.en.m4a",
-     "seconds": 150,
-     "size": 882217,
-     "lead": "World Bank opens free AI skills training to young people across 44 African countries",
-     "n": 3
-    },
-    "fr": {
-     "file": "briefing-2026-09-23.fr.m4a",
-     "seconds": 139,
-     "size": 805344,
-     "lead": "World Bank opens free AI skills training to young people across 44 African countries",
-     "n": 3
-    },
-    "es": {
-     "file": "briefing-2026-09-23.es.m4a",
-     "seconds": 138,
-     "size": 804355,
-     "lead": "World Bank opens free AI skills training to young people across 44 African countries",
-     "n": 3
-    },
-    "pt": {
-     "file": "briefing-2026-09-23.pt.m4a",
-     "seconds": 145,
-     "size": 860831,
-     "lead": "World Bank opens free AI skills training to young people across 44 African countries",
-     "n": 3
-    },
-    "zh": {
-     "file": "briefing-2026-09-23.zh.m4a",
-     "seconds": 144,
-     "size": 884909,
-     "lead": "World Bank opens free AI skills training to young people across 44 African countries",
-     "n": 3
-    },
-    "zu": {
-     "file": "briefing-2026-09-23.zu.m4a",
-     "seconds": 178,
-     "size": 1037292,
-     "lead": "World Bank opens free AI skills training to young people across 44 African countries",
      "n": 3
     }
    }

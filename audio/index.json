@@ -1,6 +1,117 @@
 {
  "editions": [
   {
+   "stem": "briefing-2026-11-28",
+   "date": "2026-11-28",
+   "files": {
+    "en": {
+     "file": "briefing-2026-11-28.en.m4a",
+     "seconds": 143,
+     "size": 1061527,
+     "lead": "African Union ministers endorse a continental education data portal and 60 CESA indicators",
+     "n": 3
+    },
+    "fr": {
+     "file": "briefing-2026-11-28.fr.m4a",
+     "seconds": 151,
+     "size": 1044431,
+     "lead": "African Union ministers endorse a continental education data portal and 60 CESA indicators",
+     "n": 3
+    },
+    "es": {
+     "file": "briefing-2026-11-28.es.m4a",
+     "seconds": 148,
+     "size": 1042288,
+     "lead": "African Union ministers endorse a continental education data portal and 60 CESA indicators",
+     "n": 3
+    },
+    "pt": {
+     "file": "briefing-2026-11-28.pt.m4a",
+     "seconds": 156,
+     "size": 1083309,
+     "lead": "African Union ministers endorse a continental education data portal and 60 CESA indicators",
+     "n": 3
+    },
+    "zh": {
+     "file": "briefing-2026-11-28.zh.m4a",
+     "seconds": 151,
+     "size": 1083574,
+     "lead": "African Union ministers endorse a continental education data portal and 60 CESA indicators",
+     "n": 3
+    },
+    "zu": {
+     "file": "briefing-2026-11-28.zu.m4a",
+     "seconds": 182,
+     "size": 1317974,
+     "lead": "African Union ministers endorse a continental education data portal and 60 CESA indicators",
+     "n": 3
+    },
+    "sw": {
+     "file": "briefing-2026-11-28.sw.m4a",
+     "seconds": 142,
+     "size": 1013251,
+     "lead": "African Union ministers endorse a continental education data portal and 60 CESA indicators",
+     "n": 3
+    },
+    "ar": {
+     "file": "briefing-2026-11-28.ar.m4a",
+     "seconds": 163,
+     "size": 1167152,
+     "lead": "African Union ministers endorse a continental education data portal and 60 CESA indicators",
+     "n": 3
+    },
+    "af": {
+     "file": "briefing-2026-11-28.af.m4a",
+     "seconds": 133,
+     "size": 948817,
+     "lead": "African Union ministers endorse a continental education data portal and 60 CESA indicators",
+     "n": 3
+    }
+   },
+   "voices": {
+    "en": {
+     "luke": {
+      "file": "briefing-2026-11-28.en-luke.m4a",
+      "seconds": 126,
+      "size": 901283,
+      "voice": "en-ZA-Luke:DragonHDOmniLatestNeural"
+     }
+    },
+    "fr": {
+     "henri": {
+      "file": "briefing-2026-11-28.fr-henri.m4a",
+      "seconds": 140,
+      "size": 1010229,
+      "voice": "fr-FR-HenriNeural"
+     },
+     "vivienne": {
+      "file": "briefing-2026-11-28.fr-vivienne.m4a",
+      "seconds": 135,
+      "size": 986072,
+      "voice": "fr-FR-Vivienne:DragonHDLatestNeural"
+     },
+     "remy": {
+      "file": "briefing-2026-11-28.fr-remy.m4a",
+      "seconds": 137,
+      "size": 1000378,
+      "voice": "fr-FR-Remy:DragonHDLatestNeural"
+     },
+     "sylvie": {
+      "file": "briefing-2026-11-28.fr-sylvie.m4a",
+      "seconds": 142,
+      "size": 1036141,
+      "voice": "fr-CA-Sylvie:DragonHDLatestNeural"
+     },
+     "gerard": {
+      "file": "briefing-2026-11-28.fr-gerard.m4a",
+      "seconds": 143,
+      "size": 1032271,
+      "voice": "fr-BE-GerardNeural"
+     }
+    }
+   }
+  },
+  {
    "stem": "briefing-2026-11-27",
    "date": "2026-11-27",
    "files": {
@@ -4640,54 +4751,6 @@
      "size": 1223178,
      "lead": "African universities can drive talent development at scale, Mastercard Foundation tells Accra convening",
      "n": 4
-    }
-   }
-  },
-  {
-   "stem": "briefing-2026-09-24",
-   "date": "2026-09-24",
-   "files": {
-    "en": {
-     "file": "briefing-2026-09-24.en.m4a",
-     "seconds": 143,
-     "size": 844610,
-     "lead": "UNESCO: over 25 education ministers declare AI must serve the 'common good'",
-     "n": 3
-    },
-    "fr": {
-     "file": "briefing-2026-09-24.fr.m4a",
-     "seconds": 130,
-     "size": 757561,
-     "lead": "UNESCO: over 25 education ministers declare AI must serve the 'common good'",
-     "n": 3
-    },
-    "es": {
-     "file": "briefing-2026-09-24.es.m4a",
-     "seconds": 125,
-     "size": 717162,
-     "lead": "UNESCO: over 25 education ministers declare AI must serve the 'common good'",
-     "n": 3
-    },
-    "pt": {
-     "file": "briefing-2026-09-24.pt.m4a",
-     "seconds": 132,
-     "size": 776106,
-     "lead": "UNESCO: over 25 education ministers declare AI must serve the 'common good'",
-     "n": 3
-    },
-    "zh": {
-     "file": "briefing-2026-09-24.zh.m4a",
-     "seconds": 132,
-     "size": 819957,
-     "lead": "UNESCO: over 25 education ministers declare AI must serve the 'common good'",
-     "n": 3
-    },
-    "zu": {
-     "file": "briefing-2026-09-24.zu.m4a",
-     "seconds": 182,
-     "size": 1071293,
-     "lead": "UNESCO: over 25 education ministers declare AI must serve the 'common good'",
-     "n": 3
     }
    }
   }
